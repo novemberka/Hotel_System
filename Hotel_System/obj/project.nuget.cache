@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zjhnU2upYws=",
+  "dgSpecHash": "hrE8HDQmAE8=",
   "success": true,
-  "projectFilePath": "D:\\Lesson back-end\\C#\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+  "projectFilePath": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
+    "C:\\Users\\ACER\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
   ],
   "logs": []
 }
