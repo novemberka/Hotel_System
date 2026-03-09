@@ -14,5 +14,10 @@ namespace Hotel_System
         {
             InitializeComponent();
         }
+
+        private void RoomControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
