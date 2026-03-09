@@ -24,3 +24,5 @@ D:\Lesson back-end\C#\Hotel_System\Hotel_System\obj\Debug\net10.0-windows\Hotel_
 D:\Lesson back-end\C#\Hotel_System\Hotel_System\bin\Debug\net10.0-windows\FontAwesome.Sharp.dll
 D:\Lesson back-end\C#\Hotel_System\Hotel_System\obj\Debug\net10.0-windows\Hotel_System.csproj.AssemblyReference.cache
 D:\Lesson back-end\C#\Hotel_System\Hotel_System\obj\Debug\net10.0-windows\Hotel_Sy.1FDCBC86.Up2Date
+D:\Lesson back-end\C#\Hotel_System\Hotel_System\obj\Debug\net10.0-windows\Hotel_System.Properties.Resources.resources
+D:\Lesson back-end\C#\Hotel_System\Hotel_System\obj\Debug\net10.0-windows\Hotel_System.sourcelink.json

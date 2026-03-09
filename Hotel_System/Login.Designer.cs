@@ -28,18 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            profile = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)profile).BeginInit();
             SuspendLayout();
+            // 
+            // profile
+            // 
+            profile.Image = Properties.Resources._0e7f6006e9273ec44255aaa391107a73;
+            profile.Location = new Point(845, 415);
+            profile.Name = "profile";
+            profile.Size = new Size(60, 60);
+            profile.SizeMode = PictureBoxSizeMode.StretchImage;
+            profile.TabIndex = 1;
+            profile.TabStop = false;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1750, 891);
+            Controls.Add(profile);
             Name = "Login";
             Text = "Form1";
+            Load += Login_Load;
+            ((System.ComponentModel.ISupportInitialize)profile).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox profile;
     }
 }
