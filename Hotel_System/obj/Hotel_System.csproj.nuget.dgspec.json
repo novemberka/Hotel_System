@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
+    "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
   },
   "projects": {
-    "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
+    "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "projectUniqueName": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
         "projectName": "Hotel_System",
-        "projectPath": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "projectPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\obj\\",
+        "outputPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0-windows7.0": {
@@ -70,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

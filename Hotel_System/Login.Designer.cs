@@ -40,7 +40,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.DarkTurquoise;
+            btnLogin.BackColor = SystemColors.Highlight;
             btnLogin.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(151, 357);
@@ -55,7 +55,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.White;
             label5.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(0, 0, 192);
+            label5.ForeColor = Color.Red;
             label5.Location = new Point(51, 296);
             label5.Name = "label5";
             label5.Size = new Size(114, 17);
@@ -85,7 +85,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.White;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.DarkGray;
+            label6.ForeColor = Color.Gray;
             label6.Location = new Point(51, 214);
             label6.Name = "label6";
             label6.Size = new Size(80, 23);
@@ -98,7 +98,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.White;
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.DarkGray;
+            label7.ForeColor = Color.Gray;
             label7.Location = new Point(51, 102);
             label7.Name = "label7";
             label7.Size = new Size(87, 23);
@@ -111,7 +111,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.White;
             label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.DarkTurquoise;
+            label8.ForeColor = SystemColors.Highlight;
             label8.Location = new Point(87, 9);
             label8.Name = "label8";
             label8.Size = new Size(225, 38);
@@ -121,7 +121,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkTurquoise;
+            panel1.BackColor = SystemColors.Highlight;
             panel1.Location = new Point(454, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(401, 598);

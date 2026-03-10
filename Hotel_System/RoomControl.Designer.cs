@@ -32,10 +32,11 @@
             // 
             // RoomControl
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "RoomControl";
-            Size = new Size(1455, 828);
+            Size = new Size(1453, 826);
             ResumeLayout(false);
         }
 
