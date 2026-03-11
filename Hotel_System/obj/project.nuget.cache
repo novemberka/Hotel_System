@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "0RIWPvEyv2Q=",
   "success": true,
   "projectFilePath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+=======
+  "dgSpecHash": "FRLgHTSyVCA=",
+  "success": true,
+  "projectFilePath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+>>>>>>> ac4da1a73cc90da987220cea3c9978e7f4d24515
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
   ],

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
         "outputPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
+=======
+    "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
+  },
+  "projects": {
+    "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "projectName": "Hotel_System",
+        "projectPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
+>>>>>>> ac4da1a73cc90da987220cea3c9978e7f4d24515
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,7 +57,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0-windows7.0": {
@@ -73,7 +87,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
