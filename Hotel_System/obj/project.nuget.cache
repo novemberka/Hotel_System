@@ -1,10 +1,16 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "FRLgHTSyVCA=",
   "success": true,
   "projectFilePath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+=======
+  "dgSpecHash": "r610LnAreqk=",
+  "success": true,
+  "projectFilePath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+>>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
   "expectedPackageFiles": [
-    "C:\\Users\\ACER\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
+    "C:\\Users\\USER\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
   ],
   "logs": []
 }
