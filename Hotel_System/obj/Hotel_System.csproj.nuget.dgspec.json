@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
+    "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
   },
   "projects": {
-    "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
+    "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "projectUniqueName": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
         "projectName": "Hotel_System",
-        "projectPath": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\IT_Y3_S1\\.NET-programming\\Project_Hotel\\Hotel_System\\Hotel_System\\obj\\",
+        "projectPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
