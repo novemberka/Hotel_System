@@ -47,19 +47,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
       "projectName": "Hotel_System",
       "projectPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
       "outputPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
-=======
-      "projectUniqueName": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-      "projectName": "Hotel_System",
-      "projectPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
->>>>>>> ac4da1a73cc90da987220cea3c9978e7f4d24515
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -91,7 +83,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0-windows7.0": {
@@ -121,8 +113,16 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file T:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }
