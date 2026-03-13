@@ -32,7 +32,6 @@
             label1 = new Label();
             button1 = new Button();
             textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
             label2 = new Label();
             button2 = new Button();
             button3 = new Button();
@@ -44,10 +43,11 @@
             label6 = new Label();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            comboBox2 = new ComboBox();
             pictureBox1 = new PictureBox();
             label7 = new Label();
             dataGridView1 = new DataGridView();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
             PaymentID = new DataGridViewTextBoxColumn();
             CustomerName = new DataGridViewTextBoxColumn();
             RoomNumber = new DataGridViewTextBoxColumn();
@@ -59,8 +59,9 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.DarkTurquoise;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.BackColor = Color.MidnightBlue;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Transparent;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(1587, 90);
@@ -70,13 +71,13 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.MediumBlue;
+            button1.BackColor = Color.MidnightBlue;
             button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(123, 440);
+            button1.Location = new Point(123, 477);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
+            button1.Size = new Size(120, 44);
+            button1.TabIndex = 7;
             button1.Tag = "";
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = false;
@@ -88,14 +89,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(368, 39);
             textBox1.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(253, 254);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(368, 28);
-            comboBox1.TabIndex = 4;
             // 
             // label2
             // 
@@ -111,18 +104,18 @@
             // 
             // button2
             // 
-            button2.Location = new Point(292, 440);
+            button2.Location = new Point(264, 477);
             button2.Name = "button2";
-            button2.Size = new Size(106, 29);
+            button2.Size = new Size(120, 44);
             button2.TabIndex = 7;
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(473, 440);
+            button3.Location = new Point(410, 478);
             button3.Name = "button3";
-            button3.Size = new Size(106, 29);
+            button3.Size = new Size(120, 44);
             button3.TabIndex = 8;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = true;
@@ -130,9 +123,9 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(640, 440);
+            button4.Location = new Point(562, 478);
             button4.Name = "button4";
-            button4.Size = new Size(106, 29);
+            button4.Size = new Size(120, 44);
             button4.TabIndex = 9;
             button4.Text = "Clear";
             button4.UseVisualStyleBackColor = true;
@@ -140,9 +133,9 @@
             // button5
             // 
             button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(795, 439);
+            button5.Location = new Point(708, 477);
             button5.Name = "button5";
-            button5.Size = new Size(106, 29);
+            button5.Size = new Size(120, 44);
             button5.TabIndex = 10;
             button5.Text = "Search";
             button5.UseVisualStyleBackColor = true;
@@ -196,26 +189,18 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(253, 178);
+            textBox3.Location = new Point(253, 194);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(368, 39);
             textBox3.TabIndex = 16;
             // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(253, 369);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(368, 28);
-            comboBox2.TabIndex = 17;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(765, 133);
+            pictureBox1.Location = new Point(859, 133);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(578, 296);
+            pictureBox1.Size = new Size(569, 373);
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -228,7 +213,7 @@
             label7.FlatStyle = FlatStyle.Popup;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(995, 107);
+            label7.Location = new Point(1093, 107);
             label7.Name = "label7";
             label7.Size = new Size(111, 23);
             label7.TabIndex = 19;
@@ -241,11 +226,29 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PaymentID, CustomerName, RoomNumber, TotalAmount, PaymentDate });
-            dataGridView1.Location = new Point(90, 475);
+            dataGridView1.Location = new Point(90, 540);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1246, 185);
+            dataGridView1.Size = new Size(974, 233);
             dataGridView1.TabIndex = 27;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Available", "Occupied", "Reserved", "Maintenance" });
+            comboBox2.Location = new Point(253, 369);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(368, 28);
+            comboBox2.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Single Room", "", "Double Room", "Deluxe Room", "Luxury Room", "Family Room" });
+            comboBox1.Location = new Point(253, 254);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(368, 28);
+            comboBox1.TabIndex = 4;
             // 
             // PaymentID
             // 
@@ -257,7 +260,7 @@
             // 
             // CustomerName
             // 
-            CustomerName.HeaderText = "Name";
+            CustomerName.HeaderText = "Number";
             CustomerName.MinimumWidth = 20;
             CustomerName.Name = "CustomerName";
             CustomerName.Width = 200;
@@ -309,7 +312,7 @@
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(2);
             Name = "RoomControl";
-            Size = new Size(1447, 662);
+            Size = new Size(1447, 776);
             Load += RoomControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -322,7 +325,6 @@
         private Label label1;
         private Button button1;
         private TextBox textBox1;
-        private ComboBox comboBox1;
         private Label label2;
         private Button button2;
         private Button button3;
@@ -334,10 +336,11 @@
         private Label label6;
         private TextBox textBox2;
         private TextBox textBox3;
-        private ComboBox comboBox2;
         private PictureBox pictureBox1;
         private Label label7;
         private DataGridView dataGridView1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
         private DataGridViewTextBoxColumn PaymentID;
         private DataGridViewTextBoxColumn CustomerName;
         private DataGridViewTextBoxColumn RoomNumber;
