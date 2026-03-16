@@ -29,16 +29,19 @@ namespace Hotel_System
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            lblTittle.Text = "Booking Management";
             LoadUserControl(new BookingControl());
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
+            lblTittle.Text = "Check-In & Check_Out";
             LoadUserControl(new Checkin_outControl());
         }
 
@@ -54,21 +57,25 @@ namespace Hotel_System
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
+            lblTittle.Text = "Dashboard";
             LoadUserControl(new DashboardControl());
         }
 
         private void room_menu_Click(object sender, EventArgs e)
         {
+            lblTittle.Text = "Room Management";
             LoadUserControl(new RoomControl());
         }
 
         private void customer_menu_Click(object sender, EventArgs e)
         {
+            lblTittle.Text = "Customer Management";
             LoadUserControl(new CustomerControl());
         }
 
         private void payment_menu_Click(object sender, EventArgs e)
         {
+            lblTittle.Text = "Payment Management";
             LoadUserControl(new PaymentControl());
         }
 
