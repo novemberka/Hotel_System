@@ -13,5 +13,15 @@
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.14\\microsoft.aspnetcore.app.ref.9.0.14.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.14\\microsoft.netcore.app.host.win-x64.9.0.14.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file D:\\projects\\Hotel_System\\Hotel_System\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
