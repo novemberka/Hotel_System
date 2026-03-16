@@ -28,138 +28,217 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnLogin = new Button();
-            label5 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            panel1 = new Panel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnlogin = new Guna.UI2.WinForms.Guna2GradientButton();
+            linkForgotpassword = new LinkLabel();
+            label2 = new Label();
+            lbusername = new Label();
+            txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtusername = new Guna.UI2.WinForms.Guna2TextBox();
+            lbLogin = new Label();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // btnLogin
+            // guna2Panel1
             // 
-            btnLogin.BackColor = SystemColors.Highlight;
-            btnLogin.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(151, 357);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(116, 46);
-            btnLogin.TabIndex = 13;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = false;
+            guna2Panel1.BackColor = Color.Navy;
+            guna2Panel1.BorderColor = Color.Red;
+            guna2Panel1.BorderRadius = 10;
+            guna2Panel1.Controls.Add(btnlogin);
+            guna2Panel1.Controls.Add(linkForgotpassword);
+            guna2Panel1.Controls.Add(label2);
+            guna2Panel1.Controls.Add(lbusername);
+            guna2Panel1.Controls.Add(txtpassword);
+            guna2Panel1.Controls.Add(txtusername);
+            guna2Panel1.Controls.Add(lbLogin);
+            guna2Panel1.Controls.Add(guna2PictureBox1);
+            guna2Panel1.CustomizableEdges = customizableEdges19;
+            guna2Panel1.FillColor = Color.Navy;
+            guna2Panel1.Location = new Point(51, 54);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel1.Size = new Size(403, 492);
+            guna2Panel1.TabIndex = 0;
+            guna2Panel1.Paint += guna2Panel1_Paint_1;
             // 
-            // label5
+            // btnlogin
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(51, 296);
-            label5.Name = "label5";
-            label5.Size = new Size(114, 17);
-            label5.TabIndex = 12;
-            label5.Text = "Forgot password?";
+            btnlogin.BackColor = Color.Navy;
+            btnlogin.BorderRadius = 8;
+            btnlogin.CustomizableEdges = customizableEdges11;
+            btnlogin.DisabledState.BorderColor = Color.DarkGray;
+            btnlogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnlogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnlogin.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnlogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnlogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnlogin.ForeColor = Color.White;
+            btnlogin.Location = new Point(57, 385);
+            btnlogin.Name = "btnlogin";
+            btnlogin.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnlogin.Size = new Size(298, 49);
+            btnlogin.TabIndex = 52;
+            btnlogin.Text = "Login";
+            btnlogin.Click += btnlogin_Click;
             // 
-            // textBox3
+            // linkForgotpassword
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(51, 240);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(315, 44);
-            textBox3.TabIndex = 11;
+            linkForgotpassword.AutoSize = true;
+            linkForgotpassword.BackColor = Color.Navy;
+            linkForgotpassword.DisabledLinkColor = Color.White;
+            linkForgotpassword.LinkBehavior = LinkBehavior.NeverUnderline;
+            linkForgotpassword.LinkColor = Color.White;
+            linkForgotpassword.Location = new Point(226, 347);
+            linkForgotpassword.Name = "linkForgotpassword";
+            linkForgotpassword.Size = new Size(129, 20);
+            linkForgotpassword.TabIndex = 6;
+            linkForgotpassword.TabStop = true;
+            linkForgotpassword.Text = "Forgot Password ?";
+            linkForgotpassword.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // textBox4
+            // label2
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(51, 128);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(315, 44);
-            textBox4.TabIndex = 10;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(57, 268);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Password";
+            label2.Click += label2_Click_1;
             // 
-            // label6
+            // lbusername
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.White;
-            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Gray;
-            label6.Location = new Point(51, 214);
-            label6.Name = "label6";
-            label6.Size = new Size(80, 23);
-            label6.TabIndex = 9;
-            label6.Text = "Password";
-            label6.Click += label6_Click;
+            lbusername.AutoSize = true;
+            lbusername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbusername.ForeColor = Color.White;
+            lbusername.Location = new Point(57, 169);
+            lbusername.Name = "lbusername";
+            lbusername.Size = new Size(75, 20);
+            lbusername.TabIndex = 4;
+            lbusername.Text = "Username";
+            lbusername.Click += lable1_Click_1;
             // 
-            // label7
+            // txtpassword
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.White;
-            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Gray;
-            label7.Location = new Point(51, 102);
-            label7.Name = "label7";
-            label7.Size = new Size(87, 23);
-            label7.TabIndex = 8;
-            label7.Text = "Username";
-            label7.Click += label7_Click;
+            txtpassword.BorderColor = Color.Gray;
+            txtpassword.BorderRadius = 8;
+            txtpassword.CustomizableEdges = customizableEdges13;
+            txtpassword.DefaultText = "";
+            txtpassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtpassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtpassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtpassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtpassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtpassword.Font = new Font("Segoe UI", 9F);
+            txtpassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtpassword.Location = new Point(57, 292);
+            txtpassword.Margin = new Padding(3, 4, 3, 4);
+            txtpassword.Name = "txtpassword";
+            txtpassword.PlaceholderText = "";
+            txtpassword.SelectedText = "";
+            txtpassword.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtpassword.Size = new Size(298, 42);
+            txtpassword.TabIndex = 3;
+            txtpassword.TextChanged += txtpassword_TextChanged;
             // 
-            // label8
+            // txtusername
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.Highlight;
-            label8.Location = new Point(87, 9);
-            label8.Name = "label8";
-            label8.Size = new Size(225, 38);
-            label8.TabIndex = 7;
-            label8.Text = "Welcome Back !";
-            label8.Click += label8_Click;
+            txtusername.BorderColor = Color.Gray;
+            txtusername.BorderRadius = 8;
+            txtusername.CustomizableEdges = customizableEdges15;
+            txtusername.DefaultText = "";
+            txtusername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtusername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtusername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtusername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtusername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtusername.Font = new Font("Segoe UI", 9F);
+            txtusername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtusername.Location = new Point(57, 193);
+            txtusername.Margin = new Padding(3, 4, 3, 4);
+            txtusername.Name = "txtusername";
+            txtusername.PlaceholderText = "";
+            txtusername.SelectedText = "";
+            txtusername.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtusername.Size = new Size(298, 42);
+            txtusername.TabIndex = 2;
+            txtusername.TextChanged += guna2TextBox1_TextChanged;
             // 
-            // panel1
+            // lbLogin
             // 
-            panel1.BackColor = SystemColors.Highlight;
-            panel1.Location = new Point(454, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(401, 598);
-            panel1.TabIndex = 14;
+            lbLogin.AutoSize = true;
+            lbLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbLogin.ForeColor = Color.White;
+            lbLogin.Location = new Point(166, 111);
+            lbLogin.Name = "lbLogin";
+            lbLogin.Size = new Size(73, 28);
+            lbLogin.TabIndex = 1;
+            lbLogin.Text = "LOGIN";
+            lbLogin.Click += label1_Click;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = Color.Navy;
+            guna2PictureBox1.BorderRadius = 40;
+            guna2PictureBox1.CustomizableEdges = customizableEdges17;
+            guna2PictureBox1.FillColor = Color.Transparent;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(166, 13);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2PictureBox1.Size = new Size(83, 83);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2PictureBox1.TabIndex = 0;
+            guna2PictureBox1.TabStop = false;
+            guna2PictureBox1.Click += guna2PictureBox1_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(854, 597);
-            Controls.Add(panel1);
-            Controls.Add(btnLogin);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
-            Controls.Add(label6);
-            Controls.Add(label7);
-            Controls.Add(label8);
+            BackColor = Color.Navy;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(513, 636);
+            Controls.Add(guna2Panel1);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Login_Load;
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button btnLogin;
-        private Label label5;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Label lbLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtusername;
+        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        private Label lbusername;
+        private Label label2;
+        private LinkLabel linkForgotpassword;
+        private Guna.UI2.WinForms.Guna2GradientButton btnlogin;
     }
 }

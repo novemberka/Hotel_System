@@ -220,5 +220,176 @@ namespace Hotel_System
         {
 
         }
+
+        private void lblGust_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label15_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerInfo_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void dateTimePicker2_ValueChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void dateTimePicker1_ValueChanged_2(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox3_TextChanged_2(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2GroupBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnclear_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gReservatonlist_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,7 +42,6 @@ namespace Hotel_System
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,6 +50,26 @@ namespace Hotel_System
         }
 
         private void PaymentControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_3(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
 
         }

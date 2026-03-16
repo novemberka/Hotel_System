@@ -213,9 +213,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(765, 133);
+            pictureBox1.Location = new Point(752, 132);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(578, 296);
+            pictureBox1.Size = new Size(578, 301);
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -244,7 +244,7 @@
             dataGridView1.Location = new Point(90, 475);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1246, 185);
+            dataGridView1.Size = new Size(1246, 313);
             dataGridView1.TabIndex = 27;
             // 
             // PaymentID
@@ -285,13 +285,6 @@
             // 
             // RoomControl
             // 
-<<<<<<< HEAD
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "RoomControl";
-            Size = new Size(1453, 826);
-=======
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
@@ -316,11 +309,10 @@
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(2);
             Name = "RoomControl";
-            Size = new Size(1447, 662);
+            Size = new Size(1447, 791);
             Load += RoomControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
->>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
             ResumeLayout(false);
             PerformLayout();
         }
