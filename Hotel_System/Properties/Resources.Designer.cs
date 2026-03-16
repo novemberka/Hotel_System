@@ -83,6 +83,7 @@ namespace Hotel_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap bg {
             get {
                 object obj = ResourceManager.GetObject("bg", resourceCulture);
@@ -116,6 +117,11 @@ namespace Hotel_System.Properties {
         internal static System.Drawing.Bitmap minnn {
             get {
                 object obj = ResourceManager.GetObject("minnn", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap _421c92b86e158a207dda560714497bdf {
+            get {
+                object obj = ResourceManager.GetObject("421c92b86e158a207dda560714497bdf", resourceCulture);
+>>>>>>> b47b1c98146bd90a1fd0905ed853448cb9d984cf
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

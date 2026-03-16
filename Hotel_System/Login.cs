@@ -8,18 +8,18 @@ namespace Hotel_System
         {
             InitializeComponent();
         }
-       
 
-        
+
+
 
         private void Login_Load(object sender, EventArgs e)
         {
             txtusername.Text = txtpassword.Text;
             txtpassword.PasswordChar = '*';
-            
+
         }
 
-       
+
         private void btnlogin_Click(object sender, EventArgs e)
         {
             // Intentional: event handler stub. Implement login logic here.
@@ -50,14 +50,15 @@ namespace Hotel_System
             dashboard.Show();
             this.Hide();
         }
-         private void LoginFailed()
+        private void LoginFailed()
         {
             MessageBox.Show("Invalid username or password. Please try again.",
                 "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             txtpassword.Clear();
             txtpassword.Focus();
         }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
 
             MessageBox.Show("Please contact the system administrator to reset your password.",
                 "Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -78,11 +79,15 @@ namespace Hotel_System
         private void guna2TextBox1_TextChanged(object sender, EventArgs e) { }
         private void label1_Click_1(object sender, EventArgs e) { }
         private void label2_Click_1(object sender, EventArgs e) { }
-        
+
         // Added missing event handlers referenced by Login.Designer.cs
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void label3_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
