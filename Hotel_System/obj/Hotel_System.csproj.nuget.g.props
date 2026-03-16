@@ -7,7 +7,15 @@
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\USER\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+<<<<<<< HEAD
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">7.0.0</NuGetToolVersion>
+=======
+<<<<<<< HEAD
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">7.0.0</NuGetToolVersion>
+=======
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.14.2</NuGetToolVersion>
+>>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
+>>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\USER\.nuget\packages\" />
