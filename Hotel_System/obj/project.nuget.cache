@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "vGFlHcDOEaU=",
   "success": true,
   "projectFilePath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
@@ -9,15 +10,48 @@
     "C:\\Users\\sonita.sun\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.14\\microsoft.netcore.app.ref.9.0.14.nupkg.sha512",
     "C:\\Users\\sonita.sun\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.14\\microsoft.aspnetcore.app.ref.9.0.14.nupkg.sha512",
     "C:\\Users\\sonita.sun\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.14\\microsoft.netcore.app.host.win-x64.9.0.14.nupkg.sha512"
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "5/JuOCj1pXY=",
+  "success": true,
+  "projectFilePath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "FRLgHTSyVCA=",
+  "success": true,
+  "projectFilePath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+=======
+  "dgSpecHash": "r610LnAreqk=",
+  "success": true,
+  "projectFilePath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+>>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
+>>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.14\\microsoft.windowsdesktop.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.14\\microsoft.netcore.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.14\\microsoft.aspnetcore.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.14\\microsoft.netcore.app.host.win-x64.9.0.14.nupkg.sha512"
+>>>>>>> origin/vicheka
   ],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
+<<<<<<< HEAD
       "message": "Problem reading the cache file D:\\Hotel_System\\Hotel_System\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
       "projectPath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
       "warningLevel": 1,
       "filePath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+=======
+      "message": "Problem reading the cache file D:\\projects\\Hotel_System\\Hotel_System\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+>>>>>>> origin/vicheka
       "targetGraphs": []
     }
   ]

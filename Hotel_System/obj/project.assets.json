@@ -13,6 +13,62 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App"
         ]
+      },
+      "Guna.UI2.WinForms/2.0.4.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows7.0/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Guna.UI2.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "System.CodeDom/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Management/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
       }
     }
   },
@@ -33,32 +89,142 @@
         "lib/net8.0-windows7.0/FontAwesome.Sharp.dll",
         "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
+    },
+    "Guna.UI2.WinForms/2.0.4.7": {
+      "sha512": "8BdBYsfnntuICbFMHIZsd5morwURN8Ucsvq7wJeyLV1Z1ze6CAIxVKEirufgjGIiXfF0M0sCr9EVFloZSazWew==",
+      "type": "package",
+      "path": "guna.ui2.winforms/2.0.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "guna.ui2.winforms.2.0.4.7.nupkg.sha512",
+        "guna.ui2.winforms.nuspec",
+        "icon.png",
+        "lib/net40/Guna.UI2.dll",
+        "lib/net45/Guna.UI2.dll",
+        "lib/net461/Guna.UI2.dll",
+        "lib/net472/Guna.UI2.dll",
+        "lib/net48/Guna.UI2.dll",
+        "lib/net6.0-windows7.0/Guna.UI2.dll",
+        "lib/net7.0-windows7.0/Guna.UI2.dll",
+        "lib/netcoreapp3.1/Guna.UI2.dll"
+      ]
+    },
+    "System.CodeDom/7.0.0": {
+      "sha512": "GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "type": "package",
+      "path": "system.codedom/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.CodeDom.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
+        "lib/net462/System.CodeDom.dll",
+        "lib/net462/System.CodeDom.xml",
+        "lib/net6.0/System.CodeDom.dll",
+        "lib/net6.0/System.CodeDom.xml",
+        "lib/net7.0/System.CodeDom.dll",
+        "lib/net7.0/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.7.0.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Management/7.0.0": {
+      "sha512": "A4jed4QUviDOm7fJNKAJObEAEkEUXmkGL/w0iyCYTzrl1rezTj8LGFHfsVst4Vb9JwFcTpboiDrvdST48avBpw==",
+      "type": "package",
+      "path": "system.management/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Management.targets",
+        "lib/net462/_._",
+        "lib/net6.0/System.Management.dll",
+        "lib/net6.0/System.Management.xml",
+        "lib/net7.0/System.Management.dll",
+        "lib/net7.0/System.Management.xml",
+        "lib/netstandard2.0/System.Management.dll",
+        "lib/netstandard2.0/System.Management.xml",
+        "runtimes/win/lib/net6.0/System.Management.dll",
+        "runtimes/win/lib/net6.0/System.Management.xml",
+        "runtimes/win/lib/net7.0/System.Management.dll",
+        "runtimes/win/lib/net7.0/System.Management.xml",
+        "system.management.7.0.0.nupkg.sha512",
+        "system.management.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
-      "FontAwesome.Sharp >= 6.6.0"
+      "FontAwesome.Sharp >= 6.6.0",
+      "Guna.UI2.WinForms >= 2.0.4.7"
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\sonita.sun\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
+>>>>>>> origin/vicheka
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
       "projectName": "Hotel_System",
       "projectPath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
       "packagesPath": "C:\\Users\\sonita.sun\\.nuget\\packages\\",
       "outputPath": "D:\\Hotel_System\\Hotel_System\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "projectName": "Hotel_System",
+      "projectPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
+=======
+      "projectUniqueName": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+>>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
+      "projectName": "Hotel_System",
+      "projectPath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+<<<<<<< HEAD
+      "outputPath": "D:\\projects\\Hotel_System\\Hotel_System\\obj\\",
+=======
+      "outputPath": "D:\\Hotel_System\\Hotel_System\\obj\\",
+>>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
+>>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
+>>>>>>> origin/vicheka
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\sonita.sun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/vicheka
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -86,7 +252,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
+<<<<<<< HEAD
       "SdkAnalysisLevel": "10.0.200"
+=======
+      "SdkAnalysisLevel": "10.0.100"
+>>>>>>> origin/vicheka
     },
     "frameworks": {
       "net9.0-windows7.0": {
@@ -96,6 +266,10 @@
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[6.6.0, )"
+          },
+          "Guna.UI2.WinForms": {
+            "target": "Package",
+            "version": "[2.0.4.7, )"
           }
         },
         "imports": [
@@ -135,7 +309,19 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
+>>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
+>>>>>>> origin/vicheka
       }
     }
   },
@@ -144,7 +330,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file D:\\Hotel_System\\Hotel_System\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+=======
+      "message": "Problem reading the cache file D:\\projects\\Hotel_System\\Hotel_System\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+>>>>>>> origin/vicheka
     }
   ]
 }
