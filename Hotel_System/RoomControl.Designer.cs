@@ -289,18 +289,17 @@
             // 
             // RoomControl
             // 
-<<<<<<< HEAD
+
             AutoScaleDimensions = new SizeF(11F, 25F);
-=======
-<<<<<<< HEAD
+
+
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Margin = new Padding(2, 2, 2, 2);
             Name = "RoomControl";
             Size = new Size(1453, 826);
-=======
+
             AutoScaleDimensions = new SizeF(9F, 20F);
->>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
             Controls.Add(label7);
@@ -328,7 +327,6 @@
             Load += RoomControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
->>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
             ResumeLayout(false);
             PerformLayout();
         }

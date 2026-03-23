@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
   },
   "projects": {
@@ -13,52 +12,13 @@
         "projectPath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
         "packagesPath": "C:\\Users\\sonita.sun\\.nuget\\packages\\",
         "outputPath": "D:\\Hotel_System\\Hotel_System\\obj\\",
-=======
-<<<<<<< HEAD
-    "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
-=======
-<<<<<<< HEAD
-    "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
-  },
-  "projects": {
-    "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-        "projectName": "Hotel_System",
-        "projectPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\obj\\",
-=======
-    "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
->>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
-  },
-  "projects": {
-    "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-        "projectName": "Hotel_System",
-        "projectPath": "D:\\projects\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-<<<<<<< HEAD
-        "outputPath": "D:\\projects\\Hotel_System\\Hotel_System\\obj\\",
-=======
-        "outputPath": "D:\\Hotel_System\\Hotel_System\\obj\\",
->>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
->>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
->>>>>>> origin/vicheka
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\sonita.sun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/vicheka
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,11 +46,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-<<<<<<< HEAD
         "SdkAnalysisLevel": "10.0.200"
-=======
-        "SdkAnalysisLevel": "10.0.100"
->>>>>>> origin/vicheka
       },
       "frameworks": {
         "net9.0-windows7.0": {
@@ -104,6 +60,14 @@
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.7, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.6.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.5.0, )"
             }
           },
           "imports": [
@@ -143,19 +107,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json"
-=======
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
->>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
->>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
->>>>>>> origin/vicheka
         }
       }
     }
