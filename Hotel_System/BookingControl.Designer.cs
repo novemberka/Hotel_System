@@ -930,7 +930,7 @@
             label8.TabIndex = 78;
             label8.Text = "Occupied";
             // 
-            // label9
+            // lbBookingID
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.White;
