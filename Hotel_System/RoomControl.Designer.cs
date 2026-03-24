@@ -289,6 +289,19 @@
             // 
             // RoomControl
             // 
+<<<<<<< HEAD
+=======
+
+            AutoScaleDimensions = new SizeF(11F, 25F);
+
+
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "RoomControl";
+            Size = new Size(1453, 826);
+
+>>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
