@@ -1020,7 +1020,7 @@
             // 
             // BookingControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             BorderStyle = BorderStyle.FixedSingle;

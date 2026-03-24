@@ -66,21 +66,13 @@
               "target": "Package",
               "version": "[2.0.4.7, )"
             },
-            "HIC.System.Windows.Forms.DataVisualization": {
+            "MySql.Data": {
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[9.6.0, )"
             },
-            "LiveCharts.WinForms": {
+            "MySqlConnector": {
               "target": "Package",
-              "version": "[0.9.7.1, )"
-            },
-            "LiveCharts.WinForms.NetCore3": {
-              "target": "Package",
-              "version": "[0.9.8, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
+              "version": "[2.5.0, )"
             }
           },
           "imports": [

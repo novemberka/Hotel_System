@@ -13,9 +13,4 @@
     <SourceRoot Include="C:\Users\ACER\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_SqlServer_Types Condition=" '$(PkgMicrosoft_SqlServer_Types)' == '' ">C:\Users\ACER\.nuget\packages\microsoft.sqlserver.types\14.0.314.76</PkgMicrosoft_SqlServer_Types>
-    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\ACER\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
-    <PkgLiveCharts_WinForms Condition=" '$(PkgLiveCharts_WinForms)' == '' ">C:\Users\ACER\.nuget\packages\livecharts.winforms\0.9.7.1</PkgLiveCharts_WinForms>
-  </PropertyGroup>
 </Project>

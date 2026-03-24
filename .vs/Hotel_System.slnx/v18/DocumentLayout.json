@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Hotel Project\\Hotel_System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel project\\hotel_system\\hotel_system\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel project\\hotel_system\\hotel_system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel project\\hotel_system\\hotel_system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel project\\hotel_system\\hotel_system\\customer_report.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\customer_report.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
@@ -33,6 +45,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel Project\\Hotel_System\\hotel_system\\history_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\history_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel project\\hotel_system\\hotel_system\\hotel_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\hotel_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,23 +58,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Hotel_System",
+              "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+              "RelativeDocumentMoniker": "Hotel_System\\Hotel_System.csproj",
+              "ToolTip": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+              "RelativeToolTip": "Hotel_System\\Hotel_System.csproj",
+              "ViewState": "AgIAABYAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-24T17:09:42.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Login.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Login.cs",
+              "ToolTip": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Login.cs",
+              "RelativeToolTip": "Hotel_System\\Login.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T16:57:08.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Login.Designer.cs",
+              "ToolTip": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Login.Designer.cs",
+              "RelativeToolTip": "Hotel_System\\Login.Designer.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAYwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T16:53:08.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Login.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Login.cs",
+              "ToolTip": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Login.cs [Design]",
+              "RelativeToolTip": "Hotel_System\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T16:52:57.267Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Customer_Report.rdlc [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Customer_Report.rdlc",
               "RelativeDocumentMoniker": "Hotel_System\\Customer_Report.rdlc",
-              "ToolTip": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Customer_Report.rdlc [Design]*",
-              "RelativeToolTip": "Hotel_System\\Customer_Report.rdlc [Design]*",
+              "ToolTip": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Customer_Report.rdlc [Design]",
+              "RelativeToolTip": "Hotel_System\\Customer_Report.rdlc [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
               "WhenOpened": "2026-03-24T16:24:43.552Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Payment_History.cs",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Payment_History.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Payment_History.cs",
@@ -71,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Report_Booking.cs [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Report_Booking.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Report_Booking.cs",
@@ -82,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Report_WalkIn.cs [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Report_WalkIn.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Report_WalkIn.cs",
@@ -93,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "PaymentControl.cs [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\PaymentControl.cs",
               "RelativeDocumentMoniker": "Hotel_System\\PaymentControl.cs",
@@ -104,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Payment_History.cs [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\Payment_History.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Payment_History.cs",
@@ -115,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "History_Booking.cs [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\History_Booking.cs",
               "RelativeDocumentMoniker": "Hotel_System\\History_Booking.cs",
@@ -126,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "BookingControl.cs [Design]",
               "DocumentMoniker": "D:\\Hotel Project\\Hotel_System\\Hotel_System\\BookingControl.cs",
               "RelativeDocumentMoniker": "Hotel_System\\BookingControl.cs",
