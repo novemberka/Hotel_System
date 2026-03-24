@@ -83,7 +83,16 @@ namespace Hotel_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
+        internal static System.Drawing.Bitmap _421c92b86e158a207dda560714497bdf {
+            get {
+                object obj = ResourceManager.GetObject("421c92b86e158a207dda560714497bdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg {
             get {
                 object obj = ResourceManager.GetObject("bg", resourceCulture);
@@ -104,6 +113,16 @@ namespace Hotel_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon {
+            get {
+                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ll {
             get {
                 object obj = ResourceManager.GetObject("ll", resourceCulture);
@@ -114,14 +133,19 @@ namespace Hotel_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minn {
+            get {
+                object obj = ResourceManager.GetObject("minn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minnn {
             get {
                 object obj = ResourceManager.GetObject("minnn", resourceCulture);
-=======
-        internal static System.Drawing.Bitmap _421c92b86e158a207dda560714497bdf {
-            get {
-                object obj = ResourceManager.GetObject("421c92b86e158a207dda560714497bdf", resourceCulture);
->>>>>>> b47b1c98146bd90a1fd0905ed853448cb9d984cf
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

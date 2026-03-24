@@ -1,4 +1,8 @@
+using System;
+using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Hotel_System
 {
@@ -8,15 +12,38 @@ namespace Hotel_System
         {
             InitializeComponent();
         }
-
-
-
-
         private void Login_Load(object sender, EventArgs e)
         {
             txtusername.Text = txtpassword.Text;
             txtpassword.PasswordChar = '*';
+            try
+            {
+               
+                string appDataFolder = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "HotelSystem"
+                );
 
+                if (Directory.Exists(appDataFolder))
+                {
+                    var files = Directory.GetFiles(appDataFolder, "profile_picture.*");
+                    if (files.Length > 0)
+                    {
+                        try
+                        {
+                            guna2CirclePictureBox1.Image = Image.FromFile(files[0]);
+                        }
+                        catch
+                        {
+                            // ignore and continue with default image
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // ignore any errors loading a saved profile picture
+            }
         }
 
 
@@ -39,6 +66,14 @@ namespace Hotel_System
                     "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtpassword.Focus();
                 return;
+            }
+            if(username == "admin" && password == "admin")
+            {
+                LoginSuccess(username);
+            }
+            else
+            {
+                LoginFailed();
             }
         }
         private void LoginSuccess(string username = "")
@@ -65,6 +100,65 @@ namespace Hotel_System
 
 
         }
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Select Profile Picture";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string selectedFilePath = openFileDialog.FileName;
+                        Image selectedImage = Image.FromFile(selectedFilePath);
+
+                        // Set the image to the CirclePictureBox
+                        guna2CirclePictureBox1.Image = selectedImage;
+
+                        // Optional: Save the image path to user settings or database
+                        SaveProfilePicture(selectedFilePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Failed to load image: {ex.Message}",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void SaveProfilePicture(string imagePath)
+        {
+            try
+            {
+                // Optionally persist the chosen path in user settings if available.
+                // The project may not include a Settings class, so skip that step here.
+                string appDataFolder = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "HotelSystem"
+                );
+
+                if (!Directory.Exists(appDataFolder))
+                    Directory.CreateDirectory(appDataFolder);
+
+                string destinationPath = Path.Combine(appDataFolder, "profile_picture" +
+                    Path.GetExtension(imagePath));
+
+                File.Copy(imagePath, destinationPath, overwrite: true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not save profile picture: {ex.Message}",
+                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+        // Removed duplicate SaveProfilePicture overload (kept single implementation above)
 
         private void lable1_Click_1(object sender, EventArgs e) { }
 
@@ -79,8 +173,6 @@ namespace Hotel_System
         private void guna2TextBox1_TextChanged(object sender, EventArgs e) { }
         private void label1_Click_1(object sender, EventArgs e) { }
         private void label2_Click_1(object sender, EventArgs e) { }
-
-        // Added missing event handlers referenced by Login.Designer.cs
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void label3_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
@@ -89,5 +181,7 @@ namespace Hotel_System
         {
 
         }
+
+        }
     }
-}
+

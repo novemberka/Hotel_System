@@ -9,13 +9,14 @@ using System.Windows.Forms;
 
 namespace Hotel_System
 {
+   
     public partial class Dashboard : Form
     {
         private void LoadUserControl(UserControl uc)
         {
-            Content.Controls.Clear();  // Remove previous page
+            contentPanel.Controls.Clear();  // Remove previous page
             uc.Dock = DockStyle.Fill;   // Fill the panel
-            Content.Controls.Add(uc); // Add new page
+            contentPanel.Controls.Add(uc); // Add new pagez
         }
         public Dashboard()
         {

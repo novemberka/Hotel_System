@@ -62,22 +62,17 @@
             panel1.Controls.Add(tableLayoutPanel1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Padding = new Padding(0, 120, 0, 56);
-            panel1.Size = new Size(190, 731);
-
             panel1.Padding = new Padding(0, 150, 0, 300);
             panel1.Size = new Size(290, 1000);
-
             panel1.TabIndex = 0;
-      
-            pictureBox1.Image = Properties.Resources._2eb6e65cddc26fd117cc3d8979b979b8_Photoroom_1;
-            pictureBox1.Location = new Point(44, 23);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            // 
+            // pictureBox1
+            // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(80, 29);
-
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(84, 74);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -97,8 +92,8 @@
             tableLayoutPanel1.Controls.Add(room_menu, 0, 2);
             tableLayoutPanel1.Controls.Add(booking_menu, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 120);
-            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
+            tableLayoutPanel1.Location = new Point(0, 150);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
@@ -108,11 +103,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-
-          tableLayoutPanel1.Size = new Size(190, 555);
-
             tableLayoutPanel1.Size = new Size(290, 550);
-
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -129,19 +120,11 @@
             logout_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             logout_menu.IconSize = 35;
             logout_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            logout_menu.Location = new Point(2, 476);
-            logout_menu.Margin = new Padding(2, 2, 2, 2);
-            logout_menu.Name = "logout_menu";
-            logout_menu.Padding = new Padding(8, 0, 0, 0);
-            logout_menu.Size = new Size(186, 77);
-
             logout_menu.Location = new Point(10, 478);
             logout_menu.Margin = new Padding(10);
             logout_menu.Name = "logout_menu";
             logout_menu.Padding = new Padding(10, 0, 0, 0);
             logout_menu.Size = new Size(270, 62);
-
             logout_menu.TabIndex = 7;
             logout_menu.Text = "Logout";
             logout_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -161,19 +144,11 @@
             payment_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             payment_menu.IconSize = 35;
             payment_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            payment_menu.Location = new Point(2, 397);
-            payment_menu.Margin = new Padding(2, 2, 2, 2);
-            payment_menu.Name = "payment_menu";
-            payment_menu.Padding = new Padding(8, 0, 0, 0);
-            payment_menu.Size = new Size(186, 75);
-
             payment_menu.Location = new Point(10, 400);
             payment_menu.Margin = new Padding(10);
             payment_menu.Name = "payment_menu";
             payment_menu.Padding = new Padding(10, 0, 0, 0);
             payment_menu.Size = new Size(270, 58);
-
             payment_menu.TabIndex = 6;
             payment_menu.Text = "Payment";
             payment_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -193,19 +168,11 @@
             customer_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             customer_menu.IconSize = 35;
             customer_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            customer_menu.Location = new Point(2, 318);
-            customer_menu.Margin = new Padding(2, 2, 2, 2);
-            customer_menu.Name = "customer_menu";
-            customer_menu.Padding = new Padding(8, 0, 0, 0);
-            customer_menu.Size = new Size(186, 75);
-
             customer_menu.Location = new Point(10, 322);
             customer_menu.Margin = new Padding(10);
             customer_menu.Name = "customer_menu";
             customer_menu.Padding = new Padding(10, 0, 0, 0);
             customer_menu.Size = new Size(270, 58);
-
             customer_menu.TabIndex = 5;
             customer_menu.Text = "Customer Mangement";
             customer_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -225,19 +192,11 @@
             checkin_checkout_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             checkin_checkout_menu.IconSize = 35;
             checkin_checkout_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            checkin_checkout_menu.Location = new Point(2, 239);
-            checkin_checkout_menu.Margin = new Padding(2, 2, 2, 2);
-            checkin_checkout_menu.Name = "checkin_checkout_menu";
-            checkin_checkout_menu.Padding = new Padding(8, 0, 0, 0);
-            checkin_checkout_menu.Size = new Size(186, 75);
-
             checkin_checkout_menu.Location = new Point(10, 244);
             checkin_checkout_menu.Margin = new Padding(10);
             checkin_checkout_menu.Name = "checkin_checkout_menu";
             checkin_checkout_menu.Padding = new Padding(10, 0, 0, 0);
             checkin_checkout_menu.Size = new Size(270, 58);
-
             checkin_checkout_menu.TabIndex = 4;
             checkin_checkout_menu.Text = "CheckIn & CheckOut";
             checkin_checkout_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -257,19 +216,11 @@
             dashboard_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             dashboard_menu.IconSize = 35;
             dashboard_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            dashboard_menu.Location = new Point(2, 2);
-            dashboard_menu.Margin = new Padding(2, 2, 2, 2);
-            dashboard_menu.Name = "dashboard_menu";
-            dashboard_menu.Padding = new Padding(8, 0, 0, 0);
-            dashboard_menu.Size = new Size(186, 75);
-
             dashboard_menu.Location = new Point(10, 10);
             dashboard_menu.Margin = new Padding(10);
             dashboard_menu.Name = "dashboard_menu";
             dashboard_menu.Padding = new Padding(10, 0, 0, 0);
             dashboard_menu.Size = new Size(270, 58);
-
             dashboard_menu.TabIndex = 3;
             dashboard_menu.Text = "Dashboard";
             dashboard_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -289,19 +240,11 @@
             room_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             room_menu.IconSize = 35;
             room_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            room_menu.Location = new Point(2, 160);
-            room_menu.Margin = new Padding(2, 2, 2, 2);
-            room_menu.Name = "room_menu";
-            room_menu.Padding = new Padding(8, 0, 0, 0);
-            room_menu.Size = new Size(186, 75);
-
             room_menu.Location = new Point(10, 166);
             room_menu.Margin = new Padding(10);
             room_menu.Name = "room_menu";
             room_menu.Padding = new Padding(10, 0, 0, 0);
             room_menu.Size = new Size(270, 58);
-
             room_menu.TabIndex = 2;
             room_menu.Text = "Room Mangement";
             room_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -321,18 +264,11 @@
             booking_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             booking_menu.IconSize = 35;
             booking_menu.ImageAlign = ContentAlignment.MiddleLeft;
-
-            booking_menu.Location = new Point(2, 81);
-            booking_menu.Margin = new Padding(2, 2, 2, 2);
-            booking_menu.Name = "booking_menu";
-            booking_menu.Padding = new Padding(8, 0, 0, 0);
-            booking_menu.Size = new Size(186, 75);
             booking_menu.Location = new Point(10, 88);
             booking_menu.Margin = new Padding(10);
             booking_menu.Name = "booking_menu";
             booking_menu.Padding = new Padding(10, 0, 0, 0);
             booking_menu.Size = new Size(270, 58);
-
             booking_menu.TabIndex = 0;
             booking_menu.Text = "Booking Management";
             booking_menu.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -342,19 +278,12 @@
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
-            panel2.Controls.Add(contentPanel);
             panel2.Controls.Add(profile);
             panel2.Dock = DockStyle.Top;
-
-            panel2.Location = new Point(190, 0);
-            panel2.Margin = new Padding(2, 2, 2, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1292, 62);
-
             panel2.Location = new Point(290, 0);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(1563, 77);
-
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -364,9 +293,10 @@
             contentPanel.Controls.Add(lblTittle);
             contentPanel.Controls.Add(guna2CirclePictureBox1);
             contentPanel.Dock = DockStyle.Fill;
-            contentPanel.Location = new Point(0, 0);
+            contentPanel.Location = new Point(290, 77);
+            contentPanel.Margin = new Padding(2);
             contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(1563, 77);
+            contentPanel.Size = new Size(1563, 923);
             contentPanel.TabIndex = 2;
             contentPanel.Paint += contentPanel_Paint;
             // 
@@ -377,7 +307,7 @@
             lblTittle.ForeColor = Color.White;
             lblTittle.Location = new Point(48, 29);
             lblTittle.Name = "lblTittle";
-            lblTittle.Size = new Size(159, 38);
+            lblTittle.Size = new Size(138, 32);
             lblTittle.TabIndex = 1;
             lblTittle.Text = "Dashboard";
             // 
@@ -386,7 +316,7 @@
             guna2CirclePictureBox1.BackgroundImageLayout = ImageLayout.Center;
             guna2CirclePictureBox1.Image = (Image)resources.GetObject("guna2CirclePictureBox1.Image");
             guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(1466, 14);
+            guna2CirclePictureBox1.Location = new Point(1468, 15);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -399,7 +329,7 @@
             // 
             profile.Image = Properties.Resources._0e7f6006e9273ec44255aaa391107a73;
             profile.Location = new Point(1226, 10);
-            profile.Margin = new Padding(2, 2, 2, 2);
+            profile.Margin = new Padding(2);
             profile.Name = "profile";
             profile.Size = new Size(48, 48);
             profile.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -410,37 +340,24 @@
             // 
             // Content
             // 
-
-            contentPanel.Location = new Point(358, 164);
-            contentPanel.Margin = new Padding(2, 2, 2, 2);
-            contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(1124, 427);
-            contentPanel.TabIndex = 2;
-            contentPanel.Paint += contentPanel_Paint;
-
             Content.BackColor = Color.Azure;
             Content.Dock = DockStyle.Fill;
             Content.Location = new Point(290, 77);
             Content.Name = "Content";
             Content.Size = new Size(1563, 923);
             Content.TabIndex = 2;
-
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-
-            ClientSize = new Size(1482, 731);
-            Controls.Add(contentPanel);
-
             ClientSize = new Size(1853, 1000);
+            Controls.Add(contentPanel);
             Controls.Add(Content);
-
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Dashboard";
             Text = "Dashboard";
             Load += Dashboard_Load;

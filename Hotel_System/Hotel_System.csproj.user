@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="History_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Payment_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="BookingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -25,11 +37,32 @@
     <Compile Update="PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Report_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Report_CheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Report_Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Report_WalkIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Walk-In.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="BookingControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Login.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

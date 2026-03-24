@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomControl));
-            label1 = new Label();
             button1 = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
@@ -53,22 +52,10 @@
             PaymentDate = new DataGridViewTextBoxColumn();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.MidnightBlue;
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(1447, 90);
-            label1.TabIndex = 0;
-            label1.Text = "Room Manangement";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -98,7 +85,7 @@
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(123, 146);
             label2.Name = "label2";
-            label2.Size = new Size(105, 30);
+            label2.Size = new Size(85, 23);
             label2.TabIndex = 6;
             label2.Text = "Room ID:";
             label2.Click += label2_Click;
@@ -124,7 +111,7 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(562, 478);
+            button4.Location = new Point(720, 476);
             button4.Name = "button4";
             button4.Size = new Size(120, 44);
             button4.TabIndex = 9;
@@ -134,7 +121,7 @@
             // button5
             // 
             button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(708, 477);
+            button5.Location = new Point(569, 476);
             button5.Name = "button5";
             button5.Size = new Size(120, 44);
             button5.TabIndex = 10;
@@ -146,7 +133,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(123, 197);
             label3.Name = "label3";
-            label3.Size = new Size(142, 25);
+            label3.Size = new Size(118, 20);
             label3.TabIndex = 11;
             label3.Text = "Room Number:";
             // 
@@ -156,7 +143,7 @@
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(123, 259);
             label4.Name = "label4";
-            label4.Size = new Size(129, 30);
+            label4.Size = new Size(105, 23);
             label4.TabIndex = 12;
             label4.Text = "Room Type:";
             // 
@@ -166,7 +153,7 @@
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(123, 321);
             label5.Name = "label5";
-            label5.Size = new Size(61, 30);
+            label5.Size = new Size(49, 23);
             label5.TabIndex = 13;
             label5.Text = "Price";
             // 
@@ -176,7 +163,7 @@
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(123, 374);
             label6.Name = "label6";
-            label6.Size = new Size(73, 30);
+            label6.Size = new Size(60, 23);
             label6.TabIndex = 14;
             label6.Text = "Status";
             // 
@@ -216,7 +203,7 @@
             label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(1093, 107);
             label7.Name = "label7";
-            label7.Size = new Size(141, 30);
+            label7.Size = new Size(111, 23);
             label7.TabIndex = 19;
             label7.Text = "Type of room";
             // 
@@ -275,7 +262,7 @@
             comboBox2.Items.AddRange(new object[] { "Available", "Occupied", "Reserved", "Maintenance" });
             comboBox2.Location = new Point(253, 369);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(368, 33);
+            comboBox2.Size = new Size(368, 28);
             comboBox2.TabIndex = 17;
             // 
             // comboBox1
@@ -284,8 +271,21 @@
             comboBox1.Items.AddRange(new object[] { "Single Room", "", "Double Room", "Deluxe Room", "Luxury Room", "Family Room" });
             comboBox1.Location = new Point(253, 254);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(368, 33);
+            comboBox1.Size = new Size(368, 28);
             comboBox1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.MidnightBlue;
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(1447, 90);
+            label1.TabIndex = 0;
+            label1.Text = "Room Manangement";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // RoomControl
             // 
@@ -322,8 +322,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Button button1;
         private TextBox textBox1;
         private Label label2;
@@ -347,5 +345,6 @@
         private DataGridViewTextBoxColumn RoomNumber;
         private DataGridViewTextBoxColumn TotalAmount;
         private DataGridViewTextBoxColumn PaymentDate;
+        private Label label1;
     }
 }
