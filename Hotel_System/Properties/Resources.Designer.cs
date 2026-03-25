@@ -79,5 +79,15 @@ namespace Hotel_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _421c92b86e158a207dda560714497bdf {
+            get {
+                object obj = ResourceManager.GetObject("421c92b86e158a207dda560714497bdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

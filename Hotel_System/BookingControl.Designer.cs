@@ -54,6 +54,8 @@
             panel3 = new Panel();
             label6 = new Label();
             groupBox1 = new GroupBox();
+            textBox10 = new TextBox();
+            lbBookingID = new Label();
             textBox9 = new TextBox();
             lbTotal = new Label();
             textBox8 = new TextBox();
@@ -79,7 +81,6 @@
             panel11 = new Panel();
             lbStatus = new Label();
             gReservatonlist = new GroupBox();
-            label17 = new Label();
             dataGridView1 = new DataGridView();
             BookingID = new DataGridViewTextBoxColumn();
             GuestName = new DataGridViewTextBoxColumn();
@@ -88,8 +89,7 @@
             CheckIn = new DataGridViewTextBoxColumn();
             Checkout = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
-            lbBookingID = new Label();
-            textBox10 = new TextBox();
+            label17 = new Label();
             lblGust.SuspendLayout();
             panel1.SuspendLayout();
             RoomAvailable.SuspendLayout();
@@ -122,6 +122,7 @@
             lblGust.TabIndex = 0;
             lblGust.TabStop = false;
             lblGust.Text = "Gust Information";
+            lblGust.Enter += lblGust_Enter;
             // 
             // textBox5
             // 
@@ -242,6 +243,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1453, 46);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint_1;
             // 
             // label1
             // 
@@ -422,6 +424,27 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Booking Information";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // textBox10
+            // 
+            textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Location = new Point(149, 29);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(192, 35);
+            textBox10.TabIndex = 39;
+            // 
+            // lbBookingID
+            // 
+            lbBookingID.AutoSize = true;
+            lbBookingID.BackColor = Color.White;
+            lbBookingID.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbBookingID.ForeColor = Color.Black;
+            lbBookingID.Location = new Point(26, 42);
+            lbBookingID.Name = "lbBookingID";
+            lbBookingID.Size = new Size(89, 20);
+            lbBookingID.TabIndex = 38;
+            lbBookingID.Text = "Booking ID:";
             // 
             // textBox9
             // 
@@ -702,17 +725,6 @@
             gReservatonlist.TabStop = false;
             gReservatonlist.Text = "Reservation List";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.BackColor = Color.White;
-            label17.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.Black;
-            label17.Location = new Point(580, 155);
-            label17.Name = "label17";
-            label17.Size = new Size(0, 20);
-            label17.TabIndex = 26;
-            // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.White;
@@ -775,26 +787,16 @@
             Status.Name = "Status";
             Status.Width = 200;
             // 
-            // lbBookingID
+            // label17
             // 
-            lbBookingID.AutoSize = true;
-            lbBookingID.BackColor = Color.White;
-            lbBookingID.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbBookingID.ForeColor = Color.Black;
-            lbBookingID.Location = new Point(26, 42);
-            lbBookingID.Name = "lbBookingID";
-            lbBookingID.Size = new Size(89, 20);
-            lbBookingID.TabIndex = 38;
-            lbBookingID.Text = "Booking ID:";
-            // 
-            // textBox10
-            // 
-            textBox10.BorderStyle = BorderStyle.FixedSingle;
-            textBox10.Location = new Point(149, 29);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(192, 35);
-            textBox10.TabIndex = 39;
+            label17.AutoSize = true;
+            label17.BackColor = Color.White;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.Black;
+            label17.Location = new Point(580, 155);
+            label17.Name = "label17";
+            label17.Size = new Size(0, 20);
+            label17.TabIndex = 26;
             // 
             // BookingControl
             // 

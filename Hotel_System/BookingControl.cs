@@ -220,5 +220,15 @@ namespace Hotel_System
         {
 
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblGust_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
