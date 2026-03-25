@@ -12,18 +12,12 @@ namespace Hotel_System
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
         private void Login_Load(object sender, EventArgs e)
         {
             txtusername.Text = txtpassword.Text;
             txtpassword.PasswordChar = '*';
-<<<<<<< HEAD
+
             try
             {
                
@@ -31,8 +25,7 @@ namespace Hotel_System
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                     "HotelSystem"
                 );
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
+
 
                 if (Directory.Exists(appDataFolder))
                 {
@@ -77,7 +70,7 @@ namespace Hotel_System
                 txtpassword.Focus();
                 return;
             }
-<<<<<<< HEAD
+
             if(username == "admin" && password == "admin")
             {
                 LoginSuccess(username);
@@ -86,8 +79,7 @@ namespace Hotel_System
             {
                 LoginFailed();
             }
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
+
         }
         private void LoginSuccess(string username = "")
         {
@@ -106,7 +98,7 @@ namespace Hotel_System
             txtpassword.Focus();
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-<<<<<<< HEAD
+
         {
 
             MessageBox.Show("Please contact the system administrator to reset your password.",
@@ -172,10 +164,11 @@ namespace Hotel_System
         }
 
 
+
         // Removed duplicate SaveProfilePicture overload (kept single implementation above)
 
+        // Designer event handler stubs (one copy each)
         private void lable1_Click_1(object sender, EventArgs e) { }
-
         private void txtpassword_TextChanged(object sender, EventArgs e) { }
         private void label7_Click(object sender, EventArgs e) { }
         private void label6_Click(object sender, EventArgs e) { }
@@ -190,43 +183,7 @@ namespace Hotel_System
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void label3_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
+        private void iconButton1_Click(object sender, EventArgs e) { }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
-        {
-
-            MessageBox.Show("Please contact the system administrator to reset your password.",
-                "Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-<<<<<<< HEAD
-=======
-
-        }
-
-        private void lable1_Click_1(object sender, EventArgs e) { }
-
-        private void txtpassword_TextChanged(object sender, EventArgs e) { }
-        private void label7_Click(object sender, EventArgs e) { }
-        private void label6_Click(object sender, EventArgs e) { }
-        private void label8_Click(object sender, EventArgs e) { }
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e) { }
-        private void guna2Panel1_Paint_1(object sender, PaintEventArgs e) { }
-        private void guna2PictureBox1_Click(object sender, EventArgs e) { }
-        private void label1_Click(object sender, EventArgs e) { }
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e) { }
-        private void label1_Click_1(object sender, EventArgs e) { }
-        private void label2_Click_1(object sender, EventArgs e) { }
-
-        // Added missing event handlers referenced by Login.Designer.cs
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void label3_Click(object sender, EventArgs e) { }
-        private void label2_Click(object sender, EventArgs e) { }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
-        }
     }
 

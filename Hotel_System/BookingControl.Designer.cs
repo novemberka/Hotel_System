@@ -50,7 +50,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-<<<<<<< HEAD
+
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -77,7 +77,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gReservatonlist = new GroupBox();
             label25 = new Label();
-=======
+
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -105,7 +105,7 @@
             label16 = new Label();
             label25 = new Label();
             label29 = new Label();
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
+
             dataGridView1 = new DataGridView();
             BookingID = new DataGridViewTextBoxColumn();
             CustomerName = new DataGridViewTextBoxColumn();
@@ -1855,7 +1855,6 @@
         private GroupBox gReservatonlist;
         private Label label17;
         private DataGridView dataGridView1;
-<<<<<<< HEAD
         private Guna.UI2.WinForms.Guna2Button btnadd;
         private Guna.UI2.WinForms.Guna2Button btnupdate;
         private Guna.UI2.WinForms.Guna2Button btncancel;
@@ -1903,8 +1902,7 @@
         private Label label11;
         private Panel panel5;
         private Guna.UI2.WinForms.Guna2TextBox txtnote;
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
+
         private DataGridViewTextBoxColumn BookingID;
         private DataGridViewTextBoxColumn CustomerName;
         private DataGridViewTextBoxColumn PhoneNumber;
@@ -1912,9 +1910,9 @@
         private DataGridViewTextBoxColumn CheckIn;
         private DataGridViewTextBoxColumn Checkout;
         private DataGridViewTextBoxColumn Status;
-<<<<<<< HEAD
+
         private DataGridViewTextBoxColumn Note;
-=======
+
         private Guna.UI2.WinForms.Guna2Button btnadd;
         private Guna.UI2.WinForms.Guna2Button btnupdate;
         private Guna.UI2.WinForms.Guna2Button btncancel;
@@ -1961,6 +1959,6 @@
         private Label label10;
         private Label label11;
         private Panel panel5;
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
+
     }
 }

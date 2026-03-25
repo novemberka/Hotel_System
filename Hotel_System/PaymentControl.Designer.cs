@@ -50,28 +50,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-<<<<<<< HEAD
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-<<<<<<< HEAD
-=======
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -97,12 +85,9 @@
             label13 = new Label();
             label14 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-<<<<<<< HEAD
             guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             label15 = new Label();
@@ -110,16 +95,7 @@
             label19 = new Label();
             label20 = new Label();
             label23 = new Label();
-<<<<<<< HEAD
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            RBWing = new RadioButton();
-            RBABA = new RadioButton();
-=======
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GroupBox1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
@@ -137,20 +113,13 @@
             btnPrint.FillColor = Color.MidnightBlue;
             btnPrint.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPrint.ForeColor = Color.White;
-<<<<<<< HEAD
             btnPrint.Location = new Point(590, 626);
-=======
-            btnPrint.Location = new Point(388, 626);
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             btnPrint.Name = "btnPrint";
             btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPrint.Size = new Size(143, 49);
             btnPrint.TabIndex = 48;
             btnPrint.Text = "Print Invoice";
-<<<<<<< HEAD
             btnPrint.Click += btnPrint_Click;
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             // 
             // btnCancel
             // 
@@ -163,11 +132,7 @@
             btnCancel.FillColor = Color.Red;
             btnCancel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.White;
-<<<<<<< HEAD
             btnCancel.Location = new Point(834, 626);
-=======
-            btnCancel.Location = new Point(590, 626);
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnCancel.Size = new Size(117, 49);
@@ -186,11 +151,7 @@
             btnPay.FocusedColor = Color.Blue;
             btnPay.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPay.ForeColor = Color.White;
-<<<<<<< HEAD
             btnPay.Location = new Point(365, 626);
-=======
-            btnPay.Location = new Point(233, 626);
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             btnPay.Name = "btnPay";
             btnPay.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPay.Size = new Size(117, 49);
@@ -218,11 +179,7 @@
             // RbtnCreditCard
             // 
             RbtnCreditCard.AutoSize = true;
-<<<<<<< HEAD
             RbtnCreditCard.Location = new Point(228, 46);
-=======
-            RbtnCreditCard.Location = new Point(247, 46);
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             RbtnCreditCard.Name = "RbtnCreditCard";
             RbtnCreditCard.Size = new Size(124, 27);
             RbtnCreditCard.TabIndex = 38;
@@ -233,11 +190,7 @@
             // RbtnTransfer
             // 
             RbtnTransfer.AutoSize = true;
-<<<<<<< HEAD
             RbtnTransfer.Location = new Point(448, 46);
-=======
-            RbtnTransfer.Location = new Point(505, 45);
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             RbtnTransfer.Name = "RbtnTransfer";
             RbtnTransfer.Size = new Size(141, 27);
             RbtnTransfer.TabIndex = 37;
@@ -282,11 +235,7 @@
             // 
             // guna2GroupBox1
             // 
-<<<<<<< HEAD
-            guna2GroupBox1.BackColor = Color.Azure;
-=======
             guna2GroupBox1.BackColor = Color.White;
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             guna2GroupBox1.BorderColor = Color.FromArgb(64, 64, 64);
             guna2GroupBox1.BorderRadius = 16;
             guna2GroupBox1.Controls.Add(guna2DateTimePicker4);
@@ -306,11 +255,7 @@
             guna2GroupBox1.Location = new Point(28, 16);
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-<<<<<<< HEAD
-            guna2GroupBox1.Size = new Size(1401, 187);
-=======
             guna2GroupBox1.Size = new Size(1348, 187);
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             guna2GroupBox1.TabIndex = 55;
             guna2GroupBox1.Text = "Customer Information";
             guna2GroupBox1.Click += guna2GroupBox1_Click;
@@ -477,11 +422,7 @@
             // 
             // guna2GroupBox2
             // 
-<<<<<<< HEAD
             guna2GroupBox2.BackColor = Color.Azure;
-=======
-            guna2GroupBox2.BackColor = Color.White;
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             guna2GroupBox2.BorderColor = Color.FromArgb(64, 64, 64);
             guna2GroupBox2.BorderRadius = 16;
             guna2GroupBox2.Controls.Add(guna2TextBox5);
@@ -501,7 +442,6 @@
             guna2GroupBox2.Location = new Point(28, 231);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges32;
-<<<<<<< HEAD
             guna2GroupBox2.Size = new Size(784, 187);
             guna2GroupBox2.TabIndex = 56;
             guna2GroupBox2.Text = "Payment Detail";
@@ -572,12 +512,6 @@
             guna2TextBox3.Size = new Size(147, 36);
             guna2TextBox3.TabIndex = 58;
             // 
-=======
-            guna2GroupBox2.Size = new Size(766, 187);
-            guna2GroupBox2.TabIndex = 56;
-            guna2GroupBox2.Text = "Payment Detail";
-            // 
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             // guna2TextBox1
             // 
             guna2TextBox1.BorderColor = Color.Black;
@@ -682,87 +616,11 @@
             label23.TabIndex = 18;
             label23.Text = "Room Charge:";
             // 
-<<<<<<< HEAD
             // guna2GroupBox3
             // 
             guna2GroupBox3.BackColor = Color.Azure;
             guna2GroupBox3.BorderColor = Color.FromArgb(64, 64, 64);
             guna2GroupBox3.BorderRadius = 16;
-            guna2GroupBox3.Controls.Add(RBWing);
-            guna2GroupBox3.Controls.Add(RBABA);
-=======
-            // guna2TextBox3
-            // 
-            guna2TextBox3.BorderColor = Color.Black;
-            guna2TextBox3.BorderRadius = 6;
-            guna2TextBox3.CustomizableEdges = customizableEdges25;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(205, 82);
-            guna2TextBox3.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2TextBox3.Size = new Size(147, 36);
-            guna2TextBox3.TabIndex = 58;
-            // 
-            // guna2TextBox4
-            // 
-            guna2TextBox4.BorderColor = Color.Black;
-            guna2TextBox4.BorderRadius = 6;
-            guna2TextBox4.CustomizableEdges = customizableEdges23;
-            guna2TextBox4.DefaultText = "";
-            guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI", 9F);
-            guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(562, 44);
-            guna2TextBox4.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox4.Name = "guna2TextBox4";
-            guna2TextBox4.PlaceholderText = "";
-            guna2TextBox4.SelectedText = "";
-            guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2TextBox4.Size = new Size(174, 36);
-            guna2TextBox4.TabIndex = 59;
-            // 
-            // guna2TextBox5
-            // 
-            guna2TextBox5.BorderColor = Color.Black;
-            guna2TextBox5.BorderRadius = 6;
-            guna2TextBox5.CustomizableEdges = customizableEdges21;
-            guna2TextBox5.DefaultText = "";
-            guna2TextBox5.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox5.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox5.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Font = new Font("Segoe UI", 9F);
-            guna2TextBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Location = new Point(562, 88);
-            guna2TextBox5.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox5.Name = "guna2TextBox5";
-            guna2TextBox5.PlaceholderText = "";
-            guna2TextBox5.SelectedText = "";
-            guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2TextBox5.Size = new Size(174, 36);
-            guna2TextBox5.TabIndex = 60;
-            // 
-            // guna2GroupBox3
-            // 
-            guna2GroupBox3.BackColor = Color.White;
-            guna2GroupBox3.BorderColor = Color.FromArgb(64, 64, 64);
-            guna2GroupBox3.BorderRadius = 16;
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             guna2GroupBox3.Controls.Add(guna2TextBox11);
             guna2GroupBox3.Controls.Add(label9);
             guna2GroupBox3.Controls.Add(RbtnCash);
@@ -777,39 +635,10 @@
             guna2GroupBox3.Location = new Point(28, 448);
             guna2GroupBox3.Name = "guna2GroupBox3";
             guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges36;
-<<<<<<< HEAD
             guna2GroupBox3.Size = new Size(1137, 160);
             guna2GroupBox3.TabIndex = 57;
             guna2GroupBox3.Text = "Payment Method";
             // 
-            // RBWing
-            // 
-            RBWing.AutoSize = true;
-            RBWing.Location = new Point(899, 46);
-            RBWing.Name = "RBWing";
-            RBWing.Size = new Size(79, 27);
-            RBWing.TabIndex = 57;
-            RBWing.TabStop = true;
-            RBWing.Text = "Wing ";
-            RBWing.UseVisualStyleBackColor = true;
-            // 
-            // RBABA
-            // 
-            RBABA.AutoSize = true;
-            RBABA.Location = new Point(685, 46);
-            RBABA.Name = "RBABA";
-            RBABA.Size = new Size(99, 27);
-            RBABA.TabIndex = 56;
-            RBABA.TabStop = true;
-            RBABA.Text = "ABA Pay";
-            RBABA.UseVisualStyleBackColor = true;
-            // 
-=======
-            guna2GroupBox3.Size = new Size(912, 160);
-            guna2GroupBox3.TabIndex = 57;
-            guna2GroupBox3.Text = "Payment Method";
-            // 
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
             // guna2TextBox11
             // 
             guna2TextBox11.BorderColor = Color.Black;
@@ -891,10 +720,5 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox11;
-<<<<<<< HEAD
-        private RadioButton RBWing;
-        private RadioButton RBABA;
-=======
->>>>>>> 445b99bcfe4e84349f3c85d532352d6ca27b264b
     }
 }
