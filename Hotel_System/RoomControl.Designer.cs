@@ -46,13 +46,13 @@
             pictureBox1 = new PictureBox();
             label7 = new Label();
             dataGridView1 = new DataGridView();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
             PaymentID = new DataGridViewTextBoxColumn();
             CustomerName = new DataGridViewTextBoxColumn();
             RoomNumber = new DataGridViewTextBoxColumn();
             TotalAmount = new DataGridViewTextBoxColumn();
             PaymentDate = new DataGridViewTextBoxColumn();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -60,12 +60,11 @@
             // label1
             // 
             label1.BackColor = Color.MidnightBlue;
-            label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Transparent;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1447, 90);
+            label1.Size = new Size(1587, 90);
             label1.TabIndex = 0;
             label1.Text = "Room Manangement";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -98,7 +97,7 @@
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(123, 146);
             label2.Name = "label2";
-            label2.Size = new Size(105, 30);
+            label2.Size = new Size(85, 23);
             label2.TabIndex = 6;
             label2.Text = "Room ID:";
             label2.Click += label2_Click;
@@ -146,7 +145,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(123, 197);
             label3.Name = "label3";
-            label3.Size = new Size(142, 25);
+            label3.Size = new Size(118, 20);
             label3.TabIndex = 11;
             label3.Text = "Room Number:";
             // 
@@ -156,7 +155,7 @@
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(123, 259);
             label4.Name = "label4";
-            label4.Size = new Size(129, 30);
+            label4.Size = new Size(105, 23);
             label4.TabIndex = 12;
             label4.Text = "Room Type:";
             // 
@@ -166,7 +165,7 @@
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(123, 321);
             label5.Name = "label5";
-            label5.Size = new Size(61, 30);
+            label5.Size = new Size(49, 23);
             label5.TabIndex = 13;
             label5.Text = "Price";
             // 
@@ -176,7 +175,7 @@
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(123, 374);
             label6.Name = "label6";
-            label6.Size = new Size(73, 30);
+            label6.Size = new Size(60, 23);
             label6.TabIndex = 14;
             label6.Text = "Status";
             // 
@@ -216,7 +215,7 @@
             label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(1093, 107);
             label7.Name = "label7";
-            label7.Size = new Size(141, 30);
+            label7.Size = new Size(111, 23);
             label7.TabIndex = 19;
             label7.Text = "Type of room";
             // 
@@ -232,6 +231,24 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(974, 233);
             dataGridView1.TabIndex = 27;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Available", "Occupied", "Reserved", "Maintenance" });
+            comboBox2.Location = new Point(253, 369);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(368, 28);
+            comboBox2.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Single Room", "", "Double Room", "Deluxe Room", "Luxury Room", "Family Room" });
+            comboBox1.Location = new Point(253, 254);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(368, 28);
+            comboBox1.TabIndex = 4;
             // 
             // PaymentID
             // 
@@ -269,38 +286,9 @@
             PaymentDate.Name = "PaymentDate";
             PaymentDate.Width = 200;
             // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Available", "Occupied", "Reserved", "Maintenance" });
-            comboBox2.Location = new Point(253, 369);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(368, 33);
-            comboBox2.TabIndex = 17;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Single Room", "", "Double Room", "Deluxe Room", "Luxury Room", "Family Room" });
-            comboBox1.Location = new Point(253, 254);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(368, 33);
-            comboBox1.TabIndex = 4;
-            // 
             // RoomControl
             // 
-<<<<<<< HEAD
-            AutoScaleDimensions = new SizeF(11F, 25F);
-=======
-<<<<<<< HEAD
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "RoomControl";
-            Size = new Size(1453, 826);
-=======
             AutoScaleDimensions = new SizeF(9F, 20F);
->>>>>>> 1698e59f2dc7b3cc5f6a07645894d27bd74fd576
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
             Controls.Add(label7);
@@ -328,7 +316,6 @@
             Load += RoomControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
->>>>>>> 6ec17975d7c3692f1ff436aeb707e38bf508349f
             ResumeLayout(false);
             PerformLayout();
         }

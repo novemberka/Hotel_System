@@ -1,13 +1,40 @@
 {
   "version": 2,
-  "dgSpecHash": "o40Dw8b9ZLA=",
+  "dgSpecHash": "Tg7JY1YJeUY=",
   "success": true,
   "projectFilePath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mysql.data\\6.9.8\\mysql.data.6.9.8.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\mysqlconnection\\1.0.1\\mysqlconnection.1.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'MySql.Data 6.9.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "warningLevel": 1,
+      "filePath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "libraryId": "MySql.Data",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'MySQLConnection 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "projectPath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "warningLevel": 1,
+      "filePath": "T:\\Hotel Project\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+      "libraryId": "MySQLConnection",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    }
+  ]
 }
