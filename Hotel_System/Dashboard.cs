@@ -81,7 +81,9 @@ namespace Hotel_System
 
         private void logout_menu_Click(object sender, EventArgs e)
         {
-
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
