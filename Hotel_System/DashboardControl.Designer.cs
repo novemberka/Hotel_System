@@ -237,19 +237,6 @@
             iconPictureBox2.Size = new Size(40, 40);
             iconPictureBox2.TabIndex = 1;
             iconPictureBox2.TabStop = false;
-            // 
-<<<<<<< HEAD
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10F);
-            label7.ForeColor = Color.FromArgb(64, 64, 64);
-            label7.Location = new Point(13, 10);
-            label7.Name = "label7";
-            // 
-            // label7
-            label7.Size = new Size(99, 28);
-            label7.TabIndex = 0;
-            label7.Text = "Check out";
-=======
             // label3
             // 
             label3.AutoSize = true;
@@ -333,7 +320,6 @@
             formsPlot2.Name = "formsPlot2";
             formsPlot2.Size = new Size(659, 386);
             formsPlot2.TabIndex = 2;
->>>>>>> 8406c51ae44b58d84846af2343e35e18279badea
             // 
             // DashboardControl
             // 

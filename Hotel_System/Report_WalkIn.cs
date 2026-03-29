@@ -61,5 +61,20 @@ namespace Hotel_System
         {
 
         }
+
+        private void ptotalPrice_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbSubTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptotal_price_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

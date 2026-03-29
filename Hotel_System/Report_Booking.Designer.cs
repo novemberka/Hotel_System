@@ -61,44 +61,44 @@
             FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             lbCustomerName = new Label();
             Booking_list = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
+            iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
+            iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             label5 = new Label();
             Report_Summary = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            ptotal_price = new Guna.UI2.WinForms.Guna2ShadowPanel();
             iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             label13 = new Label();
             label14 = new Label();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            label11 = new Label();
+            lbSubTotal = new Label();
             label12 = new Label();
-            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            ptotalPrice = new Guna.UI2.WinForms.Guna2ShadowPanel();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            label8 = new Label();
-            label10 = new Label();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lbCancel = new Label();
+            label = new Label();
+            pbooking = new Guna.UI2.WinForms.Guna2ShadowPanel();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            label7 = new Label();
+            lbooking = new Label();
             label6 = new Label();
             label9 = new Label();
-            iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
             Booking_Report = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)Booking_Report).BeginInit();
             SelectDateRoport.SuspendLayout();
             Booking_list.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).BeginInit();
             Report_Summary.SuspendLayout();
-            guna2ShadowPanel4.SuspendLayout();
+            ptotal_price.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
             guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
-            guna2ShadowPanel2.SuspendLayout();
+            ptotalPrice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            guna2ShadowPanel1.SuspendLayout();
+            pbooking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox7).BeginInit();
             SuspendLayout();
             // 
             // Booking_Report
@@ -391,6 +391,48 @@
             Booking_list.TabIndex = 3;
             Booking_list.Paint += guna2ShadowPanel1_Paint_1;
             // 
+            // iconPictureBox7
+            // 
+            iconPictureBox7.BackColor = Color.White;
+            iconPictureBox7.ForeColor = Color.Red;
+            iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            iconPictureBox7.IconColor = Color.Red;
+            iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox7.Location = new Point(1326, 10);
+            iconPictureBox7.Margin = new Padding(2);
+            iconPictureBox7.Name = "iconPictureBox7";
+            iconPictureBox7.Size = new Size(32, 32);
+            iconPictureBox7.TabIndex = 31;
+            iconPictureBox7.TabStop = false;
+            // 
+            // iconPictureBox6
+            // 
+            iconPictureBox6.BackColor = Color.White;
+            iconPictureBox6.ForeColor = Color.Green;
+            iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            iconPictureBox6.IconColor = Color.Green;
+            iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox6.Location = new Point(1279, 10);
+            iconPictureBox6.Margin = new Padding(2);
+            iconPictureBox6.Name = "iconPictureBox6";
+            iconPictureBox6.Size = new Size(32, 32);
+            iconPictureBox6.TabIndex = 30;
+            iconPictureBox6.TabStop = false;
+            // 
+            // iconPictureBox5
+            // 
+            iconPictureBox5.BackColor = Color.White;
+            iconPictureBox5.ForeColor = Color.Black;
+            iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Print;
+            iconPictureBox5.IconColor = Color.Black;
+            iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox5.Location = new Point(1230, 10);
+            iconPictureBox5.Margin = new Padding(2);
+            iconPictureBox5.Name = "iconPictureBox5";
+            iconPictureBox5.Size = new Size(32, 32);
+            iconPictureBox5.TabIndex = 29;
+            iconPictureBox5.TabStop = false;
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -406,10 +448,10 @@
             // Report_Summary
             // 
             Report_Summary.BackColor = Color.Transparent;
-            Report_Summary.Controls.Add(guna2ShadowPanel4);
+            Report_Summary.Controls.Add(ptotal_price);
             Report_Summary.Controls.Add(guna2ShadowPanel3);
-            Report_Summary.Controls.Add(guna2ShadowPanel2);
-            Report_Summary.Controls.Add(guna2ShadowPanel1);
+            Report_Summary.Controls.Add(ptotalPrice);
+            Report_Summary.Controls.Add(pbooking);
             Report_Summary.Controls.Add(label9);
             Report_Summary.FillColor = Color.White;
             Report_Summary.Location = new Point(23, 189);
@@ -421,24 +463,26 @@
             Report_Summary.Size = new Size(1405, 199);
             Report_Summary.TabIndex = 6;
             // 
-            // guna2ShadowPanel4
+            // ptotal_price
             // 
-            guna2ShadowPanel4.BackColor = Color.Transparent;
-            guna2ShadowPanel4.Controls.Add(iconPictureBox4);
-            guna2ShadowPanel4.Controls.Add(label13);
-            guna2ShadowPanel4.Controls.Add(label14);
-            guna2ShadowPanel4.FillColor = Color.Purple;
-            guna2ShadowPanel4.Location = new Point(1074, 61);
-            guna2ShadowPanel4.Name = "guna2ShadowPanel4";
-            guna2ShadowPanel4.Radius = 6;
-            guna2ShadowPanel4.ShadowColor = Color.DodgerBlue;
-            guna2ShadowPanel4.Size = new Size(211, 100);
-            guna2ShadowPanel4.TabIndex = 23;
+            ptotal_price.BackColor = Color.Transparent;
+            ptotal_price.Controls.Add(iconPictureBox4);
+            ptotal_price.Controls.Add(label13);
+            ptotal_price.Controls.Add(label14);
+            ptotal_price.FillColor = Color.DarkBlue;
+            ptotal_price.Location = new Point(1074, 61);
+            ptotal_price.Name = "ptotal_price";
+            ptotal_price.Radius = 6;
+            ptotal_price.ShadowColor = Color.DarkBlue;
+            ptotal_price.ShadowDepth = 60;
+            ptotal_price.ShadowShift = 4;
+            ptotal_price.Size = new Size(211, 100);
+            ptotal_price.TabIndex = 23;
             // 
             // iconPictureBox4
             // 
-            iconPictureBox4.BackColor = Color.Blue;
-            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            iconPictureBox4.BackColor = Color.DarkBlue;
+            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Receipt;
             iconPictureBox4.IconColor = Color.White;
             iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox4.Location = new Point(165, 13);
@@ -455,9 +499,9 @@
             label13.ForeColor = Color.White;
             label13.Location = new Point(80, 57);
             label13.Name = "label13";
-            label13.Size = new Size(48, 28);
+            label13.Size = new Size(84, 28);
             label13.TabIndex = 22;
-            label13.Text = "100";
+            label13.Text = "$24500";
             // 
             // label14
             // 
@@ -466,47 +510,50 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(15, 13);
             label14.Name = "label14";
-            label14.Size = new Size(90, 28);
+            label14.Size = new Size(112, 28);
             label14.TabIndex = 21;
-            label14.Text = "Booking";
+            label14.Text = "Total Price";
             // 
             // guna2ShadowPanel3
             // 
             guna2ShadowPanel3.BackColor = Color.Transparent;
-            guna2ShadowPanel3.Controls.Add(iconPictureBox3);
-            guna2ShadowPanel3.Controls.Add(label11);
+            guna2ShadowPanel3.Controls.Add(iconPictureBox2);
+            guna2ShadowPanel3.Controls.Add(lbSubTotal);
             guna2ShadowPanel3.Controls.Add(label12);
-            guna2ShadowPanel3.FillColor = Color.LimeGreen;
+            guna2ShadowPanel3.FillColor = Color.Indigo;
             guna2ShadowPanel3.Location = new Point(760, 61);
             guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             guna2ShadowPanel3.Radius = 6;
-            guna2ShadowPanel3.ShadowColor = Color.DodgerBlue;
+            guna2ShadowPanel3.ShadowColor = Color.Indigo;
+            guna2ShadowPanel3.ShadowDepth = 60;
+            guna2ShadowPanel3.ShadowShift = 3;
             guna2ShadowPanel3.Size = new Size(211, 100);
             guna2ShadowPanel3.TabIndex = 23;
             // 
             // iconPictureBox3
             // 
-            iconPictureBox3.BackColor = Color.Blue;
-            iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Bed;
-            iconPictureBox3.IconColor = Color.White;
+            iconPictureBox3.BackColor = Color.Green;
+            iconPictureBox3.ForeColor = Color.Red;
+            iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Cancel;
+            iconPictureBox3.IconColor = Color.Red;
             iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox3.Location = new Point(165, 13);
+            iconPictureBox3.Location = new Point(177, 13);
             iconPictureBox3.Margin = new Padding(2);
             iconPictureBox3.Name = "iconPictureBox3";
             iconPictureBox3.Size = new Size(32, 32);
             iconPictureBox3.TabIndex = 21;
             iconPictureBox3.TabStop = false;
             // 
-            // label11
+            // lbSubTotal
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(80, 57);
-            label11.Name = "label11";
-            label11.Size = new Size(48, 28);
-            label11.TabIndex = 22;
-            label11.Text = "100";
+            lbSubTotal.AutoSize = true;
+            lbSubTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbSubTotal.ForeColor = Color.White;
+            lbSubTotal.Location = new Point(80, 57);
+            lbSubTotal.Name = "lbSubTotal";
+            lbSubTotal.Size = new Size(72, 28);
+            lbSubTotal.TabIndex = 22;
+            lbSubTotal.Text = "$5500";
             // 
             // label12
             // 
@@ -515,72 +562,77 @@
             label12.ForeColor = Color.White;
             label12.Location = new Point(15, 13);
             label12.Name = "label12";
-            label12.Size = new Size(90, 28);
+            label12.Size = new Size(100, 28);
             label12.TabIndex = 21;
-            label12.Text = "Booking";
+            label12.Text = "Sub Total";
+            label12.Click += label12_Click;
             // 
-            // guna2ShadowPanel2
+            // ptotalPrice
             // 
-            guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(iconPictureBox2);
-            guna2ShadowPanel2.Controls.Add(label8);
-            guna2ShadowPanel2.Controls.Add(label10);
-            guna2ShadowPanel2.FillColor = Color.Salmon;
-            guna2ShadowPanel2.Location = new Point(444, 61);
-            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            guna2ShadowPanel2.Radius = 6;
-            guna2ShadowPanel2.ShadowColor = Color.DodgerBlue;
-            guna2ShadowPanel2.Size = new Size(211, 100);
-            guna2ShadowPanel2.TabIndex = 21;
+            ptotalPrice.BackColor = Color.Transparent;
+            ptotalPrice.Controls.Add(iconPictureBox3);
+            ptotalPrice.Controls.Add(lbCancel);
+            ptotalPrice.Controls.Add(label);
+            ptotalPrice.FillColor = Color.Green;
+            ptotalPrice.Location = new Point(444, 61);
+            ptotalPrice.Name = "ptotalPrice";
+            ptotalPrice.Radius = 6;
+            ptotalPrice.ShadowColor = Color.Turquoise;
+            ptotalPrice.ShadowDepth = 60;
+            ptotalPrice.ShadowShift = 3;
+            ptotalPrice.Size = new Size(211, 100);
+            ptotalPrice.TabIndex = 21;
             // 
             // iconPictureBox2
             // 
-            iconPictureBox2.BackColor = Color.Blue;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            iconPictureBox2.BackColor = Color.Indigo;
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Calculator;
             iconPictureBox2.IconColor = Color.White;
             iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.Location = new Point(165, 13);
+            iconPictureBox2.Location = new Point(167, 13);
             iconPictureBox2.Margin = new Padding(2);
             iconPictureBox2.Name = "iconPictureBox2";
             iconPictureBox2.Size = new Size(32, 32);
             iconPictureBox2.TabIndex = 21;
             iconPictureBox2.TabStop = false;
             // 
-            // label8
+            // lbCancel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(80, 57);
-            label8.Name = "label8";
-            label8.Size = new Size(48, 28);
-            label8.TabIndex = 22;
-            label8.Text = "100";
+            lbCancel.AutoSize = true;
+            lbCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbCancel.ForeColor = Color.White;
+            lbCancel.Location = new Point(80, 57);
+            lbCancel.Name = "lbCancel";
+            lbCancel.Size = new Size(48, 28);
+            lbCancel.TabIndex = 22;
+            lbCancel.Text = "200";
             // 
-            // label10
+            // label
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(15, 13);
-            label10.Name = "label10";
-            label10.Size = new Size(90, 28);
-            label10.TabIndex = 21;
-            label10.Text = "Booking";
+            label.AutoSize = true;
+            label.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label.ForeColor = Color.White;
+            label.Location = new Point(15, 13);
+            label.Name = "label";
+            label.Size = new Size(158, 28);
+            label.TabIndex = 21;
+            label.Text = "Cancel Booking";
             // 
-            // guna2ShadowPanel1
+            // pbooking
             // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(iconPictureBox1);
-            guna2ShadowPanel1.Controls.Add(label7);
-            guna2ShadowPanel1.Controls.Add(label6);
-            guna2ShadowPanel1.FillColor = Color.Blue;
-            guna2ShadowPanel1.Location = new Point(114, 61);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.Radius = 6;
-            guna2ShadowPanel1.ShadowColor = Color.DodgerBlue;
-            guna2ShadowPanel1.Size = new Size(211, 100);
-            guna2ShadowPanel1.TabIndex = 20;
+            pbooking.BackColor = Color.Transparent;
+            pbooking.Controls.Add(iconPictureBox1);
+            pbooking.Controls.Add(lbooking);
+            pbooking.Controls.Add(label6);
+            pbooking.FillColor = Color.Blue;
+            pbooking.Location = new Point(114, 61);
+            pbooking.Name = "pbooking";
+            pbooking.Radius = 6;
+            pbooking.ShadowColor = Color.Blue;
+            pbooking.ShadowDepth = 60;
+            pbooking.ShadowShift = 3;
+            pbooking.Size = new Size(211, 100);
+            pbooking.TabIndex = 20;
             // 
             // iconPictureBox1
             // 
@@ -595,16 +647,16 @@
             iconPictureBox1.TabIndex = 21;
             iconPictureBox1.TabStop = false;
             // 
-            // label7
+            // lbooking
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(80, 57);
-            label7.Name = "label7";
-            label7.Size = new Size(48, 28);
-            label7.TabIndex = 22;
-            label7.Text = "100";
+            lbooking.AutoSize = true;
+            lbooking.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbooking.ForeColor = Color.White;
+            lbooking.Location = new Point(80, 57);
+            lbooking.Name = "lbooking";
+            lbooking.Size = new Size(48, 28);
+            lbooking.TabIndex = 22;
+            lbooking.Text = "100";
             // 
             // label6
             // 
@@ -629,48 +681,6 @@
             label9.TabIndex = 19;
             label9.Text = "Report Summary";
             // 
-            // iconPictureBox5
-            // 
-            iconPictureBox5.BackColor = Color.White;
-            iconPictureBox5.ForeColor = Color.Black;
-            iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Print;
-            iconPictureBox5.IconColor = Color.Black;
-            iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox5.Location = new Point(1074, 16);
-            iconPictureBox5.Margin = new Padding(2);
-            iconPictureBox5.Name = "iconPictureBox5";
-            iconPictureBox5.Size = new Size(32, 32);
-            iconPictureBox5.TabIndex = 29;
-            iconPictureBox5.TabStop = false;
-            // 
-            // iconPictureBox6
-            // 
-            iconPictureBox6.BackColor = Color.White;
-            iconPictureBox6.ForeColor = Color.Green;
-            iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            iconPictureBox6.IconColor = Color.Green;
-            iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox6.Location = new Point(1120, 16);
-            iconPictureBox6.Margin = new Padding(2);
-            iconPictureBox6.Name = "iconPictureBox6";
-            iconPictureBox6.Size = new Size(32, 32);
-            iconPictureBox6.TabIndex = 30;
-            iconPictureBox6.TabStop = false;
-            // 
-            // iconPictureBox7
-            // 
-            iconPictureBox7.BackColor = Color.White;
-            iconPictureBox7.ForeColor = Color.Red;
-            iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            iconPictureBox7.IconColor = Color.Red;
-            iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox7.Location = new Point(1170, 16);
-            iconPictureBox7.Margin = new Padding(2);
-            iconPictureBox7.Name = "iconPictureBox7";
-            iconPictureBox7.Size = new Size(32, 32);
-            iconPictureBox7.TabIndex = 31;
-            iconPictureBox7.TabStop = false;
-            // 
             // Report_Booking
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -680,30 +690,30 @@
             Controls.Add(Booking_list);
             Controls.Add(SelectDateRoport);
             Name = "Report_Booking";
-            Size = new Size(1455, 811);
+            Size = new Size(1447, 811);
             Load += Report_Booking_Load;
             ((System.ComponentModel.ISupportInitialize)Booking_Report).EndInit();
             SelectDateRoport.ResumeLayout(false);
             SelectDateRoport.PerformLayout();
             Booking_list.ResumeLayout(false);
             Booking_list.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).EndInit();
             Report_Summary.ResumeLayout(false);
             Report_Summary.PerformLayout();
-            guna2ShadowPanel4.ResumeLayout(false);
-            guna2ShadowPanel4.PerformLayout();
+            ptotal_price.ResumeLayout(false);
+            ptotal_price.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
             guna2ShadowPanel3.ResumeLayout(false);
             guna2ShadowPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
-            guna2ShadowPanel2.ResumeLayout(false);
-            guna2ShadowPanel2.PerformLayout();
+            ptotalPrice.ResumeLayout(false);
+            ptotalPrice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            guna2ShadowPanel1.ResumeLayout(false);
-            guna2ShadowPanel1.PerformLayout();
+            pbooking.ResumeLayout(false);
+            pbooking.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox7).EndInit();
             ResumeLayout(false);
         }
 
@@ -733,21 +743,21 @@
         private DataGridViewTextBoxColumn Status;
         private DataGridViewTextBoxColumn Note;
         private Guna.UI2.WinForms.Guna2ShadowPanel Report_Summary;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
+        private Guna.UI2.WinForms.Guna2ShadowPanel ptotal_price;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private Label label13;
         private Label label14;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private Label label11;
+        private Label lbSubTotal;
         private Label label12;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private Guna.UI2.WinForms.Guna2ShadowPanel ptotalPrice;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private Label label8;
-        private Label label10;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Label lbCancel;
+        private Label label;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pbooking;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Label label7;
+        private Label lbooking;
         private Label label6;
         private Label label9;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;

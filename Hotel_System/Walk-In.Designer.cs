@@ -153,7 +153,7 @@
             CheckboxMale.CheckedState.BorderRadius = 0;
             CheckboxMale.CheckedState.BorderThickness = 0;
             CheckboxMale.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            CheckboxMale.Location = new Point(330, 97);
+            CheckboxMale.Location = new Point(330, 90);
             CheckboxMale.Name = "CheckboxMale";
             CheckboxMale.Size = new Size(71, 27);
             CheckboxMale.TabIndex = 63;
