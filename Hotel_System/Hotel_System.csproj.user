@@ -16,7 +16,7 @@
     <Compile Update="BookingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Checkin&amp;outControl.cs">
+    <Compile Update="Checkin_outControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="CustomerControl.cs">
