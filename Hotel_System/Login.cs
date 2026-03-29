@@ -1,8 +1,13 @@
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+
 using System.IO;
 using System.Windows.Forms;
+
+using Hotel_System.Properties.Config;
+using MySql.Data.MySqlClient;
+
 
 namespace Hotel_System
 {
@@ -52,24 +57,55 @@ namespace Hotel_System
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            // Intentional: event handler stub. Implement login logic here.
             string username = txtusername.Text.Trim();
             string password = txtpassword.Text.Trim();
-            if (string.IsNullOrEmpty(username))
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter your username.",
-                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtusername.Focus();
+                MessageBox.Show("Please enter username and password!");
                 return;
             }
 
-            if (string.IsNullOrEmpty(password))
+            try
             {
-                MessageBox.Show("Please enter your password.",
-                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtpassword.Focus();
-                return;
+                // Create connection from your DbConnection class
+                DbConnection db = new DbConnection();
+                using (MySqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+
+                    // Parameterized query (safe)
+                    string query = "SELECT * FROM admins WHERE Username=@username AND Password=@password";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Successful login
+                        string fullName = reader["FullName"].ToString();
+                        string role = reader["Role"].ToString();
+
+                        MessageBox.Show($"Welcome {fullName} ({role})!");
+
+                        // Open Dashboard form or main app
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password!");
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
 
             if(username == "admin" && password == "admin")
             {
@@ -168,6 +204,7 @@ namespace Hotel_System
         // Removed duplicate SaveProfilePicture overload (kept single implementation above)
 
         // Designer event handler stubs (one copy each)
+
         private void lable1_Click_1(object sender, EventArgs e) { }
         private void txtpassword_TextChanged(object sender, EventArgs e) { }
         private void label7_Click(object sender, EventArgs e) { }

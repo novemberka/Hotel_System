@@ -28,40 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
-            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label1 = new Label();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            guestNum = new Label();
-            guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label2 = new Label();
-            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            label3 = new Label();
-            guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label4 = new Label();
-            iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            label5 = new Label();
             guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             label6 = new Label();
             iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             label7 = new Label();
+            guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label4 = new Label();
+            iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            label5 = new Label();
+            guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label2 = new Label();
+            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            label3 = new Label();
+            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            guestNum = new Label();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            label1 = new Label();
+            formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            formsPlot2 = new ScottPlot.WinForms.FormsPlot();
             tableLayoutPanel1.SuspendLayout();
-            guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
-            guna2GradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            guna2GradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
+            guna2GradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
+            guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
+            guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -84,116 +86,59 @@
             tableLayoutPanel1.Size = new Size(1355, 130);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // guna2GradientPanel1
+            // guna2GradientPanel4
             // 
-            guna2GradientPanel1.BackColor = Color.White;
-            guna2GradientPanel1.BorderColor = Color.MidnightBlue;
-            guna2GradientPanel1.BorderRadius = 10;
-            guna2GradientPanel1.BorderThickness = 1;
-            guna2GradientPanel1.Controls.Add(guestNum);
-            guna2GradientPanel1.Controls.Add(iconPictureBox1);
-            guna2GradientPanel1.Controls.Add(label1);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges7;
-            guna2GradientPanel1.Dock = DockStyle.Fill;
-            guna2GradientPanel1.Location = new Point(10, 3);
-            guna2GradientPanel1.Margin = new Padding(10, 3, 10, 3);
-            guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.Padding = new Padding(10);
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GradientPanel1.Size = new Size(318, 124);
-            guna2GradientPanel1.TabIndex = 1;
+            guna2GradientPanel4.BackColor = Color.White;
+            guna2GradientPanel4.BorderColor = Color.MidnightBlue;
+            guna2GradientPanel4.BorderRadius = 10;
+            guna2GradientPanel4.BorderThickness = 1;
+            guna2GradientPanel4.Controls.Add(label6);
+            guna2GradientPanel4.Controls.Add(iconPictureBox4);
+            guna2GradientPanel4.Controls.Add(label7);
+            guna2GradientPanel4.CustomizableEdges = customizableEdges1;
+            guna2GradientPanel4.Dock = DockStyle.Fill;
+            guna2GradientPanel4.Location = new Point(1024, 3);
+            guna2GradientPanel4.Margin = new Padding(10, 3, 10, 3);
+            guna2GradientPanel4.Name = "guna2GradientPanel4";
+            guna2GradientPanel4.Padding = new Padding(10);
+            guna2GradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2GradientPanel4.Size = new Size(321, 124);
+            guna2GradientPanel4.TabIndex = 4;
             // 
-            // label1
+            // label6
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(13, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(119, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Total Rooms";
-            label1.Click += label1_Click;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 18F);
+            label6.Location = new Point(131, 54);
+            label6.Name = "label6";
+            label6.Size = new Size(77, 48);
+            label6.TabIndex = 2;
+            label6.Text = "100";
             // 
-            // iconPictureBox1
+            // iconPictureBox4
             // 
-            iconPictureBox1.BackColor = Color.White;
-            iconPictureBox1.ForeColor = SystemColors.MenuHighlight;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bed;
-            iconPictureBox1.IconColor = SystemColors.MenuHighlight;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 40;
-            iconPictureBox1.Location = new Point(265, 10);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(40, 40);
-            iconPictureBox1.TabIndex = 1;
-            iconPictureBox1.TabStop = false;
-            iconPictureBox1.Click += iconPictureBox1_Click;
+            iconPictureBox4.BackColor = Color.White;
+            iconPictureBox4.ForeColor = Color.Red;
+            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.CheckToSlot;
+            iconPictureBox4.IconColor = Color.Red;
+            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox4.IconSize = 40;
+            iconPictureBox4.Location = new Point(268, 13);
+            iconPictureBox4.Name = "iconPictureBox4";
+            iconPictureBox4.Size = new Size(40, 40);
+            iconPictureBox4.TabIndex = 1;
+            iconPictureBox4.TabStop = false;
             // 
-            // guestNum
+            // label7
             // 
-            guestNum.AutoSize = true;
-            guestNum.Font = new Font("Segoe UI", 18F);
-            guestNum.Location = new Point(122, 54);
-            guestNum.Name = "guestNum";
-            guestNum.Size = new Size(77, 48);
-            guestNum.TabIndex = 2;
-            guestNum.Text = "100";
-            // 
-            // guna2GradientPanel2
-            // 
-            guna2GradientPanel2.BackColor = Color.White;
-            guna2GradientPanel2.BorderColor = Color.MidnightBlue;
-            guna2GradientPanel2.BorderRadius = 10;
-            guna2GradientPanel2.BorderThickness = 1;
-            guna2GradientPanel2.Controls.Add(label2);
-            guna2GradientPanel2.Controls.Add(iconPictureBox2);
-            guna2GradientPanel2.Controls.Add(label3);
-            guna2GradientPanel2.CustomizableEdges = customizableEdges5;
-            guna2GradientPanel2.Dock = DockStyle.Fill;
-            guna2GradientPanel2.Location = new Point(348, 3);
-            guna2GradientPanel2.Margin = new Padding(10, 3, 10, 3);
-            guna2GradientPanel2.Name = "guna2GradientPanel2";
-            guna2GradientPanel2.Padding = new Padding(10);
-            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GradientPanel2.Size = new Size(318, 124);
-            guna2GradientPanel2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F);
-            label2.Location = new Point(122, 54);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 48);
-            label2.TabIndex = 2;
-            label2.Text = "100";
-            // 
-            // iconPictureBox2
-            // 
-            iconPictureBox2.BackColor = Color.White;
-            iconPictureBox2.ForeColor = Color.FromArgb(255, 128, 0);
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            iconPictureBox2.IconColor = Color.FromArgb(255, 128, 0);
-            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.IconSize = 40;
-            iconPictureBox2.Location = new Point(265, 13);
-            iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(40, 40);
-            iconPictureBox2.TabIndex = 1;
-            iconPictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
-            label3.ForeColor = Color.FromArgb(64, 64, 64);
-            label3.Location = new Point(13, 10);
-            label3.Name = "label3";
-            label3.Size = new Size(117, 28);
-            label3.TabIndex = 0;
-            label3.Text = "Total Guests";
-            label3.Click += label3_Click;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10F);
+            label7.ForeColor = Color.FromArgb(64, 64, 64);
+            label7.Location = new Point(13, 10);
+            label7.Name = "label7";
+            label7.Size = new Size(99, 28);
+            label7.TabIndex = 0;
+            label7.Text = "Check out";
             // 
             // guna2GradientPanel3
             // 
@@ -250,49 +195,50 @@
             label5.TabIndex = 0;
             label5.Text = "Check in";
             // 
-            // guna2GradientPanel4
+            // guna2GradientPanel2
             // 
-            guna2GradientPanel4.BackColor = Color.White;
-            guna2GradientPanel4.BorderColor = Color.MidnightBlue;
-            guna2GradientPanel4.BorderRadius = 10;
-            guna2GradientPanel4.BorderThickness = 1;
-            guna2GradientPanel4.Controls.Add(label6);
-            guna2GradientPanel4.Controls.Add(iconPictureBox4);
-            guna2GradientPanel4.Controls.Add(label7);
-            guna2GradientPanel4.CustomizableEdges = customizableEdges1;
-            guna2GradientPanel4.Dock = DockStyle.Fill;
-            guna2GradientPanel4.Location = new Point(1024, 3);
-            guna2GradientPanel4.Margin = new Padding(10, 3, 10, 3);
-            guna2GradientPanel4.Name = "guna2GradientPanel4";
-            guna2GradientPanel4.Padding = new Padding(10);
-            guna2GradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientPanel4.Size = new Size(321, 124);
-            guna2GradientPanel4.TabIndex = 4;
+            guna2GradientPanel2.BackColor = Color.White;
+            guna2GradientPanel2.BorderColor = Color.MidnightBlue;
+            guna2GradientPanel2.BorderRadius = 10;
+            guna2GradientPanel2.BorderThickness = 1;
+            guna2GradientPanel2.Controls.Add(label2);
+            guna2GradientPanel2.Controls.Add(iconPictureBox2);
+            guna2GradientPanel2.Controls.Add(label3);
+            guna2GradientPanel2.CustomizableEdges = customizableEdges5;
+            guna2GradientPanel2.Dock = DockStyle.Fill;
+            guna2GradientPanel2.Location = new Point(348, 3);
+            guna2GradientPanel2.Margin = new Padding(10, 3, 10, 3);
+            guna2GradientPanel2.Name = "guna2GradientPanel2";
+            guna2GradientPanel2.Padding = new Padding(10);
+            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2GradientPanel2.Size = new Size(318, 124);
+            guna2GradientPanel2.TabIndex = 2;
             // 
-            // label6
+            // label2
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 18F);
-            label6.Location = new Point(131, 54);
-            label6.Name = "label6";
-            label6.Size = new Size(77, 48);
-            label6.TabIndex = 2;
-            label6.Text = "100";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F);
+            label2.Location = new Point(122, 54);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 48);
+            label2.TabIndex = 2;
+            label2.Text = "100";
             // 
-            // iconPictureBox4
+            // iconPictureBox2
             // 
-            iconPictureBox4.BackColor = Color.White;
-            iconPictureBox4.ForeColor = Color.Red;
-            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.CheckToSlot;
-            iconPictureBox4.IconColor = Color.Red;
-            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox4.IconSize = 40;
-            iconPictureBox4.Location = new Point(268, 13);
-            iconPictureBox4.Name = "iconPictureBox4";
-            iconPictureBox4.Size = new Size(40, 40);
-            iconPictureBox4.TabIndex = 1;
-            iconPictureBox4.TabStop = false;
+            iconPictureBox2.BackColor = Color.White;
+            iconPictureBox2.ForeColor = Color.FromArgb(255, 128, 0);
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            iconPictureBox2.IconColor = Color.FromArgb(255, 128, 0);
+            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox2.IconSize = 40;
+            iconPictureBox2.Location = new Point(265, 13);
+            iconPictureBox2.Name = "iconPictureBox2";
+            iconPictureBox2.Size = new Size(40, 40);
+            iconPictureBox2.TabIndex = 1;
+            iconPictureBox2.TabStop = false;
             // 
+<<<<<<< HEAD
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10F);
             label7.ForeColor = Color.FromArgb(64, 64, 64);
@@ -303,29 +249,117 @@
             label7.Size = new Size(99, 28);
             label7.TabIndex = 0;
             label7.Text = "Check out";
+=======
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.ForeColor = Color.FromArgb(64, 64, 64);
+            label3.Location = new Point(13, 10);
+            label3.Name = "label3";
+            label3.Size = new Size(117, 28);
+            label3.TabIndex = 0;
+            label3.Text = "Total Guests";
+            label3.Click += label3_Click;
+            // 
+            // guna2GradientPanel1
+            // 
+            guna2GradientPanel1.BackColor = Color.White;
+            guna2GradientPanel1.BorderColor = Color.MidnightBlue;
+            guna2GradientPanel1.BorderRadius = 10;
+            guna2GradientPanel1.BorderThickness = 1;
+            guna2GradientPanel1.Controls.Add(guestNum);
+            guna2GradientPanel1.Controls.Add(iconPictureBox1);
+            guna2GradientPanel1.Controls.Add(label1);
+            guna2GradientPanel1.CustomizableEdges = customizableEdges7;
+            guna2GradientPanel1.Dock = DockStyle.Fill;
+            guna2GradientPanel1.Location = new Point(10, 3);
+            guna2GradientPanel1.Margin = new Padding(10, 3, 10, 3);
+            guna2GradientPanel1.Name = "guna2GradientPanel1";
+            guna2GradientPanel1.Padding = new Padding(10);
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2GradientPanel1.Size = new Size(318, 124);
+            guna2GradientPanel1.TabIndex = 1;
+            // 
+            // guestNum
+            // 
+            guestNum.AutoSize = true;
+            guestNum.Font = new Font("Segoe UI", 18F);
+            guestNum.Location = new Point(122, 54);
+            guestNum.Name = "guestNum";
+            guestNum.Size = new Size(77, 48);
+            guestNum.TabIndex = 2;
+            guestNum.Text = "100";
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.White;
+            iconPictureBox1.ForeColor = SystemColors.MenuHighlight;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            iconPictureBox1.IconColor = SystemColors.MenuHighlight;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 40;
+            iconPictureBox1.Location = new Point(265, 10);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(40, 40);
+            iconPictureBox1.TabIndex = 1;
+            iconPictureBox1.TabStop = false;
+            iconPictureBox1.Click += iconPictureBox1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.ForeColor = Color.FromArgb(64, 64, 64);
+            label1.Location = new Point(13, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(119, 28);
+            label1.TabIndex = 0;
+            label1.Text = "Total Rooms";
+            label1.Click += label1_Click;
+            // 
+            // formsPlot1
+            // 
+            formsPlot1.DisplayScale = 1.5F;
+            formsPlot1.Location = new Point(60, 201);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(656, 386);
+            formsPlot1.TabIndex = 1;
+            // 
+            // formsPlot2
+            // 
+            formsPlot2.DisplayScale = 1.5F;
+            formsPlot2.Location = new Point(736, 201);
+            formsPlot2.Name = "formsPlot2";
+            formsPlot2.Size = new Size(659, 386);
+            formsPlot2.TabIndex = 2;
+>>>>>>> 8406c51ae44b58d84846af2343e35e18279badea
             // 
             // DashboardControl
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
+            Controls.Add(formsPlot2);
+            Controls.Add(formsPlot1);
             Controls.Add(tableLayoutPanel1);
             Name = "DashboardControl";
             Padding = new Padding(50);
             Size = new Size(1455, 828);
+            Load += DashboardControl_Load;
             tableLayoutPanel1.ResumeLayout(false);
-            guna2GradientPanel1.ResumeLayout(false);
-            guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            guna2GradientPanel2.ResumeLayout(false);
-            guna2GradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            guna2GradientPanel3.ResumeLayout(false);
-            guna2GradientPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
             guna2GradientPanel4.ResumeLayout(false);
             guna2GradientPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
+            guna2GradientPanel3.ResumeLayout(false);
+            guna2GradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
+            guna2GradientPanel2.ResumeLayout(false);
+            guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
+            guna2GradientPanel1.ResumeLayout(false);
+            guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -348,5 +382,7 @@
         private Label label6;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private Label label7;
+        private ScottPlot.WinForms.FormsPlot formsPlot1;
+        private ScottPlot.WinForms.FormsPlot formsPlot2;
     }
 }

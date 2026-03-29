@@ -134,7 +134,7 @@
             linkForgotpassword.TabIndex = 6;
             linkForgotpassword.TabStop = true;
             linkForgotpassword.Text = "Forgot Password ?";
-            linkForgotpassword.LinkClicked += linkLabel1_LinkClicked;
+            //linkForgotpassword.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label2
             // 
