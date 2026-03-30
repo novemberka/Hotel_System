@@ -38,17 +38,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridView Booking_Report;
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             Customer_history = new GroupBox();
             label25 = new Label();
-            dataGridView1 = new DataGridView();
-            BookingID = new DataGridViewTextBoxColumn();
-            CustomerName = new DataGridViewTextBoxColumn();
-            PhoneNumber = new DataGridViewTextBoxColumn();
-            Room = new DataGridViewTextBoxColumn();
-            CheckIn = new DataGridViewTextBoxColumn();
-            Checkout = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
-            Note = new DataGridViewTextBoxColumn();
             label17 = new Label();
             SelectDateRoport = new Guna.UI2.WinForms.Guna2ShadowPanel();
             panel1 = new Panel();
@@ -63,17 +56,27 @@
             label1 = new Label();
             FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             lbCustomerName = new Label();
+            Booking = new DataGridViewTextBoxColumn();
+            CustomerName = new DataGridViewTextBoxColumn();
+            PhoneNumber = new DataGridViewTextBoxColumn();
+            Room = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            CheckIn = new DataGridViewTextBoxColumn();
+            Checkout = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
+            Note = new DataGridViewTextBoxColumn();
+            Booking_Report = new DataGridView();
             Customer_history.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SelectDateRoport.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Booking_Report).BeginInit();
             SuspendLayout();
             // 
             // Customer_history
             // 
+            Customer_history.Controls.Add(Booking_Report);
             Customer_history.Controls.Add(label25);
-            Customer_history.Controls.Add(dataGridView1);
             Customer_history.Controls.Add(label17);
             Customer_history.FlatStyle = FlatStyle.Flat;
             Customer_history.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -95,74 +98,6 @@
             label25.Name = "label25";
             label25.Size = new Size(0, 20);
             label25.TabIndex = 45;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { BookingID, CustomerName, PhoneNumber, Room, CheckIn, Checkout, Status, Note });
-            dataGridView1.Location = new Point(0, 29);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1403, 439);
-            dataGridView1.TabIndex = 27;
-            // 
-            // BookingID
-            // 
-            BookingID.HeaderText = "Booking ID";
-            BookingID.MinimumWidth = 6;
-            BookingID.Name = "BookingID";
-            BookingID.Resizable = DataGridViewTriState.True;
-            BookingID.Width = 150;
-            // 
-            // CustomerName
-            // 
-            CustomerName.HeaderText = "Customer Name";
-            CustomerName.MinimumWidth = 6;
-            CustomerName.Name = "CustomerName";
-            CustomerName.Width = 200;
-            // 
-            // PhoneNumber
-            // 
-            PhoneNumber.HeaderText = "Phone Number";
-            PhoneNumber.MinimumWidth = 6;
-            PhoneNumber.Name = "PhoneNumber";
-            PhoneNumber.Width = 200;
-            // 
-            // Room
-            // 
-            Room.HeaderText = "Room";
-            Room.MinimumWidth = 6;
-            Room.Name = "Room";
-            Room.Width = 150;
-            // 
-            // CheckIn
-            // 
-            CheckIn.HeaderText = "Check In";
-            CheckIn.MinimumWidth = 6;
-            CheckIn.Name = "CheckIn";
-            CheckIn.Width = 125;
-            // 
-            // Checkout
-            // 
-            Checkout.HeaderText = "Check Out";
-            Checkout.MinimumWidth = 6;
-            Checkout.Name = "Checkout";
-            Checkout.Width = 125;
-            // 
-            // Status
-            // 
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.Width = 125;
-            // 
-            // Note
-            // 
-            Note.HeaderText = "Note";
-            Note.MinimumWidth = 6;
-            Note.Name = "Note";
-            Note.Width = 280;
             // 
             // label17
             // 
@@ -378,6 +313,93 @@
             lbCustomerName.TabIndex = 19;
             lbCustomerName.Text = "From Date";
             // 
+            // Booking_Report
+            // 
+            Booking_Report.AllowUserToAddRows = false;
+            Booking_Report.BackgroundColor = Color.White;
+            Booking_Report.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Booking_Report.Columns.AddRange(new DataGridViewColumn[] { Booking, CustomerName, PhoneNumber, Room, dataGridViewTextBoxColumn1, CheckIn, Checkout, Status, Note });
+            Booking_Report.Location = new Point(19, 43);
+            Booking_Report.Name = "Booking_Report";
+            Booking_Report.RowHeadersVisible = false;
+            Booking_Report.RowHeadersWidth = 51;
+            Booking_Report.Size = new Size(1350, 265);
+            Booking_Report.TabIndex = 46;
+            // 
+            // Booking
+            // 
+            Booking.DataPropertyName = "booking_id";
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Booking.DefaultCellStyle = dataGridViewCellStyle1;
+            Booking.HeaderText = "Booking ID";
+            Booking.MinimumWidth = 6;
+            Booking.Name = "Booking";
+            Booking.Width = 150;
+            // 
+            // CustomerName
+            // 
+            CustomerName.DataPropertyName = "customer_name";
+            CustomerName.HeaderText = "Customer Name";
+            CustomerName.MinimumWidth = 6;
+            CustomerName.Name = "CustomerName";
+            CustomerName.Width = 170;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.DataPropertyName = "phone_number";
+            PhoneNumber.HeaderText = "Phone Number";
+            PhoneNumber.MinimumWidth = 6;
+            PhoneNumber.Name = "PhoneNumber";
+            PhoneNumber.Width = 180;
+            // 
+            // Room
+            // 
+            Room.DataPropertyName = "room";
+            Room.HeaderText = "Room";
+            Room.MinimumWidth = 6;
+            Room.Name = "Room";
+            Room.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "room_type";
+            dataGridViewTextBoxColumn1.HeaderText = "Room Type";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // CheckIn
+            // 
+            CheckIn.DataPropertyName = "check-in";
+            CheckIn.HeaderText = "Check In";
+            CheckIn.MinimumWidth = 6;
+            CheckIn.Name = "CheckIn";
+            CheckIn.Width = 125;
+            // 
+            // Checkout
+            // 
+            Checkout.DataPropertyName = "check-out";
+            Checkout.HeaderText = "Check Out";
+            Checkout.MinimumWidth = 6;
+            Checkout.Name = "Checkout";
+            Checkout.Width = 125;
+            // 
+            // Status
+            // 
+            Status.DataPropertyName = "status";
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.Width = 170;
+            // 
+            // Note
+            // 
+            Note.DataPropertyName = "note";
+            Note.HeaderText = "Note";
+            Note.MinimumWidth = 6;
+            Note.Name = "Note";
+            Note.Width = 150;
+            // 
             // History_Booking
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -389,12 +411,12 @@
             Size = new Size(1455, 800);
             Customer_history.ResumeLayout(false);
             Customer_history.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             SelectDateRoport.ResumeLayout(false);
             SelectDateRoport.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Booking_Report).EndInit();
             ResumeLayout(false);
         }
 
@@ -402,15 +424,6 @@
 
         private GroupBox Customer_history;
         private Label label25;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn BookingID;
-        private DataGridViewTextBoxColumn CustomerName;
-        private DataGridViewTextBoxColumn PhoneNumber;
-        private DataGridViewTextBoxColumn Room;
-        private DataGridViewTextBoxColumn CheckIn;
-        private DataGridViewTextBoxColumn Checkout;
-        private DataGridViewTextBoxColumn Status;
-        private DataGridViewTextBoxColumn Note;
         private Label label17;
         private Guna.UI2.WinForms.Guna2ShadowPanel SelectDateRoport;
         private Panel panel1;
@@ -425,5 +438,14 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker FromDate;
         private Label lbCustomerName;
+        private DataGridViewTextBoxColumn Booking;
+        private DataGridViewTextBoxColumn CustomerName;
+        private DataGridViewTextBoxColumn PhoneNumber;
+        private DataGridViewTextBoxColumn Room;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn CheckIn;
+        private DataGridViewTextBoxColumn Checkout;
+        private DataGridViewTextBoxColumn Status;
+        private DataGridViewTextBoxColumn Note;
     }
 }
