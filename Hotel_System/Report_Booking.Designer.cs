@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridView Booking_Report;
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -39,7 +40,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            Booking = new DataGridViewTextBoxColumn();
+            CustomerName = new DataGridViewTextBoxColumn();
+            PhoneNumber = new DataGridViewTextBoxColumn();
+            Room = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            CheckIn = new DataGridViewTextBoxColumn();
+            Checkout = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
+            Note = new DataGridViewTextBoxColumn();
             SelectDateRoport = new Guna.UI2.WinForms.Guna2ShadowPanel();
             txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
@@ -74,15 +83,6 @@
             lbooking = new Label();
             label6 = new Label();
             label9 = new Label();
-            Booking = new DataGridViewTextBoxColumn();
-            CustomerName = new DataGridViewTextBoxColumn();
-            PhoneNumber = new DataGridViewTextBoxColumn();
-            Room = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            CheckIn = new DataGridViewTextBoxColumn();
-            Checkout = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
-            Note = new DataGridViewTextBoxColumn();
             Booking_Report = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)Booking_Report).BeginInit();
             SelectDateRoport.SuspendLayout();
@@ -114,6 +114,80 @@
             Booking_Report.Size = new Size(1350, 265);
             Booking_Report.TabIndex = 28;
             Booking_Report.CellContentClick += Booking_Report_CellContentClick_1;
+            // 
+            // Booking
+            // 
+            Booking.DataPropertyName = "booking_id";
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Booking.DefaultCellStyle = dataGridViewCellStyle1;
+            Booking.HeaderText = "Booking ID";
+            Booking.MinimumWidth = 6;
+            Booking.Name = "Booking";
+            Booking.Width = 150;
+            // 
+            // CustomerName
+            // 
+            CustomerName.DataPropertyName = "customer_name";
+            CustomerName.HeaderText = "Customer Name";
+            CustomerName.MinimumWidth = 6;
+            CustomerName.Name = "CustomerName";
+            CustomerName.Width = 160;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.DataPropertyName = "phone_number";
+            PhoneNumber.HeaderText = "Phone Number";
+            PhoneNumber.MinimumWidth = 6;
+            PhoneNumber.Name = "PhoneNumber";
+            PhoneNumber.Width = 180;
+            // 
+            // Room
+            // 
+            Room.DataPropertyName = "room";
+            Room.HeaderText = "Room";
+            Room.MinimumWidth = 6;
+            Room.Name = "Room";
+            Room.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "room_type";
+            dataGridViewTextBoxColumn1.HeaderText = "Room Type";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // CheckIn
+            // 
+            CheckIn.DataPropertyName = "check-in";
+            CheckIn.HeaderText = "Check In";
+            CheckIn.MinimumWidth = 6;
+            CheckIn.Name = "CheckIn";
+            CheckIn.Width = 125;
+            // 
+            // Checkout
+            // 
+            Checkout.DataPropertyName = "check-out";
+            Checkout.HeaderText = "Check Out";
+            Checkout.MinimumWidth = 6;
+            Checkout.Name = "Checkout";
+            Checkout.Width = 125;
+            // 
+            // Status
+            // 
+            Status.DataPropertyName = "status";
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.Width = 150;
+            // 
+            // Note
+            // 
+            Note.DataPropertyName = "note";
+            Note.HeaderText = "Note";
+            Note.MinimumWidth = 6;
+            Note.Name = "Note";
+            Note.Width = 170;
             // 
             // SelectDateRoport
             // 
@@ -608,80 +682,6 @@
             label9.Size = new Size(157, 25);
             label9.TabIndex = 19;
             label9.Text = "Report Summary";
-            // 
-            // Booking
-            // 
-            Booking.DataPropertyName = "booking_id";
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Booking.DefaultCellStyle = dataGridViewCellStyle1;
-            Booking.HeaderText = "Booking ID";
-            Booking.MinimumWidth = 6;
-            Booking.Name = "Booking";
-            Booking.Width = 150;
-            // 
-            // CustomerName
-            // 
-            CustomerName.DataPropertyName = "customer_name";
-            CustomerName.HeaderText = "Customer Name";
-            CustomerName.MinimumWidth = 6;
-            CustomerName.Name = "CustomerName";
-            CustomerName.Width = 160;
-            // 
-            // PhoneNumber
-            // 
-            PhoneNumber.DataPropertyName = "phone_number";
-            PhoneNumber.HeaderText = "Phone Number";
-            PhoneNumber.MinimumWidth = 6;
-            PhoneNumber.Name = "PhoneNumber";
-            PhoneNumber.Width = 180;
-            // 
-            // Room
-            // 
-            Room.DataPropertyName = "room";
-            Room.HeaderText = "Room";
-            Room.MinimumWidth = 6;
-            Room.Name = "Room";
-            Room.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "room_type";
-            dataGridViewTextBoxColumn1.HeaderText = "Room Type";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // CheckIn
-            // 
-            CheckIn.DataPropertyName = "check-in";
-            CheckIn.HeaderText = "Check In";
-            CheckIn.MinimumWidth = 6;
-            CheckIn.Name = "CheckIn";
-            CheckIn.Width = 125;
-            // 
-            // Checkout
-            // 
-            Checkout.DataPropertyName = "check-out";
-            Checkout.HeaderText = "Check Out";
-            Checkout.MinimumWidth = 6;
-            Checkout.Name = "Checkout";
-            Checkout.Width = 125;
-            // 
-            // Status
-            // 
-            Status.DataPropertyName = "status";
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.Width = 150;
-            // 
-            // Note
-            // 
-            Note.DataPropertyName = "note";
-            Note.HeaderText = "Note";
-            Note.MinimumWidth = 6;
-            Note.Name = "Note";
-            Note.Width = 170;
             // 
             // Report_Booking
             // 

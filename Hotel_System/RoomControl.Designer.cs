@@ -45,6 +45,8 @@
             pictureBox1 = new PictureBox();
             label7 = new Label();
             dataGridView1 = new DataGridView();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
             PaymentID = new DataGridViewTextBoxColumn();
             CustomerName = new DataGridViewTextBoxColumn();
             RoomNumber = new DataGridViewTextBoxColumn();
@@ -219,6 +221,24 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1246, 313);
             dataGridView1.TabIndex = 27;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Available", "Occupied", "Reserved", "Maintenance" });
+            comboBox2.Location = new Point(253, 369);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(368, 28);
+            comboBox2.TabIndex = 17;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Single Room", "", "Double Room", "Deluxe Room", "Luxury Room", "Family Room" });
+            comboBox1.Location = new Point(253, 254);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(368, 28);
+            comboBox1.TabIndex = 4;
             // 
             // PaymentID
             // 

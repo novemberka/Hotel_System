@@ -29,22 +29,33 @@
         private void InitializeComponent()
         {
             DataGridView Booking_Report;
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            CustomerName = new DataGridViewTextBoxColumn();
+            PhoneNumber = new DataGridViewTextBoxColumn();
+            Room = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            CheckIn = new DataGridViewTextBoxColumn();
+            Checkout = new DataGridViewTextBoxColumn();
+            Room_Service = new DataGridViewTextBoxColumn();
+            Service_charge = new DataGridViewTextBoxColumn();
+            Total_Amount = new DataGridViewTextBoxColumn();
+            Payment = new DataGridViewTextBoxColumn();
             Booking_list = new Guna.UI2.WinForms.Guna2ShadowPanel();
             iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             label5 = new Label();
             SelectDateRoport = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            txtRoomNumber = new Guna.UI2.WinForms.Guna2TextBox();
             txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -60,6 +71,7 @@
             lbTotal_amount = new Label();
             label14 = new Label();
             ptotalPrice = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             lbService_charge = new Label();
             label = new Label();
             pbooking = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -67,18 +79,6 @@
             lbRoomService = new Label();
             label6 = new Label();
             label9 = new Label();
-            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            CustomerName = new DataGridViewTextBoxColumn();
-            PhoneNumber = new DataGridViewTextBoxColumn();
-            Room = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            CheckIn = new DataGridViewTextBoxColumn();
-            Checkout = new DataGridViewTextBoxColumn();
-            Room_Service = new DataGridViewTextBoxColumn();
-            Service_charge = new DataGridViewTextBoxColumn();
-            Total_Amount = new DataGridViewTextBoxColumn();
-            Payment = new DataGridViewTextBoxColumn();
-            txtRoomNumber = new Guna.UI2.WinForms.Guna2TextBox();
             Booking_Report = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)Booking_Report).BeginInit();
             Booking_list.SuspendLayout();
@@ -90,21 +90,103 @@
             ptotal_price.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
             ptotalPrice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             pbooking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             SuspendLayout();
             // 
             // Booking_Report
             // 
+            Booking_Report.AllowUserToAddRows = false;
             Booking_Report.BackgroundColor = Color.White;
             Booking_Report.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             Booking_Report.Columns.AddRange(new DataGridViewColumn[] { CustomerName, PhoneNumber, Room, dataGridViewTextBoxColumn1, CheckIn, Checkout, Room_Service, Service_charge, Total_Amount, Payment });
             Booking_Report.Location = new Point(29, 68);
             Booking_Report.Name = "Booking_Report";
+            Booking_Report.RowHeadersVisible = false;
             Booking_Report.RowHeadersWidth = 51;
             Booking_Report.Size = new Size(1350, 265);
             Booking_Report.TabIndex = 28;
+            // 
+            // CustomerName
+            // 
+            CustomerName.DataPropertyName = "customer_name";
+            CustomerName.HeaderText = "Customer Name";
+            CustomerName.MinimumWidth = 6;
+            CustomerName.Name = "CustomerName";
+            CustomerName.Width = 160;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.DataPropertyName = "phone_number";
+            PhoneNumber.HeaderText = "Phone Number";
+            PhoneNumber.MinimumWidth = 6;
+            PhoneNumber.Name = "PhoneNumber";
+            PhoneNumber.Width = 180;
+            // 
+            // Room
+            // 
+            Room.DataPropertyName = "room";
+            Room.HeaderText = "Room";
+            Room.MinimumWidth = 6;
+            Room.Name = "Room";
+            Room.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "room_type";
+            dataGridViewTextBoxColumn1.HeaderText = "Room Type";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // CheckIn
+            // 
+            CheckIn.DataPropertyName = "check-in";
+            CheckIn.HeaderText = "Check In";
+            CheckIn.MinimumWidth = 6;
+            CheckIn.Name = "CheckIn";
+            CheckIn.Width = 120;
+            // 
+            // Checkout
+            // 
+            Checkout.DataPropertyName = "check-out";
+            Checkout.HeaderText = "Check Out";
+            Checkout.MinimumWidth = 6;
+            Checkout.Name = "Checkout";
+            Checkout.Width = 120;
+            // 
+            // Room_Service
+            // 
+            Room_Service.DataPropertyName = "room_service";
+            Room_Service.HeaderText = "Room Service";
+            Room_Service.MinimumWidth = 6;
+            Room_Service.Name = "Room_Service";
+            Room_Service.Width = 150;
+            // 
+            // Service_charge
+            // 
+            Service_charge.DataPropertyName = "service_charge";
+            Service_charge.HeaderText = "Service Charge";
+            Service_charge.MinimumWidth = 6;
+            Service_charge.Name = "Service_charge";
+            Service_charge.Width = 150;
+            // 
+            // Total_Amount
+            // 
+            Total_Amount.DataPropertyName = "total_amount";
+            Total_Amount.HeaderText = "Total Amount";
+            Total_Amount.MinimumWidth = 6;
+            Total_Amount.Name = "Total_Amount";
+            Total_Amount.Width = 140;
+            // 
+            // Payment
+            // 
+            Payment.DataPropertyName = "payment";
+            Payment.HeaderText = "Payment";
+            Payment.MinimumWidth = 6;
+            Payment.Name = "Payment";
+            Payment.Width = 125;
             // 
             // Booking_list
             // 
@@ -201,11 +283,33 @@
             SelectDateRoport.Size = new Size(1405, 180);
             SelectDateRoport.TabIndex = 7;
             // 
+            // txtRoomNumber
+            // 
+            txtRoomNumber.BorderColor = Color.Black;
+            txtRoomNumber.BorderRadius = 6;
+            txtRoomNumber.CustomizableEdges = customizableEdges11;
+            txtRoomNumber.DefaultText = "";
+            txtRoomNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtRoomNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtRoomNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtRoomNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtRoomNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRoomNumber.Font = new Font("Segoe UI", 9F);
+            txtRoomNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRoomNumber.Location = new Point(837, 120);
+            txtRoomNumber.Margin = new Padding(3, 4, 3, 4);
+            txtRoomNumber.Name = "txtRoomNumber";
+            txtRoomNumber.PlaceholderText = "";
+            txtRoomNumber.SelectedText = "";
+            txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtRoomNumber.Size = new Size(209, 36);
+            txtRoomNumber.TabIndex = 56;
+            // 
             // txtSearchCustomer
             // 
             txtSearchCustomer.BorderColor = Color.Silver;
             txtSearchCustomer.BorderRadius = 6;
-            txtSearchCustomer.CustomizableEdges = customizableEdges3;
+            txtSearchCustomer.CustomizableEdges = customizableEdges13;
             txtSearchCustomer.DefaultText = "";
             txtSearchCustomer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchCustomer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -219,8 +323,8 @@
             txtSearchCustomer.Name = "txtSearchCustomer";
             txtSearchCustomer.PlaceholderText = "";
             txtSearchCustomer.SelectedText = "";
-            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearchCustomer.Size = new Size(492, 36);
+            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtSearchCustomer.Size = new Size(296, 36);
             txtSearchCustomer.TabIndex = 55;
             // 
             // label4
@@ -252,7 +356,7 @@
             RoomType.BackColor = Color.Transparent;
             RoomType.BorderColor = Color.Silver;
             RoomType.BorderRadius = 8;
-            RoomType.CustomizableEdges = customizableEdges5;
+            RoomType.CustomizableEdges = customizableEdges15;
             RoomType.DrawMode = DrawMode.OwnerDrawFixed;
             RoomType.DropDownStyle = ComboBoxStyle.DropDownList;
             RoomType.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -263,7 +367,7 @@
             RoomType.Items.AddRange(new object[] { "All", "Single", "Double", "VIP" });
             RoomType.Location = new Point(836, 45);
             RoomType.Name = "RoomType";
-            RoomType.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            RoomType.ShadowDecoration.CustomizableEdges = customizableEdges16;
             RoomType.Size = new Size(210, 36);
             RoomType.TabIndex = 24;
             // 
@@ -284,7 +388,7 @@
             ToDate.BackColor = Color.White;
             ToDate.BorderRadius = 8;
             ToDate.Checked = true;
-            ToDate.CustomizableEdges = customizableEdges7;
+            ToDate.CustomizableEdges = customizableEdges17;
             ToDate.FillColor = Color.White;
             ToDate.FocusedColor = Color.White;
             ToDate.Font = new Font("Segoe UI", 9F);
@@ -293,7 +397,7 @@
             ToDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             ToDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             ToDate.Name = "ToDate";
-            ToDate.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            ToDate.ShadowDecoration.CustomizableEdges = customizableEdges18;
             ToDate.Size = new Size(315, 36);
             ToDate.TabIndex = 22;
             ToDate.Value = new DateTime(2026, 3, 22, 0, 25, 41, 535);
@@ -315,7 +419,7 @@
             FromDate.BackColor = Color.White;
             FromDate.BorderRadius = 8;
             FromDate.Checked = true;
-            FromDate.CustomizableEdges = customizableEdges9;
+            FromDate.CustomizableEdges = customizableEdges19;
             FromDate.FillColor = Color.White;
             FromDate.FocusedColor = Color.White;
             FromDate.Font = new Font("Segoe UI", 9F);
@@ -324,7 +428,7 @@
             FromDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             FromDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             FromDate.Name = "FromDate";
-            FromDate.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            FromDate.ShadowDecoration.CustomizableEdges = customizableEdges20;
             FromDate.Size = new Size(296, 36);
             FromDate.TabIndex = 20;
             FromDate.Value = new DateTime(2026, 3, 22, 0, 25, 41, 535);
@@ -425,6 +529,19 @@
             ptotalPrice.Size = new Size(211, 100);
             ptotalPrice.TabIndex = 21;
             // 
+            // iconPictureBox2
+            // 
+            iconPictureBox2.BackColor = Color.Indigo;
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Calculator;
+            iconPictureBox2.IconColor = Color.White;
+            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox2.Location = new Point(171, 13);
+            iconPictureBox2.Margin = new Padding(2);
+            iconPictureBox2.Name = "iconPictureBox2";
+            iconPictureBox2.Size = new Size(32, 32);
+            iconPictureBox2.TabIndex = 21;
+            iconPictureBox2.TabStop = false;
+            // 
             // lbService_charge
             // 
             lbService_charge.AutoSize = true;
@@ -510,120 +627,6 @@
             label9.TabIndex = 19;
             label9.Text = "Report Summary";
             // 
-            // iconPictureBox2
-            // 
-            iconPictureBox2.BackColor = Color.Indigo;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Calculator;
-            iconPictureBox2.IconColor = Color.White;
-            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.Location = new Point(171, 13);
-            iconPictureBox2.Margin = new Padding(2);
-            iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(32, 32);
-            iconPictureBox2.TabIndex = 21;
-            iconPictureBox2.TabStop = false;
-            // 
-            // CustomerName
-            // 
-            CustomerName.DataPropertyName = "customer_name";
-            CustomerName.HeaderText = "Customer Name";
-            CustomerName.MinimumWidth = 6;
-            CustomerName.Name = "CustomerName";
-            CustomerName.Width = 160;
-            // 
-            // PhoneNumber
-            // 
-            PhoneNumber.DataPropertyName = "phone_number";
-            PhoneNumber.HeaderText = "Phone Number";
-            PhoneNumber.MinimumWidth = 6;
-            PhoneNumber.Name = "PhoneNumber";
-            PhoneNumber.Width = 180;
-            // 
-            // Room
-            // 
-            Room.DataPropertyName = "room";
-            Room.HeaderText = "Room";
-            Room.MinimumWidth = 6;
-            Room.Name = "Room";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "room_type";
-            dataGridViewTextBoxColumn1.HeaderText = "Room Type";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // CheckIn
-            // 
-            CheckIn.DataPropertyName = "check-in";
-            CheckIn.HeaderText = "Check In";
-            CheckIn.MinimumWidth = 6;
-            CheckIn.Name = "CheckIn";
-            CheckIn.Width = 120;
-            // 
-            // Checkout
-            // 
-            Checkout.DataPropertyName = "check-out";
-            Checkout.HeaderText = "Check Out";
-            Checkout.MinimumWidth = 6;
-            Checkout.Name = "Checkout";
-            Checkout.Width = 120;
-            // 
-            // Room_Service
-            // 
-            Room_Service.DataPropertyName = "room_service";
-            Room_Service.HeaderText = "Room Service";
-            Room_Service.MinimumWidth = 6;
-            Room_Service.Name = "Room_Service";
-            Room_Service.Width = 150;
-            // 
-            // Service_charge
-            // 
-            Service_charge.DataPropertyName = "service_charge";
-            Service_charge.HeaderText = "Service Charge";
-            Service_charge.MinimumWidth = 6;
-            Service_charge.Name = "Service_charge";
-            Service_charge.Width = 150;
-            // 
-            // Total_Amount
-            // 
-            Total_Amount.DataPropertyName = "total_amount";
-            Total_Amount.HeaderText = "Total Amount";
-            Total_Amount.MinimumWidth = 6;
-            Total_Amount.Name = "Total_Amount";
-            Total_Amount.Width = 140;
-            // 
-            // Payment
-            // 
-            Payment.DataPropertyName = "payment";
-            Payment.HeaderText = "Payment";
-            Payment.MinimumWidth = 6;
-            Payment.Name = "Payment";
-            Payment.Width = 125;
-            // 
-            // txtRoomNumber
-            // 
-            txtRoomNumber.BorderColor = Color.Black;
-            txtRoomNumber.BorderRadius = 6;
-            txtRoomNumber.CustomizableEdges = customizableEdges1;
-            txtRoomNumber.DefaultText = "";
-            txtRoomNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtRoomNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtRoomNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtRoomNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtRoomNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRoomNumber.Font = new Font("Segoe UI", 9F);
-            txtRoomNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRoomNumber.Location = new Point(837, 120);
-            txtRoomNumber.Margin = new Padding(3, 4, 3, 4);
-            txtRoomNumber.Name = "txtRoomNumber";
-            txtRoomNumber.PlaceholderText = "";
-            txtRoomNumber.SelectedText = "";
-            txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtRoomNumber.Size = new Size(209, 36);
-            txtRoomNumber.TabIndex = 56;
-            // 
             // Report_Payment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -650,10 +653,10 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
             ptotalPrice.ResumeLayout(false);
             ptotalPrice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             pbooking.ResumeLayout(false);
             pbooking.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ResumeLayout(false);
         }
 

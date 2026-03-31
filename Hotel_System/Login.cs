@@ -39,7 +39,7 @@ namespace Hotel_System
                     {
                         try
                         {
-                            guna2CirclePictureBox1.Image = Image.FromFile(files[0]);
+                            boxProfile.Image = Image.FromFile(files[0]);
                         }
                         catch
                         {
@@ -159,7 +159,7 @@ namespace Hotel_System
                         Image selectedImage = Image.FromFile(selectedFilePath);
 
                         // Set the image to the CirclePictureBox
-                        guna2CirclePictureBox1.Image = selectedImage;
+                        boxProfile.Image = selectedImage;
 
                         // Optional: Save the image path to user settings or database
                         SaveProfilePicture(selectedFilePath);

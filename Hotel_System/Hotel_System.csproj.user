@@ -43,7 +43,13 @@
     <Compile Update="Report_CheckOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Report_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Report_Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Report_Room.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Report_WalkIn.cs">
