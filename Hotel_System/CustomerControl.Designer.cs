@@ -56,27 +56,27 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             Add = new Guna.UI2.WinForms.Guna2Button();
             Update = new Guna.UI2.WinForms.Guna2Button();
             Delete = new Guna.UI2.WinForms.Guna2Button();
             CustomerList = new GroupBox();
             dataGridView1 = new DataGridView();
-            label17 = new Label();
-            label1 = new Label();
-            groupBox1 = new GroupBox();
-            DVSearchCustomer = new DataGridView();
-            panel1 = new Panel();
-            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             BookingID = new DataGridViewTextBoxColumn();
             Gender = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
             Phone = new DataGridViewTextBoxColumn();
+            label17 = new Label();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
+            DVSearchCustomer = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             CustomerInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
@@ -140,7 +140,7 @@
             CustomerInfo.Controls.Add(iconPictureBox1);
             CustomerInfo.Controls.Add(guna2TextBox5);
             CustomerInfo.Controls.Add(guna2TextBox4);
-            CustomerInfo.Controls.Add(guna2TextBox1);
+            CustomerInfo.Controls.Add(txtCustomerName);
             CustomerInfo.Controls.Add(label2);
             CustomerInfo.Controls.Add(label3);
             CustomerInfo.Controls.Add(FullNameLabel);
@@ -283,27 +283,27 @@
             guna2TextBox4.TabIndex = 3;
             guna2TextBox4.TextChanged += guna2TextBox4_TextChanged;
             // 
-            // guna2TextBox1
+            // txtCustomerName
             // 
-            guna2TextBox1.BorderColor = Color.Silver;
-            guna2TextBox1.BorderRadius = 6;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(222, 55);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(460, 34);
-            guna2TextBox1.TabIndex = 0;
+            txtCustomerName.BorderColor = Color.Silver;
+            txtCustomerName.BorderRadius = 6;
+            txtCustomerName.CustomizableEdges = customizableEdges5;
+            txtCustomerName.DefaultText = "";
+            txtCustomerName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCustomerName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCustomerName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCustomerName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCustomerName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCustomerName.Font = new Font("Segoe UI", 9F);
+            txtCustomerName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCustomerName.Location = new Point(222, 55);
+            txtCustomerName.Margin = new Padding(3, 4, 3, 4);
+            txtCustomerName.Name = "txtCustomerName";
+            txtCustomerName.PlaceholderText = "";
+            txtCustomerName.SelectedText = "";
+            txtCustomerName.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtCustomerName.Size = new Size(460, 34);
+            txtCustomerName.TabIndex = 0;
             // 
             // Add
             // 
@@ -391,6 +391,39 @@
             dataGridView1.TabIndex = 27;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // BookingID
+            // 
+            BookingID.DataPropertyName = "full_name";
+            BookingID.HeaderText = "Full Name";
+            BookingID.MinimumWidth = 6;
+            BookingID.Name = "BookingID";
+            BookingID.Resizable = DataGridViewTriState.True;
+            BookingID.Width = 200;
+            // 
+            // Gender
+            // 
+            Gender.DataPropertyName = "gender";
+            Gender.HeaderText = "Gender";
+            Gender.MinimumWidth = 6;
+            Gender.Name = "Gender";
+            Gender.Width = 125;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.DataPropertyName = "address";
+            PhoneNumber.HeaderText = "Address";
+            PhoneNumber.MinimumWidth = 6;
+            PhoneNumber.Name = "PhoneNumber";
+            PhoneNumber.Width = 220;
+            // 
+            // Phone
+            // 
+            Phone.DataPropertyName = "phone";
+            Phone.HeaderText = "Phone";
+            Phone.MinimumWidth = 6;
+            Phone.Name = "Phone";
+            Phone.Width = 180;
+            // 
             // label17
             // 
             label17.AutoSize = true;
@@ -442,6 +475,39 @@
             DVSearchCustomer.Size = new Size(735, 627);
             DVSearchCustomer.TabIndex = 28;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            dataGridViewTextBoxColumn1.HeaderText = "Name";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.True;
+            dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "gender";
+            dataGridViewTextBoxColumn2.HeaderText = "Gender";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "phone";
+            dataGridViewTextBoxColumn3.HeaderText = "Phone";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "id_card";
+            dataGridViewTextBoxColumn4.HeaderText = "ID Card";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.Width = 150;
+            // 
             // panel1
             // 
             panel1.Controls.Add(iconPictureBox4);
@@ -487,72 +553,6 @@
             guna2TextBox2.Size = new Size(735, 50);
             guna2TextBox2.TabIndex = 28;
             // 
-            // BookingID
-            // 
-            BookingID.DataPropertyName = "full_name";
-            BookingID.HeaderText = "Full Name";
-            BookingID.MinimumWidth = 6;
-            BookingID.Name = "BookingID";
-            BookingID.Resizable = DataGridViewTriState.True;
-            BookingID.Width = 200;
-            // 
-            // Gender
-            // 
-            Gender.DataPropertyName = "gender";
-            Gender.HeaderText = "Gender";
-            Gender.MinimumWidth = 6;
-            Gender.Name = "Gender";
-            Gender.Width = 125;
-            // 
-            // PhoneNumber
-            // 
-            PhoneNumber.DataPropertyName = "address";
-            PhoneNumber.HeaderText = "Address";
-            PhoneNumber.MinimumWidth = 6;
-            PhoneNumber.Name = "PhoneNumber";
-            PhoneNumber.Width = 220;
-            // 
-            // Phone
-            // 
-            Phone.DataPropertyName = "phone";
-            Phone.HeaderText = "Phone";
-            Phone.MinimumWidth = 6;
-            Phone.Name = "Phone";
-            Phone.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "name";
-            dataGridViewTextBoxColumn1.HeaderText = "Name";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.True;
-            dataGridViewTextBoxColumn1.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.DataPropertyName = "gender";
-            dataGridViewTextBoxColumn2.HeaderText = "Gender";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.DataPropertyName = "phone";
-            dataGridViewTextBoxColumn3.HeaderText = "Phone";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.DataPropertyName = "id_card";
-            dataGridViewTextBoxColumn4.HeaderText = "ID Card";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 150;
-            // 
             // CustomerControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -590,7 +590,7 @@
         private Label label2;
         private Label FullNameLabel;
         private Guna.UI2.WinForms.Guna2GroupBox CustomerInfo;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2Button Add;
