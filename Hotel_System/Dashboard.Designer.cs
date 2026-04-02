@@ -62,7 +62,6 @@
             panel1.Controls.Add(tableLayoutPanel1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(0, 150, 0, 300);
             panel1.Size = new Size(290, 1000);
@@ -72,9 +71,8 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(80, 29);
-            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(84, 74);
+            pictureBox1.Size = new Size(105, 93);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -83,7 +81,7 @@
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(logout_menu, 0, 6);
             tableLayoutPanel1.Controls.Add(payment_menu, 0, 5);
             tableLayoutPanel1.Controls.Add(customer_menu, 0, 4);
@@ -93,7 +91,6 @@
             tableLayoutPanel1.Controls.Add(booking_menu, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 150);
-            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
@@ -278,10 +275,10 @@
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
+            panel2.Controls.Add(contentPanel);
             panel2.Controls.Add(profile);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(290, 0);
-            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(1563, 77);
             panel2.TabIndex = 1;
@@ -293,10 +290,9 @@
             contentPanel.Controls.Add(lblTittle);
             contentPanel.Controls.Add(guna2CirclePictureBox1);
             contentPanel.Dock = DockStyle.Fill;
-            contentPanel.Location = new Point(290, 77);
-            contentPanel.Margin = new Padding(2);
+            contentPanel.Location = new Point(0, 0);
             contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(1563, 923);
+            contentPanel.Size = new Size(1563, 77);
             contentPanel.TabIndex = 2;
             contentPanel.Paint += contentPanel_Paint;
             // 
@@ -307,7 +303,7 @@
             lblTittle.ForeColor = Color.White;
             lblTittle.Location = new Point(48, 29);
             lblTittle.Name = "lblTittle";
-            lblTittle.Size = new Size(138, 32);
+            lblTittle.Size = new Size(159, 38);
             lblTittle.TabIndex = 1;
             lblTittle.Text = "Dashboard";
             // 
@@ -316,7 +312,7 @@
             guna2CirclePictureBox1.BackgroundImageLayout = ImageLayout.Center;
             guna2CirclePictureBox1.Image = (Image)resources.GetObject("guna2CirclePictureBox1.Image");
             guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(1468, 15);
+            guna2CirclePictureBox1.Location = new Point(1466, 14);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -328,10 +324,9 @@
             // profile
             // 
             profile.Image = Properties.Resources._0e7f6006e9273ec44255aaa391107a73;
-            profile.Location = new Point(1226, 10);
-            profile.Margin = new Padding(2);
+            profile.Location = new Point(1532, 12);
             profile.Name = "profile";
-            profile.Size = new Size(48, 48);
+            profile.Size = new Size(60, 60);
             profile.SizeMode = PictureBoxSizeMode.StretchImage;
             profile.TabIndex = 0;
             profile.TabStop = false;
@@ -349,16 +344,15 @@
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1853, 1000);
-            Controls.Add(contentPanel);
             Controls.Add(Content);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2);
             Name = "Dashboard";
+            Text = "Dashboard";
             Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -237,6 +237,7 @@
             iconPictureBox2.Size = new Size(40, 40);
             iconPictureBox2.TabIndex = 1;
             iconPictureBox2.TabStop = false;
+            // 
             // label3
             // 
             label3.AutoSize = true;
