@@ -52,6 +52,9 @@
     <Compile Update="Report_WalkIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
