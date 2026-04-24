@@ -22,10 +22,13 @@ namespace Hotel_System
         }
 
 
+
         private void btnlogin_Click(object sender, EventArgs e)
         {
             string username = txtusername.Text.Trim();
             string password = txtpassword.Text.Trim();
+
+
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -51,14 +54,20 @@ namespace Hotel_System
 
                     if (reader.Read())
                     {
-                        // Successful login
                         string fullName = reader["FullName"].ToString();
                         string role = reader["Role"].ToString();
 
+                        string imgPath = null;
+
+                        if (reader["ImagePath"] != DBNull.Value)
+                        {
+                            imgPath = reader["ImagePath"].ToString();
+                        }
+
                         MessageBox.Show($"Welcome {fullName} ({role})!");
 
-                        // Open Dashboard form or main app
-                        Dashboard dashboard = new Dashboard();
+                        // PASS DATA to Dashboard
+                        Dashboard dashboard = new Dashboard(fullName, role, imgPath);
                         dashboard.Show();
                         this.Hide();
                     }
@@ -72,6 +81,7 @@ namespace Hotel_System
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
 
         }
         private void lable1_Click_1(object sender, EventArgs e) { }
