@@ -22,6 +22,12 @@
     <Compile Update="PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Reportroom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Report_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="RoomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

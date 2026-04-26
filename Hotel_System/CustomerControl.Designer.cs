@@ -48,6 +48,8 @@
             label2 = new Label();
             FullNameLabel = new Label();
             CustomerInfo = new Guna.UI2.WinForms.Guna2GroupBox();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
             genderLbl = new Label();
             iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -60,23 +62,21 @@
             Delete = new Guna.UI2.WinForms.Guna2Button();
             CustomerList = new GroupBox();
             dataGridView1 = new DataGridView();
-            label17 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
             BookingID = new DataGridViewTextBoxColumn();
             Gender = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
             Room = new DataGridViewTextBoxColumn();
+            label17 = new Label();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            panel1 = new Panel();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             dataGridView2 = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             CustomerInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
@@ -84,9 +84,9 @@
             CustomerList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // label3
@@ -155,6 +155,32 @@
             CustomerInfo.TabIndex = 4;
             CustomerInfo.Text = "Customer Information";
             CustomerInfo.Click += CustomerInfo_Click;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.BackColor = Color.White;
+            radioButton2.Location = new Point(353, 102);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(88, 27);
+            radioButton2.TabIndex = 31;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Female";
+            radioButton2.UseVisualStyleBackColor = false;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.BackColor = Color.White;
+            radioButton1.Location = new Point(222, 102);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(70, 27);
+            radioButton1.TabIndex = 30;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Male";
+            radioButton1.UseVisualStyleBackColor = false;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // genderLbl
             // 
@@ -363,43 +389,6 @@
             dataGridView1.TabIndex = 27;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.BackColor = Color.White;
-            label17.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.Black;
-            label17.Location = new Point(580, 155);
-            label17.Name = "label17";
-            label17.Size = new Size(0, 20);
-            label17.TabIndex = 26;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.BackColor = Color.White;
-            radioButton1.Location = new Point(222, 102);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(70, 27);
-            radioButton1.TabIndex = 30;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Male";
-            radioButton1.UseVisualStyleBackColor = false;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.BackColor = Color.White;
-            radioButton2.Location = new Point(353, 102);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(88, 27);
-            radioButton2.TabIndex = 31;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Female";
-            radioButton2.UseVisualStyleBackColor = false;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
-            // 
             // BookingID
             // 
             BookingID.HeaderText = "Full Name";
@@ -430,6 +419,17 @@
             Room.Name = "Room";
             Room.Width = 150;
             // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.White;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.Black;
+            label17.Location = new Point(580, 155);
+            label17.Name = "label17";
+            label17.Size = new Size(0, 20);
+            label17.TabIndex = 26;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -456,51 +456,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Search Customer ";
             groupBox1.Enter += groupBox1_Enter;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(iconPictureBox4);
-            panel1.Controls.Add(guna2TextBox2);
-            panel1.Location = new Point(6, 39);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(735, 50);
-            panel1.TabIndex = 27;
-            // 
-            // guna2TextBox2
-            // 
-            guna2TextBox2.BorderRadius = 10;
-            guna2TextBox2.CustomizableEdges = customizableEdges15;
-            guna2TextBox2.DefaultText = "Search Keyword...";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.Dock = DockStyle.Fill;
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(0, 0);
-            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox2.Size = new Size(735, 50);
-            guna2TextBox2.TabIndex = 28;
-            // 
-            // iconPictureBox4
-            // 
-            iconPictureBox4.BackColor = Color.White;
-            iconPictureBox4.ForeColor = Color.MidnightBlue;
-            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconPictureBox4.IconColor = Color.MidnightBlue;
-            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox4.IconSize = 24;
-            iconPictureBox4.Location = new Point(698, 16);
-            iconPictureBox4.Name = "iconPictureBox4";
-            iconPictureBox4.Size = new Size(24, 27);
-            iconPictureBox4.TabIndex = 29;
-            iconPictureBox4.TabStop = false;
             // 
             // dataGridView2
             // 
@@ -543,6 +498,51 @@
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             dataGridViewTextBoxColumn4.Width = 150;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(iconPictureBox4);
+            panel1.Controls.Add(guna2TextBox2);
+            panel1.Location = new Point(6, 39);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(735, 50);
+            panel1.TabIndex = 27;
+            // 
+            // iconPictureBox4
+            // 
+            iconPictureBox4.BackColor = Color.White;
+            iconPictureBox4.ForeColor = Color.MidnightBlue;
+            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconPictureBox4.IconColor = Color.MidnightBlue;
+            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox4.IconSize = 24;
+            iconPictureBox4.Location = new Point(698, 16);
+            iconPictureBox4.Name = "iconPictureBox4";
+            iconPictureBox4.Size = new Size(24, 27);
+            iconPictureBox4.TabIndex = 29;
+            iconPictureBox4.TabStop = false;
+            // 
+            // guna2TextBox2
+            // 
+            guna2TextBox2.BorderRadius = 10;
+            guna2TextBox2.CustomizableEdges = customizableEdges15;
+            guna2TextBox2.DefaultText = "Search Keyword...";
+            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.Dock = DockStyle.Fill;
+            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Font = new Font("Segoe UI", 9F);
+            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Location = new Point(0, 0);
+            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox2.Name = "guna2TextBox2";
+            guna2TextBox2.PlaceholderText = "";
+            guna2TextBox2.SelectedText = "";
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2TextBox2.Size = new Size(735, 50);
+            guna2TextBox2.TabIndex = 28;
+            // 
             // CustomerControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -569,9 +569,9 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
