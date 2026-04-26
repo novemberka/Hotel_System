@@ -73,5 +73,10 @@ namespace Hotel_System
         {
 
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace Hotel_System
         }
 
 
-        
+
 
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -123,6 +123,11 @@ namespace Hotel_System
         }
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

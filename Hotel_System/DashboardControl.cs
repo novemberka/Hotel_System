@@ -109,5 +109,10 @@ namespace Hotel_System
         {
 
         }
+
+        private void formsPlot1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

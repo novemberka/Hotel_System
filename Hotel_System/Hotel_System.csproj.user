@@ -25,5 +25,8 @@
     <Compile Update="RoomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Walk-In.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
