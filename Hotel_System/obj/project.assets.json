@@ -5423,6 +5423,7 @@
       },
       "frameworks": {
         "net9.0-windows7.0": {
+          "framework": "net9.0-windows7.0",
           "targetAlias": "net9.0-windows7.0",
           "projectReferences": {}
         }
@@ -5441,6 +5442,7 @@
     },
     "frameworks": {
       "net9.0-windows7.0": {
+        "framework": "net9.0-windows7.0",
         "targetAlias": "net9.0-windows7.0",
         "dependencies": {
           "Bunifu.Charts.WinForms": {
@@ -5495,7 +5497,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

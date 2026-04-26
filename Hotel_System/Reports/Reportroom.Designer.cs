@@ -1,6 +1,6 @@
 ﻿namespace Hotel_System
 {
-    partial class UserControl1
+    partial class Reportroom
     {
         /// <summary> 
         /// Required designer variable.

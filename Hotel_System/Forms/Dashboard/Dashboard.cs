@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Hotel_System
 {
@@ -17,14 +18,25 @@ namespace Hotel_System
             uc.Dock = DockStyle.Fill;   // Fill the panel
             Content.Controls.Add(uc); // Add new page
         }
-        public Dashboard()
+        public Dashboard(string fullName, string role, string imgPath)
         {
             InitializeComponent();
             // Load default page
             LoadUserControl(new DashboardControl());
 
-
+            if (!string.IsNullOrEmpty(imgPath) && File.Exists(imgPath))
+            {
+                guna2CirclePictureBox1.Image = Image.FromFile(imgPath);
+            }
+            //else
+            //{
+            //    // Optional: default image
+            //    guna2CirclePictureBox1.Image = Properties.Resources.default_user;
+            //}
         }
+
+
+        
 
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -108,6 +120,11 @@ namespace Hotel_System
             GraphicsPath gp = new GraphicsPath();
             gp.AddEllipse(0, 0, profile.Width - 1, profile.Height - 1);
             profile.Region = new Region(gp);
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

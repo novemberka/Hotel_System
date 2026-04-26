@@ -1,69 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="History_Booking.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="History_Customer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="History_Room.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Payment_History.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="BookingControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Checkin_outControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="CustomerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard.cs">
+    <Compile Update="Forms\Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DashboardControl.cs">
+    <Compile Update="History\History_Booking.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Login.cs">
+    <Compile Update="History\History_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History\History_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History\Payment_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Booking\BookingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\CheckInCheckOut\Checkin_outControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Customer\CustomerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Dashboard\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PaymentControl.cs">
+    <Compile Update="Forms\Payment\PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Report_Booking.cs">
+    <Compile Update="Reports\Reportroom.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Report_CheckOut.cs">
+    <Compile Update="Reports\Report_Booking.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Report_Customer.cs">
+    <Compile Update="Reports\Report_CheckOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Report_Payment.cs">
+    <Compile Update="Reports\Report_Customer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Report_Room.cs">
+    <Compile Update="Reports\Report_Payment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Report_WalkIn.cs">
+    <Compile Update="Reports\Report_WalkIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl1.cs">
+    <Compile Update="Forms\WalkIn\Walk-In.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Walk-In.cs">
+    <Compile Update="Forms\Room\RoomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="BookingControl.resx">
+    <EmbeddedResource Update="Forms\Booking\BookingControl.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Login.resx">
+    <EmbeddedResource Update="Forms\Login\Login.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">

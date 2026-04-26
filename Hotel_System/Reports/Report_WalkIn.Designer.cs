@@ -30,8 +30,6 @@
         {
             DataGridView WalkIn_Report;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -40,6 +38,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            BalanceDue = new DataGridViewTextBoxColumn();
+            AmountPaid = new DataGridViewTextBoxColumn();
+            TotalPrice = new DataGridViewTextBoxColumn();
+            Payment = new DataGridViewTextBoxColumn();
             Booking = new DataGridViewTextBoxColumn();
             CustomerName = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
@@ -59,8 +69,6 @@
             txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             label3 = new Label();
-            RoomType = new Guna.UI2.WinForms.Guna2ComboBox();
-            label2 = new Label();
             ToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label1 = new Label();
             FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -79,16 +87,7 @@
             lbCustomers = new Label();
             label6 = new Label();
             label9 = new Label();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            BalanceDue = new DataGridViewTextBoxColumn();
-            AmountPaid = new DataGridViewTextBoxColumn();
-            TotalPrice = new DataGridViewTextBoxColumn();
-            Payment = new DataGridViewTextBoxColumn();
+            btnflitter = new Guna.UI2.WinForms.Guna2Button();
             WalkIn_Report = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)WalkIn_Report).BeginInit();
             WalkIn_list.SuspendLayout();
@@ -118,6 +117,85 @@
             WalkIn_Report.Size = new Size(1350, 264);
             WalkIn_Report.TabIndex = 28;
             WalkIn_Report.CellContentClick += WalkIn_Report_CellContentClick_1;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "customer_name";
+            dataGridViewTextBoxColumn3.HeaderText = "Customer Name";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "phone_number";
+            dataGridViewTextBoxColumn4.HeaderText = "Phone Number";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.DataPropertyName = "room_type";
+            dataGridViewTextBoxColumn6.HeaderText = "Room Type";
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.DataPropertyName = "check-in";
+            dataGridViewTextBoxColumn7.HeaderText = "Check In";
+            dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewTextBoxColumn8.DataPropertyName = "check-out";
+            dataGridViewTextBoxColumn8.HeaderText = "Check Out";
+            dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewTextBoxColumn9.DataPropertyName = "status";
+            dataGridViewTextBoxColumn9.HeaderText = "Status";
+            dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            dataGridViewTextBoxColumn9.Width = 160;
+            // 
+            // BalanceDue
+            // 
+            BalanceDue.HeaderText = "Balance Due";
+            BalanceDue.MinimumWidth = 6;
+            BalanceDue.Name = "BalanceDue";
+            BalanceDue.Width = 125;
+            // 
+            // AmountPaid
+            // 
+            AmountPaid.DataPropertyName = "amount_paid";
+            AmountPaid.HeaderText = "Amount Paid";
+            AmountPaid.MinimumWidth = 6;
+            AmountPaid.Name = "AmountPaid";
+            AmountPaid.Width = 125;
+            // 
+            // TotalPrice
+            // 
+            TotalPrice.DataPropertyName = "total_price";
+            TotalPrice.HeaderText = "Total Price";
+            TotalPrice.MinimumWidth = 6;
+            TotalPrice.Name = "TotalPrice";
+            TotalPrice.Width = 110;
+            // 
+            // Payment
+            // 
+            Payment.DataPropertyName = "payment";
+            Payment.HeaderText = "Payment";
+            Payment.MinimumWidth = 6;
+            Payment.Name = "Payment";
+            Payment.Width = 125;
             // 
             // Booking
             // 
@@ -268,12 +346,11 @@
             // SelectDateRoport
             // 
             SelectDateRoport.BackColor = Color.Transparent;
+            SelectDateRoport.Controls.Add(btnflitter);
             SelectDateRoport.Controls.Add(txtRoomNumber);
             SelectDateRoport.Controls.Add(txtSearchCustomer);
             SelectDateRoport.Controls.Add(label4);
             SelectDateRoport.Controls.Add(label3);
-            SelectDateRoport.Controls.Add(RoomType);
-            SelectDateRoport.Controls.Add(label2);
             SelectDateRoport.Controls.Add(ToDate);
             SelectDateRoport.Controls.Add(label1);
             SelectDateRoport.Controls.Add(FromDate);
@@ -292,7 +369,7 @@
             // 
             txtRoomNumber.BorderColor = Color.Black;
             txtRoomNumber.BorderRadius = 6;
-            txtRoomNumber.CustomizableEdges = customizableEdges1;
+            txtRoomNumber.CustomizableEdges = customizableEdges3;
             txtRoomNumber.DefaultText = "";
             txtRoomNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtRoomNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -301,12 +378,12 @@
             txtRoomNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtRoomNumber.Font = new Font("Segoe UI", 9F);
             txtRoomNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRoomNumber.Location = new Point(836, 120);
+            txtRoomNumber.Location = new Point(830, 80);
             txtRoomNumber.Margin = new Padding(3, 4, 3, 4);
             txtRoomNumber.Name = "txtRoomNumber";
             txtRoomNumber.PlaceholderText = "";
             txtRoomNumber.SelectedText = "";
-            txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtRoomNumber.Size = new Size(228, 36);
             txtRoomNumber.TabIndex = 61;
             // 
@@ -314,7 +391,7 @@
             // 
             txtSearchCustomer.BorderColor = Color.Silver;
             txtSearchCustomer.BorderRadius = 6;
-            txtSearchCustomer.CustomizableEdges = customizableEdges3;
+            txtSearchCustomer.CustomizableEdges = customizableEdges5;
             txtSearchCustomer.DefaultText = "";
             txtSearchCustomer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchCustomer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -328,8 +405,8 @@
             txtSearchCustomer.Name = "txtSearchCustomer";
             txtSearchCustomer.PlaceholderText = "";
             txtSearchCustomer.SelectedText = "";
-            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearchCustomer.Size = new Size(492, 36);
+            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtSearchCustomer.Size = new Size(296, 36);
             txtSearchCustomer.TabIndex = 55;
             // 
             // label4
@@ -350,43 +427,11 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(836, 96);
+            label3.Location = new Point(825, 45);
             label3.Name = "label3";
             label3.Size = new Size(110, 20);
             label3.TabIndex = 25;
             label3.Text = "Room Number";
-            // 
-            // RoomType
-            // 
-            RoomType.BackColor = Color.Transparent;
-            RoomType.BorderColor = Color.Silver;
-            RoomType.BorderRadius = 8;
-            RoomType.CustomizableEdges = customizableEdges5;
-            RoomType.DrawMode = DrawMode.OwnerDrawFixed;
-            RoomType.DropDownStyle = ComboBoxStyle.DropDownList;
-            RoomType.FocusedColor = Color.FromArgb(94, 148, 255);
-            RoomType.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            RoomType.Font = new Font("Segoe UI", 10F);
-            RoomType.ForeColor = Color.FromArgb(68, 88, 112);
-            RoomType.ItemHeight = 30;
-            RoomType.Items.AddRange(new object[] { "All", "Single", "Double", "VIP" });
-            RoomType.Location = new Point(836, 45);
-            RoomType.Name = "RoomType";
-            RoomType.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            RoomType.Size = new Size(210, 36);
-            RoomType.TabIndex = 24;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(836, 22);
-            label2.Name = "label2";
-            label2.Size = new Size(85, 20);
-            label2.TabIndex = 23;
-            label2.Text = "Room Type";
             // 
             // ToDate
             // 
@@ -398,7 +443,7 @@
             ToDate.FocusedColor = Color.White;
             ToDate.Font = new Font("Segoe UI", 9F);
             ToDate.Format = DateTimePickerFormat.Long;
-            ToDate.Location = new Point(427, 45);
+            ToDate.Location = new Point(370, 45);
             ToDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             ToDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             ToDate.Name = "ToDate";
@@ -414,7 +459,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(427, 22);
+            label1.Location = new Point(370, 22);
             label1.Name = "label1";
             label1.Size = new Size(61, 20);
             label1.TabIndex = 21;
@@ -635,84 +680,23 @@
             label9.TabIndex = 19;
             label9.Text = "Report Summary";
             // 
-            // dataGridViewTextBoxColumn3
+            // btnflitter
             // 
-            dataGridViewTextBoxColumn3.DataPropertyName = "customer_name";
-            dataGridViewTextBoxColumn3.HeaderText = "Customer Name";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.DataPropertyName = "phone_number";
-            dataGridViewTextBoxColumn4.HeaderText = "Phone Number";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.DataPropertyName = "room_type";
-            dataGridViewTextBoxColumn6.HeaderText = "Room Type";
-            dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            dataGridViewTextBoxColumn7.DataPropertyName = "check-in";
-            dataGridViewTextBoxColumn7.HeaderText = "Check In";
-            dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.DataPropertyName = "check-out";
-            dataGridViewTextBoxColumn8.HeaderText = "Check Out";
-            dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewTextBoxColumn9.DataPropertyName = "status";
-            dataGridViewTextBoxColumn9.HeaderText = "Status";
-            dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            dataGridViewTextBoxColumn9.Width = 160;
-            // 
-            // BalanceDue
-            // 
-            BalanceDue.HeaderText = "Balance Due";
-            BalanceDue.MinimumWidth = 6;
-            BalanceDue.Name = "BalanceDue";
-            BalanceDue.Width = 125;
-            // 
-            // AmountPaid
-            // 
-            AmountPaid.DataPropertyName = "amount_paid";
-            AmountPaid.HeaderText = "Amount Paid";
-            AmountPaid.MinimumWidth = 6;
-            AmountPaid.Name = "AmountPaid";
-            AmountPaid.Width = 125;
-            // 
-            // TotalPrice
-            // 
-            TotalPrice.DataPropertyName = "total_price";
-            TotalPrice.HeaderText = "Total Price";
-            TotalPrice.MinimumWidth = 6;
-            TotalPrice.Name = "TotalPrice";
-            TotalPrice.Width = 110;
-            // 
-            // Payment
-            // 
-            Payment.DataPropertyName = "payment";
-            Payment.HeaderText = "Payment";
-            Payment.MinimumWidth = 6;
-            Payment.Name = "Payment";
-            Payment.Width = 125;
+            btnflitter.BorderRadius = 8;
+            btnflitter.CustomizableEdges = customizableEdges1;
+            btnflitter.DisabledState.BorderColor = Color.DarkGray;
+            btnflitter.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnflitter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnflitter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnflitter.FillColor = Color.LimeGreen;
+            btnflitter.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnflitter.ForeColor = Color.White;
+            btnflitter.Location = new Point(707, 45);
+            btnflitter.Name = "btnflitter";
+            btnflitter.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnflitter.Size = new Size(71, 36);
+            btnflitter.TabIndex = 62;
+            btnflitter.Text = "Flitter";
             // 
             // Report_WalkIn
             // 
@@ -763,8 +747,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearchCustomer;
         private Label label4;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox RoomType;
-        private Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker ToDate;
         private Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker FromDate;
@@ -797,6 +779,7 @@
         private DataGridViewTextBoxColumn AmountPaid;
         private DataGridViewTextBoxColumn TotalPrice;
         private DataGridViewTextBoxColumn Payment;
+        private Guna.UI2.WinForms.Guna2Button btnflitter;
 
         public DataGridView WalkIn_Report { get; private set; }
     }
