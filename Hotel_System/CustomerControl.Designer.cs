@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -80,6 +81,7 @@
             IDCardNumber = new DataGridViewTextBoxColumn();
             dbConnectionBindingSource = new BindingSource(components);
             CustomerInfo.SuspendLayout();
+
             CustomerList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dbConnectionBindingSource).BeginInit();
