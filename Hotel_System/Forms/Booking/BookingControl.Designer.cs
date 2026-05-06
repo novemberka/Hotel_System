@@ -66,10 +66,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gReservatonlist = new GroupBox();
@@ -115,19 +115,19 @@
             label20 = new Label();
             label13 = new Label();
             label26 = new Label();
-            RoomStatus = new Guna.UI2.WinForms.Guna2GroupBox();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             label19 = new Label();
+            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            RoomStatus = new Guna.UI2.WinForms.Guna2GroupBox();
+            panel5 = new Panel();
+            label11 = new Label();
+            label10 = new Label();
+            panel4 = new Panel();
+            label9 = new Label();
+            label8 = new Label();
+            panel3 = new Panel();
+            label7 = new Label();
             label21 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label7 = new Label();
-            panel3 = new Panel();
-            label8 = new Label();
-            label9 = new Label();
-            panel4 = new Panel();
-            label10 = new Label();
-            label11 = new Label();
-            panel5 = new Panel();
             gReservatonlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             CustomerInfo.SuspendLayout();
@@ -244,7 +244,7 @@
             label15.BackColor = Color.White;
             label15.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.Black;
-            label15.Location = new Point(586, 201);
+            label15.Location = new Point(575, 201);
             label15.Name = "label15";
             label15.Size = new Size(88, 20);
             label15.TabIndex = 53;
@@ -256,7 +256,7 @@
             label16.BackColor = Color.White;
             label16.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.Black;
-            label16.Location = new Point(586, 157);
+            label16.Location = new Point(580, 157);
             label16.Name = "label16";
             label16.Size = new Size(94, 20);
             label16.TabIndex = 51;
@@ -808,25 +808,18 @@
             label26.Text = "Room Type:";
             label26.Click += label26_Click_1;
             // 
-            // RoomStatus
+            // label19
             // 
-            RoomStatus.BorderColor = Color.FromArgb(64, 64, 64);
-            RoomStatus.BorderRadius = 10;
-            RoomStatus.Controls.Add(guna2ComboBox1);
-            RoomStatus.Controls.Add(label19);
-            RoomStatus.CustomBorderColor = Color.MidnightBlue;
-            RoomStatus.CustomizableEdges = customizableEdges41;
-            RoomStatus.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            RoomStatus.ForeColor = Color.White;
-            RoomStatus.Location = new Point(1137, 240);
-            RoomStatus.Name = "RoomStatus";
-            RoomStatus.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            RoomStatus.Size = new Size(233, 232);
-            RoomStatus.TabIndex = 56;
-            RoomStatus.Text = "Room Status";
-            RoomStatus.TextAlign = HorizontalAlignment.Center;
-            RoomStatus.TextOffset = new Point(1, 1);
-            RoomStatus.Click += RoomStatus_Click;
+            label19.AutoSize = true;
+            label19.BackColor = Color.White;
+            label19.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.Black;
+            label19.Location = new Point(3, 76);
+            label19.Name = "label19";
+            label19.Size = new Size(54, 20);
+            label19.TabIndex = 59;
+            label19.Text = "Status:";
+            label19.Click += label19_Click;
             // 
             // guna2ComboBox1
             // 
@@ -848,18 +841,110 @@
             guna2ComboBox1.TabIndex = 72;
             guna2ComboBox1.SelectedIndexChanged += guna2ComboBox1_SelectedIndexChanged;
             // 
-            // label19
+            // RoomStatus
             // 
-            label19.AutoSize = true;
-            label19.BackColor = Color.White;
-            label19.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.Black;
-            label19.Location = new Point(3, 76);
-            label19.Name = "label19";
-            label19.Size = new Size(54, 20);
-            label19.TabIndex = 59;
-            label19.Text = "Status:";
-            label19.Click += label19_Click;
+            RoomStatus.BorderColor = Color.FromArgb(64, 64, 64);
+            RoomStatus.BorderRadius = 10;
+            RoomStatus.Controls.Add(guna2ComboBox1);
+            RoomStatus.Controls.Add(label19);
+            RoomStatus.CustomBorderColor = Color.MidnightBlue;
+            RoomStatus.CustomizableEdges = customizableEdges41;
+            RoomStatus.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            RoomStatus.ForeColor = Color.White;
+            RoomStatus.Location = new Point(1137, 240);
+            RoomStatus.Name = "RoomStatus";
+            RoomStatus.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            RoomStatus.Size = new Size(233, 232);
+            RoomStatus.TabIndex = 56;
+            RoomStatus.Text = "Room Status";
+            RoomStatus.TextAlign = HorizontalAlignment.Center;
+            RoomStatus.TextOffset = new Point(1, 1);
+            RoomStatus.Click += RoomStatus_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.LawnGreen;
+            panel5.Location = new Point(15, 53);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(20, 20);
+            panel5.TabIndex = 73;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.White;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(57, 53);
+            label11.Name = "label11";
+            label11.Size = new Size(77, 20);
+            label11.TabIndex = 74;
+            label11.Text = "Room 701";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.White;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.Black;
+            label10.Location = new Point(146, 53);
+            label10.Name = "label10";
+            label10.Size = new Size(71, 20);
+            label10.TabIndex = 75;
+            label10.Text = "Available";
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Red;
+            panel4.ForeColor = SystemColors.ControlLight;
+            panel4.Location = new Point(15, 104);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(20, 20);
+            panel4.TabIndex = 76;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.White;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(57, 104);
+            label9.Name = "label9";
+            label9.Size = new Size(77, 20);
+            label9.TabIndex = 77;
+            label9.Text = "Room 702";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.White;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Red;
+            label8.Location = new Point(149, 104);
+            label8.Name = "label8";
+            label8.Size = new Size(72, 20);
+            label8.TabIndex = 78;
+            label8.Text = "Occupied";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.DarkOrange;
+            panel3.Location = new Point(15, 156);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(20, 20);
+            panel3.TabIndex = 79;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.White;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(57, 156);
+            label7.Name = "label7";
+            label7.Size = new Size(77, 20);
+            label7.TabIndex = 80;
+            label7.Text = "Room 703";
             // 
             // label21
             // 
@@ -899,91 +984,6 @@
             guna2GroupBox2.TextAlign = HorizontalAlignment.Center;
             guna2GroupBox2.TextOffset = new Point(1, 1);
             guna2GroupBox2.Click += guna2GroupBox2_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.White;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(57, 156);
-            label7.Name = "label7";
-            label7.Size = new Size(77, 20);
-            label7.TabIndex = 80;
-            label7.Text = "Room 703";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.DarkOrange;
-            panel3.Location = new Point(15, 156);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(20, 20);
-            panel3.TabIndex = 79;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Red;
-            label8.Location = new Point(149, 104);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 20);
-            label8.TabIndex = 78;
-            label8.Text = "Occupied";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.White;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(57, 104);
-            label9.Name = "label9";
-            label9.Size = new Size(77, 20);
-            label9.TabIndex = 77;
-            label9.Text = "Room 702";
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Red;
-            panel4.ForeColor = SystemColors.ControlLight;
-            panel4.Location = new Point(15, 104);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(20, 20);
-            panel4.TabIndex = 76;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.White;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Black;
-            label10.Location = new Point(146, 53);
-            label10.Name = "label10";
-            label10.Size = new Size(71, 20);
-            label10.TabIndex = 75;
-            label10.Text = "Available";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Black;
-            label11.Location = new Point(57, 53);
-            label11.Name = "label11";
-            label11.Size = new Size(77, 20);
-            label11.TabIndex = 74;
-            label11.Text = "Room 701";
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.LawnGreen;
-            panel5.Location = new Point(15, 53);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(20, 20);
-            panel5.TabIndex = 73;
             // 
             // BookingControl
             // 
@@ -1063,19 +1063,19 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker4;
-        private Guna.UI2.WinForms.Guna2GroupBox RoomStatus;
-        private Label label19;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Label label21;
+        private Label label19;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Label label7;
-        private Panel panel3;
-        private Label label8;
-        private Label label9;
-        private Panel panel4;
-        private Label label10;
-        private Label label11;
+        private Guna.UI2.WinForms.Guna2GroupBox RoomStatus;
         private Panel panel5;
+        private Label label11;
+        private Label label10;
+        private Panel panel4;
+        private Label label9;
+        private Label label8;
+        private Panel panel3;
+        private Label label7;
+        private Label label21;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
     }
 }
