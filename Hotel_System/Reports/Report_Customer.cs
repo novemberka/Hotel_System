@@ -51,7 +51,7 @@ namespace Hotel_System
         {
             try
             {
-                string fullName = txtFullName.Text.Trim();
+                string fullName = cmbCustomerName.Text.Trim();
                 string roomType = cmbRoomType.SelectedItem?.ToString() == "All"
                                   ? "" : cmbRoomType.SelectedItem?.ToString() ?? "";
 
@@ -124,13 +124,13 @@ namespace Hotel_System
             {
                 try
                 {
-                    // ✅ If file exists → delete (avoid permission error)
+
                     if (File.Exists(sfd.FileName))
                     {
                         File.Delete(sfd.FileName);
                     }
 
-                    // ✅ Count ONLY visible columns
+
                     int visibleColumns = dgvCustomers.Columns
                         .Cast<DataGridViewColumn>()
                         .Count(c => c.Visible);
@@ -142,7 +142,7 @@ namespace Hotel_System
                     {
                         Table table = new Table(visibleColumns);
 
-                        // ✅ Header
+
                         foreach (DataGridViewColumn col in dgvCustomers.Columns)
                         {
                             if (col.Visible)
@@ -151,7 +151,7 @@ namespace Hotel_System
                             }
                         }
 
-                        // ✅ Data
+
                         foreach (DataGridViewRow row in dgvCustomers.Rows)
                         {
                             if (!row.IsNewRow)
@@ -169,13 +169,18 @@ namespace Hotel_System
                         document.Add(table);
                     }
 
-                    MessageBox.Show("✅ Exported to PDF successfully!");
+                    MessageBox.Show("Exported to PDF successfully!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("❌ ERROR:\n" + ex.Message);
+                    MessageBox.Show("ERROR:\n" + ex.Message);
                 }
             }
+        }
+
+        private void cmbCustomerName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

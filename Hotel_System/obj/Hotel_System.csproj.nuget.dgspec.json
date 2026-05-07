@@ -52,21 +52,9 @@
           "framework": "net9.0-windows7.0",
           "targetAlias": "net9.0-windows7.0",
           "dependencies": {
-            "Bunifu.Charts.WinForms": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
             "Bunifu.UI.WinForms": {
               "target": "Package",
               "version": "[9.1.0, )"
-            },
-            "ClosedXML": {
-              "target": "Package",
-              "version": "[0.105.0, )"
-            },
-            "ClosedXML.Report": {
-              "target": "Package",
-              "version": "[0.2.12, )"
             },
             "FontAwesome.Sharp": {
               "target": "Package",
@@ -76,14 +64,6 @@
               "target": "Package",
               "version": "[2.0.4.7, )"
             },
-            "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
-            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.6.0, )"
@@ -91,14 +71,6 @@
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.22, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.5.0, )"
-            },
-            "ReportViewer.WebForms": {
-              "target": "Package",
-              "version": "[12.0.2402.20, )"
             },
             "ReportViewerCore.NETCore": {
               "target": "Package",
@@ -112,21 +84,9 @@
               "target": "Package",
               "version": "[5.5.13.5, )"
             },
-            "itext.kernel.core": {
-              "target": "Package",
-              "version": "[1.0.2, )"
-            },
             "itext7": {
               "target": "Package",
               "version": "[9.6.0, )"
-            },
-            "itext7.commons": {
-              "target": "Package",
-              "version": "[9.6.0, )"
-            },
-            "itext7.pdfhtml": {
-              "target": "Package",
-              "version": "[6.3.2, )"
             }
           },
           "imports": [

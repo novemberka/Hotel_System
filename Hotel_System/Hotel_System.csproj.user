@@ -7,18 +7,6 @@
     <Compile Update="Forms\Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="History\History_Booking.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="History\History_Customer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="History\History_Room.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="History\Payment_History.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Forms\Booking\BookingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -46,16 +34,7 @@
     <Compile Update="Reports\Report_Customer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Reports\Report_Customer_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Reports\Report_Payment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Reports\Report_WalkIn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\WalkIn\Walk-In.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Forms\Room\RoomControl.cs">

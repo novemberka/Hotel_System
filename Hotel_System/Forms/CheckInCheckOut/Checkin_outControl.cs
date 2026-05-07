@@ -99,5 +99,20 @@ namespace Hotel_System
         {
 
         }
+
+        private void guna2TextBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

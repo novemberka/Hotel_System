@@ -54,9 +54,9 @@ namespace Hotel_System
                                               ? reader["ImagePath"].ToString() : null;
                         reader.Close();
 
-                        Report_Customer_Form reportForm = new Report_Customer_Form();
-                        reportForm.Show();
-                        this.Hide();
+                        //Report_Customer_Form reportForm = new Report_Customer_Form();
+                        //reportForm.Show();
+                        //this.Hide();
                     }
                     else
                     {

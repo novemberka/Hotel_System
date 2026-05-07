@@ -78,5 +78,15 @@ namespace Hotel_System
         {
 
         }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
