@@ -15,25 +15,6 @@
           }
         }
       },
-      "Bunifu.Charts.WinForms/3.1.0": {
-        "type": "package",
-        "dependencies": {
-          "bunifu.licensing": "6.3.0"
-        },
-        "compile": {
-          "lib/net9.0-windows7.0/Bunifu.Charts.WinForms.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0-windows7.0/Bunifu.Charts.WinForms.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
-      },
       "Bunifu.Licensing/6.3.0": {
         "type": "package",
         "dependencies": {
@@ -550,6 +531,361 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.ReportingServices.ReportViewerControl.WebForms/150.1652.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.SqlServer.Types": "14.0.0"
+        },
+        "compile": {
+          "lib/net40/Microsoft.ReportViewer.Common.dll": {},
+          "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/net40/Microsoft.ReportViewer.Design.dll": {},
+          "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
+          "lib/net40/Microsoft.ReportViewer.WebDesign.dll": {},
+          "lib/net40/Microsoft.ReportViewer.WebForms.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.ReportViewer.Common.dll": {},
+          "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/net40/Microsoft.ReportViewer.Design.dll": {},
+          "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
+          "lib/net40/Microsoft.ReportViewer.WebDesign.dll": {},
+          "lib/net40/Microsoft.ReportViewer.WebForms.dll": {}
+        },
+        "resource": {
+          "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/de/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/de/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/de/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/de/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/de/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/es/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/es/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/es/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/es/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/es/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/fr/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/fr/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/fr/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/fr/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/fr/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/it/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/it/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/it/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/it/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/it/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/it/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/ja/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ja/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ja/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ja/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ja/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ja/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net40/ko/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ko/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ko/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ko/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ko/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/ko/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net40/pt/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net40/pt/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net40/pt/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net40/pt/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net40/pt/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net40/pt/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net40/ru/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/ru/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/ru/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/ru/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/ru/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/ru/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/zh-CHS/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "zh-CHS"
+          },
+          "lib/net40/zh-CHS/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "zh-CHS"
+          },
+          "lib/net40/zh-CHS/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "zh-CHS"
+          },
+          "lib/net40/zh-CHS/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "zh-CHS"
+          },
+          "lib/net40/zh-CHS/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "zh-CHS"
+          },
+          "lib/net40/zh-CHS/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "zh-CHS"
+          },
+          "lib/net40/zh-CHT/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "zh-CHT"
+          },
+          "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "zh-CHT"
+          },
+          "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "zh-CHT"
+          },
+          "lib/net40/zh-CHT/Microsoft.ReportViewer.WebDesign.resources.dll": {
+            "locale": "zh-CHT"
+          },
+          "lib/net40/zh-CHT/Microsoft.ReportViewer.WebForms.resources.dll": {
+            "locale": "zh-CHT"
+          },
+          "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "zh-CHT"
+          }
+        }
+      },
+      "Microsoft.SqlServer.Types/14.0.314.76": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.SqlServer.Types.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.SqlServer.Types.dll": {}
+        }
+      },
+      "Microsoft.Testing.Extensions.TrxReport/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Testing.Extensions.TrxReport.Abstractions": "2.2.2",
+          "Microsoft.Testing.Platform": "2.2.2"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/cs/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Testing.Extensions.TrxReport.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "build": {
+          "buildTransitive/net9.0/Microsoft.Testing.Extensions.TrxReport.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.Testing.Extensions.TrxReport.props": {}
+        }
+      },
+      "Microsoft.Testing.Extensions.TrxReport.Abstractions/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Testing.Platform": "2.2.2"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Testing.Platform/2.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Testing.Platform.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Testing.Platform.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net9.0/cs/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.Testing.Platform.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "build": {
+          "buildTransitive/net9.0/Microsoft.Testing.Platform.props": {},
+          "buildTransitive/net9.0/Microsoft.Testing.Platform.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.Testing.Platform.props": {},
+          "buildMultiTargeting/Microsoft.Testing.Platform.targets": {}
+        }
+      },
       "MySql.Data/9.6.0": {
         "type": "package",
         "dependencies": {
@@ -667,6 +1003,38 @@
           "lib/net20/OpenTK.GLControl.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "ReportPortal.Client/3.11.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/ReportPortal.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ReportPortal.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ReportPortal.Shared/3.11.1": {
+        "type": "package",
+        "dependencies": {
+          "ReportPortal.Client": "3.11.1"
+        },
+        "compile": {
+          "lib/net8.0/ReportPortal.Shared.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ReportPortal.Shared.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/net8.0/ReportPortal.Shared.targets": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -1866,36 +2234,6 @@
         "packageIcon.png"
       ]
     },
-    "Bunifu.Charts.WinForms/3.1.0": {
-      "sha512": "hVqtdwJyq0dyFb/Jyi1rWI8+hxn/666/6lJSMpCerHEGpgGZhOK3fzfAdH2GYpm+wZTAiaA47gxQZFtEXf9heQ==",
-      "type": "package",
-      "path": "bunifu.charts.winforms/3.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHARTS README.md",
-        "Icon.png",
-        "LICENSE.txt",
-        "bunifu.charts.winforms.3.1.0.nupkg.sha512",
-        "bunifu.charts.winforms.nuspec",
-        "lib/net462/Bunifu.Charts.WinForms.dll",
-        "lib/net462/Bunifu.Charts.WinForms.xml",
-        "lib/net472/Bunifu.Charts.WinForms.dll",
-        "lib/net472/Bunifu.Charts.WinForms.xml",
-        "lib/net48/Bunifu.Charts.WinForms.dll",
-        "lib/net48/Bunifu.Charts.WinForms.xml",
-        "lib/net5.0-windows7.0/Bunifu.Charts.WinForms.dll",
-        "lib/net5.0-windows7.0/Bunifu.Charts.WinForms.xml",
-        "lib/net6.0-windows7.0/Bunifu.Charts.WinForms.dll",
-        "lib/net6.0-windows7.0/Bunifu.Charts.WinForms.xml",
-        "lib/net7.0-windows7.0/Bunifu.Charts.WinForms.dll",
-        "lib/net7.0-windows7.0/Bunifu.Charts.WinForms.xml",
-        "lib/net8.0-windows7.0/Bunifu.Charts.WinForms.dll",
-        "lib/net8.0-windows7.0/Bunifu.Charts.WinForms.xml",
-        "lib/net9.0-windows7.0/Bunifu.Charts.WinForms.dll",
-        "lib/net9.0-windows7.0/Bunifu.Charts.WinForms.xml"
-      ]
-    },
     "Bunifu.Licensing/6.3.0": {
       "sha512": "rxUZsV8xTIIwLW7haxMwg1ZfyjXR7p5geF7/7ymqnIwz0TDdYjwOtIZmkO85+c+nRnJHrpmCr5gZpSKHsWwaag==",
       "type": "package",
@@ -2584,6 +2922,271 @@
         "runtime.json"
       ]
     },
+    "Microsoft.ReportingServices.ReportViewerControl.WebForms/150.1652.0": {
+      "sha512": "Y0gZS3o9Y2HvTV/XjZ06kJ4PJxmlb7CE9jPgwtSMvGUkIF9NK8JBRUsEMSHgrXQaKXu4LtVL1HkcyGFebaVjnA==",
+      "type": "package",
+      "path": "microsoft.reportingservices.reportviewercontrol.webforms/150.1652.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/web.config.install.xdt",
+        "lib/net40/Microsoft.ReportViewer.Common.dll",
+        "lib/net40/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/Microsoft.ReportViewer.DataVisualization.dll",
+        "lib/net40/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/Microsoft.ReportViewer.Design.dll",
+        "lib/net40/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll",
+        "lib/net40/Microsoft.ReportViewer.WebDesign.dll",
+        "lib/net40/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/Microsoft.ReportViewer.WebForms.dll",
+        "lib/net40/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/Microsoft.ReportViewer.WinForms.dll",
+        "lib/net40/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/de/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/de/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/de/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/de/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/de/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/es/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/es/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/es/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/es/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/es/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/es/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/fr/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/fr/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/fr/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/fr/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/fr/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/fr/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/it/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/it/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/it/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/it/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/it/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/it/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/ja/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/ja/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/ja/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/ja/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/ja/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/ja/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/ko/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/ko/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/ko/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/ko/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/ko/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/ko/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/pt/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/pt/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/pt/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/pt/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/pt/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/pt/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/ru/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/ru/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/ru/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/ru/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/ru/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/ru/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/zh-CHS/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/zh-CHS/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/zh-CHS/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/zh-CHS/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/zh-CHS/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/zh-CHS/Microsoft.ReportViewer.WinForms.resources.dll",
+        "lib/net40/zh-CHT/Microsoft.ReportViewer.Common.resources.dll",
+        "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll",
+        "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll",
+        "lib/net40/zh-CHT/Microsoft.ReportViewer.WebDesign.resources.dll",
+        "lib/net40/zh-CHT/Microsoft.ReportViewer.WebForms.resources.dll",
+        "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll",
+        "license/License_ReportViewer.rtf",
+        "license/ThirdPartyNotices_ReportViewer.txt",
+        "microsoft.reportingservices.reportviewercontrol.webforms.150.1652.0.nupkg.sha512",
+        "microsoft.reportingservices.reportviewercontrol.webforms.nuspec"
+      ]
+    },
+    "Microsoft.SqlServer.Types/14.0.314.76": {
+      "sha512": "gAekCmSfjtRBaiuuRIqJJV6cfEsEbYY5vI7Ssoc5sYI04JcyPrZ4C8RC3z7K9xfpr9ejQAQ1AtfvtgqEnjmwOw==",
+      "type": "package",
+      "path": "microsoft.sqlserver.types/14.0.314.76",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/SqlServerTypes/Loader.cs",
+        "content/SqlServerTypes/readme.htm",
+        "lib/net40/Microsoft.SqlServer.Types.dll",
+        "license/license_SysClrTypes.rtf",
+        "microsoft.sqlserver.types.14.0.314.76.nupkg.sha512",
+        "microsoft.sqlserver.types.nuspec",
+        "nativeBinaries/x64/SqlServerSpatial140.dll",
+        "nativeBinaries/x64/msvcr120.dll",
+        "nativeBinaries/x86/SqlServerSpatial140.dll",
+        "nativeBinaries/x86/msvcr120.dll",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.Testing.Extensions.TrxReport/2.2.2": {
+      "sha512": "iEp69l8C0OlEnqUgZVoh621PrFIbaIbhjShUkW9pgPwH1GGLawLbi7cW1wyzLxZLI3jVSuKqV/JbSFz8Ael7Kg==",
+      "type": "package",
+      "path": "microsoft.testing.extensions.trxreport/2.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "build/net8.0/Microsoft.Testing.Extensions.TrxReport.props",
+        "build/net9.0/Microsoft.Testing.Extensions.TrxReport.props",
+        "build/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.props",
+        "buildMultiTargeting/Microsoft.Testing.Extensions.TrxReport.props",
+        "buildTransitive/net8.0/Microsoft.Testing.Extensions.TrxReport.props",
+        "buildTransitive/net9.0/Microsoft.Testing.Extensions.TrxReport.props",
+        "buildTransitive/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.props",
+        "lib/net8.0/Microsoft.Testing.Extensions.TrxReport.dll",
+        "lib/net8.0/Microsoft.Testing.Extensions.TrxReport.xml",
+        "lib/net8.0/cs/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/de/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/es/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/fr/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/it/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/ja/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/ko/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/pl/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/pt-BR/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/ru/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/tr/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.dll",
+        "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.xml",
+        "lib/net9.0/cs/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/de/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/es/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/fr/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/it/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/ja/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/ko/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/pl/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/pt-BR/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/ru/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/tr/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/zh-Hans/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/net9.0/zh-Hant/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.dll",
+        "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.xml",
+        "lib/netstandard2.0/cs/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/de/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/es/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/fr/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/it/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/ja/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/ko/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/pl/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/pt-BR/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/ru/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/tr/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/zh-Hans/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "lib/netstandard2.0/zh-Hant/Microsoft.Testing.Extensions.TrxReport.resources.dll",
+        "microsoft.testing.extensions.trxreport.2.2.2.nupkg.sha512",
+        "microsoft.testing.extensions.trxreport.nuspec"
+      ]
+    },
+    "Microsoft.Testing.Extensions.TrxReport.Abstractions/2.2.2": {
+      "sha512": "MuOC3Be70FPysaPxaO0f3GFoXU49UwnKCVDWfFrOZ93h955KZ6MKiJ6vwt/2r4e1wkLDoJFbkQzi/MNbpe4oXQ==",
+      "type": "package",
+      "path": "microsoft.testing.extensions.trxreport.abstractions/2.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll",
+        "lib/net8.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.xml",
+        "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll",
+        "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.xml",
+        "microsoft.testing.extensions.trxreport.abstractions.2.2.2.nupkg.sha512",
+        "microsoft.testing.extensions.trxreport.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Testing.Platform/2.2.2": {
+      "sha512": "9mUsTOri0aVqBX7/EJwqVJxVwdOzGUVJqK1H2EMfIl9xxJuSdqhfAlJbukl/iNugvi4+cmQs/LI8PLTDUT9P1A==",
+      "type": "package",
+      "path": "microsoft.testing.platform/2.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "build/net8.0/Microsoft.Testing.Platform.props",
+        "build/net8.0/Microsoft.Testing.Platform.targets",
+        "build/net9.0/Microsoft.Testing.Platform.props",
+        "build/net9.0/Microsoft.Testing.Platform.targets",
+        "build/netstandard2.0/Microsoft.Testing.Platform.props",
+        "build/netstandard2.0/Microsoft.Testing.Platform.targets",
+        "buildMultiTargeting/Microsoft.Testing.Platform.props",
+        "buildMultiTargeting/Microsoft.Testing.Platform.targets",
+        "buildTransitive/net8.0/Microsoft.Testing.Platform.props",
+        "buildTransitive/net8.0/Microsoft.Testing.Platform.targets",
+        "buildTransitive/net9.0/Microsoft.Testing.Platform.props",
+        "buildTransitive/net9.0/Microsoft.Testing.Platform.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Testing.Platform.props",
+        "buildTransitive/netstandard2.0/Microsoft.Testing.Platform.targets",
+        "lib/net8.0/Microsoft.Testing.Platform.dll",
+        "lib/net8.0/Microsoft.Testing.Platform.xml",
+        "lib/net8.0/cs/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/de/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/es/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/fr/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/it/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/ja/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/ko/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/pl/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/pt-BR/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/ru/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/tr/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.Testing.Platform.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/Microsoft.Testing.Platform.dll",
+        "lib/net9.0/Microsoft.Testing.Platform.xml",
+        "lib/net9.0/cs/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/de/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/es/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/fr/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/it/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/ja/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/ko/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/pl/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/pt-BR/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/ru/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/tr/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/zh-Hans/Microsoft.Testing.Platform.resources.dll",
+        "lib/net9.0/zh-Hant/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/Microsoft.Testing.Platform.dll",
+        "lib/netstandard2.0/Microsoft.Testing.Platform.xml",
+        "lib/netstandard2.0/cs/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/de/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/es/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/fr/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/it/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/ja/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/ko/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/pl/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/pt-BR/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/ru/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/tr/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/zh-Hans/Microsoft.Testing.Platform.resources.dll",
+        "lib/netstandard2.0/zh-Hant/Microsoft.Testing.Platform.resources.dll",
+        "microsoft.testing.platform.2.2.2.nupkg.sha512",
+        "microsoft.testing.platform.nuspec"
+      ]
+    },
     "MySql.Data/9.6.0": {
       "sha512": "jjCXNBxLLQHBcyYyOP4yp5jqljStH2qGFXXg3jBMdwYQk9ihpLH9BXoMyc/J3421pENBDjCf/eGi9Ow0Ib7LUA==",
       "type": "package",
@@ -2721,6 +3324,52 @@
         "lib/net20/OpenTK.GLControl.xml",
         "opentk.glcontrol.3.1.0.nupkg.sha512",
         "opentk.glcontrol.nuspec"
+      ]
+    },
+    "ReportPortal.Client/3.11.1": {
+      "sha512": "mLqWJAIo5H2ieMrNnlQZe/wUpnstJc1AgcvM0gXMy90dBj01jSMwE3LrgsYKyejeEvlHZ34DlFxG2OpRlAOiOw==",
+      "type": "package",
+      "path": "reportportal.client/3.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Logo.png",
+        "README.md",
+        "lib/net462/ReportPortal.Client.dll",
+        "lib/net462/ReportPortal.Client.xml",
+        "lib/net6.0/ReportPortal.Client.dll",
+        "lib/net6.0/ReportPortal.Client.xml",
+        "lib/net8.0/ReportPortal.Client.dll",
+        "lib/net8.0/ReportPortal.Client.xml",
+        "lib/netstandard2.0/ReportPortal.Client.dll",
+        "lib/netstandard2.0/ReportPortal.Client.xml",
+        "reportportal.client.3.11.1.nupkg.sha512",
+        "reportportal.client.nuspec"
+      ]
+    },
+    "ReportPortal.Shared/3.11.1": {
+      "sha512": "jgzBgUhjR3MLXrr5jS9/7OPcBQx7PV9CtOQzaQqCSHtOaQkxvfVR7jBdMjx+DEtzBQ6PCnPq2LCow+u9azCR/A==",
+      "type": "package",
+      "path": "reportportal.shared/3.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Logo.png",
+        "build/ReportPortal.Shared.props",
+        "build/net462/ReportPortal.Shared.targets",
+        "build/net6.0/ReportPortal.Shared.targets",
+        "build/net8.0/ReportPortal.Shared.targets",
+        "build/netstandard2.0/ReportPortal.Shared.targets",
+        "lib/net462/ReportPortal.Shared.dll",
+        "lib/net462/ReportPortal.Shared.xml",
+        "lib/net6.0/ReportPortal.Shared.dll",
+        "lib/net6.0/ReportPortal.Shared.xml",
+        "lib/net8.0/ReportPortal.Shared.dll",
+        "lib/net8.0/ReportPortal.Shared.xml",
+        "lib/netstandard2.0/ReportPortal.Shared.dll",
+        "lib/netstandard2.0/ReportPortal.Shared.xml",
+        "reportportal.shared.3.11.1.nupkg.sha512",
+        "reportportal.shared.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -5383,18 +6032,22 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
-      "Bunifu.Charts.WinForms >= 3.1.0",
       "Bunifu.UI.WinForms >= 9.1.0",
       "FontAwesome.Sharp >= 6.6.0",
       "Guna.UI2.WinForms >= 2.0.4.7",
+      "Microsoft.ReportingServices.ReportViewerControl.WebForms >= 150.1652.0",
+      "Microsoft.Testing.Extensions.TrxReport >= 2.2.2",
+      "Microsoft.Testing.Extensions.TrxReport.Abstractions >= 2.2.2",
       "MySql.Data >= 9.6.0",
       "MySql.Data.EntityFrameworkCore >= 8.0.22",
       "MySqlConnector >= 2.5.0",
+      "ReportPortal.Client >= 3.11.1",
+      "ReportPortal.Shared >= 3.11.1",
       "ScottPlot.WinForms >= 5.1.57"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sonita.sun\\.nuget\\packages\\": {},
+    "C:\\Users\\abc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -5403,14 +6056,14 @@
       "projectUniqueName": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
       "projectName": "Hotel_System",
       "projectPath": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-      "packagesPath": "C:\\Users\\sonita.sun\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
       "outputPath": "D:\\Hotel_System\\Hotel_System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sonita.sun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5419,12 +6072,10 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0-windows7.0": {
-          "framework": "net9.0-windows7.0",
           "targetAlias": "net9.0-windows7.0",
           "projectReferences": {}
         }
@@ -5439,17 +6090,12 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0-windows7.0": {
-        "framework": "net9.0-windows7.0",
         "targetAlias": "net9.0-windows7.0",
         "dependencies": {
-          "Bunifu.Charts.WinForms": {
-            "target": "Package",
-            "version": "[3.1.0, )"
-          },
           "Bunifu.UI.WinForms": {
             "target": "Package",
             "version": "[9.1.0, )"
@@ -5462,6 +6108,18 @@
             "target": "Package",
             "version": "[2.0.4.7, )"
           },
+          "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
+            "target": "Package",
+            "version": "[150.1652.0, )"
+          },
+          "Microsoft.Testing.Extensions.TrxReport": {
+            "target": "Package",
+            "version": "[2.2.2, )"
+          },
+          "Microsoft.Testing.Extensions.TrxReport.Abstractions": {
+            "target": "Package",
+            "version": "[2.2.2, )"
+          },
           "MySql.Data": {
             "target": "Package",
             "version": "[9.6.0, )"
@@ -5473,6 +6131,14 @@
           "MySqlConnector": {
             "target": "Package",
             "version": "[2.5.0, )"
+          },
+          "ReportPortal.Client": {
+            "target": "Package",
+            "version": "[3.11.1, )"
+          },
+          "ReportPortal.Shared": {
+            "target": "Package",
+            "version": "[3.11.1, )"
           },
           "ScottPlot.WinForms": {
             "target": "Package",
@@ -5493,19 +6159,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.12, 9.0.12]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.12, 9.0.12]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.12, 9.0.12]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.12, 9.0.12]"
           }
         ],
         "frameworkReferences": {
@@ -5516,11 +6182,41 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Microsoft.ReportingServices.ReportViewerControl.WebForms 150.1652.0 depends on Microsoft.SqlServer.Types (>= 14.0.0) but Microsoft.SqlServer.Types 14.0.0 was not found. Microsoft.SqlServer.Types 14.0.314.76 was resolved instead.",
+      "libraryId": "Microsoft.SqlServer.Types",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.WebForms 150.1652.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.ReportingServices.ReportViewerControl.WebForms",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.SqlServer.Types 14.0.314.76' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.SqlServer.Types",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

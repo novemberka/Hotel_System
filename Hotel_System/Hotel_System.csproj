@@ -11,17 +11,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bunifu.Charts.WinForms" Version="3.1.0" />
     <PackageReference Include="Bunifu.UI.WinForms" Version="9.1.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1652.0" />
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport.Abstractions" Version="2.2.2" />
     <PackageReference Include="MySql.Data" Version="9.6.0" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
     <PackageReference Include="MySqlConnector" Version="2.5.0" />
+    <PackageReference Include="ReportPortal.Client" Version="3.11.1" />
+    <PackageReference Include="ReportPortal.Shared" Version="3.11.1" />
     <PackageReference Include="ScottPlot.WinForms" Version="5.1.57" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DataSet1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -34,6 +43,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

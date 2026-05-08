@@ -16,5 +16,10 @@ namespace Hotel_System
         {
             InitializeComponent();
         }
+
+        private void btnflitter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

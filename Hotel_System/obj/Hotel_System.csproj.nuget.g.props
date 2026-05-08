@@ -5,12 +5,19 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\sonita.sun\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\abc\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">7.0.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\sonita.sun\.nuget\packages\" />
+    <SourceRoot Include="C:\Users\abc\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.testing.platform\2.2.2\buildTransitive\net9.0\Microsoft.Testing.Platform.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testing.platform\2.2.2\buildTransitive\net9.0\Microsoft.Testing.Platform.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.testing.extensions.trxreport\2.2.2\buildTransitive\net9.0\Microsoft.Testing.Extensions.TrxReport.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testing.extensions.trxreport\2.2.2\buildTransitive\net9.0\Microsoft.Testing.Extensions.TrxReport.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_SqlServer_Types Condition=" '$(PkgMicrosoft_SqlServer_Types)' == '' ">C:\Users\abc\.nuget\packages\microsoft.sqlserver.types\14.0.314.76</PkgMicrosoft_SqlServer_Types>
+  </PropertyGroup>
 </Project>

@@ -21,22 +21,18 @@ namespace Hotel_System
         public Dashboard(string fullName, string role, string imgPath)
         {
             InitializeComponent();
-            // Load default page
-            LoadUserControl(new DashboardControl());
+
+            // Change this line — load Report_Customer as default page
+            LoadUserControl(new Report_Customer()); // ← CHANGE HERE
 
             if (!string.IsNullOrEmpty(imgPath) && File.Exists(imgPath))
             {
                 guna2CirclePictureBox1.Image = Image.FromFile(imgPath);
             }
-            //else
-            //{
-            //    // Optional: default image
-            //    guna2CirclePictureBox1.Image = Properties.Resources.default_user;
-            //}
         }
 
 
-        
+
 
 
         private void iconButton1_Click(object sender, EventArgs e)
