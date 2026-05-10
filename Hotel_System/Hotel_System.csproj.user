@@ -22,6 +22,12 @@
     <Compile Update="Forms\Payment\PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="PrintForms\BookingInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PrintForms\RecieptForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Reports\Reportroom.cs">
       <SubType>UserControl</SubType>
     </Compile>
