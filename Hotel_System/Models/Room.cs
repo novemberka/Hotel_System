@@ -21,6 +21,5 @@ namespace Hotel_System.Models
         public int RoomTypeID { get; set; }
         public string TypeName { get; set; } // e.g., "Deluxe"
         public decimal Price { get; set; }
-        public string Floor { get; set; }
     }
 }

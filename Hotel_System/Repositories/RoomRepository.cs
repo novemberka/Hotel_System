@@ -23,7 +23,6 @@ namespace Hotel_System.Repositories
                         r.RoomTypeID,
                         rt.TypeName, 
                         rt.PricePerNight, 
-                        rt.Floor, 
                         r.Status 
                      FROM rooms r 
                      INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID";
@@ -35,24 +34,44 @@ namespace Hotel_System.Repositories
             }
             return dt;
         }
-        public DataTable Search(string keyword)
+        public DataTable Search(string roomNumber, string roomId, string status)
         {
             DataTable dt = new DataTable();
-            // Use the JOIN so the search results have the Price, Floor, and TypeName!
-            string query = @"SELECT r.RoomID, r.RoomNumber, rt.TypeName, rt.PricePerNight, rt.Floor, r.Status 
-                     FROM rooms r 
-                     INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
-                     WHERE r.RoomNumber LIKE @key OR rt.Floor LIKE @key";
 
             using (MySqlConnection conn = db.GetConnection())
             {
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@key", "%" + keyword + "%");
-                adapter.Fill(dt);
+                conn.Open();
+
+                string query = @"
+            SELECT 
+                r.RoomID,
+                r.RoomNumber,
+                rt.TypeName,
+                rt.PricePerNight,
+                r.Status,
+                r.RoomTypeID
+            FROM rooms r
+            INNER JOIN roomtypes rt 
+                ON r.RoomTypeID = rt.RoomTypeID
+            WHERE 
+                (@RoomNumber = '' OR r.RoomNumber LIKE CONCAT('%', @RoomNumber, '%'))
+                AND (@RoomID = '' OR CAST(r.RoomID AS CHAR) LIKE CONCAT('%', @RoomID, '%'))
+                AND (@Status = '' OR r.Status = @Status)
+        ";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@RoomNumber", roomNumber ?? "");
+                    cmd.Parameters.AddWithValue("@RoomID", roomId ?? "");
+                    cmd.Parameters.AddWithValue("@Status", status ?? "");
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
             }
+
             return dt;
         }
-
         public bool Add(Room room)
         {
             string query = "INSERT INTO rooms (RoomNumber, RoomTypeID, Status) VALUES (@num, @type, @status)";
@@ -120,7 +139,7 @@ namespace Hotel_System.Repositories
         {
             DataTable dt = new DataTable();
             // CRITICAL: You MUST include 'Floor' and 'PricePerNight' here
-            string query = "SELECT RoomTypeID, TypeName, PricePerNight, Floor FROM roomtypes";
+            string query = "SELECT RoomTypeID, TypeName, PricePerNight FROM roomtypes";
 
             using (MySqlConnection conn = db.GetConnection())
             {

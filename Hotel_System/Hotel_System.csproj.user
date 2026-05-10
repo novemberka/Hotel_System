@@ -10,7 +10,22 @@
     <Compile Update="Forms\Payment\PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Forms\WalkIn\Walk-In.cs">
+    <Compile Update="Reports\Reportroom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\Report_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\Report_CheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\Report_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\Report_Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\Report_WalkIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
