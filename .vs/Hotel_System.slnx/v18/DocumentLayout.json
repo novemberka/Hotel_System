@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "D:\\Project C#\\Hotel_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\printforms\\bookinginvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\printforms\\bookinginvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\forms\\checkincheckout\\checkin_outcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\checkincheckout\\checkin_outcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\printforms\\bookinginvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\printforms\\bookinginvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\printforms\\recieptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\printforms\\recieptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\forms\\payment\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\payment\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\forms\\customer\\customercontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\customer\\customercontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\reports\\report_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\forms\\checkincheckout\\checkin_outcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\checkincheckout\\checkin_outcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\forms\\payment\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\payment\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\forms\\payment\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\payment\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\printforms\\recieptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\printforms\\recieptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\project c#\\hotel_system\\hotel_system\\hotel_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\hotel_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\forms\\checkincheckout\\checkin_outcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\checkincheckout\\checkin_outcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Project C#\\Hotel_System\\hotel_system\\forms\\booking\\bookingcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,19 +58,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RecieptForm.cs [Design]",
-              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\RecieptForm.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\PrintForms\\RecieptForm.cs",
-              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\RecieptForm.cs [Design]",
-              "RelativeToolTip": "Hotel_System\\PrintForms\\RecieptForm.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "PaymentControl.cs",
+              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\Payment\\PaymentControl.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Forms\\Payment\\PaymentControl.cs",
+              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\Payment\\PaymentControl.cs",
+              "RelativeToolTip": "Hotel_System\\Forms\\Payment\\PaymentControl.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAWwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T07:47:08.04Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-10T16:44:42.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Checkin_outControl.cs",
+              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
+              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
+              "RelativeToolTip": "Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAIAwwHwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T15:32:33.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CustomerControl.Designer.cs",
               "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\Customer\\CustomerControl.Designer.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Forms\\Customer\\CustomerControl.Designer.cs",
@@ -87,44 +97,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Report_Booking.cs [Design]",
-              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Booking.cs",
-              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.cs [Design]",
-              "RelativeToolTip": "Hotel_System\\Reports\\Report_Booking.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Checkin_outControl.cs [Design]",
+              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
+              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs [Design]",
+              "RelativeToolTip": "Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T19:58:31.817Z",
+              "WhenOpened": "2026-05-09T19:22:17.018Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BookingInvoice.cs",
-              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\BookingInvoice.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\PrintForms\\BookingInvoice.cs",
-              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\BookingInvoice.cs",
-              "RelativeToolTip": "Hotel_System\\PrintForms\\BookingInvoice.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAIAwwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T19:28:01.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookingInvoice.cs [Design]",
-              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\BookingInvoice.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\PrintForms\\BookingInvoice.cs",
-              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\BookingInvoice.cs [Design]",
-              "RelativeToolTip": "Hotel_System\\PrintForms\\BookingInvoice.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T19:24:55.408Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "PaymentControl.cs [Design]",
               "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\Payment\\PaymentControl.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Forms\\Payment\\PaymentControl.cs",
@@ -133,6 +118,17 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-10T08:21:38.956Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RecieptForm.cs [Design]",
+              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\RecieptForm.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\PrintForms\\RecieptForm.cs",
+              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\PrintForms\\RecieptForm.cs [Design]",
+              "RelativeToolTip": "Hotel_System\\PrintForms\\RecieptForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T07:47:08.04Z"
             },
             {
               "$type": "Document",
@@ -149,17 +145,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Checkin_outControl.cs [Design]",
-              "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs",
-              "ToolTip": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs [Design]",
-              "RelativeToolTip": "Hotel_System\\Forms\\CheckInCheckOut\\Checkin_outControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T19:22:17.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "BookingControl.cs [Design]",
               "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Forms\\Booking\\BookingControl.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Forms\\Booking\\BookingControl.cs",
@@ -170,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Hotel_System",
               "DocumentMoniker": "D:\\Project C#\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
               "RelativeDocumentMoniker": "Hotel_System\\Hotel_System.csproj",
