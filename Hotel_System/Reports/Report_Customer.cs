@@ -2,9 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.IO;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
+
 
 namespace Hotel_System
 {
@@ -20,32 +18,9 @@ namespace Hotel_System
 
         private void ReportCustomer_Load(object sender, EventArgs e)
         {
-            LoadRoomTypes();
-            LoadReport(null, null);
+
         }
 
-        private void LoadRoomTypes()
-        {
-            try
-            {
-                cmbRoomType.SelectedIndexChanged -= RoomType_SelectedIndexChanged;
-
-                cmbRoomType.Items.Clear();
-                cmbRoomType.Items.Add("All");
-
-                DataTable dt = service.GetAllRoomTypes();
-                foreach (DataRow row in dt.Rows)
-                    cmbRoomType.Items.Add(row["TypeName"].ToString());
-
-                cmbRoomType.SelectedIndex = 0;
-                cmbRoomType.SelectedIndexChanged += RoomType_SelectedIndexChanged;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load room types: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void LoadReport(DateTime? from, DateTime? to)
         {
@@ -87,96 +62,7 @@ namespace Hotel_System
             LoadReport(FromDate.Value.Date, ToDate.Value.Date);
         }
 
-        private void RoomType_SelectedIndexChanged(object sender, EventArgs e) { }
-
-        private void label2_Click(object sender, EventArgs e) { }
-
-        private void dgvCustomers_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
-
-        private void Customer_Paint(object sender, PaintEventArgs e) { }
-
-        private void iconPictureBox5_Click(object sender, EventArgs e)
-
-
-        {
-
-        }
-
-
-        private void iconExcel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconPDF_Click(object sender, EventArgs e)
-        {
-            if (dgvCustomers.Rows.Count == 0)
-            {
-                MessageBox.Show("No data to export");
-                return;
-            }
-
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "PDF File|*.pdf";
-            sfd.FileName = $"CustomerReport_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
-
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-
-                    if (File.Exists(sfd.FileName))
-                    {
-                        File.Delete(sfd.FileName);
-                    }
-
-
-                    int visibleColumns = dgvCustomers.Columns
-                        .Cast<DataGridViewColumn>()
-                        .Count(c => c.Visible);
-
-                    using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write))
-                    using (PdfWriter writer = new PdfWriter(fs))
-                    using (PdfDocument pdf = new PdfDocument(writer))
-                    using (Document document = new Document(pdf))
-                    {
-                        Table table = new Table(visibleColumns);
-
-
-                        foreach (DataGridViewColumn col in dgvCustomers.Columns)
-                        {
-                            if (col.Visible)
-                            {
-                                table.AddCell(col.HeaderText);
-                            }
-                        }
-
-
-                        foreach (DataGridViewRow row in dgvCustomers.Rows)
-                        {
-                            if (!row.IsNewRow)
-                            {
-                                foreach (DataGridViewCell cell in row.Cells)
-                                {
-                                    if (cell.OwningColumn.Visible)
-                                    {
-                                        table.AddCell(cell.Value?.ToString() ?? "");
-                                    }
-                                }
-                            }
-                        }
-
-                        document.Add(table);
-                    }
-
-                    MessageBox.Show("Exported to PDF successfully!");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("ERROR:\n" + ex.Message);
-                }
-            }
-        }
+ 
 
         private void cmbCustomerName_SelectedIndexChanged(object sender, EventArgs e)
         {

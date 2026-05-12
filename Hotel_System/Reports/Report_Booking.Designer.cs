@@ -433,6 +433,7 @@
             iconPictureBox6.Size = new Size(32, 32);
             iconPictureBox6.TabIndex = 30;
             iconPictureBox6.TabStop = false;
+            iconPictureBox6.Click += iconPictureBox6_Click;
             // 
             // iconPictureBox5
             // 

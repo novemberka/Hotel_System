@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel_System.Services;
+using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Hotel_System
 {
     public partial class Report_Booking : UserControl
     {
+        private ReportViewer reportViewer1;
+
         public Report_Booking()
         {
             InitializeComponent();
@@ -86,5 +90,38 @@ namespace Hotel_System
         {
 
         }
+        private void iconPictureBox6_Click(object sender, EventArgs e)
+        {
+            reportViewer1 = new ReportViewer();
+
+            reportViewer1.Dock = DockStyle.Fill;
+
+            this.Controls.Add(reportViewer1);
+
+            LoadReport();
+        }
+
+        private void LoadReport()
+        {
+            BookingService service = new BookingService();
+
+            DataTable dt = service.GetWalkInReport(
+                FromDate.Value,
+                ToDate.Value
+            );
+
+            reportViewer1.LocalReport.DataSources.Clear();
+
+            reportViewer1.LocalReport.ReportPath =
+                @"Reports\BookingReport.rdlc";
+
+            ReportDataSource rds =
+                new ReportDataSource("WalkInDataSet", dt);
+
+            reportViewer1.LocalReport.DataSources.Add(rds);
+
+            reportViewer1.RefreshReport();
+        }
+
     }
 }

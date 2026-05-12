@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace Hotel_System.Services
 {
-    internal class CustomerService
-    {
-    }
+
 }

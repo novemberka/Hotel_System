@@ -14,7 +14,8 @@
     <PackageReference Include="Bunifu.UI.WinForms" Version="9.1.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
-    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1652.0" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1652.0" />
+    <PackageReference Include="Microsoft.ReportViewer.WinForms" Version="10.0.40219.1" />
     <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" Version="2.2.2" />
     <PackageReference Include="Microsoft.Testing.Extensions.TrxReport.Abstractions" Version="2.2.2" />
     <PackageReference Include="MySql.Data" Version="9.6.0" />
