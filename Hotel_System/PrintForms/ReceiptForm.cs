@@ -129,6 +129,24 @@ namespace Hotel_System.PrintForms
             lblWelcome.Location = new Point(265, 720);
             this.Controls.Add(lblWelcome);
         }
+        public void AdjustGridHeight()
+        {
+            int totalHeight = dgvReceipt.ColumnHeadersHeight;
+            foreach (DataGridViewRow row in dgvReceipt.Rows)
+                totalHeight += row.Height;
+            totalHeight += 2;
+            dgvReceipt.Height = totalHeight;
+
+          
+            int bottom = dgvReceipt.Location.Y + dgvReceipt.Height + 15;
+
+            lblSubtotal.Location = new Point(630, bottom);
+            txtSubTotal.Location = new Point(750, bottom - 4);
+            lblDiscount.Location = new Point(630, bottom + 36);
+            txtDiscount.Location = new Point(750, bottom + 32);
+            lblTotalAmount.Location = new Point(600, bottom + 72);
+            txtTotalAmount.Location = new Point(750, bottom + 68);
+        }
 
         private void SetupGrid()
         {
@@ -156,8 +174,9 @@ namespace Hotel_System.PrintForms
             dgvReceipt.ColumnHeadersHeight = 35;
             dgvReceipt.GridColor = Color.LightGray;
             dgvReceipt.EnableHeadersVisualStyles = false;
+            
 
-           
+
             dgvReceipt.BackgroundColor = Color.White;
 
             // Header

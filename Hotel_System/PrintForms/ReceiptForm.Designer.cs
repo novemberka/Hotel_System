@@ -41,8 +41,7 @@ namespace Hotel_System.PrintForms
             ((System.ComponentModel.ISupportInitialize)dgvReceipt).BeginInit();
             SuspendLayout();
 
-            // ── dgvReceipt ──
-            // NOTE: No DataGridViewCellStyle set here — all styles handled in SetupGrid()
+          
             dgvReceipt.AllowUserToAddRows = false;
             dgvReceipt.RowHeadersVisible = false;
             dgvReceipt.ReadOnly = true;
@@ -52,15 +51,15 @@ namespace Hotel_System.PrintForms
             dgvReceipt.TabIndex = 0;
             dgvReceipt.BorderStyle = BorderStyle.FixedSingle;
             dgvReceipt.RowHeadersWidth = 51;
-            dgvReceipt.BackgroundColor = Color.White;   // no gray
+            dgvReceipt.BackgroundColor = Color.White;   
 
-            // ── txtCustomerName ──
+          
             txtCustomerName.Location = new Point(170, 207);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(200, 27);
             txtCustomerName.TabIndex = 1;
 
-            // ── txtPhoneNumber ──
+        
             txtPhoneNumber.Location = new Point(170, 242);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.Size = new Size(200, 27);
