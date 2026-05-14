@@ -1,4 +1,7 @@
-﻿namespace Hotel_System.PrintForms
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Hotel_System.PrintForms
 {
     partial class ReceiptForm
     {
@@ -7,9 +10,7 @@
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
@@ -17,358 +18,206 @@
 
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            txtSubTotal = new Guna.UI2.WinForms.Guna2TextBox();
-            txtDiscount = new Guna.UI2.WinForms.Guna2TextBox();
-            txtTotalAmount = new Guna.UI2.WinForms.Guna2TextBox();
+            dgvReceipt = new DataGridView();
+            txtSubTotal = new TextBox();
+            txtDiscount = new TextBox();
+            txtTotalAmount = new TextBox();
+            txtPaymentby = new TextBox();
+            txtCustomerName = new TextBox();
+            txtPhoneNumber = new TextBox();
+            txtInvoiceDate = new TextBox();
+            txtBooking = new TextBox();
+            txtInvoiceNo = new TextBox();
             lblSubtotal = new Label();
             lblDiscount = new Label();
             lblTotalAmount = new Label();
-            dgvReceipt = new DataGridView();
-            txtPaymentby = new Guna.UI2.WinForms.Guna2TextBox();
-            txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
-            txtInvoiceDate = new Guna.UI2.WinForms.Guna2TextBox();
-            txtBooking = new Guna.UI2.WinForms.Guna2TextBox();
-            txtInvoiceNo = new Guna.UI2.WinForms.Guna2TextBox();
             lblPaymentby = new Label();
-            label3 = new Label();
+            lblCustomerName = new Label();
+            lblPhoneNumber = new Label();
             lblInvoiceDate = new Label();
             lblBooking = new Label();
-            lbInvoiceNo = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            lblInvoiceNo = new Label();
+
             ((System.ComponentModel.ISupportInitialize)dgvReceipt).BeginInit();
             SuspendLayout();
-            // 
-            // txtSubTotal
-            // 
-            txtSubTotal.CustomizableEdges = customizableEdges1;
-            txtSubTotal.DefaultText = "";
-            txtSubTotal.Font = new Font("Segoe UI", 9F);
-            txtSubTotal.Location = new Point(551, 464);
-            txtSubTotal.Margin = new Padding(3, 4, 3, 4);
-            txtSubTotal.Name = "txtSubTotal";
-            txtSubTotal.PlaceholderText = "";
-            txtSubTotal.SelectedText = "";
-            txtSubTotal.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSubTotal.Size = new Size(150, 36);
-            txtSubTotal.TabIndex = 0;
-            // 
-            // txtDiscount
-            // 
-            txtDiscount.CustomizableEdges = customizableEdges3;
-            txtDiscount.DefaultText = "";
-            txtDiscount.Font = new Font("Segoe UI", 9F);
-            txtDiscount.Location = new Point(551, 508);
-            txtDiscount.Margin = new Padding(3, 4, 3, 4);
-            txtDiscount.Name = "txtDiscount";
-            txtDiscount.PlaceholderText = "";
-            txtDiscount.SelectedText = "";
-            txtDiscount.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtDiscount.Size = new Size(150, 36);
-            txtDiscount.TabIndex = 1;
-            // 
-            // txtTotalAmount
-            // 
-            txtTotalAmount.CustomizableEdges = customizableEdges5;
-            txtTotalAmount.DefaultText = "";
-            txtTotalAmount.Font = new Font("Segoe UI", 9F);
-            txtTotalAmount.Location = new Point(551, 552);
-            txtTotalAmount.Margin = new Padding(3, 4, 3, 4);
-            txtTotalAmount.Name = "txtTotalAmount";
-            txtTotalAmount.PlaceholderText = "";
-            txtTotalAmount.SelectedText = "";
-            txtTotalAmount.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtTotalAmount.Size = new Size(150, 36);
-            txtTotalAmount.TabIndex = 2;
-            // 
-            // lblSubtotal
-            // 
-            lblSubtotal.Location = new Point(456, 480);
-            lblSubtotal.Name = "lblSubtotal";
-            lblSubtotal.Size = new Size(100, 23);
-            lblSubtotal.TabIndex = 9;
-            lblSubtotal.Text = "Subtotal";
-            // 
-            // lblDiscount
-            // 
-            lblDiscount.Location = new Point(456, 524);
-            lblDiscount.Name = "lblDiscount";
-            lblDiscount.Size = new Size(100, 23);
-            lblDiscount.TabIndex = 10;
-            lblDiscount.Text = "Discount";
-            // 
-            // lblTotalAmount
-            // 
-            lblTotalAmount.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblTotalAmount.Location = new Point(404, 565);
-            lblTotalAmount.Name = "lblTotalAmount";
-            lblTotalAmount.Size = new Size(100, 23);
-            lblTotalAmount.TabIndex = 11;
-            lblTotalAmount.Text = "Total Amount";
-            // 
-            // dgvReceipt
-            // 
+
+            // ── dgvReceipt ──
+            // NOTE: No DataGridViewCellStyle set here — all styles handled in SetupGrid()
             dgvReceipt.AllowUserToAddRows = false;
-            dgvReceipt.ColumnHeadersHeight = 29;
-            dgvReceipt.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
-            dgvReceipt.Location = new Point(12, 257);
-            dgvReceipt.Name = "dgvReceipt";
             dgvReceipt.RowHeadersVisible = false;
+            dgvReceipt.ReadOnly = true;
+            dgvReceipt.Location = new Point(25, 325);
+            dgvReceipt.Name = "dgvReceipt";
+            dgvReceipt.Size = new Size(880, 230);
+            dgvReceipt.TabIndex = 0;
+            dgvReceipt.BorderStyle = BorderStyle.FixedSingle;
             dgvReceipt.RowHeadersWidth = 51;
-            dgvReceipt.Size = new Size(689, 200);
-            dgvReceipt.TabIndex = 18;
-            // 
-            // txtPaymentby
-            // 
-            txtPaymentby.CustomizableEdges = customizableEdges7;
-            txtPaymentby.DefaultText = "";
-            txtPaymentby.Font = new Font("Segoe UI", 9F);
-            txtPaymentby.Location = new Point(136, 144);
-            txtPaymentby.Margin = new Padding(3, 4, 3, 4);
-            txtPaymentby.Name = "txtPaymentby";
-            txtPaymentby.PlaceholderText = "";
-            txtPaymentby.SelectedText = "";
-            txtPaymentby.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtPaymentby.Size = new Size(120, 25);
-            txtPaymentby.TabIndex = 3;
-            // 
-            // txtCustomerName
-            // 
-            txtCustomerName.CustomizableEdges = customizableEdges9;
-            txtCustomerName.DefaultText = "";
-            txtCustomerName.Font = new Font("Segoe UI", 9F);
-            txtCustomerName.Location = new Point(136, 107);
-            txtCustomerName.Margin = new Padding(3, 4, 3, 4);
+            dgvReceipt.BackgroundColor = Color.White;   // no gray
+
+            // ── txtCustomerName ──
+            txtCustomerName.Location = new Point(170, 207);
             txtCustomerName.Name = "txtCustomerName";
-            txtCustomerName.PlaceholderText = "";
-            txtCustomerName.SelectedText = "";
-            txtCustomerName.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtCustomerName.Size = new Size(120, 25);
-            txtCustomerName.TabIndex = 5;
-            // 
-            // txtInvoiceDate
-            // 
-            txtInvoiceDate.CustomizableEdges = customizableEdges11;
-            txtInvoiceDate.DefaultText = "";
-            txtInvoiceDate.Font = new Font("Segoe UI", 9F);
-            txtInvoiceDate.Location = new Point(597, 168);
-            txtInvoiceDate.Margin = new Padding(3, 4, 3, 4);
-            txtInvoiceDate.Name = "txtInvoiceDate";
-            txtInvoiceDate.PlaceholderText = "";
-            txtInvoiceDate.SelectedText = "";
-            txtInvoiceDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtInvoiceDate.Size = new Size(120, 25);
-            txtInvoiceDate.TabIndex = 6;
-            // 
-            // txtBooking
-            // 
-            txtBooking.CustomizableEdges = customizableEdges13;
-            txtBooking.DefaultText = "";
-            txtBooking.Font = new Font("Segoe UI", 9F);
-            txtBooking.Location = new Point(597, 135);
-            txtBooking.Margin = new Padding(3, 4, 3, 4);
-            txtBooking.Name = "txtBooking";
-            txtBooking.PlaceholderText = "";
-            txtBooking.SelectedText = "";
-            txtBooking.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtBooking.Size = new Size(120, 25);
-            txtBooking.TabIndex = 7;
-            // 
-            // txtInvoiceNo
-            // 
-            txtInvoiceNo.CustomizableEdges = customizableEdges15;
-            txtInvoiceNo.DefaultText = "";
-            txtInvoiceNo.Font = new Font("Segoe UI", 9F);
-            txtInvoiceNo.Location = new Point(597, 102);
-            txtInvoiceNo.Margin = new Padding(3, 4, 3, 4);
+            txtCustomerName.Size = new Size(200, 27);
+            txtCustomerName.TabIndex = 1;
+
+            // ── txtPhoneNumber ──
+            txtPhoneNumber.Location = new Point(170, 242);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(200, 27);
+            txtPhoneNumber.TabIndex = 2;
+
+            // ── txtPaymentby ──
+            txtPaymentby.Location = new Point(170, 277);
+            txtPaymentby.Name = "txtPaymentby";
+            txtPaymentby.Size = new Size(200, 27);
+            txtPaymentby.TabIndex = 3;
+
+            // ── txtInvoiceNo ──
+            txtInvoiceNo.Location = new Point(680, 207);
             txtInvoiceNo.Name = "txtInvoiceNo";
-            txtInvoiceNo.PlaceholderText = "";
-            txtInvoiceNo.SelectedText = "";
-            txtInvoiceNo.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtInvoiceNo.Size = new Size(120, 25);
-            txtInvoiceNo.TabIndex = 8;
-            // 
-            // lblPaymentby
-            // 
-            lblPaymentby.Location = new Point(3, 144);
+            txtInvoiceNo.Size = new Size(190, 27);
+            txtInvoiceNo.TabIndex = 4;
+
+            // ── txtBooking ──
+            txtBooking.Location = new Point(680, 242);
+            txtBooking.Name = "txtBooking";
+            txtBooking.Size = new Size(190, 27);
+            txtBooking.TabIndex = 5;
+
+            // ── txtInvoiceDate ──
+            txtInvoiceDate.Location = new Point(680, 277);
+            txtInvoiceDate.Name = "txtInvoiceDate";
+            txtInvoiceDate.Size = new Size(190, 27);
+            txtInvoiceDate.TabIndex = 6;
+
+            // ── txtSubTotal ──
+            txtSubTotal.Location = new Point(750, 568);
+            txtSubTotal.Name = "txtSubTotal";
+            txtSubTotal.Size = new Size(155, 27);
+            txtSubTotal.TabIndex = 7;
+
+            // ── txtDiscount ──
+            txtDiscount.Location = new Point(750, 604);
+            txtDiscount.Name = "txtDiscount";
+            txtDiscount.Size = new Size(155, 27);
+            txtDiscount.TabIndex = 8;
+
+            // ── txtTotalAmount ──
+            txtTotalAmount.Location = new Point(750, 640);
+            txtTotalAmount.Name = "txtTotalAmount";
+            txtTotalAmount.Size = new Size(155, 27);
+            txtTotalAmount.TabIndex = 9;
+
+            // ── Labels ──
+            lblCustomerName.AutoSize = true;
+            lblCustomerName.Font = new Font("Segoe UI", 10F);
+            lblCustomerName.Location = new Point(25, 210);
+            lblCustomerName.Name = "lblCustomerName";
+            lblCustomerName.Text = "Customer Name :";
+
+            lblPhoneNumber.AutoSize = true;
+            lblPhoneNumber.Font = new Font("Segoe UI", 10F);
+            lblPhoneNumber.Location = new Point(25, 245);
+            lblPhoneNumber.Name = "lblPhoneNumber";
+            lblPhoneNumber.Text = "Phone Number :";
+
+            lblPaymentby.AutoSize = true;
+            lblPaymentby.Font = new Font("Segoe UI", 10F);
+            lblPaymentby.Location = new Point(25, 280);
             lblPaymentby.Name = "lblPaymentby";
-            lblPaymentby.Size = new Size(100, 23);
-            lblPaymentby.TabIndex = 12;
-            lblPaymentby.Text = "Payment by:";
-            // 
-            // label3
-            // 
-            label3.Location = new Point(3, 112);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 23);
-            label3.TabIndex = 14;
-            label3.Text = "Customer Name:";
-            // 
-            // lblInvoiceDate
-            // 
-            lblInvoiceDate.Location = new Point(501, 177);
-            lblInvoiceDate.Name = "lblInvoiceDate";
-            lblInvoiceDate.Size = new Size(100, 23);
-            lblInvoiceDate.TabIndex = 15;
-            lblInvoiceDate.Text = "Invoice Date:";
-            // 
-            // lblBooking
-            // 
-            lblBooking.Location = new Point(497, 144);
+            lblPaymentby.Text = "Payment :";
+
+            lblInvoiceNo.AutoSize = true;
+            lblInvoiceNo.Font = new Font("Segoe UI", 10F);
+            lblInvoiceNo.Location = new Point(560, 210);
+            lblInvoiceNo.Name = "lblInvoiceNo";
+            lblInvoiceNo.Text = "InvoiceNo. :";
+
+            lblBooking.AutoSize = true;
+            lblBooking.Font = new Font("Segoe UI", 10F);
+            lblBooking.Location = new Point(560, 245);
             lblBooking.Name = "lblBooking";
-            lblBooking.Size = new Size(100, 23);
-            lblBooking.TabIndex = 16;
-            lblBooking.Text = "Booking ID:";
-            // 
-            // lbInvoiceNo
-            // 
-            lbInvoiceNo.Location = new Point(501, 107);
-            lbInvoiceNo.Name = "lbInvoiceNo";
-            lbInvoiceNo.Size = new Size(100, 23);
-            lbInvoiceNo.TabIndex = 17;
-            lbInvoiceNo.Text = "Invoice No:";
-            // 
-            // label4
-            // 
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(100, 23);
-            label4.TabIndex = 0;
-            // 
-            // label5
-            // 
-            label5.Location = new Point(0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(100, 23);
-            label5.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "No.";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Description";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "RoomType";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "QTY";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.HeaderText = "Discount";
-            dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.HeaderText = "Amount";
-            dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // ReceiptForm
-            // 
+            lblBooking.Text = "Booking ID :";
+
+            lblInvoiceDate.AutoSize = true;
+            lblInvoiceDate.Font = new Font("Segoe UI", 10F);
+            lblInvoiceDate.Location = new Point(560, 280);
+            lblInvoiceDate.Name = "lblInvoiceDate";
+            lblInvoiceDate.Text = "Invoice Date :";
+
+            lblSubtotal.AutoSize = true;
+            lblSubtotal.Font = new Font("Segoe UI", 10F);
+            lblSubtotal.Location = new Point(630, 572);
+            lblSubtotal.Name = "lblSubtotal";
+            lblSubtotal.Text = "Total Price:";
+
+            lblDiscount.AutoSize = true;
+            lblDiscount.Font = new Font("Segoe UI", 10F);
+            lblDiscount.Location = new Point(630, 608);
+            lblDiscount.Name = "lblDiscount";
+            lblDiscount.Text = "Discount:";
+
+            lblTotalAmount.AutoSize = true;
+            lblTotalAmount.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTotalAmount.Location = new Point(600, 644);
+            lblTotalAmount.Name = "lblTotalAmount";
+            lblTotalAmount.Text = "Total Amount:";
+
+            // ── Form ──
             BackColor = Color.White;
-            ClientSize = new Size(713, 700);
-            Controls.Add(txtSubTotal);
-            Controls.Add(txtDiscount);
-            Controls.Add(txtTotalAmount);
-            Controls.Add(txtPaymentby);
-            Controls.Add(txtCustomerName);
-            Controls.Add(txtInvoiceDate);
-            Controls.Add(txtBooking);
-            Controls.Add(txtInvoiceNo);
-            Controls.Add(lblSubtotal);
-            Controls.Add(lblDiscount);
-            Controls.Add(lblTotalAmount);
-            Controls.Add(lblPaymentby);
-            Controls.Add(label3);
-            Controls.Add(lblInvoiceDate);
-            Controls.Add(lblBooking);
-            Controls.Add(lbInvoiceNo);
-            Controls.Add(dgvReceipt);
-            Name = "ReceiptForm";
-            StartPosition = FormStartPosition.CenterScreen;
+            ClientSize = new Size(930, 760);
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Receipt Invoice";
-            Load += ReceiptForm_Load;
+            Name = "ReceiptForm";
+            this.Load += new System.EventHandler(this.ReceiptForm_Load);
+
+            Controls.Add(lblCustomerName);
+            Controls.Add(txtCustomerName);
+            Controls.Add(lblPhoneNumber);
+            Controls.Add(txtPhoneNumber);
+            Controls.Add(lblPaymentby);
+            Controls.Add(txtPaymentby);
+            Controls.Add(lblInvoiceNo);
+            Controls.Add(txtInvoiceNo);
+            Controls.Add(lblBooking);
+            Controls.Add(txtBooking);
+            Controls.Add(lblInvoiceDate);
+            Controls.Add(txtInvoiceDate);
+            Controls.Add(dgvReceipt);
+            Controls.Add(lblSubtotal);
+            Controls.Add(txtSubTotal);
+            Controls.Add(lblDiscount);
+            Controls.Add(txtDiscount);
+            Controls.Add(lblTotalAmount);
+            Controls.Add(txtTotalAmount);
+
             ((System.ComponentModel.ISupportInitialize)dgvReceipt).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        // =========================
-        // PUBLIC CONTROLS (IMPORTANT)
-        // =========================
-
-        public Guna.UI2.WinForms.Guna2TextBox txtSubTotal;
-        public Guna.UI2.WinForms.Guna2TextBox txtDiscount;
-        public Guna.UI2.WinForms.Guna2TextBox txtTotalAmount;
-
-        public Guna.UI2.WinForms.Guna2TextBox txtPaymentby;
-        public Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
-        public Guna.UI2.WinForms.Guna2TextBox txtInvoiceDate;
-        public Guna.UI2.WinForms.Guna2TextBox txtBooking;
-        public Guna.UI2.WinForms.Guna2TextBox txtInvoiceNo;
-
+        // Public controls
         public DataGridView dgvReceipt;
+        public TextBox txtSubTotal;
+        public TextBox txtDiscount;
+        public TextBox txtTotalAmount;
+        public TextBox txtPaymentby;
+        public TextBox txtCustomerName;
+        public TextBox txtPhoneNumber;
+        public TextBox txtInvoiceDate;
+        public TextBox txtBooking;
+        public TextBox txtInvoiceNo;
 
         private Label lblSubtotal;
         private Label lblDiscount;
         private Label lblTotalAmount;
         private Label lblPaymentby;
-        private Label label3;
+        private Label lblCustomerName;
+        private Label lblPhoneNumber;
         private Label lblInvoiceDate;
         private Label lblBooking;
-        private Label lbInvoiceNo;
-
-        private Label label4;
-        private Label label5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private Label lblInvoiceNo;
     }
 }

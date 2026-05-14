@@ -188,7 +188,7 @@ namespace Hotel_System
 
                     paymentID = Convert.ToInt32(cmdInsert.ExecuteScalar());
 
-                    // ✅ UPDATE BOOKING STATUS
+
                     string updateBooking = @"
                     UPDATE bookings
                     SET Status = 'Completed'
@@ -342,15 +342,19 @@ namespace Hotel_System
             {
                 conn.Open();
 
-                string query = @"SELECT p.PaymentID, b.BookingID, c.FullName,
-                                rt.TypeName, r.RoomNumber, p.AmountPaid,
-                                p.PaymentMethod, p.PaymentDate
-                                FROM payments p
-                                INNER JOIN bookings b ON p.BookingID = b.BookingID
-                                INNER JOIN customers c ON b.CustomerID = c.CustomerID
-                                INNER JOIN rooms r ON b.RoomID = r.RoomID
-                                INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
-                                WHERE p.PaymentID = @PaymentID";
+               
+                string query = @"
+            SELECT p.PaymentID, p.InvoiceNo, b.BookingID,
+                   c.FullName, c.Phone,
+                   rt.TypeName, r.RoomNumber,
+                   p.AmountPaid, p.PaymentMethod, p.PaymentDate,
+                   b.CheckInDate, b.CheckOutDate
+            FROM payments p
+            INNER JOIN bookings b ON p.BookingID = b.BookingID
+            INNER JOIN customers c ON b.CustomerID = c.CustomerID
+            INNER JOIN rooms r ON b.RoomID = r.RoomID
+            INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+            WHERE p.PaymentID = @PaymentID";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@PaymentID", paymentID);
@@ -361,25 +365,36 @@ namespace Hotel_System
                 {
                     ReceiptForm f = new ReceiptForm();
 
-                    f.txtInvoiceNo.Text = "INV-" + paymentID;
+                    
+                    f.txtInvoiceNo.Text = reader["InvoiceNo"].ToString();
                     f.txtBooking.Text = reader["BookingID"].ToString();
                     f.txtCustomerName.Text = reader["FullName"].ToString();
+                    f.txtPhoneNumber.Text = reader["Phone"].ToString();
                     f.txtPaymentby.Text = reader["PaymentMethod"].ToString();
                     f.txtInvoiceDate.Text = Convert.ToDateTime(reader["PaymentDate"]).ToString("yyyy-MM-dd");
 
-                    decimal amount = Convert.ToDecimal(reader["AmountPaid"]);
-                    f.txtSubTotal.Text = amount.ToString("0.00");
-                    f.txtTotalAmount.Text = amount.ToString("0.00");
-                    f.txtDiscount.Text = "0";
+                 
+                    DateTime checkIn = Convert.ToDateTime(reader["CheckInDate"]);
+                    DateTime checkOut = Convert.ToDateTime(reader["CheckOutDate"]);
+                    int nights = (checkOut - checkIn).Days;
+                    if (nights <= 0) nights = 1;
 
+                    decimal totalAmount = Convert.ToDecimal(reader["AmountPaid"]);
+                    decimal pricePerNight = totalAmount / nights;
+
+                    f.txtSubTotal.Text = totalAmount.ToString("0.00");
+                    f.txtDiscount.Text = "0";
+                    f.txtTotalAmount.Text = totalAmount.ToString("0.00");
+
+                    
                     f.dgvReceipt.Rows.Clear();
                     f.dgvReceipt.Rows.Add(
-                        1,
-                        reader["TypeName"].ToString(),
-                        reader["RoomNumber"].ToString(),
-                        1,
-                        0,
-                        amount.ToString("0.00")
+                        1,                                      
+                        reader["TypeName"].ToString(),         
+                        nights,                                   
+                        pricePerNight.ToString("0.00"),           
+                        "0",                                     
+                        totalAmount.ToString("0.00")           
                     );
 
                     f.ShowDialog();
@@ -389,7 +404,7 @@ namespace Hotel_System
         }
     }
 
-    public class ComboBoxItem
+        public class ComboBoxItem
     {
         public string Text { get; set; }
         public string Value { get; set; }

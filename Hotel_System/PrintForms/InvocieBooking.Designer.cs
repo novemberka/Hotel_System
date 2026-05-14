@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label5 = new Label();
             label4 = new Label();
             dgvBookingInvoice = new DataGridView();
@@ -155,7 +155,7 @@
             // txtPayment
             // 
             txtPayment.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            txtPayment.CustomizableEdges = customizableEdges13;
+            txtPayment.CustomizableEdges = customizableEdges1;
             txtPayment.DefaultText = "";
             txtPayment.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPayment.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -169,7 +169,7 @@
             txtPayment.Name = "txtPayment";
             txtPayment.PlaceholderText = "";
             txtPayment.SelectedText = "";
-            txtPayment.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtPayment.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtPayment.Size = new Size(141, 25);
             txtPayment.TabIndex = 86;
             // 
@@ -185,7 +185,7 @@
             // txtPhoneNumber
             // 
             txtPhoneNumber.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            txtPhoneNumber.CustomizableEdges = customizableEdges15;
+            txtPhoneNumber.CustomizableEdges = customizableEdges3;
             txtPhoneNumber.DefaultText = "";
             txtPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -199,14 +199,14 @@
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.PlaceholderText = "";
             txtPhoneNumber.SelectedText = "";
-            txtPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtPhoneNumber.Size = new Size(141, 25);
             txtPhoneNumber.TabIndex = 84;
             // 
             // txtCustomerName
             // 
             txtCustomerName.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            txtCustomerName.CustomizableEdges = customizableEdges17;
+            txtCustomerName.CustomizableEdges = customizableEdges5;
             txtCustomerName.DefaultText = "";
             txtCustomerName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCustomerName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -220,7 +220,7 @@
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.PlaceholderText = "";
             txtCustomerName.SelectedText = "";
-            txtCustomerName.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtCustomerName.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtCustomerName.Size = new Size(141, 25);
             txtCustomerName.TabIndex = 83;
             // 
@@ -245,7 +245,7 @@
             // txtDate
             // 
             txtDate.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            txtDate.CustomizableEdges = customizableEdges19;
+            txtDate.CustomizableEdges = customizableEdges7;
             txtDate.DefaultText = "";
             txtDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -259,7 +259,7 @@
             txtDate.Name = "txtDate";
             txtDate.PlaceholderText = "";
             txtDate.SelectedText = "";
-            txtDate.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtDate.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtDate.Size = new Size(141, 25);
             txtDate.TabIndex = 80;
             // 
@@ -275,7 +275,7 @@
             // txtbookingID
             // 
             txtbookingID.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            txtbookingID.CustomizableEdges = customizableEdges21;
+            txtbookingID.CustomizableEdges = customizableEdges9;
             txtbookingID.DefaultText = "";
             txtbookingID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbookingID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -289,14 +289,14 @@
             txtbookingID.Name = "txtbookingID";
             txtbookingID.PlaceholderText = "";
             txtbookingID.SelectedText = "";
-            txtbookingID.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtbookingID.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtbookingID.Size = new Size(141, 25);
             txtbookingID.TabIndex = 78;
             // 
             // txtInvoiceNo
             // 
             txtInvoiceNo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            txtInvoiceNo.CustomizableEdges = customizableEdges23;
+            txtInvoiceNo.CustomizableEdges = customizableEdges11;
             txtInvoiceNo.DefaultText = "";
             txtInvoiceNo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtInvoiceNo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -310,7 +310,7 @@
             txtInvoiceNo.Name = "txtInvoiceNo";
             txtInvoiceNo.PlaceholderText = "";
             txtInvoiceNo.SelectedText = "";
-            txtInvoiceNo.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtInvoiceNo.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtInvoiceNo.Size = new Size(141, 25);
             txtInvoiceNo.TabIndex = 77;
             // 
@@ -374,7 +374,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(994, 729);
+            ClientSize = new Size(985, 729);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(dgvBookingInvoice);
