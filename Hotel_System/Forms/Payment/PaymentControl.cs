@@ -1,97 +1,405 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using Hotel_System.PrintForms;
+using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Hotel_System
 {
     public partial class PaymentControl : UserControl
     {
+        string connectionString =
+            "server=localhost;database=hoteldb;uid=root;pwd=;";
+
         public PaymentControl()
         {
             InitializeComponent();
+
+            this.Load += PaymentControl_Load;
+            btnPay.Click += btnPayNow_Click;
+            btnPrintRecicpt.Click += btnPrint_Click;
+            btnClear.Click += btnClear_Click;
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void dgvPayment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (e.RowIndex >= 0)
+            {
+                dgvPayment.Rows[e.RowIndex].Selected = true;
+            }
         }
 
         private void PaymentControl_Load(object sender, EventArgs e)
         {
+            cmbPaymentType.Items.Clear();
+            cmbPaymentType.Items.Add("Cash");
+            cmbPaymentType.Items.Add("Card");
+            cmbPaymentType.Items.Add("Bank");
+            cmbPaymentType.Items.Add("Other");
 
+            dgvPayment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPayment.MultiSelect = false;
+            dgvPayment.ReadOnly = true;
+            dgvPayment.AllowUserToAddRows = false;
+            dgvPayment.AllowUserToDeleteRows = false;
+            dgvPayment.RowHeadersVisible = false;
+            dgvPayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPayment.RowTemplate.Height = 35;
+
+            SetupPaymentGrid();
+            LoadCustomers();
+            LoadPayments();
+
+            cmbCustomerName.SelectedIndexChanged += cmbCustomerName_SelectedIndexChanged;
+            dgvPayment.CellClick += dgvPayment_CellClick;
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        private void LoadCustomers()
         {
+            cmbCustomerName.Items.Clear();
 
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                string query = @"
+                SELECT b.BookingID, c.FullName
+                FROM bookings b
+                INNER JOIN customers c ON b.CustomerID = c.CustomerID
+                INNER JOIN checkins ci ON b.BookingID = ci.BookingID
+                INNER JOIN checkouts co ON ci.CheckInID = co.CheckInID
+                WHERE b.Status != 'Completed'";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                conn.Open();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cmbCustomerName.Items.Add(
+                        new ComboBoxItem(
+                            reader["FullName"].ToString(),
+                            reader["BookingID"].ToString()
+                        )
+                    );
+                }
+                reader.Close();
+            }
         }
 
-        private void panel1_Paint_2(object sender, PaintEventArgs e)
+        private void cmbCustomerName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbCustomerName.SelectedItem == null) return;
 
+            ComboBoxItem item = (ComboBoxItem)cmbCustomerName.SelectedItem;
+            int bookingID = Convert.ToInt32(item.Value);
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                string query = @"
+                SELECT r.RoomNumber, rt.TypeName, rt.PricePerNight,
+                       b.CheckInDate, b.CheckOutDate
+                FROM bookings b
+                INNER JOIN rooms r ON b.RoomID = r.RoomID
+                INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                WHERE b.BookingID = @BookingID";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@BookingID", bookingID);
+
+                conn.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    txtRoomType.Text = reader["TypeName"].ToString();
+                    txtRoomNumber.Text = reader["RoomNumber"].ToString();
+
+                    DateTime checkIn = Convert.ToDateTime(reader["CheckInDate"]);
+                    DateTime checkOut = Convert.ToDateTime(reader["CheckOutDate"]);
+
+                    CheckInDate.Value = checkIn;
+                    CheckOutDate.Value = checkOut;
+
+                    decimal price = Convert.ToDecimal(reader["PricePerNight"]);
+                    int days = (checkOut - checkIn).Days;
+                    if (days <= 0) days = 1;
+
+                    txtTotalAmount.Text = (price * days).ToString("0.00");
+                }
+                reader.Close();
+            }
         }
 
-        private void panel1_Paint_3(object sender, PaintEventArgs e)
+        private void btnPayNow_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (cmbCustomerName.SelectedItem == null ||
+                    cmbPaymentType.SelectedItem == null)
+                {
+                    MessageBox.Show("Select customer and payment type!");
+                    return;
+                }
 
-        }
+                ComboBoxItem item = (ComboBoxItem)cmbCustomerName.SelectedItem;
+                int bookingID = Convert.ToInt32(item.Value);
 
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
+                decimal amount = Convert.ToDecimal(txtTotalAmount.Text);
+                string method = cmbPaymentType.Text;
+                string invoiceNo = GenerateInvoiceNo();
 
+                int paymentID = 0;
+
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string getCheckout = @"
+                    SELECT c.CheckOutID
+                    FROM checkouts c
+                    INNER JOIN checkins i ON c.CheckInID = i.CheckInID
+                    WHERE i.BookingID = @BookingID";
+
+                    MySqlCommand cmd = new MySqlCommand(getCheckout, conn);
+                    cmd.Parameters.AddWithValue("@BookingID", bookingID);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        MessageBox.Show("Customer not checked out yet!");
+                        return;
+                    }
+
+                    int checkOutID = Convert.ToInt32(result);
+
+                    string insert = @"
+                    INSERT INTO payments
+                    (InvoiceNo, CheckOutID, AmountPaid, PaymentMethod, PaymentStatus, BookingID, IsPrinted)
+                    VALUES
+                    (@InvoiceNo, @CheckOutID, @Amount, @Method, 'Paid', @BookingID, 0);
+                    SELECT LAST_INSERT_ID();";
+
+                    MySqlCommand cmdInsert = new MySqlCommand(insert, conn);
+                    cmdInsert.Parameters.AddWithValue("@InvoiceNo", invoiceNo);
+                    cmdInsert.Parameters.AddWithValue("@CheckOutID", checkOutID);
+                    cmdInsert.Parameters.AddWithValue("@Amount", amount);
+                    cmdInsert.Parameters.AddWithValue("@Method", method);
+                    cmdInsert.Parameters.AddWithValue("@BookingID", bookingID);
+
+                    paymentID = Convert.ToInt32(cmdInsert.ExecuteScalar());
+
+                    // ✅ UPDATE BOOKING STATUS
+                    string updateBooking = @"
+                    UPDATE bookings
+                    SET Status = 'Completed'
+                    WHERE BookingID = @BookingID";
+
+                    MySqlCommand cmdUpdate = new MySqlCommand(updateBooking, conn);
+                    cmdUpdate.Parameters.AddWithValue("@BookingID", bookingID);
+                    cmdUpdate.ExecuteNonQuery();
+                }
+
+                LoadPayments();
+                MessageBox.Show("Payment Successful!");
+
+                OpenReceipt(paymentID);
+                ClearForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            if (dgvPayment.CurrentRow == null)
+            {
+                MessageBox.Show("Select payment row!");
+                return;
+            }
 
+            int paymentID = Convert.ToInt32(dgvPayment.CurrentRow.Cells[0].Value);
+            OpenReceipt(paymentID);
         }
 
-        private void label19_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
+            ClearForm();
+            dgvPayment.ClearSelection();
         }
 
-        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        private void ClearForm()
         {
-
+            cmbCustomerName.SelectedIndex = -1;
+            cmbPaymentType.SelectedIndex = -1;
+            txtRoomType.Clear();
+            txtRoomNumber.Clear();
+            txtTotalAmount.Clear();
         }
 
-        private void txtRoomNumber_TextChanged(object sender, EventArgs e)
+        private string GenerateInvoiceNo()
         {
+            string year = DateTime.Now.Year.ToString();
+            string prefix = "INV-" + year + "-";
 
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = @"
+                SELECT InvoiceNo
+                FROM payments
+                WHERE InvoiceNo LIKE @Prefix
+                ORDER BY PaymentID DESC
+                LIMIT 1";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Prefix", prefix + "%");
+
+                object result = cmd.ExecuteScalar();
+
+                int nextNumber = 1;
+
+                if (result != null)
+                {
+                    string lastInvoice = result.ToString();
+                    string[] parts = lastInvoice.Split('-');
+                    nextNumber = Convert.ToInt32(parts[2]) + 1;
+                }
+
+                return prefix + nextNumber.ToString("0000");
+            }
         }
+
+        private void SetupPaymentGrid()
+        {
+            dgvPayment.Columns.Clear();
+            dgvPayment.AutoGenerateColumns = false;
+
+            dgvPayment.Columns.Add("PaymentID", "PaymentID");
+            dgvPayment.Columns.Add("BookingID", "BookingID");
+            dgvPayment.Columns.Add("CustomerName", "Customer Name");
+            dgvPayment.Columns.Add("RoomType", "Room Type");
+            dgvPayment.Columns.Add("RoomNumber", "Room Number");
+            dgvPayment.Columns.Add("Amount", "Total Price");
+            dgvPayment.Columns.Add("Method", "Payment Type");
+            dgvPayment.Columns.Add("Date", "Payment Date");
+
+            dgvPayment.Columns[0].Visible = false;
+            dgvPayment.Columns[1].Visible = false;
+        }
+
+        private void LoadPayments()
+        {
+            dgvPayment.Rows.Clear();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                string query = @"
+                SELECT 
+                    p.PaymentID,
+                    b.BookingID,
+                    c.FullName,
+                    rt.TypeName,
+                    r.RoomNumber,
+                    p.AmountPaid,
+                    p.PaymentMethod,
+                    p.PaymentDate
+                FROM payments p
+                INNER JOIN bookings b ON p.BookingID = b.BookingID
+                INNER JOIN customers c ON b.CustomerID = c.CustomerID
+                INNER JOIN rooms r ON b.RoomID = r.RoomID
+                INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                WHERE p.PaymentStatus = 'Paid'
+                ORDER BY p.PaymentDate DESC";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                conn.Open();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    dgvPayment.Rows.Add(
+                        reader["PaymentID"],
+                        reader["BookingID"],
+                        reader["FullName"],
+                        reader["TypeName"],
+                        reader["RoomNumber"],
+                        reader["AmountPaid"],
+                        reader["PaymentMethod"],
+                        Convert.ToDateTime(reader["PaymentDate"]).ToString("yyyy-MM-dd")
+                    );
+                }
+                reader.Close();
+            }
+        }
+
+        private void OpenReceipt(int paymentID)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = @"SELECT p.PaymentID, b.BookingID, c.FullName,
+                                rt.TypeName, r.RoomNumber, p.AmountPaid,
+                                p.PaymentMethod, p.PaymentDate
+                                FROM payments p
+                                INNER JOIN bookings b ON p.BookingID = b.BookingID
+                                INNER JOIN customers c ON b.CustomerID = c.CustomerID
+                                INNER JOIN rooms r ON b.RoomID = r.RoomID
+                                INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                                WHERE p.PaymentID = @PaymentID";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@PaymentID", paymentID);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    ReceiptForm f = new ReceiptForm();
+
+                    f.txtInvoiceNo.Text = "INV-" + paymentID;
+                    f.txtBooking.Text = reader["BookingID"].ToString();
+                    f.txtCustomerName.Text = reader["FullName"].ToString();
+                    f.txtPaymentby.Text = reader["PaymentMethod"].ToString();
+                    f.txtInvoiceDate.Text = Convert.ToDateTime(reader["PaymentDate"]).ToString("yyyy-MM-dd");
+
+                    decimal amount = Convert.ToDecimal(reader["AmountPaid"]);
+                    f.txtSubTotal.Text = amount.ToString("0.00");
+                    f.txtTotalAmount.Text = amount.ToString("0.00");
+                    f.txtDiscount.Text = "0";
+
+                    f.dgvReceipt.Rows.Clear();
+                    f.dgvReceipt.Rows.Add(
+                        1,
+                        reader["TypeName"].ToString(),
+                        reader["RoomNumber"].ToString(),
+                        1,
+                        0,
+                        amount.ToString("0.00")
+                    );
+
+                    f.ShowDialog();
+                }
+                reader.Close();
+            }
+        }
+    }
+
+    public class ComboBoxItem
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+
+        public ComboBoxItem(string text, string value)
+        {
+            Text = text;
+            Value = value;
+        }
+
+        public override string ToString() => Text;
     }
 }

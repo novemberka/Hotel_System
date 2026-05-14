@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hotel_System.PrintForms
 {
-    public partial class RecieptForm : UserControl
+    public partial class InvocieBooking : Form
     {
-        public RecieptForm()
+        public InvocieBooking()
         {
             InitializeComponent();
         }

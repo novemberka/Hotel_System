@@ -42,7 +42,6 @@ namespace Hotel_System
                 dataGridView2.Columns["RoomNumber"].DataPropertyName = "RoomNumber";
                 dataGridView2.Columns["TypeName"].DataPropertyName = "TypeName";
                 dataGridView2.Columns["PricePerNight"].DataPropertyName = "PricePerNight";
-                dataGridView2.Columns["Floor"].DataPropertyName = "Floor";
                 dataGridView2.Columns["Status"].DataPropertyName = "Status";
                 dataGridView2.Columns["RoomTypeID"].DataPropertyName = "RoomTypeID";
                 dataGridView2.Columns["RoomTypeID"].Visible = false;
@@ -71,7 +70,6 @@ namespace Hotel_System
 
                     // 2. Default to nothing selected
                     cmbRoomType.SelectedIndex = -1;
-                    txtFloor.ReadOnly = true;
                     txtPrice.ReadOnly = true;
                 }
             }
@@ -93,7 +91,6 @@ namespace Hotel_System
                 // Use the EXACT column names from your Repository SELECT statement
                 // If these names are wrong, the code will fail here
                 txtPrice.Text = row["PricePerNight"].ToString();
-                txtFloor.Text = row["Floor"].ToString();
             }
 
         }
@@ -147,7 +144,6 @@ namespace Hotel_System
                 // Replace "RoomID" and "RoomNumber" with the actual (Name) from your Designer properties
                 txtRoomID.Text = row.Cells["RoomID"].Value?.ToString();
                 txtRoomNumber.Text = row.Cells["RoomNumber"].Value?.ToString();
-                txtFloor.Text = row.Cells["Floor"].Value?.ToString();
                 txtPrice.Text = row.Cells["PricePerNight"].Value?.ToString();
 
                 // 2. Load the Status ComboBox
@@ -182,7 +178,6 @@ namespace Hotel_System
             cmbRoomType.SelectedIndex = -1;
             cmbRoomType.Text = "";
             cmbStatus.SelectedIndex = -1;
-            txtFloor.Clear();
             txtPrice.Clear();
         }
 
@@ -221,7 +216,7 @@ namespace Hotel_System
                 {
                     MessageBox.Show("Room updated successfully!");
                     LoadGrid();    // Refresh the DataGridView
-                    ClearFields(); // Clear textboxes and comboboxe
+                    ClearFields(); // Clear textboxes and comboboxes
                 }
                 else
                 {
@@ -231,6 +226,25 @@ namespace Hotel_System
             catch (Exception ex)
             {
                 MessageBox.Show("Update Error: " + ex.Message);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string roomNumber = txtRoomNumber.Text.Trim();
+                string roomID = txtRoomID.Text.Trim();
+                string status = cmbStatus.Text.Trim();
+
+                DataTable dt = _roomService.SearchRooms(roomNumber, roomID, status);
+
+                dataGridView2.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -25,8 +25,11 @@
     <Compile Update="PrintForms\BookingInvoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="PrintForms\RecieptForm.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="PrintForms\InvocieBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PrintForms\ReceiptForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Reports\Reportroom.cs">
       <SubType>UserControl</SubType>
