@@ -240,7 +240,7 @@
             PaymentDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
             PaymentDate.Size = new Size(221, 36);
             PaymentDate.TabIndex = 63;
-            PaymentDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            PaymentDate.Value = new DateTime(2026, 5, 14, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -270,7 +270,7 @@
             CheckOutDate.ShadowDecoration.CustomizableEdges = customizableEdges14;
             CheckOutDate.Size = new Size(228, 36);
             CheckOutDate.TabIndex = 57;
-            CheckOutDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            CheckOutDate.Value = new DateTime(2026, 5, 14, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -301,7 +301,7 @@
             CheckInDate.ShadowDecoration.CustomizableEdges = customizableEdges16;
             CheckInDate.Size = new Size(228, 36);
             CheckInDate.TabIndex = 56;
-            CheckInDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            CheckInDate.Value = new DateTime(2026, 5, 14, 0, 0, 0, 0);
             // 
             // cmbCustomerName
             // 
@@ -574,7 +574,7 @@
             Margin = new Padding(2);
             Name = "PaymentControl";
             Padding = new Padding(50);
-            Size = new Size(1413, 704);
+            Size = new Size(1392, 683);
             Load += PaymentControl_Load;
             paymentInformation.ResumeLayout(false);
             paymentInformation.PerformLayout();

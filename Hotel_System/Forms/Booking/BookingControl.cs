@@ -1,4 +1,5 @@
 ﻿using Hotel_System.Models;
+using Hotel_System.PrintForms;
 using Hotel_System.Services;
 using Org.BouncyCastle.Asn1.Cmp;
 using System;
@@ -209,6 +210,7 @@ namespace Hotel_System
 
         }
         
+
         private void ClearForm()
         {
             // 1. Stop the event from firing
@@ -274,11 +276,26 @@ namespace Hotel_System
                 }
             }
         }
-
+       
         private void btnclear_Click(object sender, EventArgs e)
         {
             ClearForm();
             RefreshGrid();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBookings.CurrentRow != null)
+            {
+                int bookingID = Convert.ToInt32(
+                    dataGridViewBookings.CurrentRow.Cells["BookingID"].Value
+                );
+
+                InvoiceBooking frm =
+                    new InvoiceBooking(bookingID);
+
+                frm.ShowDialog();
+            }
         }
     }
 }

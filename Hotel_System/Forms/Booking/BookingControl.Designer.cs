@@ -60,6 +60,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gReservatonlist = new GroupBox();
             label25 = new Label();
             dataGridViewBookings = new DataGridView();
@@ -98,6 +100,7 @@
             label18 = new Label();
             txtBookingID = new Guna.UI2.WinForms.Guna2TextBox();
             label26 = new Label();
+            btnPrint = new Guna.UI2.WinForms.Guna2Button();
             gReservatonlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBookings).BeginInit();
             CustomerInfo.SuspendLayout();
@@ -661,12 +664,33 @@
             label26.TabIndex = 56;
             label26.Text = "Room:";
             // 
+            // btnPrint
+            // 
+            btnPrint.BorderRadius = 10;
+            btnPrint.CustomizableEdges = customizableEdges33;
+            btnPrint.DisabledState.BorderColor = Color.DarkGray;
+            btnPrint.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPrint.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPrint.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPrint.FillColor = Color.MidnightBlue;
+            btnPrint.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPrint.ForeColor = Color.White;
+            btnPrint.Location = new Point(978, 490);
+            btnPrint.Name = "btnPrint";
+            btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btnPrint.Size = new Size(112, 39);
+            btnPrint.TabIndex = 56;
+            btnPrint.Text = "Print";
+            btnPrint.Click += btnPrint_Click;
+            btnPrint.DoubleClick += btnPrint_Click;
+            // 
             // BookingControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(btnPrint);
             Controls.Add(guna2GroupBox1);
             Controls.Add(CustomerInfo);
             Controls.Add(btnclear);
@@ -730,5 +754,6 @@
         private DataGridViewTextBoxColumn CheckIn;
         private DataGridViewTextBoxColumn Checkout;
         private DataGridViewTextBoxColumn Status;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }

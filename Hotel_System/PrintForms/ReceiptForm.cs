@@ -21,7 +21,7 @@ namespace Hotel_System.PrintForms
 
         private void AddHeader()
         {
-            // Hotel Name
+            
             Label lblHotel = new Label();
             lblHotel.Text = "Hotel Name";
             lblHotel.Font = new Font("Times New Roman", 20, FontStyle.Bold);
@@ -32,7 +32,7 @@ namespace Hotel_System.PrintForms
             lblHotel.Location = new Point(320, 18);
             this.Controls.Add(lblHotel);
 
-            // Address
+            
             Label lblAddress = new Label();
             lblAddress.Text = "Address: St 2004, Sen Sok, Phnom Penh";
             lblAddress.Font = new Font("Segoe UI", 10);
@@ -40,7 +40,7 @@ namespace Hotel_System.PrintForms
             lblAddress.Location = new Point(245, 78);
             this.Controls.Add(lblAddress);
 
-            // Tel
+         
             Label lblTel = new Label();
             lblTel.Text = "Tel: 097 967 9172";
             lblTel.Font = new Font("Segoe UI", 10);
@@ -48,7 +48,7 @@ namespace Hotel_System.PrintForms
             lblTel.Location = new Point(330, 103);
             this.Controls.Add(lblTel);
 
-            // Email
+           
             Label lblEmail = new Label();
             lblEmail.Text = "Email: hotel09@gmail.com";
             lblEmail.Font = new Font("Segoe UI", 10);
@@ -56,7 +56,7 @@ namespace Hotel_System.PrintForms
             lblEmail.Location = new Point(305, 128);
             this.Controls.Add(lblEmail);
 
-            // Invoice title
+           
             Label lblInvoice = new Label();
             lblInvoice.Text = "Invoice";
             lblInvoice.Font = new Font("Times New Roman", 16, FontStyle.Bold);
@@ -70,7 +70,7 @@ namespace Hotel_System.PrintForms
 
         private void ArrangeControls()
         {
-            // LEFT column
+            
             lblCustomerName.Location = new Point(25, 210);
             txtCustomerName.Location = new Point(170, 207);
             txtCustomerName.Size = new Size(200, 27);
@@ -83,7 +83,7 @@ namespace Hotel_System.PrintForms
             txtPaymentby.Location = new Point(170, 277);
             txtPaymentby.Size = new Size(200, 27);
 
-            // RIGHT column
+        
             lblInvoiceNo.Location = new Point(560, 210);
             txtInvoiceNo.Location = new Point(680, 207);
             txtInvoiceNo.Size = new Size(190, 27);
@@ -96,11 +96,11 @@ namespace Hotel_System.PrintForms
             txtInvoiceDate.Location = new Point(680, 277);
             txtInvoiceDate.Size = new Size(190, 27);
 
-            // Grid
+           
             dgvReceipt.Location = new Point(25, 325);
             dgvReceipt.Size = new Size(880, 230);
 
-            // Totals
+            
             lblSubtotal.Location = new Point(630, 572);
             txtSubTotal.Location = new Point(750, 568);
             txtSubTotal.Size = new Size(155, 27);
@@ -113,7 +113,7 @@ namespace Hotel_System.PrintForms
             txtTotalAmount.Location = new Point(750, 640);
             txtTotalAmount.Size = new Size(155, 27);
 
-            // Footer
+            
             Label lblThank = new Label();
             lblThank.Text = "Thank you for coming!!";
             lblThank.Font = new Font("Segoe UI", 12, FontStyle.Bold | FontStyle.Italic);
@@ -179,7 +179,7 @@ namespace Hotel_System.PrintForms
 
             dgvReceipt.BackgroundColor = Color.White;
 
-            // Header
+         
             dgvReceipt.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
             dgvReceipt.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dgvReceipt.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);

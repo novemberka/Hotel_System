@@ -651,13 +651,13 @@ namespace Hotel_System
 
                 table.SetWidths(new float[] { 40f, 20f, 20f, 20f });
 
-                // HEADER
+                
                 AddHeaderCell(table, "Description");
                 AddHeaderCell(table, "Days");
                 AddHeaderCell(table, "Price");
                 AddHeaderCell(table, "Total");
 
-                // DATA
+                
                 int nights = 1;
 
                 DateTime inDate = Convert.ToDateTime(checkIn);
@@ -711,7 +711,7 @@ namespace Hotel_System
 
                 doc.Close();
 
-                // OPEN PDF
+                
                 Process.Start(new ProcessStartInfo()
                 {
                     FileName = filePath,
