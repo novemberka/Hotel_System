@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[9.1.0, )"
             },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.104.2, )"
+            },
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.6.0, )"
@@ -62,41 +66,13 @@
               "target": "Package",
               "version": "[2.0.4.7, )"
             },
-            "Microsoft.ReportViewer.WinForms": {
-              "target": "Package",
-              "version": "[10.0.40219.1, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
-            },
-            "Microsoft.Testing.Extensions.TrxReport": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
-            "Microsoft.Testing.Extensions.TrxReport.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.6.0, )"
             },
-            "MySql.Data.EntityFrameworkCore": {
+            "ReportViewerCore.WinForms": {
               "target": "Package",
-              "version": "[8.0.22, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.5.0, )"
-            },
-            "ReportPortal.Client": {
-              "target": "Package",
-              "version": "[3.11.1, )"
-            },
-            "ReportPortal.Shared": {
-              "target": "Package",
-              "version": "[3.11.1, )"
+              "version": "[15.1.33, )"
             },
             "ScottPlot.WinForms": {
               "target": "Package",

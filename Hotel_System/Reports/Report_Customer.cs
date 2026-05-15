@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using System.IO;
-
 
 namespace Hotel_System
 {
@@ -16,11 +14,7 @@ namespace Hotel_System
             service = new Services.CustomerService();
         }
 
-        private void ReportCustomer_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        private void ReportCustomer_Load(object sender, EventArgs e) { }
 
         private void LoadReport(DateTime? from, DateTime? to)
         {
@@ -62,11 +56,6 @@ namespace Hotel_System
             LoadReport(FromDate.Value.Date, ToDate.Value.Date);
         }
 
- 
-
-        private void cmbCustomerName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void cmbCustomerName_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

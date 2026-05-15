@@ -1,8 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Forms\Booking\BookingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\CheckInCheckOut\Checkin_outControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Customer\CustomerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Forms\Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Dashboard\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Payment\PaymentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Room\RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\WalkIn\Walk-In.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="History\History_Booking.cs">
       <SubType>UserControl</SubType>
@@ -16,23 +40,8 @@
     <Compile Update="History\Payment_History.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Forms\Booking\BookingControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\CheckInCheckOut\Checkin_outControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\Customer\CustomerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\Dashboard\DashboardControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\Login\Login.cs">
+    <Compile Update="Reports\ReportPreviewForm.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Payment\PaymentControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Reports\Reportroom.cs">
       <SubType>UserControl</SubType>
@@ -50,12 +59,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Reports\Report_WalkIn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\WalkIn\Walk-In.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Forms\Room\RoomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
