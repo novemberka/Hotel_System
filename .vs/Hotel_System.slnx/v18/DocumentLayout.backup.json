@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,6 +107,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report_CheckInCheckOut.cs [Design]",
+              "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckInCheckOut.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_CheckInCheckOut.cs",
+              "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckInCheckOut.cs [Design]",
+              "RelativeToolTip": "Hotel_System\\Reports\\Report_CheckInCheckOut.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T15:06:33.272Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -155,18 +167,6 @@
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Payment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T15:15:24.075Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Report_CheckInCheckOut.cs [Design]",
-              "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckInCheckOut.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_CheckInCheckOut.cs",
-              "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckInCheckOut.cs [Design]",
-              "RelativeToolTip": "Hotel_System\\Reports\\Report_CheckInCheckOut.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:06:33.272Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -264,7 +264,7 @@
               "RelativeDocumentMoniker": "Hotel_System\\Repositories\\BookingRepository.cs",
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Repositories\\BookingRepository.cs",
               "RelativeToolTip": "Hotel_System\\Repositories\\BookingRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA4wBUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T15:14:02.954Z",
               "EditorCaption": ""
@@ -277,7 +277,7 @@
               "RelativeDocumentMoniker": "Hotel_System\\Services\\BookingService.cs",
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Services\\BookingService.cs",
               "RelativeToolTip": "Hotel_System\\Services\\BookingService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvw0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvw0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T14:49:16.805Z",
               "EditorCaption": ""
@@ -290,7 +290,7 @@
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Booking.Designer.cs",
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.Designer.cs",
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Booking.Designer.cs",
-              "ViewState": "AgIAAAUCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T15:10:04.894Z",
               "EditorCaption": ""
@@ -303,7 +303,7 @@
               "RelativeDocumentMoniker": "Hotel_System\\Forms\\Booking\\BookingControl.cs",
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Forms\\Booking\\BookingControl.cs",
               "RelativeToolTip": "Hotel_System\\Forms\\Booking\\BookingControl.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAIA9wDgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAtwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T14:48:49.6Z",
               "EditorCaption": ""
@@ -361,7 +361,8 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Forms\\Booking\\BookingControl.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Forms\\Booking\\BookingControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T14:46:37.006Z"
+              "WhenOpened": "2026-05-16T14:46:37.006Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -372,7 +373,8 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
               "RelativeToolTip": "Hotel_System\\Hotel_System.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-27T17:38:44.596Z"
+              "WhenOpened": "2026-02-27T17:38:44.596Z",
+              "EditorCaption": ""
             }
           ]
         }
