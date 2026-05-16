@@ -47,6 +47,28 @@ namespace Hotel_System.Repositories
             return dt;
         }
 
+        public DataTable Search(string roomNumber, string roomID, string status)
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT r.RoomID, r.RoomNumber, rt.TypeName, rt.PricePerNight, r.Status
+                     FROM rooms r
+                     INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                     WHERE (@num = '' OR r.RoomNumber LIKE CONCAT('%',@num,'%'))
+                       AND (@rid = '' OR r.RoomID = @ridVal)
+                       AND (@status = '' OR r.Status = @status)";
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                var adapter = new MySqlDataAdapter(query, conn);
+                adapter.SelectCommand.Parameters.AddWithValue("@num",    roomNumber ?? "");
+                adapter.SelectCommand.Parameters.AddWithValue("@rid",    string.IsNullOrWhiteSpace(roomID) ? "" : roomID);
+                int ridVal = int.TryParse(roomID, out int v) ? v : 0;
+                adapter.SelectCommand.Parameters.AddWithValue("@ridVal", ridVal);
+                adapter.SelectCommand.Parameters.AddWithValue("@status", status ?? "");
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+
         public bool Add(Room room)
         {
             string query = "INSERT INTO rooms (RoomNumber, RoomTypeID, Status) VALUES (@num, @type, @status)";
