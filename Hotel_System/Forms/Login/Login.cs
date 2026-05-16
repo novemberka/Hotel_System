@@ -1,7 +1,6 @@
+using System.Drawing.Drawing2D;
 using Hotel_System.Properties.Config;
 using MySql.Data.MySqlClient;
-using System;
-using System.Windows.Forms;
 
 namespace Hotel_System
 {
@@ -12,15 +11,24 @@ namespace Hotel_System
             InitializeComponent();
         }
 
+
+
+
         private void Login_Load(object sender, EventArgs e)
         {
+            txtusername.Text = txtpassword.Text;
             txtpassword.PasswordChar = '*';
+
         }
+
+
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
             string username = txtusername.Text.Trim();
             string password = txtpassword.Text.Trim();
+
+
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -30,11 +38,13 @@ namespace Hotel_System
 
             try
             {
+                // Create connection from your DbConnection class
                 DbConnection db = new DbConnection();
                 using (MySqlConnection conn = db.GetConnection())
                 {
                     conn.Open();
 
+                    // Parameterized query (safe)
                     string query = "SELECT * FROM admins WHERE Username=@username AND Password=@password";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
@@ -44,15 +54,20 @@ namespace Hotel_System
 
                     if (reader.Read())
                     {
-                        string fullName = reader["FullName"]?.ToString() ?? "";
-                        string role = reader["Role"]?.ToString() ?? "";
-                        string? imgPath = reader["ImagePath"] != DBNull.Value
-                            ? reader["ImagePath"]?.ToString()
-                            : null;
+                        string fullName = reader["FullName"].ToString();
+                        string role = reader["Role"].ToString();
+
+                        string imgPath = null;
+
+                        if (reader["ImagePath"] != DBNull.Value)
+                        {
+                            imgPath = reader["ImagePath"].ToString();
+                        }
 
                         MessageBox.Show($"Welcome {fullName} ({role})!");
 
-                        Dashboard dashboard = new Dashboard(fullName, role, imgPath ?? "");
+                        // PASS DATA to Dashboard
+                        Dashboard dashboard = new Dashboard(fullName, role, imgPath);
                         dashboard.Show();
                         this.Hide();
                     }
@@ -66,23 +81,31 @@ namespace Hotel_System
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
 
+
+        }
         private void lable1_Click_1(object sender, EventArgs e) { }
+
         private void txtpassword_TextChanged(object sender, EventArgs e) { }
         private void label7_Click(object sender, EventArgs e) { }
         private void label6_Click(object sender, EventArgs e) { }
         private void label8_Click(object sender, EventArgs e) { }
-        private void guna2Panel1_Paint(object sender, EventArgs e) { }
-        private void guna2Panel1_Paint_1(object sender, EventArgs e) { }
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e) { }
+        private void guna2Panel1_Paint_1(object sender, PaintEventArgs e) { }
         private void guna2PictureBox1_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void guna2TextBox1_TextChanged(object sender, EventArgs e) { }
         private void label1_Click_1(object sender, EventArgs e) { }
         private void label2_Click_1(object sender, EventArgs e) { }
+
+        // Added missing event handlers referenced by Login.Designer.cs
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void label3_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
-        private void iconButton1_Click(object sender, EventArgs e) { }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

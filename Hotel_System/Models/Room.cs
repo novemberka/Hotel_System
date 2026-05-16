@@ -10,16 +10,16 @@ namespace Hotel_System.Models
     public class Room
     {
         public int RoomID { get; set; }
-        public string RoomNumber { get; set; } = string.Empty;
-        public int RoomTypeID { get; set; }
-        public string Status { get; set; } = string.Empty;
+        public string RoomNumber { get; set; }
+        public int RoomTypeID { get; set; } // Foreign Key
+        public string Status { get; set; }
     }
 
+    // Models/RoomType.cs
     public class RoomType
     {
         public int RoomTypeID { get; set; }
-        public string TypeName { get; set; } = string.Empty;
+        public string TypeName { get; set; } // e.g., "Deluxe"
         public decimal Price { get; set; }
-        public string Floor { get; set; } = string.Empty;
     }
 }

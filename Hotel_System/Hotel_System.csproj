@@ -26,6 +26,21 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>DataSet1.xsd</DependentUpon>
 		</Compile>
+		<Compile Update="Forms\Customer\CustomerControl.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Forms\Dashboard\Dashboard.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Forms\Dashboard\DashboardControl.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Forms\Login\Login.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Forms\Room\RoomControl.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
 		<Compile Update="Properties\Resources.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
