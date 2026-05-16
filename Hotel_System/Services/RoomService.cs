@@ -23,6 +23,9 @@ namespace Hotel_System.Services
         {
             return _repo.GetRoomTypes();
         }
+
+        public DataTable GetRoomReport(string roomNumber = "", string floor = "", string roomType = "")
+            => _repo.GetRoomReport(roomNumber, floor, roomType);
     }
 }
     

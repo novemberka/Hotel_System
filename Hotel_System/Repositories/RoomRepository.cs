@@ -18,7 +18,6 @@ namespace Hotel_System.Repositories
                         r.RoomTypeID,
                         rt.TypeName,
                         rt.PricePerNight,
-                        rt.Floor,
                         r.Status
                      FROM rooms r
                      INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID";
@@ -34,10 +33,10 @@ namespace Hotel_System.Repositories
         public DataTable Search(string keyword)
         {
             DataTable dt = new DataTable();
-            string query = @"SELECT r.RoomID, r.RoomNumber, rt.TypeName, rt.PricePerNight, rt.Floor, r.Status
+            string query = @"SELECT r.RoomID, r.RoomNumber, rt.TypeName, rt.PricePerNight, r.Status
                      FROM rooms r
                      INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
-                     WHERE r.RoomNumber LIKE @key OR rt.Floor LIKE @key";
+                     WHERE r.RoomNumber LIKE @key";
 
             using (MySqlConnection conn = db.GetConnection())
             {
@@ -99,11 +98,33 @@ namespace Hotel_System.Repositories
         public DataTable GetRoomTypes()
         {
             DataTable dt = new DataTable();
-            string query = "SELECT RoomTypeID, TypeName, PricePerNight, Floor FROM roomtypes";
+            string query = "SELECT RoomTypeID, TypeName, PricePerNight FROM roomtypes";
 
             using (MySqlConnection conn = db.GetConnection())
             {
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+
+        public DataTable GetRoomReport(string roomNumber, string floor, string roomType)
+        {
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand("sp_GetRoomReport", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@p_FromDate",   System.DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_ToDate",     System.DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_RoomType",   string.IsNullOrWhiteSpace(roomType) || roomType == "All" ? "" : roomType.Trim());
+                cmd.Parameters.AddWithValue("@p_RoomNumber", string.IsNullOrWhiteSpace(roomNumber) ? "" : roomNumber.Trim());
+                cmd.Parameters.AddWithValue("@p_Floor",      string.IsNullOrWhiteSpace(floor) ? "" : floor.Trim());
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 adapter.Fill(dt);
             }
             return dt;

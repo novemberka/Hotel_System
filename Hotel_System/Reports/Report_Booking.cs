@@ -21,12 +21,27 @@ namespace Hotel_System
         {
             _grid = FindGrid(Booking_list);
 
-            // Default range: 1st of current month → today
             FromDate.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             ToDate.Value   = DateTime.Today;
 
+            if (_grid != null) _grid.AutoGenerateColumns = false;
+
+            // Load room types from DB
+            try
+            {
+                var rt = new Repositories.BookingRepository();
+                // reuse CustomerRepository's GetAllRoomTypes which queries roomtypes table
+                var repo = new Repositories.CustomerRepository();
+                var types = repo.GetAllRoomTypes();
+                RoomType.Items.Clear();
+                RoomType.Items.Add("All");
+                foreach (System.Data.DataRow row in types.Rows)
+                    RoomType.Items.Add(row["TypeName"].ToString());
+                RoomType.SelectedIndex = 0;
+            }
+            catch { }
+
             btnflitter.Click += (s, ev) => LoadData();
-            LoadData();
         }
 
         private DataGridView? FindGrid(Control parent)
@@ -44,9 +59,17 @@ namespace Hotel_System
         {
             try
             {
+                _currentData = new DataTable();
+                if (_grid != null) { _grid.DataSource = _currentData; _grid.Refresh(); }
+
+                string roomType     = RoomType.SelectedItem?.ToString() ?? "";
+                string customerName = txtSearchCustomer.Text.Trim();
+
                 _currentData = _service.GetBookingReport(
                     FromDate.Value.Date,
-                    ToDate.Value.Date);
+                    ToDate.Value.Date,
+                    roomType,
+                    customerName);
 
                 if (_grid != null)
                 {
@@ -74,13 +97,12 @@ namespace Hotel_System
                 balanceDue  += row["BalanceDue"]  == DBNull.Value ? 0 : Convert.ToDecimal(row["BalanceDue"]);
             }
 
-            if (lbltotalbeforedis != null) lbltotalbeforedis.Text = totalAmount.ToString("N2");
-            if (lbldiscount != null)       lbldiscount.Text       = amountPaid.ToString("N2");
-            if (lbltotalAfterdis != null)  lbltotalAfterdis.Text  = (totalAmount - balanceDue).ToString("N2");
-            if (lblGrandtotal != null)     lblGrandtotal.Text     = balanceDue.ToString("N2");
+            if (lbltotalbeforedis != null) lbltotalbeforedis.Text = "Totel Before Discount:  " + totalAmount.ToString("N2");
+            if (lbldiscount != null)       lbldiscount.Text       = "Discount:  "              + amountPaid.ToString("N2");
+            if (lbltotalAfterdis != null)  lbltotalAfterdis.Text  = "Totel After Discount:  "  + (totalAmount - balanceDue).ToString("N2");
+            if (lblGrandtotal != null)     lblGrandtotal.Text     = "Grand Total:  "           + balanceDue.ToString("N2");
         }
 
-        // Excel icon → open RDLC report preview
         private void iconPictureBox6_Click(object sender, EventArgs e)
         {
             if (_currentData.Rows.Count == 0)
@@ -93,7 +115,24 @@ namespace Hotel_System
             try
             {
                 var rdlcData = BuildRdlcTable(_currentData);
-                new ReportPreviewForm(rdlcData, FromDate.Value.Date, ToDate.Value.Date).Show(this);
+                new ReportPreviewForm(
+                    "Booking Report",
+                    rdlcData,
+                    FromDate.Value.Date,
+                    ToDate.Value.Date,
+                    new[]
+                    {
+                        ("BookingID",    "Booking ID",    1.0, "Center"),
+                        ("CustomerName", "Customer Name", 1.8, "Left"),
+                        ("PhoneNumber",  "Phone",         1.3, "Center"),
+                        ("Room",         "Room",          1.0, "Center"),
+                        ("RoomType",     "Room Type",     1.3, "Center"),
+                        ("CheckIn",      "Check In",      1.5, "Center"),
+                        ("CheckOut",     "Check Out",     1.5, "Center"),
+                        ("TotalAmount",  "Total ($)",     1.2, "Right"),
+                        ("Status",       "Status",        1.2, "Center"),
+                    }
+                ).Show(this);
             }
             catch (Exception ex)
             {
@@ -104,34 +143,31 @@ namespace Hotel_System
             }
         }
 
-        // Maps _currentData columns to the field names declared in BookingReport.rdlc
         private static DataTable BuildRdlcTable(DataTable source)
         {
             var dt = new DataTable();
+            dt.Columns.Add("BookingID");
             dt.Columns.Add("CustomerName");
             dt.Columns.Add("PhoneNumber");
-            dt.Columns.Add("RoomType");
-            dt.Columns.Add("CheckInDate");
-            dt.Columns.Add("CheckoutDate");
-            dt.Columns.Add("TotalAmout");   // matches the typo in the RDLC
-            dt.Columns.Add("BookingID");
             dt.Columns.Add("Room");
-            dt.Columns.Add("Note");
+            dt.Columns.Add("RoomType");
+            dt.Columns.Add("CheckIn");
+            dt.Columns.Add("CheckOut");
+            dt.Columns.Add("TotalAmount");
             dt.Columns.Add("Status");
 
             foreach (DataRow src in source.Rows)
             {
                 dt.Rows.Add(
-                    src["customer_name"]?.ToString() ?? "",
-                    src["phone_number"]?.ToString()  ?? "",
-                    src["room_type"]?.ToString()     ?? "",
-                    src["check-in"]?.ToString()      ?? "",
-                    src["check-out"]?.ToString()     ?? "",
-                    src["TotalAmount"] == DBNull.Value ? "0" : src["TotalAmount"].ToString(),
-                    "",   // BookingID — not in SP output
-                    "",   // Room      — not in SP output
-                    "",   // Note
-                    ""    // Status
+                    source.Columns.Contains("booking_id")    ? src["booking_id"]?.ToString()    ?? "" : "",
+                    source.Columns.Contains("customer_name") ? src["customer_name"]?.ToString() ?? "" : "",
+                    source.Columns.Contains("phone_number")  ? src["phone_number"]?.ToString()  ?? "" : "",
+                    source.Columns.Contains("room")          ? src["room"]?.ToString()          ?? "" : "",
+                    source.Columns.Contains("room_type")     ? src["room_type"]?.ToString()     ?? "" : "",
+                    source.Columns.Contains("check-in")      ? src["check-in"]?.ToString()      ?? "" : "",
+                    source.Columns.Contains("check-out")     ? src["check-out"]?.ToString()     ?? "" : "",
+                    source.Columns.Contains("TotalAmount") && src["TotalAmount"] != DBNull.Value ? src["TotalAmount"].ToString() : "0",
+                    source.Columns.Contains("status")        ? src["status"]?.ToString()        ?? "" : ""
                 );
             }
 

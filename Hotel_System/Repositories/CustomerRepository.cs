@@ -1,4 +1,4 @@
-﻿using Hotel_System.Models;
+using Hotel_System.Models;
 using Hotel_System.Properties.Config;
 using MySql.Data.MySqlClient;
 using System;
@@ -79,64 +79,22 @@ namespace Hotel_System.Repositories
             }
         }
 
-
         public DataTable GetCustomerReport(DateTime? fromDate, DateTime? toDate,
                                string customerName, string roomType, string roomNumber)
         {
             DataTable dt = new DataTable();
 
-            string query = @"
-        SELECT DISTINCT
-            c.CustomerID,
-            c.FullName,
-            c.Gender,
-            c.Phone       AS PhoneNumber,
-            c.Email,
-            c.IDCardNumber,
-            c.Address
-        FROM customers c
-        LEFT JOIN bookings b   ON c.CustomerID = b.CustomerID
-        LEFT JOIN rooms r      ON b.RoomID     = r.RoomID
-        LEFT JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
-        WHERE 1=1";
-
             using (MySqlConnection conn = db.GetConnection())
             {
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-
-              
-                if (fromDate.HasValue)
+                MySqlCommand cmd = new MySqlCommand("sp_GetCustomerReport", conn)
                 {
-                    query += " AND DATE(c.CreatedAt) >= @FromDate";
-                    cmd.Parameters.AddWithValue("@FromDate", fromDate.Value.Date);
-                }
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@p_FromDate",     fromDate.HasValue ? (object)fromDate.Value.Date : DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_ToDate",       toDate.HasValue   ? (object)toDate.Value.Date   : DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_RoomType",     string.IsNullOrWhiteSpace(roomType)     ? (object)DBNull.Value : roomType.Trim());
+                cmd.Parameters.AddWithValue("@p_CustomerName", string.IsNullOrWhiteSpace(customerName) ? (object)DBNull.Value : customerName.Trim());
 
-                if (toDate.HasValue)
-                {
-                    query += " AND DATE(c.CreatedAt) <= @ToDate";
-                    cmd.Parameters.AddWithValue("@ToDate", toDate.Value.Date);
-                }
-
-                if (!string.IsNullOrWhiteSpace(customerName))
-                {
-                    query += " AND c.FullName LIKE @CustomerName";
-                    cmd.Parameters.AddWithValue("@CustomerName", "%" + customerName.Trim() + "%");
-                }
-
-                if (!string.IsNullOrWhiteSpace(roomType))
-                {
-                    query += " AND rt.TypeName = @RoomType";
-                    cmd.Parameters.AddWithValue("@RoomType", roomType.Trim());
-                }
-
-                if (!string.IsNullOrWhiteSpace(roomNumber))
-                {
-                    query += " AND r.RoomNumber = @RoomNumber";
-                    cmd.Parameters.AddWithValue("@RoomNumber", roomNumber.Trim());
-                }
-
-                cmd.CommandText = query;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 adapter.Fill(dt);
             }

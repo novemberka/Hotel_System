@@ -46,7 +46,6 @@
             CheckIn = new DataGridViewTextBoxColumn();
             Checkout = new DataGridViewTextBoxColumn();
             Room_Service = new DataGridViewTextBoxColumn();
-            Service_charge = new DataGridViewTextBoxColumn();
             Total_Amount = new DataGridViewTextBoxColumn();
             Payment = new DataGridViewTextBoxColumn();
             Booking_list = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -78,7 +77,7 @@
             Booking_Report.AllowUserToAddRows = false;
             Booking_Report.BackgroundColor = Color.White;
             Booking_Report.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Booking_Report.Columns.AddRange(new DataGridViewColumn[] { CustomerName, PhoneNumber, Room, dataGridViewTextBoxColumn1, CheckIn, Checkout, Room_Service, Service_charge, Total_Amount, Payment });
+            Booking_Report.Columns.AddRange(new DataGridViewColumn[] { CustomerName, PhoneNumber, Room, dataGridViewTextBoxColumn1, CheckIn, Checkout, Total_Amount, Room_Service, Payment });
             Booking_Report.Location = new Point(29, 68);
             Booking_Report.Name = "Booking_Report";
             Booking_Report.RowHeadersVisible = false;
@@ -133,30 +132,22 @@
             Checkout.MinimumWidth = 6;
             Checkout.Name = "Checkout";
             Checkout.Width = 120;
-            // 
-            // Room_Service
-            // 
-            Room_Service.DataPropertyName = "room_service";
-            Room_Service.HeaderText = "Room Service";
-            Room_Service.MinimumWidth = 6;
-            Room_Service.Name = "Room_Service";
-            Room_Service.Width = 150;
-            // 
-            // Service_charge
-            // 
-            Service_charge.DataPropertyName = "service_charge";
-            Service_charge.HeaderText = "Service Charge";
-            Service_charge.MinimumWidth = 6;
-            Service_charge.Name = "Service_charge";
-            Service_charge.Width = 150;
-            // 
+            //
             // Total_Amount
-            // 
+            //
             Total_Amount.DataPropertyName = "total_amount";
             Total_Amount.HeaderText = "Total Amount";
             Total_Amount.MinimumWidth = 6;
             Total_Amount.Name = "Total_Amount";
-            Total_Amount.Width = 140;
+            Total_Amount.Width = 150;
+            //
+            // Room_Service (reused as Amount Paid column)
+            //
+            Room_Service.DataPropertyName = "AmountPaid";
+            Room_Service.HeaderText = "Amount Paid";
+            Room_Service.MinimumWidth = 6;
+            Room_Service.Name = "Room_Service";
+            Room_Service.Width = 150;
             // 
             // Payment
             // 
@@ -183,43 +174,43 @@
             Booking_list.ShadowShift = 10;
             Booking_list.Size = new Size(1405, 553);
             Booking_list.TabIndex = 8;
-            // 
+            //
             // iconPictureBox7
-            // 
+            //
             iconPictureBox7.BackColor = Color.White;
             iconPictureBox7.ForeColor = Color.Red;
             iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
             iconPictureBox7.IconColor = Color.Red;
             iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox7.Location = new Point(1274, 16);
+            iconPictureBox7.Location = new Point(1326, 10);
             iconPictureBox7.Margin = new Padding(2);
             iconPictureBox7.Name = "iconPictureBox7";
             iconPictureBox7.Size = new Size(32, 32);
             iconPictureBox7.TabIndex = 31;
             iconPictureBox7.TabStop = false;
-            // 
+            //
             // iconPictureBox6
-            // 
+            //
             iconPictureBox6.BackColor = Color.White;
             iconPictureBox6.ForeColor = Color.Green;
             iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             iconPictureBox6.IconColor = Color.Green;
             iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox6.Location = new Point(1323, 16);
+            iconPictureBox6.Location = new Point(1279, 10);
             iconPictureBox6.Margin = new Padding(2);
             iconPictureBox6.Name = "iconPictureBox6";
             iconPictureBox6.Size = new Size(32, 32);
             iconPictureBox6.TabIndex = 30;
             iconPictureBox6.TabStop = false;
-            // 
+            //
             // iconPictureBox5
-            // 
+            //
             iconPictureBox5.BackColor = Color.White;
             iconPictureBox5.ForeColor = Color.Black;
             iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Print;
             iconPictureBox5.IconColor = Color.Black;
             iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox5.Location = new Point(1226, 16);
+            iconPictureBox5.Location = new Point(1230, 10);
             iconPictureBox5.Margin = new Padding(2);
             iconPictureBox5.Name = "iconPictureBox5";
             iconPictureBox5.Size = new Size(32, 32);
@@ -251,7 +242,7 @@
             SelectDateRoport.Controls.Add(FromDate);
             SelectDateRoport.Controls.Add(lbCustomerName);
             SelectDateRoport.FillColor = Color.White;
-            SelectDateRoport.Location = new Point(25, -2);
+            SelectDateRoport.Location = new Point(25, 3);
             SelectDateRoport.Name = "SelectDateRoport";
             SelectDateRoport.Radius = 8;
             SelectDateRoport.ShadowColor = Color.LightSteelBlue;
@@ -446,7 +437,6 @@
         private DataGridViewTextBoxColumn CheckIn;
         private DataGridViewTextBoxColumn Checkout;
         private DataGridViewTextBoxColumn Room_Service;
-        private DataGridViewTextBoxColumn Service_charge;
         private DataGridViewTextBoxColumn Total_Amount;
         private DataGridViewTextBoxColumn Payment;
         private Guna.UI2.WinForms.Guna2Button btnflitter;

@@ -8,9 +8,10 @@ namespace Hotel_System.Services
     {
         private readonly BookingRepository _repo = new BookingRepository();
 
-        public DataTable GetBookingReport(DateTime fromDate, DateTime toDate)
+        public DataTable GetBookingReport(DateTime fromDate, DateTime toDate,
+                                          string roomType = "", string customerName = "")
         {
-            return _repo.GetBookingReport(fromDate, toDate);
+            return _repo.GetBookingReport(fromDate, toDate, roomType, customerName);
         }
     }
 }
