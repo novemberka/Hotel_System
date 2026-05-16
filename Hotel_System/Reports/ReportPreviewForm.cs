@@ -9,9 +9,25 @@ namespace Hotel_System.Reports
 {
     internal class ReportPreviewForm : Form
     {
+        // Used by BookingReport
         public ReportPreviewForm(DataTable reportData, DateTime fromDate, DateTime toDate)
+            : this("Booking Report", reportData, fromDate, toDate,
+                new[]
+                {
+                    ("CustomerName", "Customer Name", 1.8, "Left"),
+                    ("PhoneNumber",  "Phone",         1.2, "Center"),
+                    ("RoomType",     "Room Type",     1.3, "Center"),
+                    ("CheckInDate",  "Check In",      1.7, "Center"),
+                    ("CheckoutDate", "Check Out",     1.7, "Center"),
+                    ("TotalAmout",   "Total ($)",     1.3, "Right"),
+                })
+        { }
+
+        // General constructor used by all reports
+        public ReportPreviewForm(string title, DataTable reportData, DateTime fromDate, DateTime toDate,
+            (string Field, string Label, double WidthIn, string Align)[] columns)
         {
-            Text = "Booking Report Preview";
+            Text = title + " Preview";
             WindowState = FormWindowState.Maximized;
             StartPosition = FormStartPosition.CenterScreen;
 
@@ -21,7 +37,7 @@ namespace Hotel_System.Reports
                 ProcessingMode = ProcessingMode.Local
             };
 
-            string rdlc = BuildRdlcXml(fromDate, toDate);
+            string rdlc = BuildRdlcXml(title, fromDate, toDate, columns);
             using var stream = new MemoryStream(Encoding.UTF8.GetBytes(rdlc));
             viewer.LocalReport.LoadReportDefinition(stream);
 
@@ -32,9 +48,28 @@ namespace Hotel_System.Reports
             Controls.Add(viewer);
         }
 
-        private static string BuildRdlcXml(DateTime fromDate, DateTime toDate)
+        private static string BuildRdlcXml(string title, DateTime fromDate, DateTime toDate,
+            (string Field, string Label, double WidthIn, string Align)[] columns)
         {
             string dateLabel = $"From: {fromDate:yyyy-MM-dd}     To: {toDate:yyyy-MM-dd}";
+            double totalWidth = 0;
+            foreach (var c in columns) totalWidth += c.WidthIn;
+
+            var fields = new StringBuilder();
+            var tablixCols = new StringBuilder();
+            var headerCells = new StringBuilder();
+            var dataCells = new StringBuilder();
+            var colMembers = new StringBuilder();
+
+            for (int i = 0; i < columns.Length; i++)
+            {
+                var col = columns[i];
+                fields.AppendLine($@"<Field Name=""{col.Field}""><DataField>{col.Field}</DataField><rd:TypeName>System.String</rd:TypeName></Field>");
+                tablixCols.AppendLine($"<TablixColumn><Width>{col.WidthIn}in</Width></TablixColumn>");
+                headerCells.Append(HeaderCell($"hC{i}", col.Label));
+                dataCells.Append(DataCell($"dC{i}", $"=Fields!{col.Field}.Value", col.Align));
+                colMembers.AppendLine("<TablixMember/>");
+            }
 
             return $@"<?xml version=""1.0"" encoding=""utf-8""?>
 <Report xmlns=""http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition""
@@ -54,12 +89,7 @@ namespace Hotel_System.Reports
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name=""CustomerName""><DataField>CustomerName</DataField><rd:TypeName>System.String</rd:TypeName></Field>
-        <Field Name=""PhoneNumber""><DataField>PhoneNumber</DataField><rd:TypeName>System.String</rd:TypeName></Field>
-        <Field Name=""RoomType""><DataField>RoomType</DataField><rd:TypeName>System.String</rd:TypeName></Field>
-        <Field Name=""CheckInDate""><DataField>CheckInDate</DataField><rd:TypeName>System.String</rd:TypeName></Field>
-        <Field Name=""CheckoutDate""><DataField>CheckoutDate</DataField><rd:TypeName>System.String</rd:TypeName></Field>
-        <Field Name=""TotalAmout""><DataField>TotalAmout</DataField><rd:TypeName>System.String</rd:TypeName></Field>
+        {fields}
       </Fields>
     </DataSet>
   </DataSets>
@@ -76,14 +106,14 @@ namespace Hotel_System.Reports
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Booking Report</Value>
+                    <Value>{title}</Value>
                     <Style><FontFamily>Segoe UI</FontFamily><FontSize>16pt</FontSize><FontWeight>Bold</FontWeight><Color>#1F4E79</Color></Style>
                   </TextRun>
                 </TextRuns>
                 <Style><TextAlign>Center</TextAlign></Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0in</Top><Left>0in</Left><Width>9in</Width><Height>0.4in</Height>
+            <Top>0in</Top><Left>0in</Left><Width>{totalWidth}in</Width><Height>0.4in</Height>
             <Style><VerticalAlign>Middle</VerticalAlign></Style>
           </Textbox>
 
@@ -101,49 +131,33 @@ namespace Hotel_System.Reports
                 <Style><TextAlign>Center</TextAlign></Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.45in</Top><Left>0in</Left><Width>9in</Width><Height>0.3in</Height>
+            <Top>0.45in</Top><Left>0in</Left><Width>{totalWidth}in</Width><Height>0.3in</Height>
             <Style><VerticalAlign>Middle</VerticalAlign></Style>
           </Textbox>
 
           <Tablix Name=""Tablix1"">
             <TablixBody>
               <TablixColumns>
-                <TablixColumn><Width>1.8in</Width></TablixColumn>
-                <TablixColumn><Width>1.2in</Width></TablixColumn>
-                <TablixColumn><Width>1.3in</Width></TablixColumn>
-                <TablixColumn><Width>1.7in</Width></TablixColumn>
-                <TablixColumn><Width>1.7in</Width></TablixColumn>
-                <TablixColumn><Width>1.3in</Width></TablixColumn>
+                {tablixCols}
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
                   <Height>0.3in</Height>
                   <TablixCells>
-                    {HeaderCell("hC1", "Customer Name")}
-                    {HeaderCell("hC2", "Phone")}
-                    {HeaderCell("hC3", "Room Type")}
-                    {HeaderCell("hC4", "Check In")}
-                    {HeaderCell("hC5", "Check Out")}
-                    {HeaderCell("hC6", "Total ($)")}
+                    {headerCells}
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
                   <Height>0.25in</Height>
                   <TablixCells>
-                    {DataCell("dC1", "=Fields!CustomerName.Value", "Left")}
-                    {DataCell("dC2", "=Fields!PhoneNumber.Value", "Center")}
-                    {DataCell("dC3", "=Fields!RoomType.Value", "Center")}
-                    {DataCell("dC4", "=Fields!CheckInDate.Value", "Center")}
-                    {DataCell("dC5", "=Fields!CheckoutDate.Value", "Center")}
-                    {DataCell("dC6", "=Fields!TotalAmout.Value", "Right")}
+                    {dataCells}
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember/><TablixMember/><TablixMember/>
-                <TablixMember/><TablixMember/><TablixMember/>
+                {colMembers}
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -153,15 +167,15 @@ namespace Hotel_System.Reports
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.85in</Top><Left>0in</Left><Width>9in</Width>
+            <Top>0.85in</Top><Left>0in</Left><Width>{totalWidth}in</Width>
           </Tablix>
 
         </ReportItems>
         <Style/>
       </Body>
-      <Width>9in</Width>
+      <Width>{totalWidth}in</Width>
       <Page>
-        <PageHeight>11in</PageHeight><PageWidth>9.5in</PageWidth>
+        <PageHeight>11in</PageHeight><PageWidth>{totalWidth + 0.5}in</PageWidth>
         <LeftMargin>0.25in</LeftMargin><RightMargin>0.25in</RightMargin>
         <TopMargin>0.25in</TopMargin><BottomMargin>0.25in</BottomMargin>
         <Style/>

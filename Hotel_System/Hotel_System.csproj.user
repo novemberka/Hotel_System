@@ -49,6 +49,9 @@
     <Compile Update="Reports\Report_Booking.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Reports\Report_CheckInCheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Reports\Report_CheckOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -56,9 +59,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Reports\Report_Payment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Reports\Report_WalkIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
