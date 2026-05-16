@@ -172,7 +172,7 @@
             Booking_list.ShadowColor = Color.LightSteelBlue;
             Booking_list.ShadowDepth = 80;
             Booking_list.ShadowShift = 10;
-            Booking_list.Size = new Size(1405, 553);
+            Booking_list.Size = new Size(1405, 425);
             Booking_list.TabIndex = 8;
             //
             // iconPictureBox7

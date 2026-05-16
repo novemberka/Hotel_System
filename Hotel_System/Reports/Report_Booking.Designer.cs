@@ -354,7 +354,7 @@
             Booking_list.ShadowColor = Color.LightSteelBlue;
             Booking_list.ShadowDepth = 80;
             Booking_list.ShadowShift = 10;
-            Booking_list.Size = new Size(1405, 557);
+            Booking_list.Size = new Size(1405, 425);
             Booking_list.TabIndex = 3;
             Booking_list.Paint += guna2ShadowPanel1_Paint_1;
             // 
@@ -364,7 +364,7 @@
             lblGrandtotal.BackColor = Color.White;
             lblGrandtotal.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblGrandtotal.ForeColor = Color.Black;
-            lblGrandtotal.Location = new Point(1094, 461);
+            lblGrandtotal.Location = new Point(1094, 398);
             lblGrandtotal.Name = "lblGrandtotal";
             lblGrandtotal.Size = new Size(116, 25);
             lblGrandtotal.TabIndex = 61;
@@ -376,7 +376,7 @@
             lbldiscount.BackColor = Color.White;
             lbldiscount.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbldiscount.ForeColor = Color.Black;
-            lbldiscount.Location = new Point(1113, 386);
+            lbldiscount.Location = new Point(1113, 358);
             lbldiscount.Name = "lbldiscount";
             lbldiscount.Size = new Size(97, 25);
             lbldiscount.TabIndex = 60;
@@ -388,7 +388,7 @@
             lbltotalAfterdis.BackColor = Color.White;
             lbltotalAfterdis.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbltotalAfterdis.ForeColor = Color.Black;
-            lbltotalAfterdis.Location = new Point(1022, 420);
+            lbltotalAfterdis.Location = new Point(1022, 378);
             lbltotalAfterdis.Name = "lbltotalAfterdis";
             lbltotalAfterdis.Size = new Size(188, 25);
             lbltotalAfterdis.TabIndex = 59;
@@ -400,7 +400,7 @@
             lbltotalbeforedis.BackColor = Color.White;
             lbltotalbeforedis.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbltotalbeforedis.ForeColor = Color.Black;
-            lbltotalbeforedis.Location = new Point(1009, 351);
+            lbltotalbeforedis.Location = new Point(1009, 338);
             lbltotalbeforedis.Name = "lbltotalbeforedis";
             lbltotalbeforedis.Size = new Size(201, 25);
             lbltotalbeforedis.TabIndex = 58;
