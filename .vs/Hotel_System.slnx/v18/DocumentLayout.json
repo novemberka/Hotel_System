@@ -7,19 +7,19 @@
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel_system\\hotel_system\\reports\\report_checkincheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel_System\\hotel_system\\reports\\report_checkincheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_checkincheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel_system\\hotel_system\\reports\\report_checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel_System\\hotel_system\\reports\\report_checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel_system\\hotel_system\\reports\\report_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel_System\\hotel_system\\reports\\report_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel_system\\hotel_system\\reports\\report_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel_System\\hotel_system\\reports\\report_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -39,7 +39,7 @@
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel_system\\hotel_system\\reports\\reportroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel_System\\hotel_system\\reports\\reportroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\reportroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,6 +107,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Forms\\Dashboard\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Forms\\Dashboard\\Dashboard.cs",
+              "ToolTip": "D:\\Hotel_System\\Hotel_System\\Forms\\Dashboard\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Hotel_System\\Forms\\Dashboard\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T05:52:40.599Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -129,8 +141,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Booking.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T14:54:26.093Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T14:54:26.093Z"
             },
             {
               "$type": "Document",
@@ -142,8 +153,7 @@
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Booking.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAuwHYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:10:15.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T15:10:15.216Z"
             },
             {
               "$type": "Document",
@@ -154,20 +164,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Payment.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Payment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:15:24.075Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Forms\\Dashboard\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Hotel_System\\Forms\\Dashboard\\Dashboard.cs",
-              "ToolTip": "D:\\Hotel_System\\Hotel_System\\Forms\\Dashboard\\Dashboard.cs [Design]",
-              "RelativeToolTip": "Hotel_System\\Forms\\Dashboard\\Dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T16:47:32.687Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T15:15:24.075Z"
             },
             {
               "$type": "Document",
@@ -178,8 +175,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckOut.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Reports\\Report_CheckOut.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T17:39:26.381Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T17:39:26.381Z"
             },
             {
               "$type": "Document",
@@ -202,8 +198,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Customer.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Customer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:06:58.343Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T15:06:58.343Z"
             },
             {
               "$type": "Document",
@@ -227,8 +222,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Reports\\Reportroom.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Reports\\Reportroom.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:22:31.319Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T15:22:31.319Z"
             },
             {
               "$type": "Document",
@@ -240,8 +234,7 @@
               "RelativeToolTip": "Hotel_System\\History\\History_Booking.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:13:13.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T15:13:13.707Z"
             },
             {
               "$type": "Document",
@@ -253,8 +246,7 @@
               "RelativeToolTip": "Hotel_System\\DataSet1.Designer.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:13:32.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T15:13:32.421Z"
             },
             {
               "$type": "Document",
@@ -266,8 +258,7 @@
               "RelativeToolTip": "Hotel_System\\Repositories\\BookingRepository.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAiwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:14:02.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T15:14:02.954Z"
             },
             {
               "$type": "Document",
@@ -279,8 +270,7 @@
               "RelativeToolTip": "Hotel_System\\Services\\BookingService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAADwvw0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T14:49:16.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T14:49:16.805Z"
             },
             {
               "$type": "Document",
@@ -292,8 +282,7 @@
               "RelativeToolTip": "Hotel_System\\Reports\\Report_Booking.Designer.cs",
               "ViewState": "AgIAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:10:04.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T15:10:04.894Z"
             },
             {
               "$type": "Document",
@@ -361,8 +350,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Forms\\Booking\\BookingControl.cs [Design]",
               "RelativeToolTip": "Hotel_System\\Forms\\Booking\\BookingControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T14:46:37.006Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-16T14:46:37.006Z"
             },
             {
               "$type": "Document",
@@ -373,8 +361,7 @@
               "ToolTip": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
               "RelativeToolTip": "Hotel_System\\Hotel_System.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-27T17:38:44.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T17:38:44.596Z"
             }
           ]
         }
