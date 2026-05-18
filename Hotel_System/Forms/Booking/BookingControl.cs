@@ -1,4 +1,5 @@
 ﻿using Hotel_System.Models;
+using Hotel_System.PrintForms;
 using Hotel_System.Services;
 using Org.BouncyCastle.Asn1.Cmp;
 using System;
@@ -99,7 +100,7 @@ namespace Hotel_System
                 // 2. Just verify the selection is valid
                 if (cmbRoom.SelectedItem is DataRowView row)
                 {
-                 
+
                 }
             }
             catch { /* Ignore errors during clear */ }
@@ -140,8 +141,8 @@ namespace Hotel_System
                     BookingDate = DateTime.Now,
                     CheckInDate = dtpCheckIn.Value,
                     CheckOutDate = dtpCheckOut.Value,
-                    Status = "Confirmed",
-                    CreatedByAdminID = 1 // Hardcoded for now
+                    Status = "Pending",
+                    CreatedByAdminID = 1
                 };
 
                 if (_bookingService.CreateBooking(newBooking))
@@ -208,28 +209,42 @@ namespace Hotel_System
             dtpCheckOut.Value = Convert.ToDateTime(row.Cells["CheckOutDate"].Value);
 
         }
-        
+
         private void ClearForm()
         {
-            // 1. Stop the event from firing
+            // 1. Unsubscribe to prevent event triggers
+            cmbCustomer.SelectedIndexChanged -= cmbCustomer_SelectedIndexChanged;
             cmbRoom.SelectedIndexChanged -= cmbRoom_SelectedIndexChanged;
 
-            // 2. Force the UI to clear the 'Text' part of the combo
-            cmbRoom.SelectedIndex = -1;
-            cmbRoom.Text = string.Empty;
-            cmbRoom.SelectedItem = null;
-
-            // 3. Clear everything else
+            // 2. Clear TextBoxes
             txtBookingID.Clear();
             txtPhoneNumber.Clear();
             txtAddress.Clear();
             txtEmail.Clear();
             txtIDCardNumber.Clear();
 
+            // 3. Reset ComboBoxes (The aggressive way)
+            // Store the data source, null it, reset it.
+            var customerDS = cmbCustomer.DataSource;
+            cmbCustomer.DataSource = null;
+            cmbCustomer.DataSource = customerDS;
+            cmbCustomer.DisplayMember = "FullName";
+            cmbCustomer.ValueMember = "CustomerID";
             cmbCustomer.SelectedIndex = -1;
-            cmbCustomer.Text = "";
 
-            // 4. Re-attach the event
+            var roomDS = cmbRoom.DataSource;
+            cmbRoom.DataSource = null;
+            cmbRoom.DataSource = roomDS;
+            cmbRoom.DisplayMember = "FullRoomName";
+            cmbRoom.ValueMember = "RoomID";
+            cmbRoom.SelectedIndex = -1;
+
+            // 4. Dates
+            dtpCheckIn.Value = DateTime.Now;
+            dtpCheckOut.Value = DateTime.Now.AddDays(1);
+
+            // 5. Re-subscribe
+            cmbCustomer.SelectedIndexChanged += cmbCustomer_SelectedIndexChanged;
             cmbRoom.SelectedIndexChanged += cmbRoom_SelectedIndexChanged;
         }
 
@@ -266,6 +281,8 @@ namespace Hotel_System
                     {
                         MessageBox.Show("Booking cancelled and room released successfully.");
                         RefreshGrid(); // Refresh the list
+                        LoadAvailableRooms();
+                        ClearForm();
                     }
                 }
                 catch (Exception ex)
@@ -277,8 +294,40 @@ namespace Hotel_System
 
         private void btnclear_Click(object sender, EventArgs e)
         {
+            // 1. Clear the UI first
             ClearForm();
+
+            // 2. Refresh the Grid
             RefreshGrid();
+
+            // 3. IMPORTANT: Tell the grid to stop selecting the first row automatically
+            dataGridViewBookings.ClearSelection();
+            if (dataGridViewBookings.CurrentRow != null)
+            {
+                // This stops the 'CurrencyManager' from forcing a selection
+                dataGridViewBookings.CurrentCell = null;
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBookings.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a booking first.");
+                return;
+            }
+
+            // Get the ID from the selected row
+            int bookingId = Convert.ToInt32(dataGridViewBookings.CurrentRow.Cells["BookingID"].Value);
+
+            // Pass the ID to the form
+            InvoiceBooking invoiceForm = new InvoiceBooking(bookingId);
+            invoiceForm.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

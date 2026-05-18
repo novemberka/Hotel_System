@@ -44,13 +44,12 @@ namespace Hotel_System.Repositories
         public DataTable GetAvailableRoomList()
         {
             DataTable dt = new DataTable();
-            string query = @"
-                SELECT r.RoomID,
-                       CONCAT(rt.TypeName, ' - ', r.RoomNumber) AS FullRoomName
-                FROM Rooms r
-                INNER JOIN RoomTypes rt ON r.RoomTypeID = rt.RoomTypeID
-                WHERE r.Status = 'Available'
-                ORDER BY r.RoomNumber";
+            string query = @"SELECT r.RoomID,
+                     CONCAT('Room ', r.RoomNumber, ' - ', rt.TypeName, ' ($', rt.PricePerNight, '/night)') AS FullRoomName,
+                     rt.PricePerNight
+                     FROM rooms r
+                     INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                     WHERE r.Status = 'Available'";
             using (MySqlConnection conn = db.GetConnection())
             {
                 new MySqlDataAdapter(query, conn).Fill(dt);
@@ -58,55 +57,164 @@ namespace Hotel_System.Repositories
             return dt;
         }
 
-        public bool CreateBooking(Booking b)
+        public bool Add(Booking booking)
         {
-            string query = @"
-                INSERT INTO Bookings (CustomerID, RoomID, BookingDate, CheckInDate, CheckOutDate, Status, CreatedByAdminID)
-                VALUES (@cid, @rid, @bdate, @cin, @cout, @status, @admin);
-                UPDATE Rooms SET Status = 'Booked' WHERE RoomID = @rid;";
             using (MySqlConnection conn = db.GetConnection())
             {
-                var cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@cid",    b.CustomerID);
-                cmd.Parameters.AddWithValue("@rid",    b.RoomID);
-                cmd.Parameters.AddWithValue("@bdate",  b.BookingDate);
-                cmd.Parameters.AddWithValue("@cin",    b.CheckInDate);
-                cmd.Parameters.AddWithValue("@cout",   b.CheckOutDate);
-                cmd.Parameters.AddWithValue("@status", b.Status);
-                cmd.Parameters.AddWithValue("@admin",  b.CreatedByAdminID);
-                return cmd.ExecuteNonQuery() > 0;
+                conn.Open();
+                using (MySqlTransaction trans = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        string query = @"INSERT INTO bookings
+                    (CustomerID, RoomID, BookingDate, CheckInDate, CheckOutDate, Status, CreatedByAdminID)
+                    VALUES (@cID, @rID, @bDate, @in, @out, @stat, @aID)";
+
+                        MySqlCommand cmd = new MySqlCommand(query, conn, trans);
+                        cmd.Parameters.Add("@cID",   MySqlDbType.Int32).Value    = booking.CustomerID;
+                        cmd.Parameters.Add("@rID",   MySqlDbType.Int32).Value    = booking.RoomID;
+                        cmd.Parameters.Add("@bDate", MySqlDbType.DateTime).Value = booking.BookingDate;
+                        cmd.Parameters.Add("@in",    MySqlDbType.DateTime).Value = booking.CheckInDate;
+                        cmd.Parameters.Add("@out",   MySqlDbType.DateTime).Value = booking.CheckOutDate;
+                        cmd.Parameters.Add("@stat",  MySqlDbType.VarChar).Value  = booking.Status ?? "Pending";
+                        cmd.Parameters.Add("@aID",   MySqlDbType.Int32).Value    = booking.CreatedByAdminID == 0 ? 1 : booking.CreatedByAdminID;
+                        cmd.ExecuteNonQuery();
+
+                        string roomQuery = "UPDATE rooms SET Status = 'Reserved' WHERE RoomID = @rID";
+                        MySqlCommand roomCmd = new MySqlCommand(roomQuery, conn, trans);
+                        roomCmd.Parameters.AddWithValue("@rID", booking.RoomID);
+                        roomCmd.ExecuteNonQuery();
+
+                        trans.Commit();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        trans.Rollback();
+                        throw new Exception("Database Error: " + ex.Message);
+                    }
+                }
             }
         }
 
-        public bool UpdateBooking(Booking b)
+        public bool UpdateBooking(Booking booking)
         {
-            string query = @"
-                UPDATE Bookings
-                SET CustomerID=@cid, RoomID=@rid, CheckInDate=@cin, CheckOutDate=@cout
-                WHERE BookingID=@bid";
             using (MySqlConnection conn = db.GetConnection())
             {
-                var cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@bid",  b.BookingID);
-                cmd.Parameters.AddWithValue("@cid",  b.CustomerID);
-                cmd.Parameters.AddWithValue("@rid",  b.RoomID);
-                cmd.Parameters.AddWithValue("@cin",  b.CheckInDate);
-                cmd.Parameters.AddWithValue("@cout", b.CheckOutDate);
-                return cmd.ExecuteNonQuery() > 0;
+                conn.Open();
+                using (MySqlTransaction trans = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        int oldRoomId = 0;
+                        string getOldRoomQuery = "SELECT RoomID FROM bookings WHERE BookingID = @bID";
+                        using (MySqlCommand cmdOld = new MySqlCommand(getOldRoomQuery, conn, trans))
+                        {
+                            cmdOld.Parameters.AddWithValue("@bID", booking.BookingID);
+                            var result = cmdOld.ExecuteScalar();
+                            if (result != null) oldRoomId = Convert.ToInt32(result);
+                        }
+
+                        string updateQuery = @"UPDATE bookings SET
+                    CustomerID = @cID, RoomID = @rID,
+                    CheckInDate = @inDate, CheckOutDate = @outDate, Status = @status
+                    WHERE BookingID = @bID";
+
+                        MySqlCommand cmd = new MySqlCommand(updateQuery, conn, trans);
+                        cmd.Parameters.AddWithValue("@cID",     booking.CustomerID);
+                        cmd.Parameters.AddWithValue("@rID",     booking.RoomID);
+                        cmd.Parameters.AddWithValue("@inDate",  booking.CheckInDate);
+                        cmd.Parameters.AddWithValue("@outDate", booking.CheckOutDate);
+                        cmd.Parameters.AddWithValue("@status",  booking.Status);
+                        cmd.Parameters.AddWithValue("@bID",     booking.BookingID);
+                        cmd.ExecuteNonQuery();
+
+                        if (oldRoomId != booking.RoomID && oldRoomId != 0)
+                        {
+                            string releaseOld = "UPDATE rooms SET Status = 'Available' WHERE RoomID = @oldID";
+                            MySqlCommand cmdRelease = new MySqlCommand(releaseOld, conn, trans);
+                            cmdRelease.Parameters.AddWithValue("@oldID", oldRoomId);
+                            cmdRelease.ExecuteNonQuery();
+                        }
+
+                        string currentRoomStatus = booking.Status switch
+                        {
+                            "Pending"    => "Reserved",
+                            "Confirmed"  => "Occupied",
+                            _            => "Available"
+                        };
+
+                        string updateCurrentRoom = "UPDATE rooms SET Status = @stat WHERE RoomID = @rID";
+                        MySqlCommand cmdCurrent = new MySqlCommand(updateCurrentRoom, conn, trans);
+                        cmdCurrent.Parameters.AddWithValue("@stat", currentRoomStatus);
+                        cmdCurrent.Parameters.AddWithValue("@rID",  booking.RoomID);
+                        cmdCurrent.ExecuteNonQuery();
+
+                        trans.Commit();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        trans.Rollback();
+                        throw new Exception("Update Failed: " + ex.Message);
+                    }
+                }
             }
         }
 
-        public bool CancelBooking(int bookingID, int roomID)
+        public DataTable GetCustomersForBooking()
         {
-            string query = @"
-                UPDATE Bookings SET Status = 'Cancelled' WHERE BookingID = @bid;
-                UPDATE Rooms    SET Status = 'Available' WHERE RoomID    = @rid;";
+            DataTable dt = new DataTable();
+            string query = "SELECT CustomerID, FullName, Phone, Address, Email, IDCardNumber FROM customers";
             using (MySqlConnection conn = db.GetConnection())
             {
-                var cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@bid", bookingID);
-                cmd.Parameters.AddWithValue("@rid", roomID);
-                return cmd.ExecuteNonQuery() > 0;
+                new MySqlDataAdapter(query, conn).Fill(dt);
+            }
+            return dt;
+        }
+
+        public bool UpdateStatusAndReleaseRoom(int bookingId, int roomId, string newStatus)
+        {
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                conn.Open();
+                using (MySqlTransaction trans = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        string cancelQuery = "UPDATE bookings SET Status = @status WHERE BookingID = @bID";
+                        MySqlCommand cmdCancel = new MySqlCommand(cancelQuery, conn, trans);
+                        cmdCancel.Parameters.AddWithValue("@status", newStatus);
+                        cmdCancel.Parameters.AddWithValue("@bID", bookingId);
+                        cmdCancel.ExecuteNonQuery();
+
+                        string roomQuery = "UPDATE rooms SET Status = 'Available' WHERE RoomID = @rID";
+                        MySqlCommand cmdRoom = new MySqlCommand(roomQuery, conn, trans);
+                        cmdRoom.Parameters.AddWithValue("@rID", roomId);
+                        cmdRoom.ExecuteNonQuery();
+
+                        trans.Commit();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        trans.Rollback();
+                        throw new Exception("Cancellation failed: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        public string GetBookingStatus(int bookingId)
+        {
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                string query = "SELECT Status FROM bookings WHERE BookingID = @id";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", bookingId);
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                return result?.ToString() ?? "";
             }
         }
 

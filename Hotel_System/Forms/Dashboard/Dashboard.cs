@@ -70,12 +70,6 @@ namespace Hotel_System
             LoadUserControl(new PaymentControl());
         }
 
-        private void logout_menu_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
-        }
 
         // ── Report accordion menu ────────────────────────────────────────────
 
@@ -162,5 +156,12 @@ namespace Hotel_System
         private void panel2_Paint(object sender, EventArgs e) { }
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e) { }
         private void panel1_Paint(object sender, EventArgs e) { }
+
+        private void logout_menu_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }
