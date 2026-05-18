@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Hotel_System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|d:\\hotel_system\\hotel_system\\forms\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\forms\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|D:\\Hotel_System\\hotel_system\\reports\\report_checkincheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4231632-2B74-3D0A-5698-01940868230A}|Hotel_System\\Hotel_System.csproj|solutionrelative:hotel_system\\reports\\report_checkincheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -107,6 +111,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Forms\\Dashboard\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Hotel_System\\Forms\\Dashboard\\Dashboard.cs",
+              "ToolTip": "D:\\Hotel_System\\Hotel_System\\Forms\\Dashboard\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Hotel_System\\Forms\\Dashboard\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T05:52:40.599Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Report_CheckInCheckOut.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckInCheckOut.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_CheckInCheckOut.cs",
@@ -118,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Report_Booking.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Booking.cs",
@@ -129,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Report_Booking.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Booking.cs",
@@ -141,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Report_Payment.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Payment.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Payment.cs",
@@ -152,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Report_CheckOut.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_CheckOut.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_CheckOut.cs",
@@ -163,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BookingReport.rdlc [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\BookingReport.rdlc",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\BookingReport.rdlc",
@@ -175,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Report_Customer.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Customer.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Customer.cs",
@@ -186,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BookingReport.rdlc [XML]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\BookingReport.rdlc",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\BookingReport.rdlc",
@@ -199,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Reportroom.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Reportroom.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Reportroom.cs",
@@ -210,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "History_Booking.Designer.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\History\\History_Booking.Designer.cs",
               "RelativeDocumentMoniker": "Hotel_System\\History\\History_Booking.Designer.cs",
@@ -222,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DataSet1.Designer.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\DataSet1.Designer.cs",
               "RelativeDocumentMoniker": "Hotel_System\\DataSet1.Designer.cs",
@@ -234,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BookingRepository.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Repositories\\BookingRepository.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Repositories\\BookingRepository.cs",
@@ -246,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "BookingService.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Services\\BookingService.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Services\\BookingService.cs",
@@ -258,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Report_Booking.Designer.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Reports\\Report_Booking.Designer.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Reports\\Report_Booking.Designer.cs",
@@ -270,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "BookingControl.cs",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Forms\\Booking\\BookingControl.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Forms\\Booking\\BookingControl.cs",
@@ -283,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "History_Customer.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\History\\History_Customer.cs",
               "RelativeDocumentMoniker": "Hotel_System\\History\\History_Customer.cs",
@@ -294,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "History_Room.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\History\\History_Room.cs",
               "RelativeDocumentMoniker": "Hotel_System\\History\\History_Room.cs",
@@ -305,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Payment_History.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\History\\Payment_History.cs",
               "RelativeDocumentMoniker": "Hotel_System\\History\\Payment_History.cs",
@@ -316,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "History_Booking.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\History\\History_Booking.cs",
               "RelativeDocumentMoniker": "Hotel_System\\History\\History_Booking.cs",
@@ -327,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "BookingControl.cs [Design]",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Forms\\Booking\\BookingControl.cs",
               "RelativeDocumentMoniker": "Hotel_System\\Forms\\Booking\\BookingControl.cs",
@@ -338,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Hotel_System",
               "DocumentMoniker": "D:\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
               "RelativeDocumentMoniker": "Hotel_System\\Hotel_System.csproj",

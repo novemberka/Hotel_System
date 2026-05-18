@@ -18,6 +18,9 @@ namespace Hotel_System
             InitializeComponent();
             LoadUserControl(new DashboardControl());
 
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             if (!string.IsNullOrEmpty(imgPath) && File.Exists(imgPath))
                 guna2CirclePictureBox1.Image = Image.FromFile(imgPath);
         }
@@ -29,7 +32,7 @@ namespace Hotel_System
             Content.Controls.Add(uc);
         }
 
-        // ── Existing menu handlers ────────────────────────────────────────────
+        // ── Menu handlers ────────────────────────────────────────────────────
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -78,78 +81,26 @@ namespace Hotel_System
 
         private void SetupReportMenu()
         {
-            const int BTN_H = 55;   // main menu item height (px)
-            const int SUB_H = 42;   // sub-item height (px)
+            const int BTN_H = 53;
+            const int SUB_H = 42;
 
-            // Remove bottom padding so the table can use the full panel height
-            // (logo occupies top 120 px; the rest = 800-120 = 680 px, enough for
-            // 8 main rows×55 + 5 sub-rows×42 = 650 px even when fully expanded).
-            panel1.Padding = new Padding(0, 120, 0, 0);
-
-            // Switch tableLayoutPanel to manual sizing, placed right below logo.
-            tableLayoutPanel1.Dock     = DockStyle.None;
-            tableLayoutPanel1.Location = new Point(0, 120);
-            tableLayoutPanel1.Width    = panel1.ClientSize.Width;
-            tableLayoutPanel1.Anchor   = AnchorStyles.Top | AnchorStyles.Left |
-                                         AnchorStyles.Right;
-
-            // Convert all existing % rows → absolute BTN_H px.
-            for (int i = 0; i < tableLayoutPanel1.RowStyles.Count; i++)
-            {
-                tableLayoutPanel1.RowStyles[i].SizeType = SizeType.Absolute;
-                tableLayoutPanel1.RowStyles[i].Height   = BTN_H;
-            }
-
-            // Expand row count: Report(6) + 5 sub-items(7-11) + Logout(12)
-            tableLayoutPanel1.RowCount = 13;
-            while (tableLayoutPanel1.RowStyles.Count < 13)
-                tableLayoutPanel1.RowStyles.Add(
-                    new RowStyle(SizeType.Absolute, BTN_H));
-
-            // Sub-item rows start collapsed.
-            for (int i = 7; i <= 11; i++)
-                tableLayoutPanel1.RowStyles[i].Height = 0;
-
-            // Move Logout from row 6 → row 12.
-            tableLayoutPanel1.SetCellPosition(
-                logout_menu, new TableLayoutPanelCellPosition(0, 12));
-
-            // Add Report parent button at row 6.
-            _reportBtn = BuildMenuButton("  Report", IconChar.ChartBar);
-            tableLayoutPanel1.Controls.Add(_reportBtn, 0, 6);
+            _reportBtn = report_menu;
             _reportBtn.Click += (s, e) => ToggleReportMenu(BTN_H, SUB_H);
 
-            // Add 5 sub-item buttons at rows 7–11 (initially hidden).
-            (string Label, IconChar Icon, Action Nav)[] subs =
-            {
-                ("      Booking Report",
-                    IconChar.BookOpen,
-                    () => NavigateReport(new Report_Booking(),  "Booking Report")),
-                ("      CheckIn/CheckOut",
-                    IconChar.CalendarDay,
-                    () => NavigateReport(new Report_CheckOut(), "CheckIn / CheckOut Report")),
-                ("      Customer Report",
-                    IconChar.Users,
-                    () => NavigateReport(new Report_Customer(), "Customer Report")),
-                ("      Payment Report",
-                    IconChar.MoneyBill,
-                    () => NavigateReport(new Report_Payment(),  "Payment Report")),
-                ("      Room Report",
-                    IconChar.Bed,
-                    () => NavigateReport(new Reportroom(),      "Room Report")),
-            };
-
             _subMenuBtns.Clear();
-            for (int i = 0; i < subs.Length; i++)
-            {
-                var btn = BuildSubMenuButton(subs[i].Label, subs[i].Icon);
-                btn.Visible = false;
-                var nav = subs[i].Nav;
-                btn.Click += (s, e) => nav();
-                tableLayoutPanel1.Controls.Add(btn, 0, 7 + i);
-                _subMenuBtns.Add(btn);
-            }
+            _subMenuBtns.Add(report_booking);
+            _subMenuBtns.Add(report_checkinout);
+            _subMenuBtns.Add(report_customer);
+            _subMenuBtns.Add(report_payment);
+            _subMenuBtns.Add(report_room);
 
+            report_booking.Click    += (s, e) => NavigateReport(new Report_Booking(),  "Booking Report");
+            report_checkinout.Click += (s, e) => NavigateReport(new Report_CheckOut(), "CheckIn / CheckOut Report");
+            report_customer.Click   += (s, e) => NavigateReport(new Report_Customer(), "Customer Report");
+            report_payment.Click    += (s, e) => NavigateReport(new Report_Payment(),  "Payment Report");
+            report_room.Click       += (s, e) => NavigateReport(new Reportroom(),      "Room Report");
+
+            tableLayoutPanel1.Width = panel1.ClientSize.Width;
             RefreshTableHeight();
         }
 
@@ -184,64 +135,6 @@ namespace Hotel_System
         {
             lblTittle.Text = title;
             LoadUserControl(uc);
-        }
-
-        // ── Button factory helpers ────────────────────────────────────────────
-
-        private static IconButton BuildMenuButton(string text, IconChar icon)
-        {
-            var btn = new IconButton
-            {
-                Text                    = text,
-                IconChar                = icon,
-                BackColor               = Color.MidnightBlue,
-                ForeColor               = Color.White,
-                IconColor               = Color.White,
-                IconFont                = IconFont.Auto,
-                IconSize                = 30,
-                ImageAlign              = ContentAlignment.MiddleLeft,
-                TextImageRelation       = TextImageRelation.ImageBeforeText,
-                Padding                 = new Padding(8, 0, 0, 0),
-                Margin                  = new Padding(8),
-                Font                    = new Font("Segoe UI", 10F),
-                FlatStyle               = FlatStyle.Flat,
-                Dock                    = DockStyle.Fill,
-                UseVisualStyleBackColor = false,
-                TextAlign               = ContentAlignment.MiddleLeft,
-                Cursor                  = Cursors.Hand,
-            };
-            btn.FlatAppearance.BorderSize          = 0;
-            btn.FlatAppearance.MouseOverBackColor  =
-                Color.FromArgb(40, 60, 150);
-            return btn;
-        }
-
-        private static IconButton BuildSubMenuButton(string text, IconChar icon)
-        {
-            var btn = new IconButton
-            {
-                Text                    = text,
-                IconChar                = icon,
-                BackColor               = Color.FromArgb(15, 32, 100),
-                ForeColor               = Color.LightSteelBlue,
-                IconColor               = Color.LightSteelBlue,
-                IconFont                = IconFont.Auto,
-                IconSize                = 20,
-                ImageAlign              = ContentAlignment.MiddleLeft,
-                TextImageRelation       = TextImageRelation.ImageBeforeText,
-                Padding                 = new Padding(20, 0, 0, 0),
-                Margin                  = new Padding(0),
-                Font                    = new Font("Segoe UI", 9F),
-                FlatStyle               = FlatStyle.Flat,
-                Dock                    = DockStyle.Fill,
-                UseVisualStyleBackColor = false,
-                TextAlign               = ContentAlignment.MiddleLeft,
-                Cursor                  = Cursors.Hand,
-            };
-            btn.FlatAppearance.BorderSize          = 0;
-            btn.FlatAppearance.MouseOverBackColor  =
-                Color.FromArgb(30, 55, 140);
-            return btn;
         }
 
         // ── Lifecycle ────────────────────────────────────────────────────────
