@@ -89,7 +89,7 @@ namespace Hotel_System
             _subMenuBtns.Add(report_room);
 
             report_booking.Click    += (s, e) => NavigateReport(new Report_Booking(),  "Booking Report");
-            report_checkinout.Click += (s, e) => NavigateReport(new Report_CheckOut(), "CheckIn / CheckOut Report");
+            report_checkinout.Click += (s, e) => NavigateReport(new Report_CheckInCheckOut(), "CheckIn / CheckOut Report");
             report_customer.Click   += (s, e) => NavigateReport(new Report_Customer(), "Customer Report");
             report_payment.Click    += (s, e) => NavigateReport(new Report_Payment(),  "Payment Report");
             report_room.Click       += (s, e) => NavigateReport(new Reportroom(),      "Room Report");
