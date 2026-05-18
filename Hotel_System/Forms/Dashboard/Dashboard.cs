@@ -24,6 +24,9 @@ namespace Hotel_System
             // Load default page
             LoadUserControl(new DashboardControl());
 
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             if (!string.IsNullOrEmpty(imgPath) && File.Exists(imgPath))
             {
                 guna2CirclePictureBox1.Image = Image.FromFile(imgPath);
@@ -33,28 +36,6 @@ namespace Hotel_System
             //    // Optional: default image
             //    guna2CirclePictureBox1.Image = Properties.Resources.default_user;
             //}
-        }
-
-
-
-
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            lblTittle.Text = "Booking Management";
-            LoadUserControl(new BookingControl());
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            lblTittle.Text = "Check-In & Check_Out";
-            LoadUserControl(new Checkin_outControl());
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -73,30 +54,12 @@ namespace Hotel_System
             LoadUserControl(new DashboardControl());
         }
 
-        private void room_menu_Click(object sender, EventArgs e)
-        {
-            lblTittle.Text = "Room Management";
-            LoadUserControl(new RoomControl());
-        }
-
-        private void customer_menu_Click(object sender, EventArgs e)
-        {
-            lblTittle.Text = "Customer Management";
-            LoadUserControl(new CustomerControl());
-        }
-
         private void payment_menu_Click(object sender, EventArgs e)
         {
             lblTittle.Text = "Payment Management";
             LoadUserControl(new PaymentControl());
         }
 
-        private void logout_menu_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -130,6 +93,43 @@ namespace Hotel_System
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void report_menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void room_menu_Click_1(object sender, EventArgs e)
+        {
+            lblTittle.Text = "Room Management";
+            LoadUserControl(new RoomControl());
+        }
+
+
+        private void customer_menu_Click_2(object sender, EventArgs e)
+        {
+            lblTittle.Text = "Customer Management";
+            LoadUserControl(new CustomerControl());
+        }
+
+        private void booking_menu_Click(object sender, EventArgs e)
+        {
+            lblTittle.Text = "Booking Management";
+            LoadUserControl(new BookingControl());
+        }
+
+        private void checkin_checkout_menu_Click(object sender, EventArgs e)
+        {
+            lblTittle.Text = "Check-In & Check_Out";
+            LoadUserControl(new Checkin_outControl());
+        }
+
+        private void logout_menu_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }

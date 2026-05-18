@@ -103,6 +103,7 @@
             // 
             // guna2GroupBox1
             // 
+            guna2GroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2GroupBox1.BackColor = Color.White;
             guna2GroupBox1.BorderColor = Color.FromArgb(64, 64, 64);
             guna2GroupBox1.BorderRadius = 16;
@@ -371,6 +372,7 @@
             // 
             // guna2GroupBox2
             // 
+            guna2GroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2GroupBox2.Controls.Add(label10);
             guna2GroupBox2.Controls.Add(label9);
             guna2GroupBox2.Controls.Add(label8);
@@ -399,9 +401,9 @@
             label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.Location = new Point(311, 398);
             label10.Name = "label10";
-            label10.Size = new Size(83, 20);
+            label10.Size = new Size(81, 20);
             label10.TabIndex = 11;
-            label10.Text = "Price: 360$";
+            label10.Text = "Price: 100$";
             // 
             // label9
             // 
@@ -409,9 +411,9 @@
             label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(311, 199);
             label9.Name = "label9";
-            label9.Size = new Size(81, 20);
+            label9.Size = new Size(75, 20);
             label9.TabIndex = 10;
-            label9.Text = "Price: 120$";
+            label9.Text = "Price: 60$";
             // 
             // label8
             // 
@@ -421,7 +423,7 @@
             label8.Name = "label8";
             label8.Size = new Size(83, 23);
             label8.TabIndex = 9;
-            label8.Text = "Price: 80$";
+            label8.Text = "Price: 25$";
             // 
             // label7
             // 
@@ -429,27 +431,27 @@
             label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.Location = new Point(30, 401);
             label7.Name = "label7";
-            label7.Size = new Size(83, 20);
+            label7.Size = new Size(76, 20);
             label7.TabIndex = 8;
-            label7.Text = "Price: 200$";
+            label7.Text = "Price: 40$";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(311, 375);
             label6.Name = "label6";
-            label6.Size = new Size(117, 23);
+            label6.Size = new Size(103, 23);
             label6.TabIndex = 7;
-            label6.Text = "Luxury Room";
+            label6.Text = "Suite Room";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(30, 378);
             label5.Name = "label5";
-            label5.Size = new Size(103, 23);
+            label5.Size = new Size(120, 23);
             label5.TabIndex = 6;
-            label5.Text = "Suite Room";
+            label5.Text = "Double Room";
             // 
             // label4
             // 
@@ -465,9 +467,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(30, 179);
             label3.Name = "label3";
-            label3.Size = new Size(136, 23);
+            label3.Size = new Size(112, 23);
             label3.TabIndex = 4;
-            label3.Text = "Standard Room";
+            label3.Text = "Single Room";
             // 
             // pictureBox4
             // 
@@ -507,6 +509,7 @@
             // 
             // RoomList
             // 
+            RoomList.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             RoomList.Controls.Add(dataGridView2);
             RoomList.Controls.Add(label17);
             RoomList.FlatStyle = FlatStyle.Flat;
@@ -514,21 +517,22 @@
             RoomList.ForeColor = Color.MidnightBlue;
             RoomList.Location = new Point(52, 481);
             RoomList.Name = "RoomList";
-            RoomList.Size = new Size(1361, 307);
+            RoomList.Size = new Size(1361, 635);
             RoomList.TabIndex = 64;
             RoomList.TabStop = false;
             RoomList.Text = "Room List";
             // 
             // dataGridView2
             // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.BackgroundColor = Color.White;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { RoomID, RoomTypeID, RoomNumber, TypeName, PricePerNight, Status });
-            dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(3, 26);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1355, 278);
+            dataGridView2.Size = new Size(1355, 603);
             dataGridView2.TabIndex = 27;
             // 
             // RoomID
@@ -623,7 +627,7 @@
             Controls.Add(Add);
             Controls.Add(guna2GroupBox1);
             Name = "RoomControl";
-            Size = new Size(1455, 826);
+            Size = new Size(1455, 1146);
             Load += RoomControl_Load;
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();

@@ -42,15 +42,9 @@ namespace Hotel_System.Services
 
             return _repo.UpdateBooking(booking);
         }
-        public bool ProcessCheckIn(int bID) => _repo.ConfirmCheckIn(bID);
+        
 
         // Inside BookingService.cs
-
-        public bool CompleteCheckOut(int bID, int rID)
-        {
-            return _repo.UpdateStatusAndReleaseRoom(bID, rID, "Complete");
-        }
-
         public bool CancelBooking(int bID, int rID)
         {
             return _repo.UpdateStatusAndReleaseRoom(bID, rID, "Cancelled");
