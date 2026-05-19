@@ -10,16 +10,37 @@
     <Compile Update="Forms\Payment\PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Forms\WalkIn\Walk-In.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History\History_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History\History_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History\History_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="History\Payment_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="PrintForms\Invoicebooking\InvocieBooking.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PrintForms\ReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Reports\ReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Reports\Reportroom.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Reports\Report_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\Report_CheckInCheckOut.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Reports\Report_CheckOut.cs">
