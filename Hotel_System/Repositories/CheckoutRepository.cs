@@ -29,16 +29,15 @@ namespace Hotel_System.Repositories
             }
 
             // Rename SP output columns to match DataGridView DataPropertyName bindings
-            if (dt.Columns.Contains("CustomerName"))  dt.Columns["CustomerName"]!.ColumnName  = "customer_name";
-            if (dt.Columns.Contains("PhoneNumber"))   dt.Columns["PhoneNumber"]!.ColumnName   = "phone_number";
-            if (dt.Columns.Contains("Room"))          dt.Columns["Room"]!.ColumnName          = "room";
-            if (dt.Columns.Contains("RoomType"))      dt.Columns["RoomType"]!.ColumnName      = "room_type";
-            if (dt.Columns.Contains("RoomNumber"))    dt.Columns["RoomNumber"]!.ColumnName    = "room_number";
-            if (dt.Columns.Contains("ID/Passport"))   dt.Columns["ID/Passport"]!.ColumnName   = "id_passport";
-            if (dt.Columns.Contains("Check In"))      dt.Columns["Check In"]!.ColumnName      = "check-in";
-            if (dt.Columns.Contains("Check Out"))     dt.Columns["Check Out"]!.ColumnName     = "check-out";
-            if (dt.Columns.Contains("SubTotal"))      dt.Columns["SubTotal"]!.ColumnName      = "sub_total";
-            if (dt.Columns.Contains("Discount"))      dt.Columns["Discount"]!.ColumnName      = "discount";
+            if (dt.Columns.Contains("CustomerName"))  dt.Columns["CustomerName"].ColumnName  = "customer_name";
+            if (dt.Columns.Contains("PhoneNumber"))   dt.Columns["PhoneNumber"].ColumnName   = "phone_number";
+            if (dt.Columns.Contains("Room"))          dt.Columns["Room"].ColumnName          = "room";
+            if (dt.Columns.Contains("RoomType"))      dt.Columns["RoomType"].ColumnName      = "room_type";
+            if (dt.Columns.Contains("RoomNumber"))    dt.Columns["RoomNumber"].ColumnName    = "room_number";
+            if (dt.Columns.Contains("ID/Passport"))   dt.Columns["ID/Passport"].ColumnName   = "id_passport";
+            if (dt.Columns.Contains("Check In"))      dt.Columns["Check In"].ColumnName      = "check-in";
+            if (dt.Columns.Contains("Check Out"))     dt.Columns["Check Out"].ColumnName     = "check-out";
+
 
             return dt;
         }

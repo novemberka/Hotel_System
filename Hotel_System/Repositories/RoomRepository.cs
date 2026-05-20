@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Hotel_System.Models;
 using Hotel_System.Properties.Config;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Hotel_System.Repositories
 {
     internal class RoomRepository
     {
-        private DbConnection db = new DbConnection();
+        private readonly DbConnection db = new DbConnection();
+
         public DataTable GetRoomsFromDb()
         {
             DataTable dt = new DataTable();
-            // This query grabs data from BOTH tables at the same time
-            string query = @"SELECT 
-                        r.RoomID, 
-                        r.RoomNumber, 
+            string query = @"SELECT
+                        r.RoomID,
+                        r.RoomNumber,
                         r.RoomTypeID,
-                        rt.TypeName, 
-                        rt.PricePerNight, 
-                        r.Status 
-                     FROM rooms r 
+                        rt.TypeName,
+                        rt.PricePerNight,
+                        r.Status
+                     FROM rooms r
                      INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID";
 
             using (MySqlConnection conn = db.GetConnection())
@@ -34,44 +29,46 @@ namespace Hotel_System.Repositories
             }
             return dt;
         }
-        public DataTable Search(string roomNumber, string roomId, string status)
+
+        public DataTable Search(string keyword)
         {
             DataTable dt = new DataTable();
+            string query = @"SELECT r.RoomID, r.RoomNumber, rt.TypeName, rt.PricePerNight, r.Status
+                     FROM rooms r
+                     INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                     WHERE r.RoomNumber LIKE @key";
 
             using (MySqlConnection conn = db.GetConnection())
             {
-                conn.Open();
-
-                string query = @"
-            SELECT 
-                r.RoomID,
-                r.RoomNumber,
-                rt.TypeName,
-                rt.PricePerNight,
-                r.Status,
-                r.RoomTypeID
-            FROM rooms r
-            INNER JOIN roomtypes rt 
-                ON r.RoomTypeID = rt.RoomTypeID
-            WHERE 
-                (@RoomNumber = '' OR r.RoomNumber LIKE CONCAT('%', @RoomNumber, '%'))
-                AND (@RoomID = '' OR CAST(r.RoomID AS CHAR) LIKE CONCAT('%', @RoomID, '%'))
-                AND (@Status = '' OR r.Status = @Status)
-        ";
-
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@RoomNumber", roomNumber ?? "");
-                    cmd.Parameters.AddWithValue("@RoomID", roomId ?? "");
-                    cmd.Parameters.AddWithValue("@Status", status ?? "");
-
-                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    da.Fill(dt);
-                }
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                adapter.SelectCommand.Parameters.AddWithValue("@key", "%" + keyword + "%");
+                adapter.Fill(dt);
             }
-
             return dt;
         }
+
+        public DataTable Search(string roomNumber, string roomID, string status)
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT r.RoomID, r.RoomNumber, rt.TypeName, rt.PricePerNight, r.Status
+                     FROM rooms r
+                     INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                     WHERE (@num = '' OR r.RoomNumber LIKE CONCAT('%',@num,'%'))
+                       AND (@rid = '' OR r.RoomID = @ridVal)
+                       AND (@status = '' OR r.Status = @status)";
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                var adapter = new MySqlDataAdapter(query, conn);
+                adapter.SelectCommand.Parameters.AddWithValue("@num",    roomNumber ?? "");
+                adapter.SelectCommand.Parameters.AddWithValue("@rid",    string.IsNullOrWhiteSpace(roomID) ? "" : roomID);
+                int ridVal = int.TryParse(roomID, out int v) ? v : 0;
+                adapter.SelectCommand.Parameters.AddWithValue("@ridVal", ridVal);
+                adapter.SelectCommand.Parameters.AddWithValue("@status", status ?? "");
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+
         public bool Add(Room room)
         {
             string query = "INSERT INTO rooms (RoomNumber, RoomTypeID, Status) VALUES (@num, @type, @status)";
@@ -120,25 +117,9 @@ namespace Hotel_System.Repositories
             }
         }
 
-        private bool ExecuteQuery(string query, Room room)
-        {
-            using (MySqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", room.RoomID);
-                    cmd.Parameters.AddWithValue("@num", room.RoomNumber);
-                    cmd.Parameters.AddWithValue("@type", room.RoomTypeID);
-                    cmd.Parameters.AddWithValue("@status", room.Status);
-                    return cmd.ExecuteNonQuery() > 0;
-                }
-            }
-        }
         public DataTable GetRoomTypes()
         {
             DataTable dt = new DataTable();
-            // CRITICAL: You MUST include 'Floor' and 'PricePerNight' here
             string query = "SELECT RoomTypeID, TypeName, PricePerNight FROM roomtypes";
 
             using (MySqlConnection conn = db.GetConnection())
@@ -149,5 +130,26 @@ namespace Hotel_System.Repositories
             return dt;
         }
 
+        public DataTable GetRoomReport(string roomNumber, string floor, string roomType)
+        {
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand("sp_GetRoomReport", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@p_FromDate",   System.DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_ToDate",     System.DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_RoomType",   string.IsNullOrWhiteSpace(roomType) || roomType == "All" ? "" : roomType.Trim());
+                cmd.Parameters.AddWithValue("@p_RoomNumber", string.IsNullOrWhiteSpace(roomNumber) ? "" : roomNumber.Trim());
+                cmd.Parameters.AddWithValue("@p_Floor",      string.IsNullOrWhiteSpace(floor) ? "" : floor.Trim());
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
     }
 }

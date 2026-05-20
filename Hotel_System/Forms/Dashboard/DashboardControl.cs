@@ -153,9 +153,6 @@ namespace Hotel_System
             pie.ExplodeFraction = 0.05;
             plt.Title("Live Room Status Distribution");
 
-            // Transparent background to match dashboard UI if needed
-            plt.FigureBackground.Color = Colors.Transparent;
-
             formsPlot2.Refresh();
         }
         private void FetchDashboardStats()

@@ -91,9 +91,9 @@ namespace Hotel_System.PrintForms
             lblHotelName.ForeColor = Color.DarkSlateBlue;
             lblHotelName.Location = new Point(390, 20);
             lblHotelName.Name = "lblHotelName";
-            lblHotelName.Size = new Size(266, 46);
+            lblHotelName.Size = new Size(265, 46);
             lblHotelName.TabIndex = 0;
-            lblHotelName.Text = "LUXURY HOTEL";
+            lblHotelName.Text = "SYSTEM HOTEL";
             // 
             // lbAddress
             // 
@@ -121,9 +121,9 @@ namespace Hotel_System.PrintForms
             lbemail.Font = new Font("Segoe UI", 10F);
             lbemail.Location = new Point(385, 120);
             lbemail.Name = "lbemail";
-            lbemail.Size = new Size(212, 23);
+            lbemail.Size = new Size(246, 23);
             lbemail.TabIndex = 3;
-            lbemail.Text = "Email: hotel09@gmail.com";
+            lbemail.Text = "Email: systemhotel@gmail.com";
             // 
             // lbCustomerName
             // 

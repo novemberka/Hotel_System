@@ -38,6 +38,9 @@ namespace Hotel_System
             // Load your data
             LoadCustomers();
             LoadPayments();
+            dtpPayment.Value = DateTime.Now;
+            dtpCheckIn.Value = DateTime.Now;
+            dtpCheckOut.Value = DateTime.Now;
 
             cmbCustomerName.SelectedIndexChanged += cmbCustomerName_SelectedIndexChanged;
             dgvPayment.CellClick += dgvPayment_CellClick;
@@ -86,11 +89,17 @@ namespace Hotel_System
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 string query = @"
-                SELECT r.RoomNumber, rt.TypeName, rt.PricePerNight,
-                       b.CheckInDate, b.CheckOutDate
+                SELECT 
+                    r.RoomNumber,
+                    rt.TypeName,
+                    rt.PricePerNight,
+                    ci.CheckInDate,
+                    co.CheckOutDate
                 FROM bookings b
                 INNER JOIN rooms r ON b.RoomID = r.RoomID
                 INNER JOIN roomtypes rt ON r.RoomTypeID = rt.RoomTypeID
+                INNER JOIN checkins ci ON b.BookingID = ci.BookingID
+                INNER JOIN checkouts co ON ci.CheckInID = co.CheckInID
                 WHERE b.BookingID = @BookingID";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -107,8 +116,8 @@ namespace Hotel_System
                     DateTime checkIn = Convert.ToDateTime(reader["CheckInDate"]);
                     DateTime checkOut = Convert.ToDateTime(reader["CheckOutDate"]);
 
-                    CheckInDate.Value = checkIn;
-                    CheckOutDate.Value = checkOut;
+                    dtpCheckIn.Value = checkIn;
+                    dtpCheckOut.Value = checkOut;
 
                     decimal price = Convert.ToDecimal(reader["PricePerNight"]);
                     int days = (checkOut - checkIn).Days;

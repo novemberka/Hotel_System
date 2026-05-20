@@ -16,7 +16,7 @@ namespace Hotel_System
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txtusername.Text = txtpassword.Text;
+            // Do not copy password into username; ensure password is masked
             txtpassword.PasswordChar = '*';
 
         }
@@ -57,19 +57,22 @@ namespace Hotel_System
                         string fullName = reader["FullName"].ToString();
                         string role = reader["Role"].ToString();
 
-                        string imgPath = null;
-
-                        if (reader["ImagePath"] != DBNull.Value)
-                        {
-                            imgPath = reader["ImagePath"].ToString();
-                        }
+                       
 
                         MessageBox.Show($"Welcome {fullName} ({role})!");
 
-                        // PASS DATA to Dashboard
-                        Dashboard dashboard = new Dashboard(fullName, role, imgPath);
-                        dashboard.Show();
-                        this.Hide();
+                        // PASS DATA to Dashboard - wrap to capture initialization errors
+                        try
+                        {
+                            Dashboard dashboard = new Dashboard();
+                            dashboard.Show();
+                            this.Hide();
+                        }
+                        catch (Exception ex)
+                        {
+                            // Show full exception to diagnose the null parameter
+                            MessageBox.Show("Error opening dashboard: " + ex.ToString(), "Initialization Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {

@@ -14,10 +14,8 @@ namespace Hotel_System.Services
         private readonly RoomRepository _repo = new RoomRepository();
 
         public DataTable GetRooms() => _repo.GetRoomsFromDb();
-        public DataTable SearchRooms(string roomNumber, string roomId, string status)
-        {
-            return _repo.Search(roomNumber, roomId, status);
-        }
+        public DataTable SearchRooms(string key) => _repo.Search(key);
+        public DataTable SearchRooms(string roomNumber, string roomID, string status) => _repo.Search(roomNumber, roomID, status);
         public bool AddRoom(Room room) => _repo.Add(room);
         public bool UpdateRoom(Room room) => _repo.Update(room);
         public bool DeleteRoom(int id) => _repo.Delete(id);
@@ -26,6 +24,9 @@ namespace Hotel_System.Services
         {
             return _repo.GetRoomTypes();
         }
+
+        public DataTable GetRoomReport(string roomNumber = "", string floor = "", string roomType = "")
+            => _repo.GetRoomReport(roomNumber, floor, roomType);
     }
 }
     

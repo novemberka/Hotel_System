@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_System
+namespace Room_control
 {
-    public partial class Report_CheckOut : UserControl
+<<<<<<<< HEAD:Room control/Form1.cs
+    public partial class Form1 : Form
     {
-        public Report_CheckOut()
+        public Form1()
+========
+    public partial class Reportroom : UserControl
+    {
+        public Reportroom()
+>>>>>>>> origin/vicheka:Hotel_System/Reports/Reportroom.cs
         {
             InitializeComponent();
         }

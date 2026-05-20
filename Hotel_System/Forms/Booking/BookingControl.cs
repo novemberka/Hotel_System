@@ -41,6 +41,10 @@ namespace Hotel_System
             LoadCustomers();
             LoadAvailableRooms();
             RefreshGrid();
+
+            dtpBookingDate.Value = DateTime.Now;
+            dtpCheckIn.Value = DateTime.Now;
+            dtpCheckOut.Value = DateTime.Now;
         }
         private void LoadCustomers()
         {
@@ -125,8 +129,10 @@ namespace Hotel_System
             }
             else
             {
-                // If this pops up, your SQL query found 0 available rooms
-                MessageBox.Show("No rooms with 'Available' status found in database!");
+                cmbRoom.DataSource = null;
+                cmbRoom.Items.Clear();
+                cmbRoom.Items.Add("No Rooms Available");
+                cmbRoom.SelectedIndex = 0;
             }
         }
 

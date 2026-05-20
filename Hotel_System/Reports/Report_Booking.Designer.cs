@@ -50,10 +50,9 @@
             Status = new DataGridViewTextBoxColumn();
             Note = new DataGridViewTextBoxColumn();
             SelectDateRoport = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            btnflitter = new Guna.UI2.WinForms.Guna2Button();
             txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
-            Booking_Status = new Guna.UI2.WinForms.Guna2ComboBox();
-            label3 = new Label();
             RoomType = new Guna.UI2.WinForms.Guna2ComboBox();
             label2 = new Label();
             ToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -61,49 +60,20 @@
             FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             lbCustomerName = new Label();
             Booking_list = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             label5 = new Label();
-            Report_Summary = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            ptotal_price = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            label13 = new Label();
-            label14 = new Label();
-            guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            lbSubTotal = new Label();
-            label12 = new Label();
-            ptotalPrice = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            lbCancel = new Label();
-            label = new Label();
-            pbooking = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            lbooking = new Label();
-            label6 = new Label();
-            label9 = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             Booking_Report = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)Booking_Report).BeginInit();
             SelectDateRoport.SuspendLayout();
             Booking_list.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).BeginInit();
-            Report_Summary.SuspendLayout();
-            ptotal_price.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
-            guna2ShadowPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            ptotalPrice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
-            pbooking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Booking_Report
             // 
             Booking_Report.AllowUserToAddRows = false;
+            Booking_Report.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Booking_Report.BackgroundColor = Color.White;
             Booking_Report.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             Booking_Report.Columns.AddRange(new DataGridViewColumn[] { Booking, CustomerName, PhoneNumber, Room, dataGridViewTextBoxColumn1, CheckIn, Checkout, Status, Note });
@@ -111,91 +81,91 @@
             Booking_Report.Name = "Booking_Report";
             Booking_Report.RowHeadersVisible = false;
             Booking_Report.RowHeadersWidth = 51;
-            Booking_Report.Size = new Size(1350, 265);
+            Booking_Report.Size = new Size(1349, 503);
             Booking_Report.TabIndex = 28;
             Booking_Report.CellContentClick += Booking_Report_CellContentClick_1;
             // 
             // Booking
             // 
-            Booking.DataPropertyName = "booking_id";
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Booking.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Booking.DataPropertyName = "BookingID";
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Booking.DefaultCellStyle = dataGridViewCellStyle1;
             Booking.HeaderText = "Booking ID";
             Booking.MinimumWidth = 6;
             Booking.Name = "Booking";
-            Booking.Width = 150;
             // 
             // CustomerName
             // 
-            CustomerName.DataPropertyName = "customer_name";
+            CustomerName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            CustomerName.DataPropertyName = "CustomerName";
             CustomerName.HeaderText = "Customer Name";
             CustomerName.MinimumWidth = 6;
             CustomerName.Name = "CustomerName";
-            CustomerName.Width = 160;
             // 
             // PhoneNumber
             // 
-            PhoneNumber.DataPropertyName = "phone_number";
+            PhoneNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PhoneNumber.DataPropertyName = "PhoneNumber";
             PhoneNumber.HeaderText = "Phone Number";
             PhoneNumber.MinimumWidth = 6;
             PhoneNumber.Name = "PhoneNumber";
-            PhoneNumber.Width = 180;
             // 
             // Room
             // 
-            Room.DataPropertyName = "room";
+            Room.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Room.DataPropertyName = "Room";
             Room.HeaderText = "Room";
             Room.MinimumWidth = 6;
             Room.Name = "Room";
-            Room.Width = 125;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "room_type";
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn1.DataPropertyName = "RoomType";
             dataGridViewTextBoxColumn1.HeaderText = "Room Type";
             dataGridViewTextBoxColumn1.MinimumWidth = 6;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 150;
             // 
             // CheckIn
             // 
-            CheckIn.DataPropertyName = "check-in";
+            CheckIn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            CheckIn.DataPropertyName = "CheckIn";
             CheckIn.HeaderText = "Check In";
             CheckIn.MinimumWidth = 6;
             CheckIn.Name = "CheckIn";
-            CheckIn.Width = 125;
             // 
             // Checkout
             // 
-            Checkout.DataPropertyName = "check-out";
+            Checkout.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Checkout.DataPropertyName = "CheckOut";
             Checkout.HeaderText = "Check Out";
             Checkout.MinimumWidth = 6;
             Checkout.Name = "Checkout";
-            Checkout.Width = 125;
             // 
             // Status
             // 
-            Status.DataPropertyName = "status";
+            Status.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Status.DataPropertyName = "Status";
             Status.HeaderText = "Status";
             Status.MinimumWidth = 6;
             Status.Name = "Status";
-            Status.Width = 150;
             // 
             // Note
             // 
-            Note.DataPropertyName = "note";
-            Note.HeaderText = "Note";
+            Note.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Note.DataPropertyName = "TotalAmount";
+            Note.HeaderText = "Total ($)";
             Note.MinimumWidth = 6;
             Note.Name = "Note";
-            Note.Width = 170;
             // 
             // SelectDateRoport
             // 
+            SelectDateRoport.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             SelectDateRoport.BackColor = Color.Transparent;
+            SelectDateRoport.Controls.Add(btnflitter);
             SelectDateRoport.Controls.Add(txtSearchCustomer);
             SelectDateRoport.Controls.Add(label4);
-            SelectDateRoport.Controls.Add(Booking_Status);
-            SelectDateRoport.Controls.Add(label3);
             SelectDateRoport.Controls.Add(RoomType);
             SelectDateRoport.Controls.Add(label2);
             SelectDateRoport.Controls.Add(ToDate);
@@ -213,11 +183,29 @@
             SelectDateRoport.TabIndex = 1;
             SelectDateRoport.Paint += guna2ShadowPanel1_Paint;
             // 
+            // btnflitter
+            // 
+            btnflitter.BorderRadius = 8;
+            btnflitter.CustomizableEdges = customizableEdges1;
+            btnflitter.DisabledState.BorderColor = Color.DarkGray;
+            btnflitter.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnflitter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnflitter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnflitter.FillColor = Color.LimeGreen;
+            btnflitter.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnflitter.ForeColor = Color.White;
+            btnflitter.Location = new Point(711, 45);
+            btnflitter.Name = "btnflitter";
+            btnflitter.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnflitter.Size = new Size(71, 36);
+            btnflitter.TabIndex = 63;
+            btnflitter.Text = "Filter";
+            // 
             // txtSearchCustomer
             // 
             txtSearchCustomer.BorderColor = Color.Silver;
             txtSearchCustomer.BorderRadius = 6;
-            txtSearchCustomer.CustomizableEdges = customizableEdges1;
+            txtSearchCustomer.CustomizableEdges = customizableEdges3;
             txtSearchCustomer.DefaultText = "";
             txtSearchCustomer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchCustomer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -231,8 +219,8 @@
             txtSearchCustomer.Name = "txtSearchCustomer";
             txtSearchCustomer.PlaceholderText = "";
             txtSearchCustomer.SelectedText = "";
-            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchCustomer.Size = new Size(492, 36);
+            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtSearchCustomer.Size = new Size(296, 36);
             txtSearchCustomer.TabIndex = 55;
             // 
             // label4
@@ -246,38 +234,6 @@
             label4.Size = new Size(119, 20);
             label4.TabIndex = 27;
             label4.Text = "Customer Name";
-            // 
-            // Booking_Status
-            // 
-            Booking_Status.BackColor = Color.Transparent;
-            Booking_Status.BorderColor = Color.Silver;
-            Booking_Status.BorderRadius = 8;
-            Booking_Status.CustomizableEdges = customizableEdges3;
-            Booking_Status.DrawMode = DrawMode.OwnerDrawFixed;
-            Booking_Status.DropDownStyle = ComboBoxStyle.DropDownList;
-            Booking_Status.FocusedColor = Color.FromArgb(94, 148, 255);
-            Booking_Status.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Booking_Status.Font = new Font("Segoe UI", 10F);
-            Booking_Status.ForeColor = Color.FromArgb(68, 88, 112);
-            Booking_Status.ItemHeight = 30;
-            Booking_Status.Items.AddRange(new object[] { "Completed", "Check-In", "Check-Out", "Cancelled" });
-            Booking_Status.Location = new Point(836, 120);
-            Booking_Status.Name = "Booking_Status";
-            Booking_Status.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            Booking_Status.Size = new Size(210, 36);
-            Booking_Status.TabIndex = 26;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.White;
-            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(836, 96);
-            label3.Name = "label3";
-            label3.Size = new Size(111, 20);
-            label3.TabIndex = 25;
-            label3.Text = "Booking Status";
             // 
             // RoomType
             // 
@@ -321,7 +277,7 @@
             ToDate.FocusedColor = Color.White;
             ToDate.Font = new Font("Segoe UI", 9F);
             ToDate.Format = DateTimePickerFormat.Long;
-            ToDate.Location = new Point(427, 45);
+            ToDate.Location = new Point(377, 45);
             ToDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             ToDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             ToDate.Name = "ToDate";
@@ -336,7 +292,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(427, 22);
+            label1.Location = new Point(377, 22);
             label1.Name = "label1";
             label1.Size = new Size(61, 20);
             label1.TabIndex = 21;
@@ -376,64 +332,37 @@
             // 
             // Booking_list
             // 
+            Booking_list.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Booking_list.BackColor = Color.Transparent;
-            Booking_list.Controls.Add(iconPictureBox7);
             Booking_list.Controls.Add(iconPictureBox6);
-            Booking_list.Controls.Add(iconPictureBox5);
             Booking_list.Controls.Add(label5);
             Booking_list.Controls.Add(Booking_Report);
             Booking_list.FillColor = Color.White;
-            Booking_list.Location = new Point(23, 383);
+            Booking_list.Location = new Point(23, 198);
             Booking_list.Name = "Booking_list";
             Booking_list.Radius = 8;
             Booking_list.ShadowColor = Color.LightSteelBlue;
             Booking_list.ShadowDepth = 80;
             Booking_list.ShadowShift = 10;
-            Booking_list.Size = new Size(1405, 425);
+            Booking_list.Size = new Size(1405, 593);
             Booking_list.TabIndex = 3;
             Booking_list.Paint += guna2ShadowPanel1_Paint_1;
             // 
-            // iconPictureBox7
-            // 
-            iconPictureBox7.BackColor = Color.White;
-            iconPictureBox7.ForeColor = Color.Red;
-            iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            iconPictureBox7.IconColor = Color.Red;
-            iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox7.Location = new Point(1326, 10);
-            iconPictureBox7.Margin = new Padding(2);
-            iconPictureBox7.Name = "iconPictureBox7";
-            iconPictureBox7.Size = new Size(32, 32);
-            iconPictureBox7.TabIndex = 31;
-            iconPictureBox7.TabStop = false;
-            // 
             // iconPictureBox6
             // 
+            iconPictureBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconPictureBox6.BackColor = Color.White;
             iconPictureBox6.ForeColor = Color.Green;
             iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             iconPictureBox6.IconColor = Color.Green;
             iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox6.Location = new Point(1279, 10);
+            iconPictureBox6.Location = new Point(1346, 31);
             iconPictureBox6.Margin = new Padding(2);
             iconPictureBox6.Name = "iconPictureBox6";
             iconPictureBox6.Size = new Size(32, 32);
             iconPictureBox6.TabIndex = 30;
             iconPictureBox6.TabStop = false;
-            // 
-            // iconPictureBox5
-            // 
-            iconPictureBox5.BackColor = Color.White;
-            iconPictureBox5.ForeColor = Color.Black;
-            iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Print;
-            iconPictureBox5.IconColor = Color.Black;
-            iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox5.Location = new Point(1230, 10);
-            iconPictureBox5.Margin = new Padding(2);
-            iconPictureBox5.Name = "iconPictureBox5";
-            iconPictureBox5.Size = new Size(32, 32);
-            iconPictureBox5.TabIndex = 29;
-            iconPictureBox5.TabStop = false;
+            iconPictureBox6.Click += iconPictureBox6_Click;
             // 
             // label5
             // 
@@ -447,250 +376,23 @@
             label5.TabIndex = 20;
             label5.Text = "Booking Report List";
             // 
-            // Report_Summary
+            // flowLayoutPanel1
             // 
-            Report_Summary.BackColor = Color.Transparent;
-            Report_Summary.Controls.Add(ptotal_price);
-            Report_Summary.Controls.Add(guna2ShadowPanel3);
-            Report_Summary.Controls.Add(ptotalPrice);
-            Report_Summary.Controls.Add(pbooking);
-            Report_Summary.Controls.Add(label9);
-            Report_Summary.FillColor = Color.White;
-            Report_Summary.Location = new Point(23, 189);
-            Report_Summary.Name = "Report_Summary";
-            Report_Summary.Radius = 8;
-            Report_Summary.ShadowColor = Color.LightSteelBlue;
-            Report_Summary.ShadowDepth = 80;
-            Report_Summary.ShadowShift = 10;
-            Report_Summary.Size = new Size(1405, 199);
-            Report_Summary.TabIndex = 6;
-            // 
-            // ptotal_price
-            // 
-            ptotal_price.BackColor = Color.Transparent;
-            ptotal_price.Controls.Add(iconPictureBox4);
-            ptotal_price.Controls.Add(label13);
-            ptotal_price.Controls.Add(label14);
-            ptotal_price.FillColor = Color.DarkBlue;
-            ptotal_price.Location = new Point(1074, 61);
-            ptotal_price.Name = "ptotal_price";
-            ptotal_price.Radius = 6;
-            ptotal_price.ShadowColor = Color.DarkBlue;
-            ptotal_price.ShadowDepth = 60;
-            ptotal_price.ShadowShift = 4;
-            ptotal_price.Size = new Size(211, 100);
-            ptotal_price.TabIndex = 23;
-            // 
-            // iconPictureBox4
-            // 
-            iconPictureBox4.BackColor = Color.DarkBlue;
-            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            iconPictureBox4.IconColor = Color.White;
-            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox4.Location = new Point(165, 13);
-            iconPictureBox4.Margin = new Padding(2);
-            iconPictureBox4.Name = "iconPictureBox4";
-            iconPictureBox4.Size = new Size(32, 32);
-            iconPictureBox4.TabIndex = 21;
-            iconPictureBox4.TabStop = false;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.White;
-            label13.Location = new Point(80, 57);
-            label13.Name = "label13";
-            label13.Size = new Size(84, 28);
-            label13.TabIndex = 22;
-            label13.Text = "$24500";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.White;
-            label14.Location = new Point(15, 13);
-            label14.Name = "label14";
-            label14.Size = new Size(112, 28);
-            label14.TabIndex = 21;
-            label14.Text = "Total Price";
-            // 
-            // guna2ShadowPanel3
-            // 
-            guna2ShadowPanel3.BackColor = Color.Transparent;
-            guna2ShadowPanel3.Controls.Add(iconPictureBox2);
-            guna2ShadowPanel3.Controls.Add(lbSubTotal);
-            guna2ShadowPanel3.Controls.Add(label12);
-            guna2ShadowPanel3.FillColor = Color.Indigo;
-            guna2ShadowPanel3.Location = new Point(760, 61);
-            guna2ShadowPanel3.Name = "guna2ShadowPanel3";
-            guna2ShadowPanel3.Radius = 6;
-            guna2ShadowPanel3.ShadowColor = Color.Indigo;
-            guna2ShadowPanel3.ShadowDepth = 60;
-            guna2ShadowPanel3.ShadowShift = 3;
-            guna2ShadowPanel3.Size = new Size(211, 100);
-            guna2ShadowPanel3.TabIndex = 23;
-            // 
-            // iconPictureBox2
-            // 
-            iconPictureBox2.BackColor = Color.Indigo;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Calculator;
-            iconPictureBox2.IconColor = Color.White;
-            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.Location = new Point(167, 13);
-            iconPictureBox2.Margin = new Padding(2);
-            iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(32, 32);
-            iconPictureBox2.TabIndex = 21;
-            iconPictureBox2.TabStop = false;
-            // 
-            // lbSubTotal
-            // 
-            lbSubTotal.AutoSize = true;
-            lbSubTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbSubTotal.ForeColor = Color.White;
-            lbSubTotal.Location = new Point(80, 57);
-            lbSubTotal.Name = "lbSubTotal";
-            lbSubTotal.Size = new Size(72, 28);
-            lbSubTotal.TabIndex = 22;
-            lbSubTotal.Text = "$5500";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(15, 13);
-            label12.Name = "label12";
-            label12.Size = new Size(100, 28);
-            label12.TabIndex = 21;
-            label12.Text = "Sub Total";
-            label12.Click += label12_Click;
-            // 
-            // ptotalPrice
-            // 
-            ptotalPrice.BackColor = Color.Transparent;
-            ptotalPrice.Controls.Add(iconPictureBox3);
-            ptotalPrice.Controls.Add(lbCancel);
-            ptotalPrice.Controls.Add(label);
-            ptotalPrice.FillColor = Color.Green;
-            ptotalPrice.Location = new Point(444, 61);
-            ptotalPrice.Name = "ptotalPrice";
-            ptotalPrice.Radius = 6;
-            ptotalPrice.ShadowColor = Color.Turquoise;
-            ptotalPrice.ShadowDepth = 60;
-            ptotalPrice.ShadowShift = 3;
-            ptotalPrice.Size = new Size(211, 100);
-            ptotalPrice.TabIndex = 21;
-            // 
-            // iconPictureBox3
-            // 
-            iconPictureBox3.BackColor = Color.Green;
-            iconPictureBox3.ForeColor = Color.Red;
-            iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Cancel;
-            iconPictureBox3.IconColor = Color.Red;
-            iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox3.Location = new Point(177, 13);
-            iconPictureBox3.Margin = new Padding(2);
-            iconPictureBox3.Name = "iconPictureBox3";
-            iconPictureBox3.Size = new Size(32, 32);
-            iconPictureBox3.TabIndex = 21;
-            iconPictureBox3.TabStop = false;
-            // 
-            // lbCancel
-            // 
-            lbCancel.AutoSize = true;
-            lbCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbCancel.ForeColor = Color.White;
-            lbCancel.Location = new Point(80, 57);
-            lbCancel.Name = "lbCancel";
-            lbCancel.Size = new Size(48, 28);
-            lbCancel.TabIndex = 22;
-            lbCancel.Text = "200";
-            // 
-            // label
-            // 
-            label.AutoSize = true;
-            label.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label.ForeColor = Color.White;
-            label.Location = new Point(15, 13);
-            label.Name = "label";
-            label.Size = new Size(158, 28);
-            label.TabIndex = 21;
-            label.Text = "Cancel Booking";
-            // 
-            // pbooking
-            // 
-            pbooking.BackColor = Color.Transparent;
-            pbooking.Controls.Add(iconPictureBox1);
-            pbooking.Controls.Add(lbooking);
-            pbooking.Controls.Add(label6);
-            pbooking.FillColor = Color.Blue;
-            pbooking.Location = new Point(114, 61);
-            pbooking.Name = "pbooking";
-            pbooking.Radius = 6;
-            pbooking.ShadowColor = Color.Blue;
-            pbooking.ShadowDepth = 60;
-            pbooking.ShadowShift = 3;
-            pbooking.Size = new Size(211, 100);
-            pbooking.TabIndex = 20;
-            // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = Color.Blue;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bed;
-            iconPictureBox1.IconColor = Color.White;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.Location = new Point(165, 13);
-            iconPictureBox1.Margin = new Padding(2);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(32, 32);
-            iconPictureBox1.TabIndex = 21;
-            iconPictureBox1.TabStop = false;
-            // 
-            // lbooking
-            // 
-            lbooking.AutoSize = true;
-            lbooking.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbooking.ForeColor = Color.White;
-            lbooking.Location = new Point(80, 57);
-            lbooking.Name = "lbooking";
-            lbooking.Size = new Size(48, 28);
-            lbooking.TabIndex = 22;
-            lbooking.Text = "100";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(15, 13);
-            label6.Name = "label6";
-            label6.Size = new Size(90, 28);
-            label6.TabIndex = 21;
-            label6.Text = "Booking";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.White;
-            label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Navy;
-            label9.Location = new Point(29, 22);
-            label9.Name = "label9";
-            label9.Size = new Size(157, 25);
-            label9.TabIndex = 19;
-            label9.Text = "Report Summary";
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.Location = new Point(23, 3);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1405, 655);
+            flowLayoutPanel1.TabIndex = 4;
             // 
             // Report_Booking
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.Azure;
-            Controls.Add(Report_Summary);
             Controls.Add(Booking_list);
             Controls.Add(SelectDateRoport);
+            Controls.Add(flowLayoutPanel1);
             Name = "Report_Booking";
             Size = new Size(1447, 811);
             Load += Report_Booking_Load;
@@ -699,23 +401,7 @@
             SelectDateRoport.PerformLayout();
             Booking_list.ResumeLayout(false);
             Booking_list.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox5).EndInit();
-            Report_Summary.ResumeLayout(false);
-            Report_Summary.PerformLayout();
-            ptotal_price.ResumeLayout(false);
-            ptotal_price.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
-            guna2ShadowPanel3.ResumeLayout(false);
-            guna2ShadowPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            ptotalPrice.ResumeLayout(false);
-            ptotalPrice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
-            pbooking.ResumeLayout(false);
-            pbooking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -729,30 +415,10 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker ToDate;
         private Label label1;
         private Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox Booking_Status;
-        private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchCustomer;
         private Guna.UI2.WinForms.Guna2ShadowPanel Booking_list;
         private DataGridView Booking_Report;
         private Label label5;
-        private Guna.UI2.WinForms.Guna2ShadowPanel Report_Summary;
-        private Guna.UI2.WinForms.Guna2ShadowPanel ptotal_price;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private Label label13;
-        private Label label14;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private Label lbSubTotal;
-        private Label label12;
-        private Guna.UI2.WinForms.Guna2ShadowPanel ptotalPrice;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private Label lbCancel;
-        private Label label;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pbooking;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Label lbooking;
-        private Label label6;
-        private Label label9;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
@@ -765,5 +431,11 @@
         private DataGridViewTextBoxColumn Checkout;
         private DataGridViewTextBoxColumn Status;
         private DataGridViewTextBoxColumn Note;
+        private Label lblGrandtotal;
+        private Label lbldiscount;
+        private Label lbltotalAfterdis;
+        private Label lbltotalbeforedis;
+        private Guna.UI2.WinForms.Guna2Button btnflitter;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

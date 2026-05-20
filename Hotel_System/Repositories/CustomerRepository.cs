@@ -1,13 +1,8 @@
-﻿using Hotel_System.Models;
+using Hotel_System.Models;
 using Hotel_System.Properties.Config;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace Hotel_System.Repositories
 {
@@ -35,6 +30,7 @@ namespace Hotel_System.Repositories
                 }
             }
         }
+
         public DataTable GetAll()
         {
             DataTable dt = new DataTable();
@@ -46,6 +42,7 @@ namespace Hotel_System.Repositories
             }
             return dt;
         }
+
         public bool Update(Customer customer)
         {
             string query = "UPDATE customers SET FullName=@name, Gender=@gender, Phone=@phone, " +
@@ -80,6 +77,41 @@ namespace Hotel_System.Repositories
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }
+        }
+
+        public DataTable GetCustomerReport(DateTime? fromDate, DateTime? toDate,
+                               string customerName, string roomType, string roomNumber)
+        {
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand("sp_GetCustomerReport", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@p_FromDate",     fromDate.HasValue ? (object)fromDate.Value.Date : DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_ToDate",       toDate.HasValue   ? (object)toDate.Value.Date   : DBNull.Value);
+                cmd.Parameters.AddWithValue("@p_RoomType",     string.IsNullOrWhiteSpace(roomType)     ? (object)DBNull.Value : roomType.Trim());
+                cmd.Parameters.AddWithValue("@p_CustomerName", string.IsNullOrWhiteSpace(customerName) ? (object)DBNull.Value : customerName.Trim());
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable GetAllRoomTypes()
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                string query = "SELECT RoomTypeID, TypeName FROM roomtypes ORDER BY TypeName";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                adapter.Fill(dt);
+            }
+            return dt;
         }
     }
 }

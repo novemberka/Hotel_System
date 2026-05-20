@@ -56,15 +56,15 @@
             btnClear = new Guna.UI2.WinForms.Guna2Button();
             btnPay = new Guna.UI2.WinForms.Guna2Button();
             paymentInformation = new Guna.UI2.WinForms.Guna2GroupBox();
+            label2 = new Label();
+            label5 = new Label();
             txtTotalAmount = new Guna.UI2.WinForms.Guna2TextBox();
             cmbPaymentType = new Guna.UI2.WinForms.Guna2ComboBox();
-            PaymentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpPayment = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label4 = new Label();
-            CheckOutDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            label2 = new Label();
-            CheckInDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             cmbCustomerName = new Guna.UI2.WinForms.Guna2ComboBox();
-            label15 = new Label();
             txtRoomNumber = new Guna.UI2.WinForms.Guna2TextBox();
             txtRoomType = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
@@ -75,13 +75,14 @@
             gpaymentlist = new GroupBox();
             label25 = new Label();
             dgvPayment = new DataGridView();
-            customerNamer = new DataGridViewTextBoxColumn();
-            RoomType = new DataGridViewTextBoxColumn();
-            RoomNumber = new DataGridViewTextBoxColumn();
-            TotalPrice = new DataGridViewTextBoxColumn();
-            PaymentType = new DataGridViewTextBoxColumn();
-            CheckIn = new DataGridViewTextBoxColumn();
-            Checkout = new DataGridViewTextBoxColumn();
+            PaymentIDColumn = new DataGridViewTextBoxColumn();
+            BookingIDColumn = new DataGridViewTextBoxColumn();
+            FullNameColumn = new DataGridViewTextBoxColumn();
+            TypeNameColumn = new DataGridViewTextBoxColumn();
+            RoomNumberColumn = new DataGridViewTextBoxColumn();
+            AmountPaidColumn = new DataGridViewTextBoxColumn();
+            PaymentMethodColumn = new DataGridViewTextBoxColumn();
+            PaymentDateColumn = new DataGridViewTextBoxColumn();
             label3 = new Label();
             paymentInformation.SuspendLayout();
             gpaymentlist.SuspendLayout();
@@ -152,15 +153,15 @@
             paymentInformation.BackColor = Color.White;
             paymentInformation.BorderColor = Color.FromArgb(64, 64, 64);
             paymentInformation.BorderRadius = 16;
+            paymentInformation.Controls.Add(label2);
+            paymentInformation.Controls.Add(label5);
             paymentInformation.Controls.Add(txtTotalAmount);
             paymentInformation.Controls.Add(cmbPaymentType);
-            paymentInformation.Controls.Add(PaymentDate);
+            paymentInformation.Controls.Add(dtpPayment);
             paymentInformation.Controls.Add(label4);
-            paymentInformation.Controls.Add(CheckOutDate);
-            paymentInformation.Controls.Add(label2);
-            paymentInformation.Controls.Add(CheckInDate);
+            paymentInformation.Controls.Add(dtpCheckOut);
+            paymentInformation.Controls.Add(dtpCheckIn);
             paymentInformation.Controls.Add(cmbCustomerName);
-            paymentInformation.Controls.Add(label15);
             paymentInformation.Controls.Add(txtRoomNumber);
             paymentInformation.Controls.Add(txtRoomType);
             paymentInformation.Controls.Add(label1);
@@ -179,6 +180,30 @@
             paymentInformation.TabIndex = 55;
             paymentInformation.Text = "Payment Information";
             paymentInformation.Click += guna2GroupBox1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(501, 147);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 20);
+            label2.TabIndex = 66;
+            label2.Text = "Total Amount:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(497, 101);
+            label5.Name = "label5";
+            label5.Size = new Size(109, 20);
+            label5.TabIndex = 65;
+            label5.Text = "Payment Type:";
             // 
             // txtTotalAmount
             // 
@@ -199,7 +224,7 @@
             txtTotalAmount.PlaceholderText = "";
             txtTotalAmount.SelectedText = "";
             txtTotalAmount.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtTotalAmount.Size = new Size(215, 36);
+            txtTotalAmount.Size = new Size(302, 36);
             txtTotalAmount.TabIndex = 64;
             // 
             // cmbPaymentType
@@ -215,30 +240,31 @@
             cmbPaymentType.Font = new Font("Segoe UI", 10F);
             cmbPaymentType.ForeColor = Color.FromArgb(68, 88, 112);
             cmbPaymentType.ItemHeight = 30;
+            cmbPaymentType.Items.AddRange(new object[] { "Cash", "Card", "Bank", "Other" });
             cmbPaymentType.Location = new Point(631, 88);
             cmbPaymentType.Name = "cmbPaymentType";
             cmbPaymentType.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            cmbPaymentType.Size = new Size(215, 36);
+            cmbPaymentType.Size = new Size(302, 36);
             cmbPaymentType.TabIndex = 58;
             // 
-            // PaymentDate
+            // dtpPayment
             // 
-            PaymentDate.BorderRadius = 6;
-            PaymentDate.Checked = true;
-            PaymentDate.CustomizableEdges = customizableEdges11;
-            PaymentDate.FillColor = Color.White;
-            PaymentDate.FocusedColor = Color.Black;
-            PaymentDate.Font = new Font("Segoe UI", 9F);
-            PaymentDate.ForeColor = Color.Black;
-            PaymentDate.Format = DateTimePickerFormat.Long;
-            PaymentDate.Location = new Point(625, 39);
-            PaymentDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            PaymentDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            PaymentDate.Name = "PaymentDate";
-            PaymentDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            PaymentDate.Size = new Size(221, 36);
-            PaymentDate.TabIndex = 63;
-            PaymentDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            dtpPayment.BorderRadius = 6;
+            dtpPayment.Checked = true;
+            dtpPayment.CustomizableEdges = customizableEdges11;
+            dtpPayment.FillColor = Color.White;
+            dtpPayment.FocusedColor = Color.Black;
+            dtpPayment.Font = new Font("Segoe UI", 9F);
+            dtpPayment.ForeColor = Color.Black;
+            dtpPayment.Format = DateTimePickerFormat.Long;
+            dtpPayment.Location = new Point(625, 39);
+            dtpPayment.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpPayment.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpPayment.Name = "dtpPayment";
+            dtpPayment.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            dtpPayment.Size = new Size(308, 36);
+            dtpPayment.TabIndex = 63;
+            dtpPayment.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
             // 
             // label4
             // 
@@ -252,54 +278,42 @@
             label4.TabIndex = 62;
             label4.Text = "Payment Date:";
             // 
-            // CheckOutDate
+            // dtpCheckOut
             // 
-            CheckOutDate.BorderRadius = 6;
-            CheckOutDate.Checked = true;
-            CheckOutDate.CustomizableEdges = customizableEdges13;
-            CheckOutDate.FillColor = Color.Red;
-            CheckOutDate.Font = new Font("Segoe UI", 9F);
-            CheckOutDate.ForeColor = Color.Honeydew;
-            CheckOutDate.Format = DateTimePickerFormat.Long;
-            CheckOutDate.Location = new Point(1060, 85);
-            CheckOutDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            CheckOutDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            CheckOutDate.Name = "CheckOutDate";
-            CheckOutDate.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            CheckOutDate.Size = new Size(228, 36);
-            CheckOutDate.TabIndex = 57;
-            CheckOutDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            dtpCheckOut.BorderRadius = 6;
+            dtpCheckOut.Checked = true;
+            dtpCheckOut.CustomizableEdges = customizableEdges13;
+            dtpCheckOut.FillColor = Color.Red;
+            dtpCheckOut.Font = new Font("Segoe UI", 9F);
+            dtpCheckOut.ForeColor = Color.Honeydew;
+            dtpCheckOut.Format = DateTimePickerFormat.Long;
+            dtpCheckOut.Location = new Point(1104, 88);
+            dtpCheckOut.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpCheckOut.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpCheckOut.Name = "dtpCheckOut";
+            dtpCheckOut.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            dtpCheckOut.Size = new Size(302, 36);
+            dtpCheckOut.TabIndex = 57;
+            dtpCheckOut.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
             // 
-            // label2
+            // dtpCheckIn
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Navy;
-            label2.Location = new Point(497, 101);
-            label2.Name = "label2";
-            label2.Size = new Size(128, 23);
-            label2.TabIndex = 61;
-            label2.Text = "Payment Type:";
-            // 
-            // CheckInDate
-            // 
-            CheckInDate.BorderRadius = 6;
-            CheckInDate.Checked = true;
-            CheckInDate.CustomizableEdges = customizableEdges15;
-            CheckInDate.FillColor = Color.MidnightBlue;
-            CheckInDate.FocusedColor = Color.Black;
-            CheckInDate.Font = new Font("Segoe UI", 9F);
-            CheckInDate.ForeColor = Color.Honeydew;
-            CheckInDate.Format = DateTimePickerFormat.Long;
-            CheckInDate.Location = new Point(1060, 27);
-            CheckInDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            CheckInDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            CheckInDate.Name = "CheckInDate";
-            CheckInDate.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            CheckInDate.Size = new Size(228, 36);
-            CheckInDate.TabIndex = 56;
-            CheckInDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            dtpCheckIn.BorderRadius = 6;
+            dtpCheckIn.Checked = true;
+            dtpCheckIn.CustomizableEdges = customizableEdges15;
+            dtpCheckIn.FillColor = Color.MidnightBlue;
+            dtpCheckIn.FocusedColor = Color.Black;
+            dtpCheckIn.Font = new Font("Segoe UI", 9F);
+            dtpCheckIn.ForeColor = Color.Honeydew;
+            dtpCheckIn.Format = DateTimePickerFormat.Long;
+            dtpCheckIn.Location = new Point(1104, 37);
+            dtpCheckIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpCheckIn.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpCheckIn.Name = "dtpCheckIn";
+            dtpCheckIn.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            dtpCheckIn.Size = new Size(302, 36);
+            dtpCheckIn.TabIndex = 56;
+            dtpCheckIn.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
             // 
             // cmbCustomerName
             // 
@@ -317,20 +331,8 @@
             cmbCustomerName.Location = new Point(183, 37);
             cmbCustomerName.Name = "cmbCustomerName";
             cmbCustomerName.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            cmbCustomerName.Size = new Size(163, 36);
+            cmbCustomerName.Size = new Size(291, 36);
             cmbCustomerName.TabIndex = 53;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.BackColor = Color.White;
-            label15.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.Navy;
-            label15.Location = new Point(497, 144);
-            label15.Name = "label15";
-            label15.Size = new Size(129, 23);
-            label15.TabIndex = 36;
-            label15.Text = "Totel Amount :";
             // 
             // txtRoomNumber
             // 
@@ -351,7 +353,7 @@
             txtRoomNumber.PlaceholderText = "";
             txtRoomNumber.SelectedText = "";
             txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtRoomNumber.Size = new Size(168, 36);
+            txtRoomNumber.Size = new Size(291, 36);
             txtRoomNumber.TabIndex = 55;
             txtRoomNumber.TextChanged += txtRoomNumber_TextChanged;
             // 
@@ -374,7 +376,7 @@
             txtRoomType.PlaceholderText = "";
             txtRoomType.SelectedText = "";
             txtRoomType.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txtRoomType.Size = new Size(163, 36);
+            txtRoomType.Size = new Size(291, 36);
             txtRoomType.TabIndex = 54;
             // 
             // label1
@@ -383,7 +385,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(922, 101);
+            label1.Location = new Point(959, 104);
             label1.Name = "label1";
             label1.Size = new Size(120, 20);
             label1.TabIndex = 52;
@@ -395,7 +397,7 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(922, 43);
+            label7.Location = new Point(959, 55);
             label7.Name = "label7";
             label7.Size = new Size(108, 20);
             label7.TabIndex = 51;
@@ -469,7 +471,7 @@
             dgvPayment.AllowUserToAddRows = false;
             dgvPayment.BackgroundColor = Color.White;
             dgvPayment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPayment.Columns.AddRange(new DataGridViewColumn[] { customerNamer, RoomType, RoomNumber, TotalPrice, PaymentType, CheckIn, Checkout });
+            dgvPayment.Columns.AddRange(new DataGridViewColumn[] { PaymentIDColumn, BookingIDColumn, FullNameColumn, TypeNameColumn, RoomNumberColumn, AmountPaidColumn, PaymentMethodColumn, PaymentDateColumn });
             dgvPayment.Dock = DockStyle.Fill;
             dgvPayment.Location = new Point(3, 26);
             dgvPayment.Name = "dgvPayment";
@@ -477,55 +479,61 @@
             dgvPayment.Size = new Size(1342, 575);
             dgvPayment.TabIndex = 27;
             // 
-            // customerNamer
+            // PaymentIDColumn
             // 
-            customerNamer.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            customerNamer.HeaderText = "Customer Name";
-            customerNamer.MinimumWidth = 6;
-            customerNamer.Name = "customerNamer";
-            customerNamer.Resizable = DataGridViewTriState.True;
+            PaymentIDColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PaymentIDColumn.HeaderText = "PaymentID";
+            PaymentIDColumn.MinimumWidth = 6;
+            PaymentIDColumn.Name = "PaymentIDColumn";
             // 
-            // RoomType
+            // BookingIDColumn
             // 
-            RoomType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            RoomType.HeaderText = "Room Type";
-            RoomType.MinimumWidth = 6;
-            RoomType.Name = "RoomType";
+            BookingIDColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BookingIDColumn.HeaderText = "BookingID";
+            BookingIDColumn.MinimumWidth = 6;
+            BookingIDColumn.Name = "BookingIDColumn";
             // 
-            // RoomNumber
+            // FullNameColumn
             // 
-            RoomNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            RoomNumber.HeaderText = "Room Number";
-            RoomNumber.MinimumWidth = 6;
-            RoomNumber.Name = "RoomNumber";
+            FullNameColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            FullNameColumn.HeaderText = "Customer Name";
+            FullNameColumn.MinimumWidth = 6;
+            FullNameColumn.Name = "FullNameColumn";
             // 
-            // TotalPrice
+            // TypeNameColumn
             // 
-            TotalPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TotalPrice.HeaderText = "Total Price";
-            TotalPrice.MinimumWidth = 6;
-            TotalPrice.Name = "TotalPrice";
+            TypeNameColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TypeNameColumn.HeaderText = "Room Type";
+            TypeNameColumn.MinimumWidth = 6;
+            TypeNameColumn.Name = "TypeNameColumn";
             // 
-            // PaymentType
+            // RoomNumberColumn
             // 
-            PaymentType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            PaymentType.HeaderText = "Payment Type";
-            PaymentType.MinimumWidth = 6;
-            PaymentType.Name = "PaymentType";
+            RoomNumberColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            RoomNumberColumn.HeaderText = "Room Number";
+            RoomNumberColumn.MinimumWidth = 6;
+            RoomNumberColumn.Name = "RoomNumberColumn";
             // 
-            // CheckIn
+            // AmountPaidColumn
             // 
-            CheckIn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            CheckIn.HeaderText = "Check In";
-            CheckIn.MinimumWidth = 6;
-            CheckIn.Name = "CheckIn";
+            AmountPaidColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            AmountPaidColumn.HeaderText = "Amount Paid";
+            AmountPaidColumn.MinimumWidth = 6;
+            AmountPaidColumn.Name = "AmountPaidColumn";
             // 
-            // Checkout
+            // PaymentMethodColumn
             // 
-            Checkout.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Checkout.HeaderText = "Check Out";
-            Checkout.MinimumWidth = 6;
-            Checkout.Name = "Checkout";
+            PaymentMethodColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PaymentMethodColumn.HeaderText = "Payment Method";
+            PaymentMethodColumn.MinimumWidth = 6;
+            PaymentMethodColumn.Name = "PaymentMethodColumn";
+            // 
+            // PaymentDateColumn
+            // 
+            PaymentDateColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PaymentDateColumn.HeaderText = "Payment Date";
+            PaymentDateColumn.MinimumWidth = 6;
+            PaymentDateColumn.Name = "PaymentDateColumn";
             // 
             // label3
             // 
@@ -591,9 +599,7 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private Label label15;
         private Guna.UI2.WinForms.Guna2ComboBox cmbPaymentType;
-        private Label label2;
         private GroupBox gpaymentlist;
         private Label label25;
         private DataGridView dgvPayment;
@@ -602,12 +608,18 @@
         private Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalAmount;
         private Guna.UI2.WinForms.Guna2ComboBox cmbCustomerName;
-        private DataGridViewTextBoxColumn customerNamer;
-        private DataGridViewTextBoxColumn RoomType;
-        private DataGridViewTextBoxColumn RoomNumber;
-        private DataGridViewTextBoxColumn TotalPrice;
-        private DataGridViewTextBoxColumn PaymentType;
-        private DataGridViewTextBoxColumn CheckIn;
-        private DataGridViewTextBoxColumn Checkout;
+        private DataGridViewTextBoxColumn PaymentIDColumn;
+        private DataGridViewTextBoxColumn BookingIDColumn;
+        private DataGridViewTextBoxColumn FullNameColumn;
+        private DataGridViewTextBoxColumn TypeNameColumn;
+        private DataGridViewTextBoxColumn RoomNumberColumn;
+        private DataGridViewTextBoxColumn AmountPaidColumn;
+        private DataGridViewTextBoxColumn PaymentMethodColumn;
+        private DataGridViewTextBoxColumn PaymentDateColumn;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpPayment;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckOut;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckIn;
+        private Label label2;
+        private Label label5;
     }
 }

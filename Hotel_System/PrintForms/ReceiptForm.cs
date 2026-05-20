@@ -23,7 +23,7 @@ namespace Hotel_System.PrintForms
         {
             
             Label lblHotel = new Label();
-            lblHotel.Text = "Hotel Name";
+            lblHotel.Text = "SYSTEM HOTEL";
             lblHotel.Font = new Font("Times New Roman", 20, FontStyle.Bold);
             lblHotel.ForeColor = Color.DarkViolet;
             lblHotel.BorderStyle = BorderStyle.FixedSingle;

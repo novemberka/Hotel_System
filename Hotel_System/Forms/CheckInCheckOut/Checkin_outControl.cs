@@ -18,6 +18,7 @@ namespace Hotel_System
         {
             InitializeComponent();
             dataGridViewCheckInCheckOut.CellClick += dataGridViewCheckInCheckOut_CellClick;
+            cmbBookingID.SelectedIndexChanged += cmbBookingID_SelectedIndexChanged;
         }
 
         // Helper to reliably obtain BookingID from the combo box
@@ -80,6 +81,9 @@ namespace Hotel_System
         {
             LoadBookingIDs();
             LoadOperationGrid();
+
+            dtpCheckIn.Value = DateTime.Now;
+            dtpCheckOut.Value = DateTime.Now;
         }
         private void btnCheckIn_Click(object sender, EventArgs e)
         {

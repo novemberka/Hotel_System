@@ -197,7 +197,7 @@ namespace Hotel_System.Repositories
             {
                 string query = @"SELECT BookingID 
                          FROM bookings
-                         WHERE (Status IN ('Pending', 'CheckIn', 'CheckOut', 'Cancelled') 
+                         WHERE (Status IN ('Pending', 'CheckIn') 
                            OR Status = '' 
                            OR Status IS NULL)
                          ORDER BY BookingID DESC";

@@ -79,8 +79,8 @@
             cmbBookingID = new Guna.UI2.WinForms.Guna2ComboBox();
             label6 = new Label();
             label3 = new Label();
-            CheckInDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            CheckOutDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label10 = new Label();
             btnCheckOut = new Guna.UI2.WinForms.Guna2Button();
             checkinList.SuspendLayout();
@@ -241,8 +241,8 @@
             guna2GroupBox1.Controls.Add(cmbBookingID);
             guna2GroupBox1.Controls.Add(label6);
             guna2GroupBox1.Controls.Add(label3);
-            guna2GroupBox1.Controls.Add(CheckInDate);
-            guna2GroupBox1.Controls.Add(CheckOutDate);
+            guna2GroupBox1.Controls.Add(dtpCheckIn);
+            guna2GroupBox1.Controls.Add(dtpCheckOut);
             guna2GroupBox1.Controls.Add(label10);
             guna2GroupBox1.CustomBorderColor = Color.White;
             guna2GroupBox1.CustomizableEdges = customizableEdges21;
@@ -468,41 +468,41 @@
             label3.TabIndex = 69;
             label3.Text = "Check-In Date:";
             // 
-            // CheckInDate
+            // dtpCheckIn
             // 
-            CheckInDate.BorderRadius = 6;
-            CheckInDate.Checked = true;
-            CheckInDate.CustomizableEdges = customizableEdges17;
-            CheckInDate.FillColor = Color.LimeGreen;
-            CheckInDate.Font = new Font("Segoe UI", 9F);
-            CheckInDate.ForeColor = Color.White;
-            CheckInDate.Format = DateTimePickerFormat.Long;
-            CheckInDate.Location = new Point(944, 43);
-            CheckInDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            CheckInDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            CheckInDate.Name = "CheckInDate";
-            CheckInDate.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            CheckInDate.Size = new Size(393, 36);
-            CheckInDate.TabIndex = 56;
-            CheckInDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            dtpCheckIn.BorderRadius = 6;
+            dtpCheckIn.Checked = true;
+            dtpCheckIn.CustomizableEdges = customizableEdges17;
+            dtpCheckIn.FillColor = Color.LimeGreen;
+            dtpCheckIn.Font = new Font("Segoe UI", 9F);
+            dtpCheckIn.ForeColor = Color.White;
+            dtpCheckIn.Format = DateTimePickerFormat.Long;
+            dtpCheckIn.Location = new Point(944, 43);
+            dtpCheckIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpCheckIn.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpCheckIn.Name = "dtpCheckIn";
+            dtpCheckIn.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            dtpCheckIn.Size = new Size(393, 36);
+            dtpCheckIn.TabIndex = 56;
+            dtpCheckIn.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
             // 
-            // CheckOutDate
+            // dtpCheckOut
             // 
-            CheckOutDate.BorderRadius = 6;
-            CheckOutDate.Checked = true;
-            CheckOutDate.CustomizableEdges = customizableEdges19;
-            CheckOutDate.FillColor = Color.Red;
-            CheckOutDate.Font = new Font("Segoe UI", 9F);
-            CheckOutDate.ForeColor = Color.White;
-            CheckOutDate.Format = DateTimePickerFormat.Long;
-            CheckOutDate.Location = new Point(944, 98);
-            CheckOutDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            CheckOutDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            CheckOutDate.Name = "CheckOutDate";
-            CheckOutDate.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            CheckOutDate.Size = new Size(393, 36);
-            CheckOutDate.TabIndex = 55;
-            CheckOutDate.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
+            dtpCheckOut.BorderRadius = 6;
+            dtpCheckOut.Checked = true;
+            dtpCheckOut.CustomizableEdges = customizableEdges19;
+            dtpCheckOut.FillColor = Color.Red;
+            dtpCheckOut.Font = new Font("Segoe UI", 9F);
+            dtpCheckOut.ForeColor = Color.White;
+            dtpCheckOut.Format = DateTimePickerFormat.Long;
+            dtpCheckOut.Location = new Point(944, 98);
+            dtpCheckOut.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpCheckOut.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpCheckOut.Name = "dtpCheckOut";
+            dtpCheckOut.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            dtpCheckOut.Size = new Size(393, 36);
+            dtpCheckOut.TabIndex = 55;
+            dtpCheckOut.Value = new DateTime(2026, 3, 12, 13, 8, 39, 286);
             // 
             // label10
             // 
@@ -593,5 +593,7 @@
         private DataGridViewTextBoxColumn Checkout;
         private DataGridViewTextBoxColumn TotalPrice;
         private DataGridViewTextBoxColumn Status;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckIn;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckOut;
     }
 }
