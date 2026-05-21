@@ -1,6 +1,7 @@
 using System.Drawing.Drawing2D;
+using Hotel_System.UI;
 using Hotel_System.Properties.Config;
-using MySql.Data.MySqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace Hotel_System
 {
@@ -9,6 +10,93 @@ namespace Hotel_System
         public Login()
         {
             InitializeComponent();
+            ApplyLoginDesign();
+        }
+
+        private void ApplyLoginDesign()
+        {
+            BackColor = Color.FromArgb(232, 245, 254);
+            Text = "Hotel Management System";
+            AcceptButton = btnlogin;
+            MinimumSize = new Size(920, 620);
+            closeButton.Visible = false;
+            minimizeButton.Visible = false;
+            WindowChrome.AddWindowButtons(this, this, Close, top: 16, right: 14);
+            Resize += (_, _) => CenterLoginCard();
+
+            mainCard.BackColor = Color.Transparent;
+            mainCard.FillColor = Color.White;
+            mainCard.BorderRadius = 16;
+
+            guna2Panel1.FillColor = Color.White;
+            guna2Panel1.BackColor = Color.White;
+
+            lbLogin.Text = "Welcome back";
+            lbLogin.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lbLogin.ForeColor = Color.FromArgb(24, 31, 42);
+
+            lbusername.ForeColor = Color.FromArgb(45, 55, 72);
+            label2.ForeColor = Color.FromArgb(45, 55, 72);
+            linkForgotpassword.LinkColor = Color.FromArgb(24, 96, 190);
+            linkForgotpassword.ActiveLinkColor = Color.FromArgb(5, 91, 181);
+            linkForgotpassword.BackColor = Color.Transparent;
+
+            txtusername.PlaceholderText = "Enter username";
+            txtpassword.PlaceholderText = "Enter password";
+            txtusername.FillColor = Color.FromArgb(239, 244, 254);
+            txtpassword.FillColor = Color.FromArgb(239, 244, 254);
+            txtusername.BorderThickness = 0;
+            txtpassword.BorderThickness = 0;
+            txtusername.BorderRadius = 8;
+            txtpassword.BorderRadius = 8;
+
+            btnlogin.Text = "Sign In";
+            btnlogin.BorderRadius = 8;
+            btnlogin.FillColor = Color.FromArgb(31, 126, 220);
+            btnlogin.FillColor2 = Color.FromArgb(5, 91, 181);
+            btnlogin.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+
+            guna2PictureBox1.BackColor = Color.Transparent;
+            guna2PictureBox1.FillColor = Color.Transparent;
+            heroIconCircle.Image = CreateHotelBadge();
+            heroIconCircle.SizeMode = PictureBoxSizeMode.CenterImage;
+            CenterLoginCard();
+        }
+
+        private void CenterLoginCard()
+        {
+            mainCard.Location = new Point(
+                Math.Max(24, (ClientSize.Width - mainCard.Width) / 2),
+                Math.Max(58, (ClientSize.Height - mainCard.Height) / 2));
+        }
+
+        private static Bitmap CreateHotelBadge()
+        {
+            Bitmap bitmap = new(72, 72);
+            using Graphics graphics = Graphics.FromImage(bitmap);
+            graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            graphics.Clear(Color.Transparent);
+
+            using SolidBrush blue = new(Color.FromArgb(19, 111, 211));
+            using Pen bluePen = new(Color.FromArgb(19, 111, 211), 4)
+            {
+                StartCap = LineCap.Round,
+                EndCap = LineCap.Round
+            };
+
+            graphics.FillRectangle(blue, 22, 18, 28, 42);
+            graphics.FillRectangle(blue, 12, 34, 48, 26);
+            graphics.FillRectangle(Brushes.White, 29, 45, 14, 15);
+
+            for (int x = 27; x <= 42; x += 15)
+            {
+                graphics.FillRectangle(Brushes.White, x, 25, 6, 6);
+                graphics.FillRectangle(Brushes.White, x, 35, 6, 6);
+            }
+
+            graphics.DrawLine(bluePen, 16, 34, 36, 14);
+            graphics.DrawLine(bluePen, 56, 34, 36, 14);
+            return bitmap;
         }
 
 
@@ -28,7 +116,7 @@ namespace Hotel_System
             string username = txtusername.Text.Trim();
             string password = txtpassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter username and password!");
                 return;
@@ -37,26 +125,27 @@ namespace Hotel_System
             try
             {
                 DbConnection db = new DbConnection();
-                using (MySqlConnection conn = db.GetConnection())
+                using (SqlConnection conn = db.GetConnection())
                 {
                     conn.Open();
-                    string query = "SELECT * FROM admins WHERE Username=@username AND Password=@password";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    string query = "SELECT TOP 1 FullName, Role, ImagePath FROM admins WHERE Username=@username AND Password=@password";
+                    using SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
 
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    using SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        string fullName = reader["FullName"].ToString();
-                        string role = reader["Role"].ToString();
+                        string fullName = reader["FullName"]?.ToString() ?? "Hotel Admin";
+                        string role = reader["Role"]?.ToString() ?? "Administrator";
                         string imgPath = reader["ImagePath"] != DBNull.Value
-                                              ? reader["ImagePath"].ToString() : null;
-                        reader.Close();
+                            ? reader["ImagePath"]?.ToString() ?? string.Empty
+                            : string.Empty;
 
-                        Report_Customer_Form reportForm = new Report_Customer_Form();
-                        reportForm.Show();
-                        this.Hide();
+                        Dashboard dashboard = new(fullName, role, imgPath);
+                        WindowChrome.MatchWindow(this, dashboard);
+                        dashboard.Show();
+                        Hide();
                     }
                     else
                     {
@@ -98,3 +187,4 @@ namespace Hotel_System
         }
     }
 }
+

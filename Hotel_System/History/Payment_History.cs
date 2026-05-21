@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel_System.UI;
 
 namespace Hotel_System
 {
@@ -15,6 +16,7 @@ namespace Hotel_System
         public Payment_History()
         {
             InitializeComponent();
+            UiTheme.ApplyPageDesign(this);
         }
 
         private void SelectDateRoport_Paint(object sender, PaintEventArgs e)

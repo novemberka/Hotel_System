@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class History_Booking
     {
@@ -418,6 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)Booking_Report).EndInit();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion

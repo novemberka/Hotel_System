@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class BookingControl
     {
@@ -990,7 +990,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
-            BorderStyle = BorderStyle.FixedSingle;
+            BorderStyle = BorderStyle.None;
             Controls.Add(guna2GroupBox2);
             Controls.Add(RoomStatus);
             Controls.Add(guna2GroupBox1);
@@ -1016,6 +1016,7 @@
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox2.PerformLayout();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion

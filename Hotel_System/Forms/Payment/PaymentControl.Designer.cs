@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class PaymentControl
     {
@@ -684,6 +684,7 @@
             guna2GroupBox3.ResumeLayout(false);
             guna2GroupBox3.PerformLayout();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion

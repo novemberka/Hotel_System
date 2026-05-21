@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class RoomControl
     {
@@ -858,6 +858,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion
@@ -884,7 +885,7 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button Add;
-        private Guna.UI2.WinForms.Guna2Button Update;
+        private new Guna.UI2.WinForms.Guna2Button Update;
         private Guna.UI2.WinForms.Guna2Button Delete;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;

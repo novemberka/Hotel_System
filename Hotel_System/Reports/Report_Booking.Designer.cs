@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class Report_Booking
     {
@@ -717,6 +717,7 @@
             pbooking.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion

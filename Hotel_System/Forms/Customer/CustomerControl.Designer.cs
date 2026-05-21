@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class CustomerControl
     {
@@ -545,6 +545,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dbConnectionBindingSource).EndInit();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion
@@ -556,7 +557,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private Guna.UI2.WinForms.Guna2Button Add;
-        private Guna.UI2.WinForms.Guna2Button Update;
+        private new Guna.UI2.WinForms.Guna2Button Update;
         private Guna.UI2.WinForms.Guna2Button Delete;
         private GroupBox CustomerList;
         private DataGridView dataGridView1;

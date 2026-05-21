@@ -7,6 +7,12 @@
     <Compile Update="Forms\Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Dashboard\DashboardDonutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\LoginHeroPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="History\History_Booking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,6 +67,27 @@
     <Compile Update="Forms\Room\RoomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Report\Booking_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Report\Checkin_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Report\Checkout_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Report\Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Report\Payment_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Report\RdlcReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Report\Room_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Forms\Booking\BookingControl.resx">
@@ -72,5 +99,10 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="HotelDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

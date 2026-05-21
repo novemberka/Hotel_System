@@ -5,6 +5,7 @@ using System.IO;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using Hotel_System.UI;
 
 namespace Hotel_System
 {
@@ -15,6 +16,7 @@ namespace Hotel_System
         public Report_Customer()
         {
             InitializeComponent();
+            UiTheme.ApplyPageDesign(this);
             service = new Services.CustomerService();
         }
 
@@ -35,7 +37,13 @@ namespace Hotel_System
 
                 DataTable dt = service.GetAllRoomTypes();
                 foreach (DataRow row in dt.Rows)
-                    cmbRoomType.Items.Add(row["TypeName"].ToString());
+                {
+                    string typeName = row["TypeName"]?.ToString() ?? string.Empty;
+                    if (!string.IsNullOrWhiteSpace(typeName))
+                    {
+                        cmbRoomType.Items.Add(typeName);
+                    }
+                }
 
                 cmbRoomType.SelectedIndex = 0;
                 cmbRoomType.SelectedIndexChanged += RoomType_SelectedIndexChanged;
@@ -60,20 +68,17 @@ namespace Hotel_System
                 dgvCustomers.DataSource = null;
                 dgvCustomers.DataSource = dt;
 
-                if (dt.Columns.Contains("CustomerID") && dgvCustomers.Columns.Contains("CustomerID"))
-                    dgvCustomers.Columns["CustomerID"].DataPropertyName = "CustomerID";
-                if (dt.Columns.Contains("FullName") && dgvCustomers.Columns.Contains("FullName"))
-                    dgvCustomers.Columns["FullName"].DataPropertyName = "FullName";
-                if (dt.Columns.Contains("Gender") && dgvCustomers.Columns.Contains("Gender"))
-                    dgvCustomers.Columns["Gender"].DataPropertyName = "Gender";
-                if (dt.Columns.Contains("PhoneNumber") && dgvCustomers.Columns.Contains("PhoneNumber"))
-                    dgvCustomers.Columns["PhoneNumber"].DataPropertyName = "PhoneNumber";
-                if (dt.Columns.Contains("Email") && dgvCustomers.Columns.Contains("Email"))
-                    dgvCustomers.Columns["Email"].DataPropertyName = "Email";
-                if (dt.Columns.Contains("Address") && dgvCustomers.Columns.Contains("Address"))
-                    dgvCustomers.Columns["Address"].DataPropertyName = "Address";
-                if (dgvCustomers.Columns.Contains("Column6"))
-                    dgvCustomers.Columns["Column6"].Visible = false;
+                BindColumn(dt, "CustomerID");
+                BindColumn(dt, "FullName");
+                BindColumn(dt, "Gender");
+                BindColumn(dt, "PhoneNumber");
+                BindColumn(dt, "Email");
+                BindColumn(dt, "Address");
+
+                if (dgvCustomers.Columns["Column6"] is DataGridViewColumn hiddenColumn)
+                {
+                    hiddenColumn.Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -87,7 +92,16 @@ namespace Hotel_System
             LoadReport(FromDate.Value.Date, ToDate.Value.Date);
         }
 
-        private void RoomType_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void BindColumn(DataTable table, string columnName)
+        {
+            if (table.Columns.Contains(columnName) &&
+                dgvCustomers.Columns[columnName] is DataGridViewColumn gridColumn)
+            {
+                gridColumn.DataPropertyName = columnName;
+            }
+        }
+
+        private void RoomType_SelectedIndexChanged(object? sender, EventArgs e) { }
 
         private void label2_Click(object sender, EventArgs e) { }
 
@@ -124,16 +138,20 @@ namespace Hotel_System
             {
                 try
                 {
-                    // ✅ If file exists → delete (avoid permission error)
                     if (File.Exists(sfd.FileName))
                     {
                         File.Delete(sfd.FileName);
                     }
 
-                    // ✅ Count ONLY visible columns
                     int visibleColumns = dgvCustomers.Columns
                         .Cast<DataGridViewColumn>()
                         .Count(c => c.Visible);
+
+                    if (visibleColumns == 0)
+                    {
+                        MessageBox.Show("No visible columns to export");
+                        return;
+                    }
 
                     using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write))
                     using (PdfWriter writer = new PdfWriter(fs))
@@ -158,7 +176,7 @@ namespace Hotel_System
                             {
                                 foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    if (cell.OwningColumn.Visible)
+                                    if (cell.OwningColumn?.Visible == true)
                                     {
                                         table.AddCell(cell.Value?.ToString() ?? "");
                                     }
@@ -169,11 +187,11 @@ namespace Hotel_System
                         document.Add(table);
                     }
 
-                    MessageBox.Show("✅ Exported to PDF successfully!");
+                    MessageBox.Show("Exported to PDF successfully!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("❌ ERROR:\n" + ex.Message);
+                    MessageBox.Show("Export failed:\n" + ex.Message);
                 }
             }
         }

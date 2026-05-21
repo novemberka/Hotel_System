@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class Report_Customer
     {
@@ -394,6 +394,7 @@
             ((System.ComponentModel.ISupportInitialize)iconExcel).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPrint).EndInit();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion

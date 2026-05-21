@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class Report_Payment
     {
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             DataGridView Booking_Report;
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             CustomerName = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
             Room = new DataGridViewTextBoxColumn();
@@ -287,7 +287,7 @@
             // 
             txtRoomNumber.BorderColor = Color.Black;
             txtRoomNumber.BorderRadius = 6;
-            txtRoomNumber.CustomizableEdges = customizableEdges11;
+            txtRoomNumber.CustomizableEdges = customizableEdges1;
             txtRoomNumber.DefaultText = "";
             txtRoomNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtRoomNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -301,7 +301,7 @@
             txtRoomNumber.Name = "txtRoomNumber";
             txtRoomNumber.PlaceholderText = "";
             txtRoomNumber.SelectedText = "";
-            txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtRoomNumber.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtRoomNumber.Size = new Size(209, 36);
             txtRoomNumber.TabIndex = 56;
             // 
@@ -309,7 +309,7 @@
             // 
             txtSearchCustomer.BorderColor = Color.Silver;
             txtSearchCustomer.BorderRadius = 6;
-            txtSearchCustomer.CustomizableEdges = customizableEdges13;
+            txtSearchCustomer.CustomizableEdges = customizableEdges3;
             txtSearchCustomer.DefaultText = "";
             txtSearchCustomer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchCustomer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -323,7 +323,7 @@
             txtSearchCustomer.Name = "txtSearchCustomer";
             txtSearchCustomer.PlaceholderText = "";
             txtSearchCustomer.SelectedText = "";
-            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtSearchCustomer.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSearchCustomer.Size = new Size(296, 36);
             txtSearchCustomer.TabIndex = 55;
             // 
@@ -356,7 +356,7 @@
             RoomType.BackColor = Color.Transparent;
             RoomType.BorderColor = Color.Silver;
             RoomType.BorderRadius = 8;
-            RoomType.CustomizableEdges = customizableEdges15;
+            RoomType.CustomizableEdges = customizableEdges5;
             RoomType.DrawMode = DrawMode.OwnerDrawFixed;
             RoomType.DropDownStyle = ComboBoxStyle.DropDownList;
             RoomType.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -367,7 +367,7 @@
             RoomType.Items.AddRange(new object[] { "All", "Single", "Double", "VIP" });
             RoomType.Location = new Point(836, 45);
             RoomType.Name = "RoomType";
-            RoomType.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            RoomType.ShadowDecoration.CustomizableEdges = customizableEdges6;
             RoomType.Size = new Size(210, 36);
             RoomType.TabIndex = 24;
             // 
@@ -388,7 +388,7 @@
             ToDate.BackColor = Color.White;
             ToDate.BorderRadius = 8;
             ToDate.Checked = true;
-            ToDate.CustomizableEdges = customizableEdges17;
+            ToDate.CustomizableEdges = customizableEdges7;
             ToDate.FillColor = Color.White;
             ToDate.FocusedColor = Color.White;
             ToDate.Font = new Font("Segoe UI", 9F);
@@ -397,7 +397,7 @@
             ToDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             ToDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             ToDate.Name = "ToDate";
-            ToDate.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            ToDate.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ToDate.Size = new Size(315, 36);
             ToDate.TabIndex = 22;
             ToDate.Value = new DateTime(2026, 3, 22, 0, 25, 41, 535);
@@ -419,7 +419,7 @@
             FromDate.BackColor = Color.White;
             FromDate.BorderRadius = 8;
             FromDate.Checked = true;
-            FromDate.CustomizableEdges = customizableEdges19;
+            FromDate.CustomizableEdges = customizableEdges9;
             FromDate.FillColor = Color.White;
             FromDate.FocusedColor = Color.White;
             FromDate.Font = new Font("Segoe UI", 9F);
@@ -428,7 +428,7 @@
             FromDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             FromDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             FromDate.Name = "FromDate";
-            FromDate.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            FromDate.ShadowDecoration.CustomizableEdges = customizableEdges10;
             FromDate.Size = new Size(296, 36);
             FromDate.TabIndex = 20;
             FromDate.Value = new DateTime(2026, 3, 22, 0, 25, 41, 535);

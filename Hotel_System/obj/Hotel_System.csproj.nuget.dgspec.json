@@ -1,37 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project C#\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {}
+    "D:\\RUPPClass\\Y3\\finalproject\\Hotel_System\\Hotel_System.csproj": {}
   },
   "projects": {
-    "D:\\Project C#\\Hotel_System\\Hotel_System\\Hotel_System.csproj": {
+    "D:\\RUPPClass\\Y3\\finalproject\\Hotel_System\\Hotel_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project C#\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
+        "projectUniqueName": "D:\\RUPPClass\\Y3\\finalproject\\Hotel_System\\Hotel_System.csproj",
         "projectName": "Hotel_System",
-        "projectPath": "D:\\Project C#\\Hotel_System\\Hotel_System\\Hotel_System.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Project C#\\Hotel_System\\Hotel_System\\obj\\",
+        "projectPath": "D:\\RUPPClass\\Y3\\finalproject\\Hotel_System\\Hotel_System.csproj",
+        "packagesPath": "C:\\Users\\M\\.nuget\\packages\\",
+        "outputPath": "D:\\RUPPClass\\Y3\\finalproject\\Hotel_System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\M\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0-windows7.0"
+          "net8.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0-windows7.0": {
-            "framework": "net9.0-windows7.0",
-            "targetAlias": "net9.0-windows7.0",
+          "net8.0-windows7.0": {
+            "framework": "net8.0-windows7.0",
+            "targetAlias": "net8.0-windows7.0",
             "projectReferences": {}
           }
         },
@@ -45,28 +45,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
-        "net9.0-windows7.0": {
-          "framework": "net9.0-windows7.0",
-          "targetAlias": "net9.0-windows7.0",
+        "net8.0-windows7.0": {
+          "framework": "net8.0-windows7.0",
+          "targetAlias": "net8.0-windows7.0",
           "dependencies": {
-            "Bunifu.Charts.WinForms": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Bunifu.UI.WinForms": {
-              "target": "Package",
-              "version": "[9.1.0, )"
-            },
             "ClosedXML": {
               "target": "Package",
               "version": "[0.105.0, )"
-            },
-            "ClosedXML.Report": {
-              "target": "Package",
-              "version": "[0.2.12, )"
             },
             "FontAwesome.Sharp": {
               "target": "Package",
@@ -76,45 +64,17 @@
               "target": "Package",
               "version": "[2.0.4.7, )"
             },
-            "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[150.1652.0, )"
+              "version": "[5.1.7, )"
             },
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[9.6.0, )"
-            },
-            "MySql.Data.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.22, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.5.0, )"
-            },
-            "ReportViewer.WebForms": {
-              "target": "Package",
-              "version": "[12.0.2402.20, )"
-            },
-            "ReportViewerCore.NETCore": {
+            "ReportViewerCore.WinForms": {
               "target": "Package",
               "version": "[15.1.33, )"
             },
             "ScottPlot.WinForms": {
               "target": "Package",
               "version": "[5.1.57, )"
-            },
-            "iTextSharp": {
-              "target": "Package",
-              "version": "[5.5.13.5, )"
-            },
-            "itext.kernel.core": {
-              "target": "Package",
-              "version": "[1.0.2, )"
             },
             "itext7": {
               "target": "Package",
@@ -148,7 +108,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

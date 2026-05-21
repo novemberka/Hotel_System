@@ -1,4 +1,4 @@
-﻿namespace Hotel_System
+namespace Hotel_System
 {
     partial class Walk_In
     {
@@ -870,6 +870,7 @@
             GroupPayment.ResumeLayout(false);
             GroupPayment.PerformLayout();
             ResumeLayout(false);
+            Hotel_System.UI.UiTheme.ApplyPageDesign(this);
         }
 
         #endregion

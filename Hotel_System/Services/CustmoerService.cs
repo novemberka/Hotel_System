@@ -7,14 +7,21 @@ namespace Hotel_System.Services
 {
     internal class CustomerService
     {
-        private CustomerRepository _repository = new CustomerRepository();
+        private readonly CustomerRepository _repository = new CustomerRepository();
 
         public bool AddCustomer(Customer customer)
         {
-            if (string.IsNullOrEmpty(customer.FullName))
+            ValidateCustomer(customer);
+            return _repository.Save(customer);
+        }
+
+        private static void ValidateCustomer(Customer customer)
+        {
+            if (string.IsNullOrWhiteSpace(customer.FullName))
                 throw new Exception("Name cannot be empty!");
 
-            return _repository.Save(customer);
+            if (string.IsNullOrWhiteSpace(customer.Phone))
+                throw new Exception("Phone number cannot be empty!");
         }
 
         public DataTable GetCustomerList()
@@ -22,9 +29,20 @@ namespace Hotel_System.Services
             return _repository.GetAll();
         }
 
+        public Customer? FindByPhone(string phone)
+        {
+            return string.IsNullOrWhiteSpace(phone) ? null : _repository.FindByPhone(phone);
+        }
+
+        public CustomerBookingLookup? FindLatestBookingByPhone(string phone)
+        {
+            return string.IsNullOrWhiteSpace(phone) ? null : _repository.FindLatestBookingByPhone(phone);
+        }
+
         public bool UpdateCustomer(Customer customer)
         {
             if (customer.CustomerID <= 0) return false;
+            ValidateCustomer(customer);
             return _repository.Update(customer);
         }
 

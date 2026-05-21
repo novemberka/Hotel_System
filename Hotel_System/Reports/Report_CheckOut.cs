@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel_System.UI;
 
 namespace Hotel_System
 {
@@ -15,6 +16,7 @@ namespace Hotel_System
         public Report_CheckOut()
         {
             InitializeComponent();
+            UiTheme.ApplyPageDesign(this);
         }
     }
 }
